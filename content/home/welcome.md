@@ -7,7 +7,7 @@ widget: hero  # See https://wowchemy.com/docs/page-builder/
 headless: true  # This file represents a page section.
 weight: 10  # Order that this section will appear.
 title: "Info"
-subtitle: "Augmented Reality Music Ensemble"
+subtitle: ""
 hero_media: ARME squared logo.jpg
 design:
   # Choose how many columns the section has. Valid values: 1 or 2.
@@ -17,4 +17,4 @@ advanced:
   css_class:
 ---
 
-The project will start in September 2021.
+The Augmented Reality Music Ensemble project has been funded by EPSRC and will start in September 2021.
