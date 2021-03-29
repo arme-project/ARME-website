@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/48378092-ea86-4c1f-955d-0e25d01bc04e/deploy-status)](https://app.netlify.com/sites/arme-project/deploys)
+
 # Wowchemy's Template for [Hugo](https://github.com/gohugoio/hugo) used for ARME
 
 The **Research Group Template** empowers your research group to easily create a beautiful website with a stunning homepage, news, academic publications, events, team profiles, and a contact form.
