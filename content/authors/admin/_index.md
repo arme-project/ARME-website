@@ -25,7 +25,7 @@ education:
     - course: PhD in Cognitive Science
       institution: Brown University
       year: 2006
-    - course: BSc in Psychology
+    - course: BSc in Psychology NO
       institution: University of Trieste
       year: 2000
 superuser: true
