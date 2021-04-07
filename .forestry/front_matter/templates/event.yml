@@ -88,3 +88,5 @@ fields:
 - type: text
   name: projects
   label: projects
+pages:
+- content/post/this-is-a-post.md
