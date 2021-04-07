@@ -34,9 +34,8 @@ education:
     year: "2000"
 superuser: true
 user_groups:
-- Researchers
 - Principal Investigators
-highlight_name: false
+highlight_name: true
 title: Max Di Luca
 email: m.diluca@bham.ac.uk
 
