@@ -4,7 +4,6 @@ all_day = true
 authors = []
 date = 2021-02-27T23:00:00Z
 date_end = ""
-draft = true
 event = "The ARME project has been ranked #3 in the EPSRC panel"
 event_url = "https://gow.epsrc.ukri.org/NGBOViewPanelROL.aspx?PanelId=1-84ONZJ&RankingListId=1-84O6SJ"
 featured = false
