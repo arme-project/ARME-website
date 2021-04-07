@@ -88,5 +88,3 @@ fields:
 - type: text
   name: projects
   label: projects
-pages:
-- content/post/folder test/the-project-has-been-funded.md

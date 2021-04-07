@@ -8,3 +8,5 @@ fields:
 - type: datetime
   name: date
   label: date
+pages:
+- content/post/folder test/the-project-has-been-funded.md
