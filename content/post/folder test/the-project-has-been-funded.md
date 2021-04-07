@@ -1,5 +1,5 @@
 +++
-abstract = ""
+abstract = "The ARME project has been ranked #3 in the EPSRC panel"
 all_day = true
 authors = []
 date = 2021-01-26T23:00:00Z
@@ -12,7 +12,7 @@ location = ""
 projects = ""
 publishDate = ""
 slides = ""
-summary = ""
+summary = "The ARME project has been ranked #3 in the EPSRC panel"
 tags = []
 title = "The project has been funded"
 url_code = ""
