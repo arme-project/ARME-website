@@ -34,7 +34,7 @@ user_groups:
 - Principal Investigators
 highlight_name: false
 title: Max Di Luca
-email: ''
+email: m.diluca@bham.ac.uk
 
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
