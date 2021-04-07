@@ -1,0 +1,68 @@
+---
+label: Person
+hide_body: false
+fields:
+- type: text
+  name: role
+  label: role
+- type: text
+  name: bio
+  label: bio
+- type: list
+  name: interests
+  label: interests
+- type: field_group_list
+  name: social
+  label: social
+  fields:
+  - type: text
+    name: icon
+    label: icon
+  - type: text
+    name: icon_pack
+    label: icon_pack
+  - type: text
+    name: link
+    label: link
+- type: field_group_list
+  name: organizations
+  label: organizations
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: url
+    label: url
+- type: field_group
+  name: education
+  label: education
+  fields:
+  - type: field_group_list
+    name: courses
+    label: courses
+    fields:
+    - type: text
+      name: course
+      label: course
+    - type: text
+      name: institution
+      label: institution
+    - type: text
+      name: year
+      label: year
+- type: boolean
+  name: superuser
+  label: superuser
+- type: list
+  name: user_groups
+  label: user_groups
+- type: boolean
+  name: highlight_name
+  label: highlight_name
+- type: text
+  name: title
+  label: title
+- type: text
+  name: email
+  label: email
