@@ -91,6 +91,3 @@ fields:
 - type: text
   name: slides
   label: slides
-pages:
-- content/publication/a-conference-paper.md
-- content/publication/example-of-the-nest-paper.md
