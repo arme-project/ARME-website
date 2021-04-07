@@ -3,6 +3,8 @@ role: Senior Lecturer
 bio: My research interests include distributed human perception, computational modeling,
   VR intereactions, haptics.
 interests:
+- Computational modeling
+- Virtual Reality
 - Psychophysics
 social:
 - icon: envelope
