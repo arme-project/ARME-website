@@ -4,6 +4,10 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: document
+  path: content/people
+  label: People
+  match: "**/*"
 - type: directory
   path: config/_default/content
   label: Pages
