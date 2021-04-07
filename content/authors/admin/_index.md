@@ -1,7 +1,6 @@
 ---
 role: Senior Lecturer
-bio: My research interests include distributed human perception, computational modeling,
-  VR intereactions, haptics.
+bio: ''
 interests:
 - Haptics
 - Virtual Reality
