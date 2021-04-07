@@ -5,14 +5,14 @@ authors = []
 date = 2021-01-26T23:00:00Z
 date_end = ""
 draft = true
-event = ""
+event = "The ARME project has been ranked #3 in the EPSRC panel"
 event_url = "https://gow.epsrc.ukri.org/NGBOViewPanelROL.aspx?PanelId=1-84ONZJ&RankingListId=1-84O6SJ"
 featured = false
 location = ""
 projects = ""
 publishDate = ""
 slides = ""
-summary = "The ARME project has been ranked #3 in the EPSRC panel"
+summary = ""
 tags = []
 title = "The project has been funded"
 url_code = ""
