@@ -2,7 +2,7 @@
 abstract = "The ARME project has been ranked #3 in the EPSRC panel"
 all_day = true
 authors = []
-date = 2021-01-26T23:00:00Z
+date = 2021-02-27T23:00:00Z
 date_end = ""
 draft = true
 event = "The ARME project has been ranked #3 in the EPSRC panel"
