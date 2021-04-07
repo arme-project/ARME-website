@@ -16,7 +16,7 @@ social:
   link: https://scholar.google.com/citations?user=93hi3QcAAAAJ&hl=en
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/maxdiluca
 organizations:
 - name: University of Birmingham
   url: ''
