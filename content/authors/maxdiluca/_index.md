@@ -9,9 +9,7 @@ interests:
 - Multisensory perception
 - Temporal perception
 social:
-- icon: envelope
-  icon_pack: fas
-  link: mailto:m.diluca@bham.ac.uk
+
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/maxdiluca
@@ -37,7 +35,7 @@ user_groups:
 - Principal Investigators
 highlight_name: true
 title: Max Di Luca
-email: m.diluca@bham.ac.uk
+
 
 ---
 Dr Di Luca is Senior Lecturer at the University of Birmingham in the CNCR research centre. Using psychophysical methods and computational models, he investigates how the human brain processes multisensory information for perception and action.
