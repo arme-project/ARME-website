@@ -1,0 +1,93 @@
+---
+label: Preprint
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: list
+  name: authors
+  label: authors
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: doi
+  label: doi
+- type: datetime
+  name: publishDate
+  label: publishDate
+- type: list
+  name: publication_types
+  label: publication_types
+- type: text
+  name: publication
+  label: publication
+- type: text
+  name: publication_short
+  label: publication_short
+- type: textarea
+  name: abstract
+  label: abstract
+- type: textarea
+  name: summary
+  label: summary
+- type: list
+  name: tags
+  label: tags
+- type: boolean
+  name: featured
+  label: featured
+- type: field_group_list
+  name: links
+  label: links
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: url
+    label: url
+- type: text
+  name: url_pdf
+  label: url_pdf
+- type: text
+  name: url_code
+  label: url_code
+- type: text
+  name: url_dataset
+  label: url_dataset
+- type: text
+  name: url_poster
+  label: url_poster
+- type: text
+  name: url_project
+  label: url_project
+- type: text
+  name: url_slides
+  label: url_slides
+- type: text
+  name: url_source
+  label: url_source
+- type: text
+  name: url_video
+  label: url_video
+- type: field_group
+  name: image
+  label: image
+  fields:
+  - type: text
+    name: caption
+    label: caption
+  - type: text
+    name: focal_point
+    label: focal_point
+  - type: boolean
+    name: preview_only
+    label: preview_only
+- type: list
+  name: projects
+  label: projects
+- type: text
+  name: slides
+  label: slides
