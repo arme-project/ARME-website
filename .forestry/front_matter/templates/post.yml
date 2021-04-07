@@ -9,5 +9,6 @@ fields:
   name: date
   label: date
 pages:
+- content/home/a-post-on-the-first-page.md
 - content/post/folder test/the-project-has-been-funded.md
 - content/post/uob-press-release.md
