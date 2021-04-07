@@ -3,9 +3,12 @@ role: Senior Lecturer
 bio: My research interests include distributed human perception, computational modeling,
   VR intereactions, haptics.
 interests:
-- Computational modeling
+- Haptics
 - Virtual Reality
 - Psychophysics
+- Computational modeling
+- Multisensory perception
+- Temporal perception
 social:
 - icon: envelope
   icon_pack: fas
@@ -39,6 +42,6 @@ title: Max Di Luca
 email: m.diluca@bham.ac.uk
 
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Dr Di Luca is Senior Lecturer at the University of Birmingham in the CNCR research centre. Using psychophysical methods and computational models, he investigates how the human brain processes multisensory information for perception and action.
 
-s;lfkj asl;dkfj l;askj
+He earned the Laurea in Psychology from the Università di Trieste in 2000 and the PhD in Cognitive Science from Brown University in 2006. During his carer, Dr Di Luca has been Scientist at the Max Planck Institute for Biological Cybernetics in Tübingen, Visiting Scientist at Oculus Research and Research Scientist at Facebook Reality Labs.T
