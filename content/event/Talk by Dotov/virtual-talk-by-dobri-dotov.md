@@ -13,8 +13,8 @@ abstract:
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date = 2021-05-28T13:00:00Z
-date_end = 2021-04-28T14:00:00Z
+date: "2021-05-28T13:00:00Z"
+date_end: "2021-04-28T14:00:00Z"
 all_day: false
 
 # Schedule page publish date (NOT talk date).
@@ -27,7 +27,7 @@ tags = ["guest", "perception", "modeling", "talk"]
 featured: false
 
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
+  caption:
   focal_point: Right
 
 url_code: ""
