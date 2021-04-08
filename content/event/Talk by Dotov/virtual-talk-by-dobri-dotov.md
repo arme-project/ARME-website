@@ -6,9 +6,13 @@ event_url:
 
 location: 
 address:
+  street: 450 Serra Mall
+  city: Stanford
+  region: CA
+  postcode: '94305'
+  country: United States
 
-
-summary: "Virtual talk by Dobri Dotov, a postdoc at the LiveLab at McMaster University in Hamilton, Canada. He’s had experience in modelling virtual synchronising partners, and will share his experience in using the Kuramoto oscillator model." 
+summary: Virtual talk by Dobri Dotov, a postdoc at the LiveLab at McMaster University in Hamilton, Canada. He’s had experience in modelling virtual synchronising partners, and will share his experience in using the Kuramoto oscillator model.
 abstract: 
 
 # Talk start and end times.
