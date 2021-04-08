@@ -4,7 +4,6 @@ all_day = true
 authors = []
 date = 2021-05-27T22:00:00Z
 date_end = ""
-draft = true
 event = ""
 event_url = ""
 featured = false
