@@ -66,3 +66,5 @@ fields:
 - type: text
   name: email
   label: email
+pages:
+- content/publication/dsfas.md
