@@ -21,7 +21,7 @@ all_day: false
 publishDate: "202-04-04T00:00:00Z"
 
 authors: []
-tags = ["guest", "perception", "modeling", "talk"]
+tags : ["guest", "perception", "modeling", "talk"]
 
 # Is this a featured talk? (true/false)
 featured: false
@@ -31,7 +31,7 @@ image:
   focal_point: Right
 
 url_code: ""
-url_pdf = "https://www.biorxiv.org/content/10.1101/2021.01.15.426897v4"
+url_pdf: "https://www.biorxiv.org/content/10.1101/2021.01.15.426897v4"
 url_slides: ""
 url_video: ""
 
