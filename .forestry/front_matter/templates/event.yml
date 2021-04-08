@@ -88,5 +88,3 @@ fields:
 - type: text
   name: projects
   label: projects
-pages:
-- content/event/virtual-talk-by-dobri-dotov.md
