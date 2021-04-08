@@ -4,7 +4,7 @@ Live website: https://arme-project.netlify.app
 
 State of publication of the website: [![Netlify Status](https://api.netlify.com/api/v1/badges/48378092-ea86-4c1f-955d-0e25d01bc04e/deploy-status)](https://app.netlify.com/sites/arme-project/deploys)
 
-* **All the information of the website is in the "content" folder on GitHub*
+**All the information of the website is in the "content" folder on GitHub**
 
 The following information comes from README.md:
 
