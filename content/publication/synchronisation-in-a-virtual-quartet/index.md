@@ -1,16 +1,18 @@
 ---
 title: Synchronisation in a virtual quartet
+subtitle: ""
 publication_types:
   - "1"
 authors:
-  - Alan Wing
-  - Ryan Stables
-  - Mark Elliott
-  - Maria Witek and Massimiliano Di Luca
+  - maxdiluca
+author_notes: []
+doi: ""
 publication: Rhythm Perception and Production Workshop 2021
 publication_short: RPPW2021
+abstract: ""
 draft: false
 featured: false
+tags: []
 categories:
   - perception
   - model
@@ -18,5 +20,5 @@ image:
   filename: featured
   focal_point: Smart
   preview_only: false
-date: 2021-04-09T16:02:53.022Z
+date: 2021-04-09T16:07:14.779Z
 ---
