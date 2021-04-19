@@ -1,5 +1,5 @@
 ---
-title: Alan
+title: Alan Wing
 avatar_filename: avatar
 social:
   - display:
