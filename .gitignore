@@ -5,3 +5,16 @@
 /resources/
 public/
 assets/jsconfig.json
+static/.DS_Store
+data/.DS_Store
+static/.DS_Store
+data/.DS_Store
+content/publication/.DS_Store
+content/post/.DS_Store
+content/event/.DS_Store
+content/authors/.DS_Store
+content/.DS_Store
+config/_default/.DS_Store
+config/.DS_Store
+assets/.DS_Store
+.DS_Store
