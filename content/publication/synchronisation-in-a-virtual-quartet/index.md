@@ -34,4 +34,4 @@ date: 2021-04-09T16:07:14.779Z
 url_slides: https://www.rppw2021.org/events/833
 ---
 
-{{<video src="https://vid-prod-vod.uio.no/vod/def/mediacache/www.uio.no/smil:60c7756ba6eb5923211d23d4.smil/playlist.m3u8?token=7ab6d784-2b3d-4abb-9881-0db7dc751ae6">}}
+{{<video src="Wing_RPPW_130621_v4a">}}
