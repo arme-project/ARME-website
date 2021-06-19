@@ -34,4 +34,4 @@ date: 2021-04-09T16:07:14.779Z
 url_slides: https://www.rppw2021.org/events/833
 ---
 
-{{<video src="Wing_RPPW_130621_v4a">}}
+{{<video src="Wing_RPPW_130621_v4a.mp4">}}
