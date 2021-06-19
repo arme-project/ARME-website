@@ -9,7 +9,9 @@ interests:
 - Multisensory perception
 - Temporal perception
 social:
-
+- icon: web
+  icon_pack: fab
+  link: https://massimilianodiluca.info
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/maxdiluca
