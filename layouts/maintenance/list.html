@@ -1,0 +1,23 @@
+{{- define "main" -}}
+
+{{ partial "page_header.html" . }}
+<div class="universal-wrapper">
+
+<div >
+    <div>
+        <div>
+            {{ $byLastMod :=  .Site.RegularPages.ByLastmod  }}
+            {{ $recent := ($byLastMod | last 1000000).Reverse }}
+            {{ $leastRecent := $byLastMod | last 1 }}
+            <h2 id="last-updated">Last Updated</h2>
+            {{ partial "maintenance-pages-table" $leastRecent }}
+
+            <h2 id="last-updated">Recent Updates</h2>
+            {{ partial "maintenance-pages-table" $recent }}
+        </div>
+    </div>
+</div>
+
+</div>
+
+{{- end -}}
