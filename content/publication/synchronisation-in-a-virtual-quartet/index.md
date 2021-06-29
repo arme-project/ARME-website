@@ -4,11 +4,11 @@ subtitle: ""
 publication_types:
   - "1"
 authors:
-  - alan
-  - "Ryan Stables"
-  - "Mark Elliott"
-  - "Maria Witek"
-  - maxdiluca
+  - Alan Wing
+  - Ryan Stables
+  - Mark Elliott
+  - Maria Witek
+  - Max Di Luca
 author_notes: []
 doi: ""
 publication: Rhythm Perception and Production Workshop 2021

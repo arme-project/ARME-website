@@ -1,14 +1,11 @@
 ---
-title: Latest News
+title: University of Warwick
 
-# View.
-#   1 = List
-#   2 = Compact
-#   3 = Card
-view: 2
-columns: 2
+
 # Optional header image (relative to `static/media/` folder).
 header:
   caption: ""
   image: ""
 ---
+
+[Max Di Luca]({{< ref "/authors/Max Di Luca" >}} "About Us")

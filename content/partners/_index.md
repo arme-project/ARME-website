@@ -1,5 +1,5 @@
 ---
-title: Partners title
+title: Partners involved in the project
 
 # View.
 #   1 = List

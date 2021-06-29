@@ -1,5 +1,5 @@
 ---
-title: Birmingham
+title: University of Birmingham
 
 
 # Optional header image (relative to `static/media/` folder).
@@ -7,6 +7,9 @@ header:
   caption: ""
   image: ""
 ---
-Cool university
 
-[Max Di Luca]({{< ref "/authors/maxdiluca" >}} "About Us")
+[Max Di Luca]({{< ref "/authors/Max Di Luca" >}} "About Us")
+
+[Alan Wing]({{< ref "/authors/Alan Wing" >}} "About Us")
+
+[Maria Witek]({{< ref "/authors/Maria Witek" >}} "About Us")

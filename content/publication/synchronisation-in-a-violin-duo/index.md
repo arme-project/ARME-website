@@ -4,10 +4,10 @@ subtitle: ""
 publication_types:
   - "1"
 authors:
-  - susan
-  - "Dominic Ward"
-  - "Ryan Stables"
-  - alan
+  - Min Li
+  - Dominic Ward
+  - Ryan Stables
+  - Alan Wing
 author_notes: []
 doi: ""
 publication: Rhythm Perception and Production Workshop 2021

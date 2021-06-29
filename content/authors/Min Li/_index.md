@@ -49,7 +49,7 @@ social:
 email: ""
 superuser: false
 authors:
-- susan
+- Min Li
 user_groups:
 - Researchers
 ---
