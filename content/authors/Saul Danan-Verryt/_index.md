@@ -37,6 +37,6 @@ superuser: false
 authors:
 - Saul Danan-Verryt
 user_groups:
-- MSc Students
+- Research Assistants
 ---
 
