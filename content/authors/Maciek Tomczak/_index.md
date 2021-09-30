@@ -26,12 +26,7 @@ social:
 #  - icon: envelope
 #    icon_pack: fas
 #    link: ''
-  - icon: twitter
-    icon_pack: fab
-    link: 
-  - icon: google-scholar
-    icon_pack: ai
-    link: 
+
 email: ""
 superuser: false
 authors:
