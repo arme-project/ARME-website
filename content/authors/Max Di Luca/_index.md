@@ -24,22 +24,15 @@ social:
 organizations:
 - name: University of Birmingham
   url: ''
-education:
-  courses:
-  - course: PhD in Cognitive Science
-    institution: Brown University
-    year: "2006"
-  - course: Laurea in Psychology
-    institution: University of Trieste
-    year: "2000"
+email: ""
 superuser: true
 user_groups:
 - Principal Investigators
 highlight_name: true
 title: Max Di Luca
-
+authors:
+- Max Di Luca
 
 ---
 Dr Di Luca is Senior Lecturer at the University of Birmingham in the CNCR research centre. Using psychophysical methods and computational models, he investigates how the human brain processes multisensory information for perception and action.
-
-He earned the Laurea in Psychology from the Università di Trieste in 2000 and the PhD in Cognitive Science from Brown University in 2006. During his carer, Dr Di Luca has been Scientist at the Max Planck Institute for Biological Cybernetics in Tübingen, Visiting Scientist at Oculus Research and Research Scientist at Facebook Reality Labs.T
+He earned the Laurea in Psychology from the Università di Trieste in 2000 and the PhD in Cognitive Science from Brown University in 2006. During his carer, Dr Di Luca has been Scientist at the Max Planck Institute for Biological Cybernetics in Tübingen, Visiting Scientist at Oculus Research and Research Scientist at Facebook Reality Labs.
