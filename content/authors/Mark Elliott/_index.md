@@ -1,6 +1,6 @@
 ---
 title: Mark Elliott
-role:
+role: Associate Professor
 avatar_filename: avatar
 social:
 - icon: web
