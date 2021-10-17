@@ -25,6 +25,8 @@ content:
   - Administration
   - Visitors
   - Alumni
+  - Industry Partners
+  - Musicians
 design:
   show_interests: false
   show_role: true
