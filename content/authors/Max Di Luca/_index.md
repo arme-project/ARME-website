@@ -57,9 +57,6 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/maxdiluca
-  - icon: website
-    icon_pack: ai
-    link: https://github.com/maxdiluca
 email: ""
 
 
