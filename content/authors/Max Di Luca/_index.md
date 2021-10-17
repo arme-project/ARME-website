@@ -3,8 +3,7 @@ title: Max Di Luca
 
 
 highlight_name: false
-role: Senior Lecturer
-University of Birmingham
+role: Senior Lecturer, \nUniversity of Birmingham
 bio: 'Dr Di Luca is Senior Lecturer at the University of Birmingham (UK) in the Centre for Computational Neuroscience and Cognitive Robotics.'
 organizations:
 - name: University of Birmingham
