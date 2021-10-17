@@ -3,8 +3,8 @@ title: Max Di Luca
 
 
 highlight_name: false
-role: Senior Lecturer, University of Birmingham
-bio: 'Dr Di Luca is Senior Lecturer at the University of Birmingham (UK) in the Centre for Computational Neuroscience and Cognitive Robotics.'
+role: Associate Professor, University of Birmingham
+bio: 'Max Di Luca is Associate Professor at the University of Birmingham (UK) in the Centre for Computational Neuroscience and Cognitive Robotics.'
 organizations:
 - name: University of Birmingham
   url: 'https://www.birmingham.ac.uk/staff/profiles/psychology/diluca-massimiliano.aspx'
@@ -66,5 +66,5 @@ authors:
 user_groups:
 - Principal Investigators
 ---
-Dr Di Luca is Senior Lecturer at the University of Birmingham in the CNCR research centre. Using psychophysical methods and computational models, he investigates how the human brain processes multisensory information for perception and action.
+Max Di Luca is Associate Professor at the University of Birmingham in the CNCR research centre. Using psychophysical methods and computational models, he investigates how the human brain processes multisensory information for perception and action.
 He earned the Laurea in Psychology from the Università di Trieste in 2000 and the PhD in Cognitive Science from Brown University in 2006. During his carer, Dr Di Luca has been Scientist at the Max Planck Institute for Biological Cybernetics in Tübingen, Visiting Scientist at Oculus Research and Research Scientist at Facebook Reality Labs.
