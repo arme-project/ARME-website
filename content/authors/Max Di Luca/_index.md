@@ -31,8 +31,8 @@ education:
 
 social:
 - icon: link
-  icon_pack: ai
-  link: https://scholar.google.com/citations?user=93hi3QcAAAAJ&hl=en
+  icon_pack: fab
+  link: https:massimilianodiluca.info
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=93hi3QcAAAAJ&hl=en
