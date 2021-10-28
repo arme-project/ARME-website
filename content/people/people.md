@@ -19,14 +19,14 @@ content:
   - Principal Investigators
   - Researchers
   - Collaborators
-  - Grad Students
-  - Postgraduate Students
-  - Research Assistants
   - Administration
-  - Visitors
-  - Alumni
   - Industry
   - Musicians
+  - Research Assistants
+  - Visitors
+  - Students
+  - Alumni
+  
 design:
   show_interests: false
   show_role: true
