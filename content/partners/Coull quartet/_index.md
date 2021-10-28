@@ -1,5 +1,5 @@
 ---
-title: University of Warwick
+title: Coull Quartet
 
 
 # Optional header image (relative to `static/media/` folder).
@@ -7,5 +7,3 @@ header:
   caption: ""
   image: ""
 ---
-
-[Mark Elliot]({{< ref "/authors/Mark Elliott" >}} "About Us")

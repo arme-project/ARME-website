@@ -9,3 +9,6 @@ header:
 ---
 
 [Ryan Stables]({{< ref "/authors/Ryan Stables" >}} "About Us")
+
+
+[Maciek Tomczak]({{< ref "/authors/Maciek Tomczak" >}} "About Us")
