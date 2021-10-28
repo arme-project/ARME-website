@@ -10,11 +10,11 @@ authors:
 superuser: false
 
 # Role/position
-role:  
+role:  Professor
 
 # Organizations/Affiliations
 organizations:
-- name:  
+- name:  University of Birmingham
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -36,9 +36,14 @@ education:
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
 social:
 
-
+- icon: google-scholar
+  icon_pack: ai
 https://scholar.google.com/citations?user=JEihq_0AAAAJ&hl=en&oi=ao
-https://www.linkedin.com/in/alan-wing-35b91530/?originalSubdomain=uk
+- icon: linkedin
+  icon_pack: fab
+  https://www.linkedin.com/in/alan-wing-35b91530/?originalSubdomain=uk
+  - icon: researchgate
+  icon_pack: fab
 https://www.researchgate.net/profile/Alan-Wing
 
 
