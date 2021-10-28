@@ -31,7 +31,7 @@ education:
 
 social:
 - icon: link
-  icon_pack: fab
+  icon_pack: fas
   link: https:massimilianodiluca.info
 - icon: google-scholar
   icon_pack: ai
