@@ -16,12 +16,12 @@
 [[main]]
   name = "People"
   url = "people"
-  weight = 30
+  weight = 40
 
 [[main]]
-  name = "Events"
-  url = "event"
-  weight = 40
+  name = "Consortium"
+  url = "partners"
+  weight = 30
 
 [[main]]
   name = "Publications"
