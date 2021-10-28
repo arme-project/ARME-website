@@ -10,6 +10,6 @@ image:
 ---
 We are excited that on September 1st the project has officially started! 
 
-So many things to do now. We are in the planning phase of the first set of recordings. We will have multiple days of recordings with the [Coull Quartet](https://www.coullquartet.com) (see also their [Facebook page](https://www.facebook.com/people/The-Coull-Quartet/100063018892350/)) by our scientists together with our industry partners [PartPlay](https://partplay.co.uk) and [SemanticAudio](http://www.semanticaudio.co.uk).
+So many things to do now. We are in the planning phase of the first set of recordings. We will have multiple days of recordings with the [Coull Quartet](http://www.coullquartet.com) (see also their [Facebook page](https://www.facebook.com/people/The-Coull-Quartet/100063018892350/)) by our scientists together with our industry partners [PartPlay](https://partplay.co.uk) and [SemanticAudio](http://www.semanticaudio.co.uk).
 
 ![]()
