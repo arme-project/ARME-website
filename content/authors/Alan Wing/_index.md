@@ -37,13 +37,13 @@ education:
 social:
 - icon: google-scholar
   icon_pack: ai
-https://scholar.google.com/citations?user=JEihq_0AAAAJ&hl=en&oi=ao
+  link: https://scholar.google.com/citations?user=JEihq_0AAAAJ&hl=en&oi=ao
 - icon: linkedin
   icon_pack: fab
-  https://www.linkedin.com/in/alan-wing-35b91530/?originalSubdomain=uk
+  link:   https://www.linkedin.com/in/alan-wing-35b91530/?originalSubdomain=uk
 - icon: researchgate
   icon_pack: fab
-https://www.researchgate.net/profile/Alan-Wing
+  link: https://www.researchgate.net/profile/Alan-Wing
 
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
