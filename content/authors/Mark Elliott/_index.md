@@ -1,6 +1,6 @@
 ---
 title: Mark Elliott
-role: Associate Professor
+role: Associate Professor, University of Warwick
 avatar_filename: avatar
 social:
 - icon: web
