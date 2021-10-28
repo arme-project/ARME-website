@@ -1,5 +1,5 @@
 ---
-role: Senior Research Fellow, University of Birmingham
+role: Senior Research Fellow
 interests:
 - Music
 - Temporal Perception

@@ -8,4 +8,4 @@ header:
   image: ""
 ---
 
-[Max Di Luca]({{< ref "/authors/Max Di Luca" >}} "About Us")
+[Ryan Stables]({{< ref "/authors/Ryan Stables" >}} "About Us")

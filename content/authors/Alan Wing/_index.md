@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role:  Professor, University of Birmingham
+role:  Professor
 
 # Organizations/Affiliations
 organizations:
