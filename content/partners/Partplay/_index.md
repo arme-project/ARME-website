@@ -8,6 +8,6 @@ header:
   image: ""
 ---
 
-PartPlay provides a software resource for classical musicians in training allowing them to play along with professional musicians, and learn from their musical performance. 
+PartPlay provides a software resource for classical musicians in training allowing them to play along with professional musicians, and learn from their musical performance. The software allows to enhance sight-reading, ensemble skills, and expand repertoire knowledge. 
 
 [PartPlay](https://partplay.co.uk)
