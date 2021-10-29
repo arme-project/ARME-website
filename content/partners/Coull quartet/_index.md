@@ -7,11 +7,8 @@ header:
   caption: ""
   image: ""
 ---
-Musicians:
-Roger Coull violin
-Philip Gallaway violin
-Jonathan Barritt viola
-Nicholas Roberts cello
+
+Roger Coull (violin), Philip Gallaway (violin), Jonathan Barritt (viola), Nicholas Roberts (cello)
 
 Formed in 1974 by students at the Royal Academy of Music under the guidance of renowned quartet leader, Sidney Griller, they rapidly achieved national recognition, and were appointed Quartet-in-Residence by the University of Warwick in 1977, a post which they held for over forty years. The Quartet, which includes two of its founder members, has performed and broadcast extensively throughout the UK, and has made tours of Western Europe, the Americas, Australia, China, India and the Far East.
 
