@@ -26,3 +26,4 @@ design:
 advanced:
   css_class: fullscreen
 ---
+Photo by [Olivia Swinscoe](http://www.oliviaswinscoe.com/)
