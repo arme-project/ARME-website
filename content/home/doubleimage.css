@@ -1,0 +1,16 @@
+/*CUSTOM VARIABLES HERE*/
+
+img-wrapper {
+  display: grid;
+  height: 100vh;
+}
+
+.img-wrapper div {
+  grid-column: 1;
+  grid-row: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--gray);
+  transition: opacity 0.1s;
+}

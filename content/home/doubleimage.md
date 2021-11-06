@@ -20,7 +20,7 @@ design:
   background:
     image: violin.jpg
     image_darken: 0
-    image_parallax: true
+    image_parallax: false
     image_position: center
     image_size: cover
     text_color_light: true
@@ -29,3 +29,5 @@ design:
 advanced:
   css_class: fullscreen
 ---
+
+{{< doubleimage >}}
