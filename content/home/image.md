@@ -18,7 +18,7 @@ subtitle:
 design:
   columns: "1"
   background:
-    image: coders.jpg
+    image: audio.jpg
     image_darken: 0
     image_parallax: false
     image_position: center
@@ -29,3 +29,5 @@ design:
 advanced:
   css_class: fullscreen
 ---
+
+Photo by [Olivia Swinscoe](http://www.oliviaswinscoe.com/)
