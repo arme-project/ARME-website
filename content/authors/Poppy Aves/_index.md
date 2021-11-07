@@ -17,7 +17,28 @@ organizations:
 - name: University of Birmingham
   url: ""
 
+interests:
+- Virtual reality
+- Multisensory perception
+- Brain imaging
+- Motor control
 
+education:
+  courses:
+  - course: MSc Computational Neuroscience and Cognitive Robotics
+    institution: University of Birmingham
+    year: 2021
+    logo: education-logos/bu.png
+  - course: BSc Psychology
+    institution: University of Sheffield 
+    logo: education-logos/uts.png
+    year: 2019
+
+
+social:
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/poppy-aves-6510a3136/
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
