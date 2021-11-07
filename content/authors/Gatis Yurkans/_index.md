@@ -1,10 +1,10 @@
 ---
 # Display name
-title: Gatis Yurkans
+title: Gatis Jurkāns
 
 # Username (this should match the folder name)
 authors:
-- Gatis Yurkans
+- Gatis Jurkāns
 
 # Is this the primary user of the site?
 superuser: false
