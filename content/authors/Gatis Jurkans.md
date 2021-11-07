@@ -26,13 +26,15 @@ interests:
 - Creative Engineering and application in visual arts
 
 education:
-courses:
-  - course: MSc in Computational Neuroscience and Cognitive Robotics
-    institution: University of Birmingham
-    year: 2022
-  - course: BEng in Electronics and Electrical engineering
-    institution: University of Bradford
-    year: 2016
+  courses:
+    - course: MSc in Computational Neuroscience and Cognitive Robotics
+      institution: University of Birmingham
+      year: 2022
+      logo: education-logos/bu.png
+    - course: BEng in Electronics and Electrical engineering
+      institution: University of Bradford
+      year: 2016
+      logo: education-logos/bu.png
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
