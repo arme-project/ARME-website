@@ -8,10 +8,13 @@
 #  url = "/"
 #  weight = 10
 
+
+
 [[main]]
-  name = "News"
-  url = "post"
-  weight = 20
+  name = "Consortium"
+  url = "partners"
+  weight = 30
+
 
 [[main]]
   name = "People"
@@ -19,21 +22,21 @@
   weight = 40
 
 [[main]]
-  name = "Consortium"
-  url = "partners"
-  weight = 30
-
-[[main]]
   name = "Publications"
   url = "publication"
   weight = 50
+  
+  [[main]]
+  name = "News"
+  url = "post"
+  weight = 60
 
   [[main]]
     name = "Twitter"
     url = "twitter"
-    weight = 60
+    weight = 70
 
 [[main]]
   name = "Contact"
   url = "contact"
-  weight = 70
+  weight = 80
