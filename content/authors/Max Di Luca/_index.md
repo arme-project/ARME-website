@@ -30,8 +30,8 @@ education:
 
 
 social:
-- icon: link
-  icon_pack: AI
+- icon: fa-link
+  icon_pack: fas
   link: https:massimilianodiluca.info
 - icon: google-scholar
   icon_pack: ai
