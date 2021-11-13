@@ -5,11 +5,10 @@ title: Partners involved in the project
 #   1 = List
 #   2 = Compact
 #   3 = Card
-view: 2
+view: 3
 
 # Optional header image (relative to `static/media/` folder).
 header:
   caption: ""
-  image: ""
+  image: "ARME squared logo.jpg"
 ---
-
