@@ -5,7 +5,7 @@ title: Coull Quartet
 # Optional header image (relative to `static/media/` folder).
 header:
   caption: ""
-  image: ""
+  image: "coull.jpg"
 ---
 
 
@@ -16,8 +16,8 @@ Since the mid-1980s the Coull Quartet has made over 30 recordings featuring a wi
 
 Their impressive and wide-ranging list of commissions includes works by Sally Beamish, Edward Cowie, Joe Cutler, David Matthews, Nicholas Maw, Robert Simpson and Howard Skempton. These include string quartets, quintets with piano or wind instruments, works with solo voice or choir, and even a piece for quartet and table tennis players.
 
-Musicians: Roger Coull (violin), Philip Gallaway (violin), Jonathan Barritt (viola), Nicholas Roberts (cello). 
+Musicians: Roger Coull (violin), Philip Gallaway (violin), Jonathan Barritt (viola), Nicholas Roberts (cello).
 
-[Webpage](http://www.coullquartet.com) 
+[Webpage](http://www.coullquartet.com)
 
 [Facebook page](https://www.facebook.com/people/The-Coull-Quartet/100063018892350/))
