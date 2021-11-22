@@ -19,21 +19,18 @@ interests:
 
 
 social:
-- icon: link
-icon_pack: fas
-link: https://massimilianodiluca.info
 - icon: google-scholar
-icon_pack: ai
-link: https://scholar.google.com/citations?user=CQO9dewAAAAJ&hl=en
+  icon_pack: ai
+  link: https://scholar.google.com/citations?user=CQO9dewAAAAJ&hl=en
 - icon: twitter
-icon_pack: fab
-link: https://twitter.com/otmiv
+  icon_pack: fab
+  link: https://twitter.com/otmiv
 - icon: linkedin
-icon_pack: fab
-link: https://www.linkedin.com/in/ryan-stables-2660b4155/
+  icon_pack: fab
+  link: https://www.linkedin.com/in/ryan-stables-2660b4155/
 - icon: researchgate
-icon_pack: fab
-link: https://www.researchgate.net/profile/Ryan-Stables
+  icon_pack: fab
+  link: https://www.researchgate.net/profile/Ryan-Stables
 
 user_groups:
 - Principal Investigators
