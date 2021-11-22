@@ -7,7 +7,7 @@ superuser: false
 # Organizations/Affiliations
 organizations:
 - name: Birmingham City University
-url: 'https://www.bcu.ac.uk/digital-technology/about-us/our-expertise/our-staff/ryan-stables'
+  url: 'https://www.bcu.ac.uk/digital-technology/about-us/our-expertise/our-staff/ryan-stables'
 
 
 
