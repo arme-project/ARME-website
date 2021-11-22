@@ -25,7 +25,6 @@ link: https://massimilianodiluca.info
 - icon: google-scholar
 icon_pack: ai
 link: https://scholar.google.com/citations?user=CQO9dewAAAAJ&hl=en
-
 - icon: twitter
 icon_pack: fab
 link: https://twitter.com/otmiv
