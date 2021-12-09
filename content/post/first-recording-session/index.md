@@ -1,6 +1,6 @@
 ---
 title: First recording session
-date: 2021-10-08T23:10:45.249Z
+date: 2021-10-06T23:10:45.249Z
 draft: false
 featured: false
 ---
