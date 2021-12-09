@@ -29,7 +29,7 @@ interests:
 
 education:
   courses:
-  - course: 2014	PhD in Computational Neuroscience
+  - course:	PhD in Computational Neuroscience
     institution: The Edmond and Lily Safra Center for Brain Sciences (ELSC), The Hebrew University of Jerusalem
     year: 2014
     logo:
@@ -40,7 +40,7 @@ education:
   - course: BSc in Mathematics and Physics, Magna cum Laude
     institution: Talpiot Military Academy, The Hebrew University Jerusalem
     year: 2000
-    logo: 
+    logo:
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
