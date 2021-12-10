@@ -17,7 +17,7 @@ organizations:
 bio: Tom is a postdoctoral researcher in the Institute for Digital Healthcare at the University of Warwick.
 
 interests:
-- Multi-pitch Estimation - Specifically non-ML approaches.
+- Multi-pitch Estimation - Specifically non-ML approaches
 - Mathematical Modelling
 - Algorithms
 - Intersections between Healthcare and Computer Science/Mathematics

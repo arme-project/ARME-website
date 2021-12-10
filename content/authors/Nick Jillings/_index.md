@@ -12,6 +12,9 @@ organizations:
 email: ""
 
 
+interests:
+- Audio Plugins
+
 superuser: false
 authors:
 - Nick Jillings

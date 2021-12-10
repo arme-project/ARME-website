@@ -17,6 +17,10 @@ organizations:
 - name:  University of Birmingham
   url: ""
 
+interests:
+  - Perception and action
+  - Movement control
+  - Internal models
 
 education:
   courses:

@@ -15,6 +15,11 @@ highlight_name: false
 avatar_filename: avatar
 
 
+interests:
+- Haptics
+- Human-Computer interfaces
+- Synchronisation
+- Rehabilitation
 
 social:
 - icon: web

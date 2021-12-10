@@ -18,6 +18,10 @@ organizations:
   url: ""
 
 
+interests:
+  - Haptics
+  - Virtual Reality
+  - VideoCcapture
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons

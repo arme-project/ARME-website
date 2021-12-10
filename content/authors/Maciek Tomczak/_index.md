@@ -20,8 +20,7 @@ organizations:
 highlight_name: false
 avatar_filename: avatar
 
-# Short bio (displayed in user profile at end of posts as a single sentence)
-bio:
+
 interests:
 - Audio engineering
 - Digital signal processing
