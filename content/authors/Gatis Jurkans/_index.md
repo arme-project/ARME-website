@@ -1,10 +1,10 @@
 ---
 # Display name
-title: Gatis Jurkāns
+title: Gatis Jurkans
 
 # Username (this should match the folder name)
 authors:
-- Gatis Jurkāns
+- Gatis Jurkans
 
 # Is this the primary user of the site?
 superuser: false
@@ -50,4 +50,3 @@ email: ""
 user_groups:
 - Research Assistants
 ---
-

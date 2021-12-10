@@ -4,7 +4,7 @@ title: Alan Wing
 
 # Username (this should match the folder name)
 authors:
-- alan
+- Alan Wing
 
 # Is this the primary user of the site?
 superuser: false
@@ -18,13 +18,13 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio:  
+bio:
 
 interests:
 
 education:
   courses:
-  - course: PhD 
+  - course: PhD
     institution: McMaster
   - course: BSc
     institution: Edinburgh

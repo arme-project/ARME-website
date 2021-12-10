@@ -5,7 +5,12 @@ title: Maciek Tomczak
 # Role/position
 role: Post-doctoral Research Fellow
 
+# Username (this should match the folder name)
+authors:
+- Maciek Tomczak
 
+# Is this the primary user of the site?
+superuser: false
 
 # Organizations/Affiliations
 organizations:
@@ -33,9 +38,7 @@ social:
   link: https://maciek-tomczak.github.io/
 
 email: ""
-superuser: false
-authors:
-- Maciek Tomczak
+
 user_groups:
 - Researchers
 ---
