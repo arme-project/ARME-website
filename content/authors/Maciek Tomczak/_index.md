@@ -27,8 +27,7 @@ interests:
 - Music informatics
 - Machine learning
 
-education:
-  courses:
+
 
 social:
 - icon: web
@@ -40,4 +39,3 @@ email: ""
 user_groups:
 - Researchers
 ---
-  Bio
