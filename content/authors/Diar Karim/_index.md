@@ -10,15 +10,15 @@ authors:
 superuser: false
 
 # Role/position
-role:  
+role:  Post-doctoral Research Fellow
 
 # Organizations/Affiliations
 organizations:
-- name:  
+- name:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio:  
+bio:
 
 interests:
 
@@ -31,7 +31,9 @@ education:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
 social:
-
+- icon: link
+  icon_pack: fas
+  link: https://diarkarim.com
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
