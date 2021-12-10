@@ -9,16 +9,6 @@ organizations:
 - name: Semantic Audio LTD
   url: ""
 
-interests:
-
-
-education:
-  courses:
-
-
-
-social:
-
 email: ""
 
 

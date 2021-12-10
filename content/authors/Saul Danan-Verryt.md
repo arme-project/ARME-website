@@ -2,6 +2,9 @@
 # Display name
 title: Saul Danan-Verryt
 
+authors:
+- Saul Danan-Verryt
+
 # Role/position
 role: MSc student
 
@@ -12,12 +15,6 @@ organizations:
   - name: University of Birmingham
     url: ""
 
-# Short bio (displayed in user profile at end of posts as a single sentence)
-bio:
-interests:
- 
-education:
-  courses:
 
 
 # Social/Academic Networking
@@ -29,8 +26,7 @@ social:
 
 email: ""
 superuser: false
-authors:
-- Saul Danan-Verryt
+
 user_groups:
 - Students
 ---

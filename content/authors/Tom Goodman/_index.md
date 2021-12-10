@@ -5,7 +5,8 @@ title: Tom Goodman
 # Role/position
 role: Post-doctoral Research Fellow
 
-
+authors:
+- Tom Goodman
 
 # Organizations/Affiliations
 organizations:
@@ -55,8 +56,7 @@ social:
     link: https://github.com/tauomicronmu
 email: ""
 superuser: false
-authors:
-- Tom Goodman
+
 user_groups:
 - Researchers
 ---
