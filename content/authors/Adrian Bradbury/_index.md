@@ -17,6 +17,12 @@ organizations:
   url: ""
 
 
+  social:
+  - icon: link
+    icon_pack: fas
+    link: https://www.musicianscience.org
+
+
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
