@@ -7,6 +7,10 @@ avatar_filename: avatar
 
 bio:
 
+
+education:
+  courses:
+  
 social:
 - icon: web
   icon_pack: fab

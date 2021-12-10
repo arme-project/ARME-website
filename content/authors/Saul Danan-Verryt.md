@@ -9,16 +9,16 @@ role: MSc student
 
 # Organizations/Affiliations
 organizations:
-  - name: University of Birmingham   
+  - name: University of Birmingham
     url: ""
 
 # Short bio (displayed in user profile at end of posts as a single sentence)
-bio: 
+bio:
 interests:
-- 
+ 
 education:
-courses:
-  - 
+  courses:
+
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -34,4 +34,3 @@ authors:
 user_groups:
 - Students
 ---
-

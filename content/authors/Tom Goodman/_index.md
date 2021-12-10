@@ -18,14 +18,14 @@ bio: Tom is a postdoctoral researcher in the Institute for Digital Healthcare at
 interests:
 - Multi-pitch Estimation - Specifically non-ML approaches.
 - Mathematical Modelling
-- Algorithms 
-- Intersections between Healthcare and Computer Science/Mathematics  
-- Pedagogy in Computer Science/Mathematics - Particularly Social Constructivistic Approaches 
+- Algorithms
+- Intersections between Healthcare and Computer Science/Mathematics
+- Pedagogy in Computer Science/Mathematics - Particularly Social Constructivistic Approaches
 - Diversity in STEM
 
 education:
-courses:
-  - course: PhD in Computer Science 
+  courses:
+  - course: PhD in Computer Science
     institution: University of Birmingham
     year: TBC
   - course: BSc in Computer Science
@@ -43,15 +43,15 @@ social:
     link: https://twitter.com/tauomicronmu
   - icon: google-scholar
     icon_pack: ai
-    link: https://scholar.google.com/citations?user=z8m3-FYAAAAJ 
-  - icon: researchgate 
-    icon_pack: fab 
-    link: https://www.researchgate.net/profile/Tom-Goodman 
-  - icon: orcid 
+    link: https://scholar.google.com/citations?user=z8m3-FYAAAAJ
+  - icon: researchgate
     icon_pack: fab
-    link: https://orcid.org/0000-0001-9283-5010 
+    link: https://www.researchgate.net/profile/Tom-Goodman
+  - icon: orcid
+    icon_pack: fab
+    link: https://orcid.org/0000-0001-9283-5010
   - icon: github
-    icon_pack: fab 
+    icon_pack: fab
     link: https://github.com/tauomicronmu
 email: ""
 superuser: false
@@ -60,4 +60,3 @@ authors:
 user_groups:
 - Researchers
 ---
-

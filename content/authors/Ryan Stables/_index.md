@@ -13,6 +13,8 @@ organizations:
   url: 'https://www.bcu.ac.uk/digital-technology/about-us/our-expertise/our-staff/ryan-stables'
 
 
+education:
+  courses:
 
 interests:
 - Audio engineering
