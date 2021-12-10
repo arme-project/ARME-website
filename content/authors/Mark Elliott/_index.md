@@ -20,6 +20,8 @@ organizations:
 - name: University of Warwick
   url: ""
 superuser: false
+authors:
+- Mark Elliott
 user_groups:
 - Principal Investigators
 ---
