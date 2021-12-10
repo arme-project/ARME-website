@@ -1,5 +1,8 @@
 ---
+title: Maria Witek
 role: Senior Research Fellow
+highlight_name: false
+avatar_filename: avatar
 interests:
 - Music
 - Temporal Perception
@@ -32,10 +35,11 @@ education:
     year: "2008 "
 superuser: false
 
+authors:
+- Maria Witek
 user_groups:
-
 - Principal Investigators
-title: Maria Witek
+
 
 ---
 Dr Maria Witek is Senior Birmingham Fellow at the Department of Music, School of Languages, Cultures, Art History and Music, University of Birmingham. Her research addresses the psychology, cognitive neuroscience and cognitive philosophy of musical rhythm, body-movement and affect, using methods such as brain imaging, motion-capture and music analysis. She also writes about musical embodiment and dance music experience.
