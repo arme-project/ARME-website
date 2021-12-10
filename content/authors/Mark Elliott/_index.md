@@ -2,15 +2,20 @@
 title: Mark Elliott
 role: Associate Professor
 
+authors:
+- Mark Elliott
+
+# Organizations/Affiliations
+organizations:
+- name: University of Warwick
+  url: ""
+superuser: false
+
 highlight_name: false
 avatar_filename: avatar
 
-bio:
 
 
-education:
-  courses:
-  
 social:
 - icon: web
   icon_pack: fab
@@ -26,13 +31,8 @@ social:
   link: https://www.linkedin.com/in/marktelliott/
 email: ""
 
-# Organizations/Affiliations
-organizations:
-- name: University of Warwick
-  url: ""
-superuser: false
-authors:
-- Mark Elliott
+
+
 user_groups:
 - Principal Investigators
 ---

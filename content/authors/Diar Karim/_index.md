@@ -14,16 +14,9 @@ role:  Post-doctoral Research Fellow
 
 # Organizations/Affiliations
 organizations:
-- name:
+- name: University of Birmingham
   url: ""
 
-# Short bio (displayed in user profile at end of posts)
-bio:
-
-interests:
-
-education:
-  courses:
 
 
 # Social/Academic Networking
