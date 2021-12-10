@@ -1,6 +1,9 @@
 ---
 title: Ryan Stables
 role: Senior Lecturer
+authors:
+- Ryan Stables
+
 avatar_filename: avatar
 social: []
 superuser: false

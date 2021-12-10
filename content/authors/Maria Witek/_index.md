@@ -1,5 +1,9 @@
 ---
 title: Maria Witek
+
+authors:
+- Maria Witek
+
 role: Senior Research Fellow
 
 organizations:
@@ -41,8 +45,7 @@ education:
     year: "2008 "
 
 superuser: false
-authors:
-- Maria Witek
+
 user_groups:
 - Principal Investigators
 ---
