@@ -8,7 +8,10 @@
 #  url = "/"
 #  weight = 10
 
-
+[[main]]
+name = "News"
+url = "post"
+weight = 20
 
 [[main]]
   name = "Consortium"
@@ -26,10 +29,7 @@
   url = "publication"
   weight = 50
 
-  [[main]]
-  name = "News"
-  url = "post"
-  weight = 60
+
 
   [[main]]
     name = "Twitter"
