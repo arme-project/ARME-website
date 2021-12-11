@@ -3,7 +3,7 @@ title: Mark Elliott
 role: Associate Professor
 
 authors:
-- Mark Elliott
+- Mark_Elliott
 
 # Organizations/Affiliations
 organizations:

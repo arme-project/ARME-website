@@ -4,7 +4,7 @@ title: Katrina Galsworthy
 
 # Username (this should match the folder name)
 authors:
-- Katrina Galsworthy
+- Katrina_Galsworthy
 
 # Is this the primary user of the site?
 superuser: false

@@ -4,7 +4,7 @@ title: Adrian Bradbury
 
 # Username (this should match the folder name)
 authors:
-- Adrian Bradbury
+- Adrian_Bradbury
 
 # Is this the primary user of the site?
 superuser: false

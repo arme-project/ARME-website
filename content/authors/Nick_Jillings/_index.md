@@ -1,6 +1,7 @@
 ---
 title: Nick Jillings
-
+authors:
+- Nick_Jillings
 
 highlight_name: false
 role:
@@ -16,8 +17,7 @@ interests:
 - Audio Plugins
 
 superuser: false
-authors:
-- Nick Jillings
+
 user_groups:
 - Industry Partners
 ---

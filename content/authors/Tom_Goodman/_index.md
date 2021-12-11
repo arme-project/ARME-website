@@ -6,7 +6,7 @@ title: Tom Goodman
 role: Post-doctoral Research Fellow
 
 authors:
-- Tom Goodman
+- Tom_Goodman
 
 # Organizations/Affiliations
 organizations:

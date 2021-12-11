@@ -4,7 +4,7 @@ title: Poppy Aves
 
 # Username (this should match the folder name)
 authors:
-- Poppy Aves
+- Poppy_Aves
 
 # Is this the primary user of the site?
 superuser: false
@@ -30,7 +30,7 @@ education:
     year: 2021
     logo: education-logos/bu.png
   - course: BSc Psychology
-    institution: University of Sheffield 
+    institution: University of Sheffield
     logo: education-logos/uts.png
     year: 2019
 
@@ -57,4 +57,3 @@ email: ""
 user_groups:
 - Research Assistants
 ---
-

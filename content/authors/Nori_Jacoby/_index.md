@@ -4,7 +4,7 @@ title: Nori Jacoby
 
 # Username (this should match the folder name)
 authors:
-- Nori Jacoby
+- Nori_Jacoby
 
 # Is this the primary user of the site?
 superuser: false

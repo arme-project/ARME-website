@@ -4,7 +4,7 @@ title: Gatis Jurkans
 
 # Username (this should match the folder name)
 authors:
-- Gatis Jurkans
+- Gatis_Jurkans
 
 # Is this the primary user of the site?
 superuser: false

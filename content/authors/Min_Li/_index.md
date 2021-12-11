@@ -5,7 +5,8 @@ title: Min Susan Li
 # Role/position
 role: Post-doctoral Research Fellow
 
-
+authors:
+- Min_Li
 
 # Organizations/Affiliations
 organizations:
@@ -48,8 +49,7 @@ social:
     link: https://scholar.google.com/citations?user=1TxnQmMAAAAJ&hl=en
 email: ""
 superuser: false
-authors:
-- Min Li
+
 user_groups:
 - Researchers
 ---

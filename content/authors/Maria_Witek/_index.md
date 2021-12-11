@@ -2,7 +2,7 @@
 title: Maria Witek
 
 authors:
-- Maria Witek
+- Maria_Witek
 
 role: Senior Research Fellow
 

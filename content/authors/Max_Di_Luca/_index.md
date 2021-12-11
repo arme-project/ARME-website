@@ -1,6 +1,8 @@
 ---
 title: Max Di Luca
 
+authors:
+- Max Di Luca
 
 highlight_name: false
 role: Associate Professor
@@ -64,8 +66,7 @@ email: ""
 
 
 superuser: false
-authors:
-- Max Di Luca
+
 user_groups:
 - Principal Investigators
 ---

@@ -7,7 +7,7 @@ role: Post-doctoral Research Fellow
 
 # Username (this should match the folder name)
 authors:
-- Maciek Tomczak
+- Maciek_Tomczak
 
 # Is this the primary user of the site?
 superuser: false
