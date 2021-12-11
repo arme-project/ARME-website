@@ -1,5 +1,5 @@
 ---
-title:
+title: Partners involved in the project
 
 # View.
 #   1 = List
@@ -12,3 +12,4 @@ header:
   caption: ""
   image: ""
 ---
+
