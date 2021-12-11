@@ -15,12 +15,12 @@ The Sensory Motor Neuroscience lab in the Schoool of Psychology performs interdi
 The Department of Music's worldleading research spans traditional musicology, electronic music and music technology, electroacoustic composition, and the cognitive neuroscience of music. The £16m Bramall Music building in
 UOB’s new Green Heart campus houses the concert sound system of the Birmingham Electro Acoustic Sound Theatre (BEAST) which is a catalyst for creation and innovation in the field.
 
-[Max Di Luca]({{< ref "/authors/Max Di Luca" >}} "About Us")
+[Max Di Luca]({{< ref "/authors/Max_Di_Luca" >}} "About Us")
 
-[Alan Wing]({{< ref "/authors/Alan Wing" >}} "About Us")
+[Alan Wing]({{< ref "/authors/Alan_Wing" >}} "About Us")
 
-[Maria Witek]({{< ref "/authors/Maria Witek" >}} "About Us")
+[Maria Witek]({{< ref "/authors/Maria_Witek" >}} "About Us")
 
-[Min Li]({{< ref "/authors/Min Li" >}} "About Us")
+[Min Li]({{< ref "/authors/Min_Li" >}} "About Us")
 
-[Katrina Galsworthy]({{< ref "/authors/Katrina Galsworthy" >}} "About Us")
+[Katrina Galsworthy]({{< ref "/authors/Katrina_Galsworthy" >}} "About Us")

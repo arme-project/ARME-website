@@ -18,4 +18,4 @@ Semantic Audio Labs was established as a company in December 2018, by a group of
 
 
 
-[Ryan Stables]({{< ref "/authors/Ryan Stables" >}} "About Us")
+[Ryan Stables]({{< ref "/authors/Ryan_Stables" >}} "About Us")
