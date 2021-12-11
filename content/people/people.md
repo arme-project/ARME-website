@@ -31,4 +31,5 @@ design:
   show_interests: false
   show_role: false
   show_social: false
+  show_organizations: true
 ---
