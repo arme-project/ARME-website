@@ -31,6 +31,14 @@
         {{- else -}}
           {{- site.Title -}}
         {{- end -}}
+
+        {{ if site.Menus.main }}
+        <button type="button" class="navbar-toggler" data-toggle="collapse"
+                data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="{{ i18n "toggle_navigation" }}">
+        <span><i class="fas fa-bars"></i></span>
+        </button>
+        {{ end }}
+        
       </a>
     </div>
     {{end}}
