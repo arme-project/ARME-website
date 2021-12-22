@@ -21,21 +21,11 @@
     <div class="d-none d-lg-inline-flex">
       <a class="navbar-brand" href="{{ "/" | relLangURL }}">
         {{- if $has_logo -}}
-          <img src="{{ $logo.RelPermalink }}" alt="{{ site.Title }}"
+          <img src="/media/logo.svg" alt="{{ site.Title }}"
           {{with site.Params.header.image.width}}width="{{.}}"{{end}}
           {{with site.Params.header.image.height}}height="{{.}}"{{end}} id="logo">
 
 
-          <script>
-            document.addEventListener('wcThemeChange', (e) => {
-              // console.log('isDarkTheme? ' + e.detail.isDarkTheme());
-              if (e.detail.isDarkTheme()) {
-                document.getElementById("logo").src="/media/logo-dark.svg";
-              } else {
-                document.getElementById("logo").src="/media/logo.svg";
-              }
-              });
-            </script>
 
 
         {{- else -}}
