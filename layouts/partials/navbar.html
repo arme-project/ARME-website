@@ -1,21 +1,4 @@
-{{ $show_navbar := site.Params.main_menu.enable | default true }}
-{{ if $show_navbar }}
 
-{{ $current_page := . }}
-{{ $highlight_active_link := site.Params.main_menu.highlight_active_link | default true }}
-{{ $show_current_language := site.Params.main_menu.show_language | default false }}
-
-{{/* Get site logo. */}}
-{{ $show_logo := site.Params.main_menu.show_logo | default true }}
-{{ $has_logo := fileExists "static/media/logo.png" | or (fileExists "static/media/logo.svg") }}
-{{ $logo := "" }}
-{{ if $has_logo }}
-    {{ $logo = resources.Get "media/logo.svg" }}
-{{ end }}
-
-<header class="header--fixed">
-<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
-  <div class="container-xl">
 
     {{if $show_logo}}
     <div class="d-none d-lg-inline-flex">
@@ -32,25 +15,7 @@
           {{- site.Title -}}
         {{- end -}}
 
-        {{ if site.Menus.main }}
-        <button type="button" class="navbar-toggler" data-toggle="collapse"
-                data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="{{ i18n "toggle_navigation" }}">
-        <span><i class="fas fa-bars"></i></span>
-        </button>
-        {{ end }}
-        
+
       </a>
     </div>
     {{end}}
-
-
-
-
-
-  </div><!-- /.container -->
-</nav>
-
-<div id="navbar-navidad"></div>
-
-</header>
-{{end}}{{/* End show navbar. */}}
