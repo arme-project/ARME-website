@@ -36,7 +36,16 @@
                 data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="{{ i18n "toggle_navigation" }}">
         <span><i class="fas fa-bars"></i></span>
         </button>
-    
+
+
+        <div class="dropdown-menu">
+          {{ range .Children }}
+            <a class="dropdown-item" href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>
+              {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
+            </a>
+          {{ end }}
+        </div>
+
       </a>
     </div>
     {{end}}
@@ -48,7 +57,7 @@
   </div><!-- /.container -->
 </nav>
 
-<div id="navbar-navidad"></div>
+
 
 </header>
 {{end}}{{/* End show navbar. */}}
