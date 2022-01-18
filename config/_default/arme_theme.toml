@@ -3,12 +3,12 @@ name = "arme_theme"
 
 [light]
   # Primary
-  primary = "#A2A2A2"
+  primary = "#a2a2a2"
 
   # Menu
   menu_primary = "#fff"
   menu_text = "#34495e"
-  menu_text_active = "#848A9B"
+  menu_text_active = "#848a9b"
   menu_title = "#2b2b2b"
 
   # Home sections
