@@ -38,13 +38,7 @@
         </button>
 
 
-        <div class="dropdown-menu">
-          {{ range .Children }}
-            <a class="dropdown-item" href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>
-              {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
-            </a>
-          {{ end }}
-        </div>
+      
 
       </a>
     </div>
