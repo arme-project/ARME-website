@@ -5,23 +5,25 @@
 {{ $highlight_active_link := site.Params.main_menu.highlight_active_link | default true }}
 {{ $show_current_language := site.Params.main_menu.show_language | default false }}
 
-
+{{/* Get site logo. */}}
+{{ $show_logo := site.Params.main_menu.show_logo | default true }}
+{{ $has_logo := fileExists "static/media/logo.png" | or (fileExists "static/media/logo.svg") }}
+{{ $logo := "" }}
+{{ if $has_logo }}
     {{ $logo = resources.Get "media/logo.svg" }}
-
+{{ end }}
 
 <header class="header--fixed">
 <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
   <div class="container-xl">
 
     <div class="d-none d-lg-inline-flex">
-    a
-      <a class="navbar-brand" href="{{ "/" | relLangURL }}">
-      b
+      <a class="navbar-brand">
           <img src="/media/logo.svg" alt="{{ site.Title }}"
           {{with site.Params.header.image.width}}width="{{.}}"{{end}}
           {{with site.Params.header.image.height}}height="{{.}}"{{end}} id="logo">
 
-c
+
 
 
 
