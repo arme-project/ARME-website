@@ -17,7 +17,6 @@
 <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
   <div class="container-xl">
 
-    {{if $show_logo}}
     <div class="d-none d-lg-inline-flex">
       <a class="navbar-brand" href="{{ "/" | relLangURL }}">
         {{- if $has_logo -}}
@@ -28,9 +27,7 @@
 
 
 
-        {{- else -}}
-          {{- site.Title -}}
-        {{- end -}}
+
 
         <button type="button" class="navbar-toggler" data-toggle="collapse"
                 data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="{{ i18n "toggle_navigation" }}">
@@ -38,11 +35,11 @@
         </button>
 
 
-      
+
 
       </a>
     </div>
-    {{end}}
+
 
     {{ if site.Menus.main }}
     <button type="button" class="navbar-toggler" data-toggle="collapse"
