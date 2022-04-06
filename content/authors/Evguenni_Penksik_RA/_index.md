@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: MSc student
+role: Research assistant
 
 # Organizations/Affiliations
 organizations:
@@ -18,7 +18,7 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts as a single sentence)
-bio: Genia has a Mechanical Engineer degree from Warwick and a MSc in Computational Neuroscience and Cognitive Robotics from the University of Birmingham. 
+bio: Genia has a Mechanical Engineer degree from Warwick and a MSc in Computational Neuroscience and Cognitive Robotics from the University of Birmingham.
 
 
 
