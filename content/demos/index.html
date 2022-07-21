@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="ARME Web Demo.">
+  <meta name="keywords" content="ARME, Onset Annotation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nerfies: Deformable Neural Radiance Fields</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://arme-project.co.uk/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://arme-project.co.uk/">
+            ARME Project
+          </a>
+          <a class="navbar-item" href="https://arme-project.co.uk/publication/synchronisation-in-a-virtual-quartet/">
+            Synchronisation in a virtual quartet
+          </a>
+          <a class="navbar-item" href="https://arme-project.co.uk/publication/synchronisation-in-a-violin-duo/">
+            Synchronisation with a violin duo
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Soft Onset Annotation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Maciek Tomczak</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Min Lee</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Ryan Stables</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Adrian Bradbury</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Maria Witek</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Mark Elliott</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Jason Hockman</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Max Di Luca</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Alan Wing</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Birmingham City University,</span>
+            <span class="author-block"><sup>2</sup>University of Birmingham</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            String quartet is a predominant chamber ensemble in classical music. Instruments in the string quartet typically include two violins, viola, and cello. 
+            String quartet music is nonrepetitive and strongly expressive. From both, MIR and music perception perspectives this makes it a complex musical genre to analyse and interpret. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Animation all participants. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Inter-annotator Agreements for All Participants</h2>
+
+        <!-- Interpolating Viola. -->
+        <h3 class="title is-4">Viola</h3>
+        <div class="content has-text-justified">
+          <p>
+            Pairwise agreements between 24 annotators using F-measure score sorted by years of musical experience.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="images/all/VA/000000.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>20ms Tolerance Window</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-va">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-va"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="images/all/VA/000010.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">70ms Tolerance Window</p>
+          </div>
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+
+        <!-- Interpolating Cello. -->
+        <h3 class="title is-4">Cello</h3>
+        <div class="content has-text-justified">
+          <p>
+            Pairwise agreements between 24 annotators using F-measure score sorted by years of musical experience.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="images/all/VC/000000.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>20ms Tolerance Window</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vc">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vc"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="images/all/VC/000010.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">70ms Tolerance Window</p>
+          </div>
+        </div>
+        <br/>
+        <!--/ Interpolating. -->        
+
+        <!-- Interpolating First Violin. -->
+        <h3 class="title is-4">First Violin</h3>
+        <div class="content has-text-justified">
+          <p>
+            Pairwise agreements between 24 annotators using F-measure score sorted by years of musical experience.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="images/all/VN1/000000.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>20ms Tolerance Window</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vn1">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vn1"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="images/all/VN1/000010.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">70ms Tolerance Window</p>
+          </div>
+        </div>
+        <br/>
+        <!--/ Interpolating. -->     
+
+        <!-- Interpolating Second Violin. -->
+        <h3 class="title is-4">Second Violin</h3>
+        <div class="content has-text-justified">
+          <p>
+            Pairwise agreements between 24 annotators using F-measure score sorted by years of musical experience.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="images/all/VN2/000000.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>20ms Tolerance Window</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vn2">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vn2"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="images/all/VN2/000010.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">70ms Tolerance Window</p>
+          </div>
+        </div>
+        <br/>
+        <!--/ Interpolating. -->   
+        
+        
+    <!-- Animation 16 participants. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Inter-annotator Agreements for a Subset of Participants</h2>
+
+        <!-- Interpolating Viola. -->
+        <h3 class="title is-4">Viola</h3>
+        <div class="content has-text-justified">
+          <p>
+            Pairwise F-measure agreements between 16 annotators with 5 or more years of musical experience.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="images/16_participants/VA/000000.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>20ms Tolerance Window</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-va-16">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-va-16"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="images/16_participants/VA/000010.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">70ms Tolerance Window</p>
+          </div>
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+
+        <!-- Interpolating Cello. -->
+        <h3 class="title is-4">Cello</h3>
+        <div class="content has-text-justified">
+          <p>
+            Pairwise F-measure agreements between 16 annotators with 5 or more years of musical experience.          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="images/16_participants/VC/000000.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>20ms Tolerance Window</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vc-16">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vc-16"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="images/16_participants/VC/000010.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">70ms Tolerance Window</p>
+          </div>
+        </div>
+        <br/>
+        <!--/ Interpolating. -->        
+
+        <!-- Interpolating First Violin. -->
+        <h3 class="title is-4">First Violin</h3>
+        <div class="content has-text-justified">
+          <p>
+            Pairwise F-measure agreements between 16 annotators with 5 or more years of musical experience.          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="images/16_participants/VN1/000000.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>20ms Tolerance Window</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vn1-16">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vn1-16"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="images/16_participants/VN1/000010.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">70ms Tolerance Window</p>
+          </div>
+        </div>
+        <br/>
+        <!--/ Interpolating. -->     
+
+        <!-- Interpolating Second Violin. -->
+        <h3 class="title is-4">Second Violin</h3>
+        <div class="content has-text-justified">
+          <p>
+            Pairwise agreements between 24 annotators using F-measure score sorted by years of musical experience.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="images/16_participants/VN2/000000.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>20ms Tolerance Window</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vn2-16">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vn2-16"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="images/16_participants/VN2/000010.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">70ms Tolerance Window</p>
+          </div>
+        </div>
+        <br/>
+        <!--/ Interpolating. -->     
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Related work.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://homes.cs.washington.edu/~kpar/nerfies/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons 
+              Attribution-ShareAlike 4.0 International License</a> with source code available <a href="https://github.com/nerfies/nerfies.github.io">here</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
