@@ -18,6 +18,5 @@ A collection of demos accompanying our [publications](/publication).
 
 --------------------------------------
 
-## [:violin: Soft Onset Annotation of String Quartet Recordings :musical_score:](/demos/annotations.html)
 Coming soon.
 
