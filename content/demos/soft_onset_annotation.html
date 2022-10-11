@@ -79,13 +79,12 @@
   </div>
 </nav>
 
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Soft Onset Annotation</h1>
+          <h1 class="title is-1 publication-title">Soft Onset Annotation of String Quartet Recordings</h1>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -119,7 +118,8 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Birmingham City University, Sound and Music Analysis (SoMA) Group in Digital Media Technology (DMT) Lab, Birmingham,</span>
+            <span class="author-block"><sup>1</sup>Birmingham City University, Sound and Music Analysis (SoMA) Group in
+              Digital Media Technology (DMT) Lab, Birmingham,</span>
             <span class="author-block"><sup>2</sup>University of Birmingham, Birmingham, UK</span>
             <span class="author-block"><sup>3</sup>University of Warwick, Coventry, UK</span>
           </div>
@@ -128,54 +128,32 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+                    <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>Paper</span>
                 </a>
               </span>
+              <!-- Dataset Link. -->
               <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="ai ai-arxiv"></i>
+                    <i class="far fa-images"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>Annotation Data</span>
                 </a>
-              </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="far fa-images"></i>
+                    <i class="far fa-images"></i>
                   </span>
-                  <span>Data</span>
-                  </a>
+                  <span>Audio Data</span>
+                </a>
+              </span>             
             </div>
-
           </div>
         </div>
       </div>
@@ -183,33 +161,17 @@
   </div>
 </section>
 
-
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            String quartet is a predominant chamber ensemble in classical music. Instruments in the string quartet typically include two violins, viola, and cello. 
-            String quartet music is nonrepetitive and strongly expressive. From both, MIR and music perception perspectives this makes it a complex musical genre to analyse and interpret. 
+            Supplementary experimental data for the paper "Soft Onset Annotation of String Quartet Recordings". 
           </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Supplementary Data</h2>
-        <div class="content has-text-justified">
           <p>
-            The following is a supplementary data which accompanies the paper "Soft Onset Annotation of String Quartet Recordings".
+            We present an annotation study of string quartet recordings in four distinct experiments, where soft onset annotations from human annotators are inspected visually and using objective evaluation metrics. The experiments investigate the inter-annotator agreement between 24 participants and compare all experimental annotations against expert annotations as well as the state-of-the-art onset detection algorithms. In order to visualise the variability introduced by human annotators we use computational methods to extract microtiming profiles from recordings annotated by participants with different musical training. The results of our evaluations highlight challenging soft onset types for human annotators and automatic approaches. The experiments demonstrate a clear interdependence of higher musical experience to a higher inter-annotator agreement as well as a higher performance when compared to the state-of-the-art onset detection systems. We publish all experimental data part of this study to promote further research of best annotation practices of soft onsets. We also release an open dataset comprising 144 recordings of a string quartet performing an excerpt from Haydn Op. 74 No. 1, each with corresponding individual instrumental note onset annotations. Additionally, a single performance in the string quartet dataset includes overlapping annotations from all experiment participants. Audio is over 120 minutes, note onset annotations are over 20000. 
           </p>
         </div>
       </div>
@@ -227,7 +189,7 @@
         <h2 class="title is-3">Inter-annotator Agreements for All Participants</h2>
 
         <!-- Interpolating Viola. -->
-        <h3 class="title is-4">Viola</h3>
+        <h3 class="title is-4">Viola - 24 Annotators</h3>
         <div class="content has-text-justified">
           <p>
             Pairwise agreements between 24 annotators using F-measure score sorted by years of musical experience.
@@ -259,7 +221,7 @@
         <!--/ Interpolating. -->
 
         <!-- Interpolating Cello. -->
-        <h3 class="title is-4">Cello</h3>
+        <h3 class="title is-4">Cello - 24 Annotators</h3>
         <div class="content has-text-justified">
           <p>
             Pairwise agreements between 24 annotators using F-measure score sorted by years of musical experience.
@@ -291,7 +253,7 @@
         <!--/ Interpolating. -->        
 
         <!-- Interpolating First Violin. -->
-        <h3 class="title is-4">First Violin</h3>
+        <h3 class="title is-4">First Violin - 24 Annotators</h3>
         <div class="content has-text-justified">
           <p>
             Pairwise agreements between 24 annotators using F-measure score sorted by years of musical experience.
@@ -323,7 +285,7 @@
         <!--/ Interpolating. -->     
 
         <!-- Interpolating Second Violin. -->
-        <h3 class="title is-4">Second Violin</h3>
+        <h3 class="title is-4">Second Violin - 24 Annotators</h3>
         <div class="content has-text-justified">
           <p>
             Pairwise agreements between 24 annotators using F-measure score sorted by years of musical experience.
@@ -361,7 +323,7 @@
         <h2 class="title is-3">Inter-annotator Agreements for a Subset of Participants</h2>
 
         <!-- Interpolating Viola. -->
-        <h3 class="title is-4">Viola</h3>
+        <h3 class="title is-4">Viola - 16 Annotators</h3>
         <div class="content has-text-justified">
           <p>
             Pairwise F-measure agreements between 16 annotators with 5 or more years of musical experience.
@@ -393,7 +355,7 @@
         <!--/ Interpolating. -->
 
         <!-- Interpolating Cello. -->
-        <h3 class="title is-4">Cello</h3>
+        <h3 class="title is-4">Cello - 16 Annotators</h3>
         <div class="content has-text-justified">
           <p>
             Pairwise F-measure agreements between 16 annotators with 5 or more years of musical experience.          </p>
@@ -424,7 +386,7 @@
         <!--/ Interpolating. -->        
 
         <!-- Interpolating First Violin. -->
-        <h3 class="title is-4">First Violin</h3>
+        <h3 class="title is-4">First Violin - 16 Annotators</h3>
         <div class="content has-text-justified">
           <p>
             Pairwise F-measure agreements between 16 annotators with 5 or more years of musical experience.          </p>
@@ -455,7 +417,7 @@
         <!--/ Interpolating. -->     
 
         <!-- Interpolating Second Violin. -->
-        <h3 class="title is-4">Second Violin</h3>
+        <h3 class="title is-4">Second Violin - 16 Annotators</h3>
         <div class="content has-text-justified">
           <p>
             Pairwise agreements between 24 annotators using F-measure score sorted by years of musical experience.
