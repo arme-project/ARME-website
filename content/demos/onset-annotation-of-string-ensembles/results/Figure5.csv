@@ -1,0 +1,17 @@
+Instrument,Note type,TP rates
+VN1,open,0.8333
+VN1,fingered,0.8367
+VN1,bow,0.8649
+VN1,finger type,0.7787
+VN2,open,0.8124
+VN2,fingered,0.8444
+VN2,bow,0.8711
+VN2,finger type,0.7405
+VA,open,0.8771
+VA,fingered,0.8390
+VA,bow,0.8717
+VA,finger type,0.6938
+VC,open,0.7987
+VC,fingered,0.7305
+VC,bow,0.7491
+VC,finger type,0.6173

@@ -1,18 +1,18 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
-var INTERP_BASE = "images/all";
+var INTERP_BASE = "onset-annotation-of-string-ensembles/all";
 
 // all participants
-var INTERP_BASE_VA = "images/all/VA";
-var INTERP_BASE_VC = "images/all/VC";
-var INTERP_BASE_VN1 = "images/all/VN1";
-var INTERP_BASE_VN2 = "images/all/VN2";
+var INTERP_BASE_VA = "onset-annotation-of-string-ensembles/all/VA";
+var INTERP_BASE_VC = "onset-annotation-of-string-ensembles/all/VC";
+var INTERP_BASE_VN1 = "onset-annotation-of-string-ensembles/all/VN1";
+var INTERP_BASE_VN2 = "onset-annotation-of-string-ensembles/all/VN2";
 
 // 16 participants
-var INTERP_BASE_16VA = "images/16_participants/VA";
-var INTERP_BASE_16VC = "images/16_participants/VC";
-var INTERP_BASE_16VN1 = "images/16_participants/VN1";
-var INTERP_BASE_16VN2 = "images/16_participants/VN2";
+var INTERP_BASE_16VA = "onset-annotation-of-string-ensembles/16_participants/VA";
+var INTERP_BASE_16VC = "onset-annotation-of-string-ensembles/16_participants/VC";
+var INTERP_BASE_16VN1 = "onset-annotation-of-string-ensembles/16_participants/VN1";
+var INTERP_BASE_16VN2 = "onset-annotation-of-string-ensembles/16_participants/VN2";
 
 var NUM_INTERP_FRAMES = 11;
 

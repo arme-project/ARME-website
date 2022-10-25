@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="ARME Web Demo.">
+  <meta name="keywords" content="ARME, Onset Annotation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARME: Onset Annotation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://arme-project.co.uk/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+        <a class="navbar-item" href="https://arme-project.co.uk/">
+          ARME Project
+        </a>
+        <a class="navbar-item" href="https://arme-project.co.uk/demos/onset-annotation">
+          Onset Annotation of String Ensembles
+        </a>
+        <a class="navbar-item" href="https://arme-project.co.uk/publication/synchronisation-in-a-virtual-quartet/">
+          Synchronisation in a virtual quartet
+        </a>
+        <a class="navbar-item" href="https://arme-project.co.uk/publication/synchronisation-in-a-violin-duo/">
+          Synchronisation with a violin duo
+        </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">String Quartet Dataset</h1>
+
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Maciek Tomczak</a><sup>a</sup>,</span>
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Min Susan Lee</a><sup>b</sup>,</span>
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Adrian Bradbury</a><sup>b</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Mark Elliott</a><sup>c</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Ryan Stables</a><sup>a</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Maria Witek</a><sup>b</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Tom Goodman</a><sup>b</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Diar Karim</a><sup>b</sup>,
+            </span>            
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Max Di Luca</a><sup>b</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Alan Wing</a><sup>b</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Jason Hockman</a><sup>a</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>a</sup>Birmingham City University, <a href="https://somagroup.co.uk/">Sound and Music Analysis (SoMA) Group</a>, Birmingham, UK</span>
+              <br>
+            <span class="author-block"><sup>b</sup>University of Birmingham, Birmingham, UK</span>
+            <br>
+            <span class="author-block"><sup>c</sup>University of Warwick, Coventry, UK</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/arme-project/string-quartet-dataset" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Audio</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Description of ARME-SQD</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>Why?</b> <a href="">To perform a detailed analysis of note onset types in a range of different musical conditions</a>.
+            <br><br>
+
+            <b>What?</b>
+            <br>
+            <ul>
+              <li><a href="https://github.com/arme-project/string-quartet-dataset">Recordings of a string quartet playing an excerpt of Haydn's Op. 74 No. 1 Finale.</a></li>
+            <li>More coming soon.</li>
+            </ul>
+            
+            <b>How?</b> 
+            <br>
+            Using <a href="https://www.dpamicrophones.com/instrument/4099-instrument-microphone">DPA 4099 series Lavalier microphones</a> in the following setup.
+            <br><br>
+            <img src="./sqd/coulls.jpg" class="interpolation-image"
+            alt="Onset detection results from all systems per instrument." />
+            <br><br>
+            <b>Who?</b> The musicians in the above photo are the <a href="http://www.coullquartet.com/">Coull Quartet.</a>
+            <br><br>
+
+            <b>Musical scores?</b> <a href="https://github.com/arme-project/string-quartet-dataset">Yes.</a>
+            <br><br>
+
+            <b>Note onset annotations?</b> <a href="https://github.com/arme-project/string-quartet-dataset">Yes.</a>
+            <br><br>
+
+            <b>Note type annotations?</b> <a href="https://github.com/arme-project/string-quartet-dataset">Yes.</a>
+            <br><br>
+
+            <b>Was each performance recorded more than once?</b> <a href="https://github.com/arme-project/string-quartet-dataset">Yes, each performance was recorded 12 times.</a>
+            
+            <br><br>
+            <b>Were all recordings performed in the same style of playing?</b> <a href="https://github.com/arme-project/string-quartet-dataset"></a>
+            <p><a href="https://github.com/arme-project/string-quartet-dataset">No</a>, each piece was recorded 12 times (i.e., 12 separate takes) each for 3 different musical conditions. The conditions represent different playing styles, and were chosen to span a wide range of realistic performance types. The following are definitions of the three recorded conditions:</p>
+            <ul>
+              <li><b>Normal (NR)</b> condition represents a concert style performance.</li>
+              <li><b>Speeds (SP)</b> condition includes accelerando and decelerando spontaneously initiated by a single musician (i.e., the leader) throughout each performance. The other musicians (i.e., VN2, VA, VC) were asked to follow the leader to the best of their ability. The leader was free to choose the magnitude of temporal variation of a single accelerando followed by a decelerando in each performance. </li>
+              <li><b>Deadpan (DP)</b> condition represents performances, where musicians were asked to play with minimal expression in tempo and accentuation.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons 
+              Attribution-ShareAlike 4.0 International License</a> with source code available <a href="https://github.com/nerfies/nerfies.github.io">here</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

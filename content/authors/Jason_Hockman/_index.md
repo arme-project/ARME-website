@@ -43,7 +43,7 @@ social:
 user_groups:
 - Principal Investigators
 ---
-Jason Hockman is Associate Professor of Audio Engineering at Birmingham City University. He is a member of the Digital Media Technology Laboratory (DMT Lab), in which he leads the Sound and Music (SoMA) Group for computational analysis of sound and music and digital audio processing.
+Jason Hockman is Associate Professor of Audio Engineering at Birmingham City University. He is a member of the [Digital Media Technology Laboratory (DMT Lab)](https://www.bcu.ac.uk/computing/research/digital-media-technology), in which he leads the [Sound and Music Analysis (SoMA) Group](https://somagroup.co.uk/) for computational analysis of sound and music and digital audio processing.
 
 Jason's expertise is in music informatics, machine listening and computational musicology—topics in which he lectures and has published nearly 50 papers, journals, and conference proceedings. His research has focused on a variety of aspects related to computational rhythm and metre detection, music transcription, and content-based audio effects. Jason has received a Bachelor’s degree in Sociology from Cornell University (USA, 2000), a Masters in Music Technology from New York University (USA, 2007), and a PhD in Music Research from McGill University (Canada, 2014).
 

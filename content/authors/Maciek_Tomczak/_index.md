@@ -22,12 +22,16 @@ avatar_filename: avatar
 
 
 interests:
-- Audio engineering
+- Music information retrieval
+- Machine listening
+- Rhythm analysis
+- Drum transcription
+- Onset, beat and metre detection
 - Digital signal processing
-- Music informatics
 - Machine learning
-
-
+- Computational musicology
+- Interactive music systems
+- Neural drum synthesis
 
 social:
 - icon: web
@@ -39,3 +43,4 @@ email: ""
 user_groups:
 - Researchers
 ---
+Maciek is a PhD student in the [Sound and Music Analysis (SoMA) Group](https://somagroup.co.uk/). His work focuses on automated music transformations using deep learning, notably on neural drum synthesis, with an emphasis on introducing control over [rhythmic manipulation of percussion recordings](https://dl.acm.org/doi/10.1145/3394171.3413519).
