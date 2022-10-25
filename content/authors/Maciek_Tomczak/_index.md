@@ -43,4 +43,4 @@ email: ""
 user_groups:
 - Researchers
 ---
-Maciek is a PhD student in the [Sound and Music Analysis (SoMA) Group](https://somagroup.co.uk/). His work focuses on automated music transformations using deep learning, notably on neural drum synthesis, with an emphasis on introducing control over [rhythmic manipulation of percussion recordings](https://dl.acm.org/doi/10.1145/3394171.3413519).
+Maciek is a PhD student in the [Sound and Music Analysis (SoMA) Group](https://somagroup.co.uk/). His work focuses on [automated music transformations using deep learning](https://maciek-tomczak.github.io/), notably on neural drum synthesis, with an emphasis on introducing control over [rhythmic manipulation of percussion recordings](https://dl.acm.org/doi/10.1145/3394171.3413519).

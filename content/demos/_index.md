@@ -18,8 +18,8 @@ A collection of demos accompanying our [publications](/publication).
 
 --------------------------------------
 
-## [:violin: Onset Annotation of String Ensembles](/demos/onset-annotation.html)
-Check out the demo [:point_right: here.](/demos/onset-annotation.html)
+## [:memo: Onset Annotation of String Ensembles :memo:](/demos/onset-annotation.html)
+Check out our Github page [:point_right: here.](https://github.com/arme-project/haydn-annotation-dataset)
 
-## [:violin: ARME String Quartet Dataset](/demos/sqd.html)
-Check out dataset demo [:point_right: here.](/demos/sqd.html)
+## [:violin: ARME String Quartet Dataset :violin:](/demos/sqd.html)
+Check out dataset Github page here [:point_right: here.](https://github.com/arme-project/string-quartet-dataset)
