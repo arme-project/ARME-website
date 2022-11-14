@@ -187,14 +187,14 @@
             Supplementary experimental results for the paper <a href="https://github.com/arme-project/haydn-annotation-dataset">Annotation of Soft Onsets in String Ensemble Recordings</a>. 
           </p>
           <p>
-Onset detection is the process of identifying the start points of musical note events within an audio recording. 
-While the detection of percussive onsets is often considered a solved problem, soft onsets---as found in string instrument recordings---still pose a significant challenge for state-of-the-art algorithms due to weak transients and expressive deviations in note duration and signal energy. 
-The problem is further exacerbated by a paucity of data containing expert annotations and research related to best practices for curating soft onset annotations for string instruments. 
-To that end, an annotation study of string ensembles is presented in three distinct experiments, where soft onset annotations from human annotators are inspected visually and evaluated using objective metrics. 
-In order to visualise the variability introduced by human annotators, we investigate the inter-annotator agreement between 24 participants and compare all experimental annotations against expert annotations as well as the state-of-the-art onset detection algorithms. 
-The results of our evaluations highlight challenging soft onset types for both human annotators and automatic approaches. 
-The experiments demonstrate a clear relationship of longer musical experience and an increased inter-annotator agreement as well as a higher performance when compared to the state-of-the-art onset detection systems. To promote further research of best annotation practices of soft onsets and further investigations in the future, we have made all experimental data associated with this study publicly available. 
-In addition, we also publish the <a href="https://github.com/arme-project/virtuoso-strings">ARME Virtuoso Strings Dataset</a>, consisting of over 144 recordings of professional performances of an excerpt from Haydn's Op. 74 No. 1 Finale, <a href="https://github.com/arme-project/haydn-annotation-dataset">each with corresponding individual instrumental note onset annotations</a>.
+            Onset detection is the process of identifying the start points of musical note events within an audio recording. 
+            While the detection of percussive onsets is often considered a solved problem, soft onsets&#8212as found in string instrument recordings&#8212still pose a significant challenge for state-of-the-art algorithms. 
+            The problem is further exacerbated by a paucity of data containing expert annotations and research related to best practices for curating soft onset annotations for string instruments. 
+            To this end, we investigate inter-annotator agreement between 24 participants, extend an algorithm for determining the most consistent annotator, and compare the performance of human annotators and state-of-the-art onset detection algorithms. 
+            The experiments demonstrate a clear relationship of longer musical experience and an increased inter-annotator agreement as well as a higher performance when compared to the state-of-the-art onset detection systems. 
+            The results additionally highlight challenging soft onset types for both human annotators and automatic approaches. 
+            To promote research in best practices for annotation of soft onsets, we have made all experimental data associated with this study publicly available.
+            In addition, we also publish the <a href="https://github.com/arme-project/virtuoso-strings">ARME Virtuoso Strings Dataset</a>, consisting of over 144 recordings of professional performances of an excerpt from Haydn's Op. 74 No. 1 Finale, <a href="https://github.com/arme-project/haydn-annotation-dataset">each with corresponding individual instrumental note onset annotations</a>.
           </p>
         </div>
       </div>
@@ -527,8 +527,10 @@ In addition, we also publish the <a href="https://github.com/arme-project/virtuo
           
             <p>Figure 1. True positive rates per participant compared to ground truth expert annotations a_0 in NR12.</p>
             <br>
-            <p>Figure 1 shows the performance of each annotator a calculated as percentage of TP onsets per instrument and onset category when compared to the expert annotations a_0 (i.e., here considered ground truth). The reported results use tolerance window size of 25 ms and are presented for every annotation participant. The highest mean accuracy of 98%, 97% and 96% for all onset types is observed in annotators a_2, a_20 and a_23, respectively. The highest accuracy from a_2 was expected as that was the annotator with annotations closest to the average timing differences calculated from ACOs and was used as the basis for the expert annotations. Mean accuracies across all participants for the open and fingered string onsets as well as bow and finger type onsets are 83.0%, 81.3%, 83.9% and 70.8%, respectively. Overall, the finger type onsets which are played in succession after each bow onset represent the most difficult onset type to annotate. Additionally, the lowest mean performance across onset types and instruments can be seen in annotators a_7, a_8, a_9 and a_17. The mean annotation performance per instrument from the lowest performing annotators indicates that VN2 was the hardest to annotate with 30.9% accuracy and the remaining 30.9%, 34.7% and 39.6% for VN1, VC and VA, respectively. Since the difference from other instruments is not significant, the difficulty in annotating the second violin can be linked to the fast passages in bars 35 and 37 of the Haydn excerpt. This indicates that fast performances might be more challenging to annotate for inexperienced annotators than any given instrument in the string quartet. Alternatively, given the relatively small tolerance window there seems to be strong annotation agreement for all onset types except the finger onset type, which can be predominantly characterised through pitch information changes rather than visible changes of the transients. </p>
-
+            <p>Figure 1 shows the performance of each annotator a calculated as percentage of TP onsets per instrument and onset category when compared to the expert annotations a_0 (i.e., here considered ground truth). The reported results use tolerance window size of 25 ms and are presented for every annotation participant. 
+              The highest mean accuracy of 98%, 97%, and 96% across onset types and instruments is observed in annotators a_2, a_20 and a_23, respectively. 
+              The lowest mean performance across onset types and instruments can be seen in annotators a_9, a_7 and a_16 with respective true positive rates of 12.8%, 42.5% and 55.2%. 
+              Additionally, means across onset types and annotators are 82.0%, 72.4%, 82.8% and 81.7% for VA, VC, VN1 and VN2, respectively. </p>
         <h2 class="title is-3">Onset Detection Results For Each Instrument</h2>
         <p>For more details please refer to Experiment 3 in the <a href="https://github.com/arme-project/haydn-annotation-dataset">paper</a>.</p>
         
@@ -536,7 +538,8 @@ In addition, we also publish the <a href="https://github.com/arme-project/virtuo
           alt="Onset detection results from all systems per instrument." />
           <p>Figure 2. Onset detection results as a correspondence between the onsets detected by the algorithms and compared against annotations from the annotators a_0, a_12, a_13, a_16, a_18.</p>
           <br>
-          <p>Results are reported for five algorithms using annotations from NR, SP and DP conditions as well as, expert annotations a_0 from NR12. The overall highest performing algorithms for all instruments are CNN and CoF. The highest precision is achieved by CNN system (0.93) on the VN1 recordings with NR12 expert annotations. In the NR, SP and DP conditions the highest precision is achieved for VC, VN2 and VC by CNN (0.8), CoF (0.8), and CNN (0.83), respectively.</p>
+          <p>Results are reported for five algorithms using annotations from NR, SP and DP conditions as well as, expert annotations a_0 from NR12. The overall highest performing algorithms for all instruments are CNN and CoF. The highest precision is achieved by CNN system (0.93) on the VN1 recordings with NR12 expert annotations. 
+            In the NR, SP and DP conditions the highest precision is achieved by the CNN (0.8), CoF (0.8), and CNN (0.83) algorithms in VC, VN2 and VC instruments, respectively. </p>
     
         <h2 class="title is-3">Onset Detection Results For Each Participant</h2>
         <p>For more details please refer to Experiment 3 in the <a href="https://github.com/arme-project/haydn-annotation-dataset">paper</a>.</p>
