@@ -18,7 +18,7 @@ A collection of demos accompanying our [publications](/publication).
 
 --------------------------------------
 
-## [:memo: Onset Annotation of String Ensembles :memo:](/demos/onset-annotation.html)
+## [:memo: Annotation of Soft Onsets in String Ensemble Recordings :memo:](/demos/onset-annotation.html)
 Check out our Github page [:point_right: here.](https://github.com/arme-project/haydn-annotation-dataset)
 
 ## [:violin: Virtuoso Strings Dataset :violin:](/demos/virtuoso-strings.html)
