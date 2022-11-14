@@ -52,7 +52,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://arme-project.co.uk/">
+      <a class="navbar-item" href="https://arme-project.co.uk/demos/">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -134,14 +134,14 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Dataset Link. -->
               <span class="link-block">
                 <a href="https://github.com/arme-project/haydn-annotation-dataset" class="external-link button is-normal is-rounded is-dark">
@@ -153,7 +153,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/arme-project/string-quartet-dataset" class="external-link button is-normal is-rounded is-dark">
+                <a href="https://github.com/arme-project/virtuoso-strings" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
@@ -249,7 +249,7 @@ In addition, we also publish the <a href="https://github.com/arme-project/virtuo
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Inter-annotator Agreements for All Participants</h2>
-        <p>Inter-annotator agreement results for the 12th repetition of the NR condition recordings (NR12) visualised for viola, cello, and first and second violin (VA, VC, VN1 and V2).
+        <p>Inter-annotator agreement results for the 12th repetition of the NR condition recordings (NR12) visualised for viola, cello, and first and second violin (VA, VC, VN1 and V2). For more details please refer to Experiment 1 in the <a href="https://github.com/arme-project/haydn-annotation-dataset">paper</a>.</p>
         <br><br>
 
         <!-- Interpolating Viola. -->
@@ -520,6 +520,7 @@ In addition, we also publish the <a href="https://github.com/arme-project/virtuo
       <div class="container is-max-desktop">
         <div class="content has-text-justified">
         <h2 class="title is-3">Inter-annotator Performance</h2>
+        <p>For more details please refer to Experiment 2 in the <a href="https://github.com/arme-project/haydn-annotation-dataset">paper</a>.</p>
         
         <img src="onset-annotation-of-string-ensembles/JNMR2022_results/annotators-performance-against-expert.png" class="interpolation-image"
           alt="Onset detection results from CNN system." />
@@ -529,6 +530,7 @@ In addition, we also publish the <a href="https://github.com/arme-project/virtuo
             <p>Figure 1 shows the performance of each annotator a calculated as percentage of TP onsets per instrument and onset category when compared to the expert annotations a_0 (i.e., here considered ground truth). The reported results use tolerance window size of 25 ms and are presented for every annotation participant. The highest mean accuracy of 98%, 97% and 96% for all onset types is observed in annotators a_2, a_20 and a_23, respectively. The highest accuracy from a_2 was expected as that was the annotator with annotations closest to the average timing differences calculated from ACOs and was used as the basis for the expert annotations. Mean accuracies across all participants for the open and fingered string onsets as well as bow and finger type onsets are 83.0%, 81.3%, 83.9% and 70.8%, respectively. Overall, the finger type onsets which are played in succession after each bow onset represent the most difficult onset type to annotate. Additionally, the lowest mean performance across onset types and instruments can be seen in annotators a_7, a_8, a_9 and a_17. The mean annotation performance per instrument from the lowest performing annotators indicates that VN2 was the hardest to annotate with 30.9% accuracy and the remaining 30.9%, 34.7% and 39.6% for VN1, VC and VA, respectively. Since the difference from other instruments is not significant, the difficulty in annotating the second violin can be linked to the fast passages in bars 35 and 37 of the Haydn excerpt. This indicates that fast performances might be more challenging to annotate for inexperienced annotators than any given instrument in the string quartet. Alternatively, given the relatively small tolerance window there seems to be strong annotation agreement for all onset types except the finger onset type, which can be predominantly characterised through pitch information changes rather than visible changes of the transients. </p>
 
         <h2 class="title is-3">Onset Detection Results For Each Instrument</h2>
+        <p>For more details please refer to Experiment 3 in the <a href="https://github.com/arme-project/haydn-annotation-dataset">paper</a>.</p>
         
         <img src="onset-annotation-of-string-ensembles/JNMR2022_results/ons-det-instrument-systems-conditions.png" class="interpolation-image"
           alt="Onset detection results from all systems per instrument." />
@@ -537,7 +539,8 @@ In addition, we also publish the <a href="https://github.com/arme-project/virtuo
           <p>Results are reported for five algorithms using annotations from NR, SP and DP conditions as well as, expert annotations a_0 from NR12. The overall highest performing algorithms for all instruments are CNN and CoF. The highest precision is achieved by CNN system (0.93) on the VN1 recordings with NR12 expert annotations. In the NR, SP and DP conditions the highest precision is achieved for VC, VN2 and VC by CNN (0.8), CoF (0.8), and CNN (0.83), respectively.</p>
     
         <h2 class="title is-3">Onset Detection Results For Each Participant</h2>
-        
+        <p>For more details please refer to Experiment 3 in the <a href="https://github.com/arme-project/haydn-annotation-dataset">paper</a>.</p>
+
         <img src="onset-annotation-of-string-ensembles/JNMR2022_results/ons-det-cnn-means.png" class="interpolation-image"
         alt="Onset detection results from CNN system." />
         <p>Figure 3. Mean F-measure, precision and recall for CNN method calculated for each annotator and instrument.</p>
