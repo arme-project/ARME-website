@@ -4,7 +4,7 @@ subtitle: ""
 publication_types:
   - "1"
 authors:
-  - Maciej Tomczak
+  - Maciek Tomczak
   - Min Susan Li
   - Adrian Bradbury
   - Mark Elliott
@@ -35,5 +35,14 @@ image:
 date: 2022-11-17T00:00:00
 url_slides: https://arxiv.org/abs/2211.08848
 ---
+
+## Supporting Website
+[https://arme-project.co.uk/demos/onset-annotation](https://arme-project.co.uk/demos/onset-annotation)
+
+## Haydn Annotation Dataset
+[https://github.com/arme-project/haydn-annotation-dataset](https://github.com/arme-project/haydn-annotation-dataset)
+
+## Virtuoso Strings
+[https://github.com/arme-project/virtuoso-strings](https://github.com/arme-project/virtuoso-strings)
 
 ![](https://arme-project.co.uk/demos/virtuoso-strings/coulls.jpg)
