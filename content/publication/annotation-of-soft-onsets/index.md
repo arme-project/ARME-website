@@ -35,3 +35,5 @@ image:
 date: 2022-11-17T00:00:00
 url_slides: https://arxiv.org/abs/2211.08848
 ---
+
+![](https://arme-project.co.uk/demos/virtuoso-strings/coulls.jpg)
