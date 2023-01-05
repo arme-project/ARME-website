@@ -3,7 +3,7 @@
 title: Iyabosola Busola Oronti
 
 # Role/position
-role: Post-doctoral Research Fellow
+role: Research assistant
 
 authors:
 - Busola_Oronti
