@@ -4,7 +4,7 @@ title: Max Di Luca
 authors:
 - Max Di Luca
 
-highlight_name: false
+highlight_name: true
 role: Associate Professor
 bio: 'Max Di Luca is the lead PI of the project. He is Associate Professor at the University of Birmingham (UK) in the Centre for Computational Neuroscience and Cognitive Robotics.'
 organizations:
@@ -65,7 +65,7 @@ social:
 email: ""
 
 
-superuser: false
+superuser: true
 
 user_groups:
 - Principal Investigators
