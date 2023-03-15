@@ -8,7 +8,7 @@ authors:
   - Maria Witek
   - Ryan Stables
   - Adrian Bradbury
- author_notes: []
+author_notes: []
 doi: ""
 publication: Music and Time - Psychology, Philosophy, Practice
 publication_short: 
