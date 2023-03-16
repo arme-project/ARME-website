@@ -7,7 +7,7 @@ authors:
  
 # Is this the primary user of the site?
 superuser: false
- 
+
 # Role/position
 role: Research assistant
  
@@ -31,6 +31,8 @@ education:
   - course: BSc Sound Engineering and Production
     institution: Birmingham City University
     year: 2011
+  
+  social:
   
   # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
