@@ -32,7 +32,6 @@ education:
     institution: Birmingham City University
     year: 2011
   
-  social:
   
   # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
