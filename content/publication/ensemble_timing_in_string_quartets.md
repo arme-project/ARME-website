@@ -2,7 +2,7 @@
 title: Synchronisation in a virtual quartet
 subtitle: ""
 publication_types:
-  - "4"
+  - "6"
 authors:
   - Alan Wing
   - Maria Witek
