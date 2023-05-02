@@ -5,7 +5,7 @@ authors:
 - Hugo Tremonte de Carvalho
 
 highlight_name: true
-role: Collaborator
+role: Assistant Professor
 bio: 'Hugo is Assistant Professor of Statistics at the Federal University of Rio de Janeiro (Brazil). He is member of the MusMat Research Group and editor of the MusMat - Brazilian Journal of Music and Mathematics. Hugo is also amateur classical guitarrist, composer and homebrewer.'
 organizations:
 - name: Federal University of Rio de Janeiro
