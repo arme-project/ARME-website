@@ -53,6 +53,6 @@ email: "hugo@dme.ufrj.br"
 superuser: false
 
 user_groups:
-- Collaborator
+- Collaborators
 ---
 Hugo Tremonte de Carvalho has undergraduate and master degrees in Applied Mathematics (UFRJ, 2011 and 2013, respectively), and completed his D.Sc. in Electrical Engineering in 2017, at COPPE/UFRJ, where he united two of his greatest passions, Music and Mathematics, by employing Bayesian methods in audio restoration. Now Hugo is assistant professor at the Department of Statistical Methods (IM/UFRJ), member of the MusMat Research Group and member of the editorial board of MusMat - Brazilian Journal of Music and Mathematics. His main research interests are Music and Mathematics, Music Information Retrieval, Statistical Signal Processing, and Computational Statistics. In his spare time, Hugo plays classical guitar, composes some music, and is learning to play the harmonica.
