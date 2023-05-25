@@ -2,7 +2,7 @@
 ---
 title: Plug-in for Simulating Harmonious Music Synchronization
 date: 2023-05-26T23:10:45.249Z
-draft: false
+draft: true
 featured: true
 ---
 
