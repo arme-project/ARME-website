@@ -18,6 +18,9 @@ A collection of demos accompanying our [publications](/publication).
 
 --------------------------------------
 
+## [:computer: Adaptive Metronome Plugin :computer:](/demos/adaptive-metronome.html)
+Check out the plguin Github page here [:point_right: here.](https://github.com/arme-project/AdaptiveMetronome)
+
 ## [:memo: Annotation of Soft Onsets :memo:](/demos/onset-annotation.html)
 Check out our Github page [:point_right: here.](https://github.com/arme-project/haydn-annotation-dataset)
 

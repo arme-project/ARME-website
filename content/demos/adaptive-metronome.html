@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="ARME Web Demo.">
+  <meta name="keywords" content="ARME, Adaptive Metronome">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARME: Onset Annotation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://arme-project.co.uk/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://arme-project.co.uk/">
+            ARME Project
+          </a>
+          <a class="navbar-item" href="https://arme-project.co.uk/publication/synchronisation-in-a-virtual-quartet/">
+            Synchronisation in a virtual quartet
+          </a>
+          <a class="navbar-item" href="https://arme-project.co.uk/publication/synchronisation-in-a-violin-duo/">
+            Synchronisation with a violin duo
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Adaptive Metronome</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Enderby S.,<sup>a</sup> R. Stables,<sup>a</sup> J. Hockman,<sup>a</sup> M. Tomczak,<sup>a</sup> A. Wing,<sup>b</sup> M. Di Luca<sup>b</sup> and M. Elliott<sup>c</sup></a>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>a</sup>Birmingham City University, <a href="https://somagroup.co.uk/">Sound and Music Analysis (SoMA) Group</a>, Birmingham, UK</span>
+              <br>
+            <span class="author-block"><sup>b</sup>University of Birmingham, Birmingham, UK</span>
+            <span class="author-block"><sup>c</sup>University of Warwick, Warwick, UK</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/arme-project/AdaptiveMetronome" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">What is it?</h2>
+        <div class="content has-text-justified">
+          <p>
+            The EPSRC-funded ARME project is proud to release a plug-in designed to simulate the harmonious synchronisation of musicians within a violin quartet playing a piece by Haydn. Such tool gives the ability to observe and analyse event times recorded during simulated ensemble performance. Virtual musicians perform their notes using a linear phase correction model, meticulously adjusting their timing to maintain a harmonious collective. The plug-in supports the configuration of the quartet's composition, accommodating any combination of virtual and human players Key to the virtual musicians' performances is the understanding of music cohesion which is reflected in various control parameters that empower the user to tailor their experience.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Operating the Adaptive Metronome</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/HKUYVPlAp8E?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <p>If you use the resources on this website in your research, feel free to cite the following:</p>
+    <pre>
+<code>Enderby S., R. Stables, J. Hockman, M. Tomczak, A. Wing, M. Di Luca and M. Elliott. 2023. 
+Adaptive Metronome: A MIDI Plug-In for Modelling Cooperative Timing in Music Ensembles. 
+In Rhythm Production and Perception Workshop, Nottingham, United Kingdom.</code>
+    </pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons 
+              Attribution-ShareAlike 4.0 International License</a> with source code available <a href="https://github.com/nerfies/nerfies.github.io">here</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
