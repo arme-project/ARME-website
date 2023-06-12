@@ -16,6 +16,488 @@ var INTERP_BASE_16VN2 = "onset-annotation-of-string-ensembles/16_participants/VN
 
 var NUM_INTERP_FRAMES = 11;
 
+// Microtiming Leader 1
+var INTERP_BASE_MICROTIMING = "microtiming/leader-annotations/";
+
+var INTERP_BASE_VA_MICRO_DP = "microtiming/leader-annotations/VA-VN1-DP";
+var INTERP_BASE_VC_MICRO_DP = "microtiming/leader-annotations/VC-VN1-DP";
+var INTERP_BASE_VN1_MICRO_DP = "microtiming/leader-annotations/VN1-VN1-DP";
+var INTERP_BASE_VN2_MICRO_DP = "microtiming/leader-annotations/VN2-VN1-DP";
+
+var INTERP_BASE_VA_MICRO_NR = "microtiming/leader-annotations/VA-VN1-NR";
+var INTERP_BASE_VC_MICRO_NR = "microtiming/leader-annotations/VC-VN1-NR";
+var INTERP_BASE_VN1_MICRO_NR = "microtiming/leader-annotations/VN1-VN1-NR";
+var INTERP_BASE_VN2_MICRO_NR = "microtiming/leader-annotations/VN2-VN1-NR";
+
+var INTERP_BASE_VA_MICRO_SP = "microtiming/leader-annotations/VA-VN1-SP";
+var INTERP_BASE_VC_MICRO_SP = "microtiming/leader-annotations/VC-VN1-SP";
+var INTERP_BASE_VN1_MICRO_SP = "microtiming/leader-annotations/VN1-VN1-SP";
+var INTERP_BASE_VN2_MICRO_SP = "microtiming/leader-annotations/VN2-VN1-SP";
+
+
+// Microtiming Leader 2
+var INTERP_BASE_VA_MICRO_VN2_DP = "microtiming/leader-annotations/VA-VN2-DP";
+var INTERP_BASE_VC_MICRO_VN2_DP = "microtiming/leader-annotations/VC-VN2-DP";
+var INTERP_BASE_VN1_MICRO_VN2_DP = "microtiming/leader-annotations/VN1-VN2-DP";
+var INTERP_BASE_VN2_MICRO_VN2_DP = "microtiming/leader-annotations/VN2-VN2-DP";
+
+var INTERP_BASE_VA_MICRO_VN2_NR = "microtiming/leader-annotations/VA-VN2-NR";
+var INTERP_BASE_VC_MICRO_VN2_NR = "microtiming/leader-annotations/VC-VN2-NR";
+var INTERP_BASE_VN1_MICRO_VN2_NR = "microtiming/leader-annotations/VN1-VN2-NR";
+var INTERP_BASE_VN2_MICRO_VN2_NR = "microtiming/leader-annotations/VN2-VN2-NR";
+
+var INTERP_BASE_VA_MICRO_VN2_SP = "microtiming/leader-annotations/VA-VN2-SP";
+var INTERP_BASE_VC_MICRO_VN2_SP = "microtiming/leader-annotations/VC-VN2-SP";
+var INTERP_BASE_VN1_MICRO_VN2_SP = "microtiming/leader-annotations/VN1-VN2-SP";
+var INTERP_BASE_VN2_MICRO_VN2_SP = "microtiming/leader-annotations/VN2-VN2-SP";
+
+var NUM_INTERP_FRAMES_MICROTIMING = 12;
+
+var interp_images_microtiming = [];
+function preloadInterpolationImages_Microtiming() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_MICROTIMING + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_microtiming[i] = new Image();
+    interp_images_microtiming[i].src = path;
+  }
+}
+
+function setInterpolationImage_Microtiming(i) {
+  var image_microtiming = interp_images_microtiming[i];
+  image_microtiming.ondragstart = function() { return false; };
+  image_microtiming.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper').empty().append(image_microtiming);
+}
+
+
+// 
+// 
+// DP VN1 leader
+// 
+// 
+
+
+var interp_images_va_vn1_dp = [];
+function preloadInterpolationImagesVA_VN1_DP() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VA_MICRO_DP + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_va_vn1_dp[i] = new Image();
+    interp_images_va_vn1_dp[i].src = path;
+  }
+}
+
+function setInterpolationImageVA_VN1_DP(i) {
+  var image_va = interp_images_va_vn1_dp[i];
+  image_va.ondragstart = function() { return false; };
+  image_va.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-va-vn1-dp').empty().append(image_va);
+}
+
+var interp_images_vc_vn1_dp = [];
+function preloadInterpolationImagesVC_VN1_DP() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VC_MICRO_DP + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_vc_vn1_dp[i] = new Image();
+    interp_images_vc_vn1_dp[i].src = path;
+  }
+}
+
+function setInterpolationImageVC_VN1_DP(i) {
+  var image_vc = interp_images_vc_vn1_dp[i];
+  image_vc.ondragstart = function() { return false; };
+  image_vc.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-vc-vn1-dp').empty().append(image_vc);
+}
+
+var interp_images_vn1_vn1_dp = [];
+function preloadInterpolationImagesVN1_VN1_DP() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VN1_MICRO_DP + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_vn1_vn1_dp[i] = new Image();
+    interp_images_vn1_vn1_dp[i].src = path;
+  }
+}
+
+function setInterpolationImageVN1_VN1_DP(i) {
+  var image_vn1 = interp_images_vn1_vn1_dp[i];
+  image_vn1.ondragstart = function() { return false; };
+  image_vn1.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-vn1-vn1-dp').empty().append(image_vn1);
+}
+
+var interp_images_vn2_vn1_dp = [];
+function preloadInterpolationImagesVN2_VN1_DP() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VN2_MICRO_DP + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_vn2_vn1_dp[i] = new Image();
+    interp_images_vn2_vn1_dp[i].src = path;
+  }
+}
+
+function setInterpolationImageVN2_VN1_DP(i) {
+  var image_vn2 = interp_images_vn2_vn1_dp[i];
+  image_vn2.ondragstart = function() { return false; };
+  image_vn2.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-vn2-vn1-dp').empty().append(image_vn2);
+}
+
+
+// 
+// 
+// NR VN1 leader
+// 
+// 
+
+
+var interp_images_va_vn1_nr = [];
+function preloadInterpolationImagesVA_VN1_NR() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VA_MICRO_NR + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_va_vn1_nr[i] = new Image();
+    interp_images_va_vn1_nr[i].src = path;
+  }
+}
+
+function setInterpolationImageVA_VN1_NR(i) {
+  var image_va = interp_images_va_vn1_nr[i];
+  image_va.ondragstart = function() { return false; };
+  image_va.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-va-vn1-nr').empty().append(image_va);
+}
+
+var interp_images_vc_vn1_nr = [];
+function preloadInterpolationImagesVC_VN1_NR() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VC_MICRO_NR + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_vc_vn1_nr[i] = new Image();
+    interp_images_vc_vn1_nr[i].src = path;
+  }
+}
+
+function setInterpolationImageVC_VN1_NR(i) {
+  var image_vc = interp_images_vc_vn1_nr[i];
+  image_vc.ondragstart = function() { return false; };
+  image_vc.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-vc-vn1-nr').empty().append(image_vc);
+}
+
+var interp_images_vn1_vn1_nr = [];
+function preloadInterpolationImagesVN1_VN1_NR() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VN1_MICRO_NR + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_vn1_vn1_nr[i] = new Image();
+    interp_images_vn1_vn1_nr[i].src = path;
+  }
+}
+
+function setInterpolationImageVN1_VN1_NR(i) {
+  var image_vn1 = interp_images_vn1_vn1_nr[i];
+  image_vn1.ondragstart = function() { return false; };
+  image_vn1.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-vn1-vn1-nr').empty().append(image_vn1);
+}
+
+var interp_images_vn2_vn1_nr = [];
+function preloadInterpolationImagesVN2_VN1_NR() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VN2_MICRO_NR + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_vn2_vn1_nr[i] = new Image();
+    interp_images_vn2_vn1_nr[i].src = path;
+  }
+}
+
+function setInterpolationImageVN2_VN1_NR(i) {
+  var image_vn2 = interp_images_vn2_vn1_nr[i];
+  image_vn2.ondragstart = function() { return false; };
+  image_vn2.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-vn2-vn1-nr').empty().append(image_vn2);
+}
+
+
+// 
+// SP VN1 leader
+// 
+
+var interp_images_va_vn1_sp = [];
+function preloadInterpolationImagesVA_VN1_SP() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VA_MICRO_SP + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_va_vn1_sp[i] = new Image();
+    interp_images_va_vn1_sp[i].src = path;
+  }
+}
+
+function setInterpolationImageVA_VN1_SP(i) {
+  var image_va = interp_images_va_vn1_sp[i];
+  image_va.ondragstart = function() { return false; };
+  image_va.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-va-vn1-sp').empty().append(image_va);
+}
+
+var interp_images_vc_vn1_sp = [];
+function preloadInterpolationImagesVC_VN1_SP() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VC_MICRO_SP + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_vc_vn1_sp[i] = new Image();
+    interp_images_vc_vn1_sp[i].src = path;
+  }
+}
+
+function setInterpolationImageVC_VN1_SP(i) {
+  var image_vc = interp_images_vc_vn1_sp[i];
+  image_vc.ondragstart = function() { return false; };
+  image_vc.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-vc-vn1-sp').empty().append(image_vc);
+}
+
+var interp_images_vn1_vn1_sp = [];
+function preloadInterpolationImagesVN1_VN1_SP() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VN1_MICRO_SP + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_vn1_vn1_sp[i] = new Image();
+    interp_images_vn1_vn1_sp[i].src = path;
+  }
+}
+
+function setInterpolationImageVN1_VN1_SP(i) {
+  var image_vn1 = interp_images_vn1_vn1_sp[i];
+  image_vn1.ondragstart = function() { return false; };
+  image_vn1.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-vn1-vn1-sp').empty().append(image_vn1);
+}
+
+var interp_images_vn2_vn1_sp = [];
+function preloadInterpolationImagesVN2_VN1_SP() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VN2_MICRO_SP + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_vn2_vn1_sp[i] = new Image();
+    interp_images_vn2_vn1_sp[i].src = path;
+  }
+}
+
+function setInterpolationImageVN2_VN1_SP(i) {
+  var image_vn2 = interp_images_vn2_vn1_sp[i];
+  image_vn2.ondragstart = function() { return false; };
+  image_vn2.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-vn2-vn1-sp').empty().append(image_vn2);
+}
+
+
+
+
+
+
+
+// 
+// DP VN2 leader
+// 
+var interp_images_va_vn2_dp = [];
+function preloadInterpolationImagesVA_VN2_DP() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VA_MICRO_VN2_DP + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_va_vn2_dp[i] = new Image();
+    interp_images_va_vn2_dp[i].src = path;
+  }
+}
+
+function setInterpolationImageVA_VN2_DP(i) {
+  var image_va = interp_images_va_vn2_dp[i];
+  image_va.ondragstart = function() { return false; };
+  image_va.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-va-vn2-dp').empty().append(image_va);
+}
+
+var interp_images_vc_vn2_dp = [];
+function preloadInterpolationImagesVC_VN2_DP() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VC_MICRO_VN2_DP + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_vc_vn2_dp[i] = new Image();
+    interp_images_vc_vn2_dp[i].src = path;
+  }
+}
+
+function setInterpolationImageVC_VN2_DP(i) {
+  var image_vc = interp_images_vc_vn2_dp[i];
+  image_vc.ondragstart = function() { return false; };
+  image_vc.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-vc-vn2-dp').empty().append(image_vc);
+}
+
+var interp_images_vn1_vn2_dp = [];
+function preloadInterpolationImagesVN1_VN2_DP() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VN1_MICRO_VN2_DP + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_vn1_vn2_dp[i] = new Image();
+    interp_images_vn1_vn2_dp[i].src = path;
+  }
+}
+
+function setInterpolationImageVN1_VN2_DP(i) {
+  var image_vn1 = interp_images_vn1_vn2_dp[i];
+  image_vn1.ondragstart = function() { return false; };
+  image_vn1.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-vn1-vn2-dp').empty().append(image_vn1);
+}
+
+var interp_images_vn2_vn2_dp = [];
+function preloadInterpolationImagesVN2_VN2_DP() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VN2_MICRO_VN2_DP + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_vn2_vn2_dp[i] = new Image();
+    interp_images_vn2_vn2_dp[i].src = path;
+  }
+}
+
+function setInterpolationImageVN2_VN2_DP(i) {
+  var image_vn2 = interp_images_vn2_vn2_dp[i];
+  image_vn2.ondragstart = function() { return false; };
+  image_vn2.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-vn2-vn2-dp').empty().append(image_vn2);
+}
+
+
+
+// 
+// NR VN2 leader
+// 
+var interp_images_va_vn2_nr = [];
+function preloadInterpolationImagesVA_VN2_NR() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VA_MICRO_VN2_NR + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_va_vn2_nr[i] = new Image();
+    interp_images_va_vn2_nr[i].src = path;
+  }
+}
+
+function setInterpolationImageVA_VN2_NR(i) {
+  var image_va = interp_images_va_vn2_nr[i];
+  image_va.ondragstart = function() { return false; };
+  image_va.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-va-vn2-nr').empty().append(image_va);
+}
+
+var interp_images_vc_vn2_nr = [];
+function preloadInterpolationImagesVC_VN2_NR() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VC_MICRO_VN2_NR + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_vc_vn2_nr[i] = new Image();
+    interp_images_vc_vn2_nr[i].src = path;
+  }
+}
+
+function setInterpolationImageVC_VN2_NR(i) {
+  var image_vc = interp_images_vc_vn2_nr[i];
+  image_vc.ondragstart = function() { return false; };
+  image_vc.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-vc-vn2-nr').empty().append(image_vc);
+}
+
+var interp_images_vn1_vn2_nr = [];
+function preloadInterpolationImagesVN1_VN2_NR() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VN1_MICRO_VN2_NR + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_vn1_vn2_nr[i] = new Image();
+    interp_images_vn1_vn2_nr[i].src = path;
+  }
+}
+
+function setInterpolationImageVN1_VN2_NR(i) {
+  var image_vn1 = interp_images_vn1_vn2_nr[i];
+  image_vn1.ondragstart = function() { return false; };
+  image_vn1.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-vn1-vn2-nr').empty().append(image_vn1);
+}
+
+var interp_images_vn2_vn2_nr = [];
+function preloadInterpolationImagesVN2_VN2_NR() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VN2_MICRO_VN2_NR + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_vn2_vn2_nr[i] = new Image();
+    interp_images_vn2_vn2_nr[i].src = path;
+  }
+}
+
+function setInterpolationImageVN2_VN2_NR(i) {
+  var image_vn2 = interp_images_vn2_vn2_nr[i];
+  image_vn2.ondragstart = function() { return false; };
+  image_vn2.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-vn2-vn2-nr').empty().append(image_vn2);
+}
+
+
+// 
+// SP VN2 leader
+// 
+
+var interp_images_va_vn2_sp = [];
+function preloadInterpolationImagesVA_VN2_SP() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VA_MICRO_VN2_SP + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_va_vn2_sp[i] = new Image();
+    interp_images_va_vn2_sp[i].src = path;
+  }
+}
+
+function setInterpolationImageVA_VN2_SP(i) {
+  var image_va = interp_images_va_vn2_sp[i];
+  image_va.ondragstart = function() { return false; };
+  image_va.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-va-vn2-sp').empty().append(image_va);
+}
+
+var interp_images_vc_vn2_sp = [];
+function preloadInterpolationImagesVC_VN2_SP() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VC_MICRO_VN2_SP + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_vc_vn2_sp[i] = new Image();
+    interp_images_vc_vn2_sp[i].src = path;
+  }
+}
+
+function setInterpolationImageVC_VN2_SP(i) {
+  var image_vc = interp_images_vc_vn2_sp[i];
+  image_vc.ondragstart = function() { return false; };
+  image_vc.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-vc-vn2-sp').empty().append(image_vc);
+}
+
+var interp_images_vn1_vn2_sp = [];
+function preloadInterpolationImagesVN1_VN2_SP() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VN1_MICRO_VN2_SP + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_vn1_vn2_sp[i] = new Image();
+    interp_images_vn1_vn2_sp[i].src = path;
+  }
+}
+
+function setInterpolationImageVN1_VN2_SP(i) {
+  var image_vn1 = interp_images_vn1_vn2_sp[i];
+  image_vn1.ondragstart = function() { return false; };
+  image_vn1.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-vn1-vn2-sp').empty().append(image_vn1);
+}
+
+var interp_images_vn2_vn2_sp = [];
+function preloadInterpolationImagesVN2_VN2_SP() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_MICROTIMING; i++) {
+    var path = INTERP_BASE_VN2_MICRO_VN2_SP + '/' + String(i).padStart(6, '0') + '.png';
+    interp_images_vn2_vn2_sp[i] = new Image();
+    interp_images_vn2_vn2_sp[i].src = path;
+  }
+}
+
+function setInterpolationImageVN2_VN2_SP(i) {
+  var image_vn2 = interp_images_vn2_vn2_sp[i];
+  image_vn2.ondragstart = function() { return false; };
+  image_vn2.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-vn2-vn2-sp').empty().append(image_vn2);
+}
+
+
+// 
+// 
+// 
+
 var interp_images = [];
 function preloadInterpolationImages() {
   for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
@@ -207,6 +689,232 @@ $(document).ready(function() {
         player.currentTime = player.duration / 100 * this.value;
       })
     }, false);*/
+
+    preloadInterpolationImages_Microtiming();
+    $('#interpolation-slider').on('input', function(event) {
+      setInterpolationImage_Microtiming(this.value);
+    });
+    setInterpolationImage_Microtiming(0);
+    $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);
+
+
+    
+    // microtiming
+    
+    // 
+    // LEADER 1
+    // 
+    preloadInterpolationImagesVA_VN1_DP();
+    preloadInterpolationImagesVC_VN1_DP();
+    preloadInterpolationImagesVN1_VN1_DP();
+    preloadInterpolationImagesVN2_VN1_DP();
+
+    preloadInterpolationImagesVA_VN1_NR();
+    preloadInterpolationImagesVC_VN1_NR();
+    preloadInterpolationImagesVN1_VN1_NR();
+    preloadInterpolationImagesVN2_VN1_NR();
+
+    preloadInterpolationImagesVA_VN1_SP();
+    preloadInterpolationImagesVC_VN1_SP();
+    preloadInterpolationImagesVN1_VN1_SP();
+    preloadInterpolationImagesVN2_VN1_SP();
+
+
+    // 
+    // DEADPAN
+    // 
+    
+    // Viola
+    $('#interpolation-slider-va-vn1-dp').on('input', function(event) {
+      setInterpolationImageVA_VN1_DP(this.value);
+    });  
+    setInterpolationImageVA_VN1_DP(0);
+    $('#interpolation-slider-va-vn1-dp').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+    // Cello
+    $('#interpolation-slider-vc-vn1-dp').on('input', function(event) {
+      setInterpolationImageVC_VN1_DP(this.value);
+    });  
+    setInterpolationImageVC_VN1_DP(0);
+    $('#interpolation-slider-vc-vn1-dp').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+    // First violin
+    $('#interpolation-slider-vn1-vn1-dp').on('input', function(event) {
+      setInterpolationImageVN1_VN1_DP(this.value);
+    });  
+    setInterpolationImageVN1_VN1_DP(0);
+    $('#interpolation-slider-vn1-vn1-dp').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+    // Second violin
+    $('#interpolation-slider-vn2-vn1-dp').on('input', function(event) {
+      setInterpolationImageVN2_VN1_DP(this.value);
+    });  
+    setInterpolationImageVN2_VN1_DP(0);
+    $('#interpolation-slider-vn2-vn1-dp').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+
+    // 
+    // NORMAL
+    // 
+    $('#interpolation-slider-va-vn1-nr').on('input', function(event) {
+      setInterpolationImageVA_VN1_NR(this.value);
+    });  
+    setInterpolationImageVA_VN1_NR(0);
+    $('#interpolation-slider-va-vn1-nr').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+    // Cello
+    $('#interpolation-slider-vc-vn1-nr').on('input', function(event) {
+      setInterpolationImageVC_VN1_NR(this.value);
+    });  
+    setInterpolationImageVC_VN1_NR(0);
+    $('#interpolation-slider-vc-vn1-nr').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+    // First violin
+    $('#interpolation-slider-vn1-vn1-nr').on('input', function(event) {
+      setInterpolationImageVN1_VN1_NR(this.value);
+    });  
+    setInterpolationImageVN1_VN1_NR(0);
+    $('#interpolation-slider-vn1-vn1-nr').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+    // Second violin
+    $('#interpolation-slider-vn2-vn1-nr').on('input', function(event) {
+      setInterpolationImageVN2_VN1_NR(this.value);
+    });  
+    setInterpolationImageVN2_VN1_NR(0);
+    $('#interpolation-slider-vn2-vn1-nr').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+
+
+    // 
+    // SPEED
+    // 
+    $('#interpolation-slider-va-vn1-sp').on('input', function(event) {
+      setInterpolationImageVA_VN1_SP(this.value);
+    });  
+    setInterpolationImageVA_VN1_SP(0);
+    $('#interpolation-slider-va-vn1-sp').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+    // Cello
+    $('#interpolation-slider-vc-vn1-sp').on('input', function(event) {
+      setInterpolationImageVC_VN1_SP(this.value);
+    });  
+    setInterpolationImageVC_VN1_SP(0);
+    $('#interpolation-slider-vc-vn1-sp').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+    // First violin
+    $('#interpolation-slider-vn1-vn1-sp').on('input', function(event) {
+      setInterpolationImageVN1_VN1_SP(this.value);
+    });  
+    setInterpolationImageVN1_VN1_SP(0);
+    $('#interpolation-slider-vn1-vn1-sp').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+    // Second violin
+    $('#interpolation-slider-vn2-vn1-sp').on('input', function(event) {
+      setInterpolationImageVN2_VN1_SP(this.value);
+    });  
+    setInterpolationImageVN2_VN1_SP(0);
+    $('#interpolation-slider-vn2-vn1-sp').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+
+
+
+    // 
+    // LEADER 2
+    // 
+    preloadInterpolationImagesVA_VN2_DP();
+    preloadInterpolationImagesVC_VN2_DP();
+    preloadInterpolationImagesVN1_VN2_DP();
+    preloadInterpolationImagesVN2_VN2_DP();
+
+    preloadInterpolationImagesVA_VN2_NR();
+    preloadInterpolationImagesVC_VN2_NR();
+    preloadInterpolationImagesVN1_VN2_NR();
+    preloadInterpolationImagesVN2_VN2_NR();
+
+    preloadInterpolationImagesVA_VN2_SP();
+    preloadInterpolationImagesVC_VN2_SP();
+    preloadInterpolationImagesVN1_VN2_SP();
+    preloadInterpolationImagesVN2_VN2_SP();
+
+    // 
+    // DEADPAN
+    // 
+    
+    // Viola
+    $('#interpolation-slider-va-vn2-dp').on('input', function(event) {
+      setInterpolationImageVA_VN2_DP(this.value);
+    });  
+    setInterpolationImageVA_VN2_DP(0);
+    $('#interpolation-slider-va-vn2-dp').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+    // Cello
+    $('#interpolation-slider-vc-vn2-dp').on('input', function(event) {
+      setInterpolationImageVC_VN2_DP(this.value);
+    });  
+    setInterpolationImageVC_VN2_DP(0);
+    $('#interpolation-slider-vc-vn2-dp').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+    // First violin
+    $('#interpolation-slider-vn1-vn2-dp').on('input', function(event) {
+      setInterpolationImageVN1_VN2_DP(this.value);
+    });  
+    setInterpolationImageVN1_VN2_DP(0);
+    $('#interpolation-slider-vn1-vn2-dp').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+    // Second violin
+    $('#interpolation-slider-vn2-vn2-dp').on('input', function(event) {
+      setInterpolationImageVN2_VN2_DP(this.value);
+    });  
+    setInterpolationImageVN2_VN2_DP(0);
+    $('#interpolation-slider-vn2-vn2-dp').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+
+    // 
+    // NORMAL
+    // 
+    $('#interpolation-slider-va-vn2-nr').on('input', function(event) {
+      setInterpolationImageVA_VN2_NR(this.value);
+    });  
+    setInterpolationImageVA_VN2_NR(0);
+    $('#interpolation-slider-va-vn2-nr').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+    // Cello
+    $('#interpolation-slider-vc-vn2-nr').on('input', function(event) {
+      setInterpolationImageVC_VN2_NR(this.value);
+    });  
+    setInterpolationImageVC_VN2_NR(0);
+    $('#interpolation-slider-vc-vn2-nr').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+    // First violin
+    $('#interpolation-slider-vn1-vn2-nr').on('input', function(event) {
+      setInterpolationImageVN1_VN2_NR(this.value);
+    });  
+    setInterpolationImageVN1_VN2_NR(0);
+    $('#interpolation-slider-vn1-vn2-nr').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+    // Second violin
+    $('#interpolation-slider-vn2-vn2-nr').on('input', function(event) {
+      setInterpolationImageVN2_VN2_NR(this.value);
+    });  
+    setInterpolationImageVN2_VN2_NR(0);
+    $('#interpolation-slider-vn2-vn2-nr').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+
+
+    // 
+    // SPEED
+    // 
+    $('#interpolation-slider-va-vn2-sp').on('input', function(event) {
+      setInterpolationImageVA_VN2_SP(this.value);
+    });  
+    setInterpolationImageVA_VN2_SP(0);
+    $('#interpolation-slider-va-vn2-sp').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+    // Cello
+    $('#interpolation-slider-vc-vn2-sp').on('input', function(event) {
+      setInterpolationImageVC_VN2_SP(this.value);
+    });  
+    setInterpolationImageVC_VN2_SP(0);
+    $('#interpolation-slider-vc-vn2-sp').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+    // First violin
+    $('#interpolation-slider-vn1-vn2-sp').on('input', function(event) {
+      setInterpolationImageVN1_VN2_SP(this.value);
+    });  
+    setInterpolationImageVN1_VN2_SP(0);
+    $('#interpolation-slider-vn1-vn2-sp').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+    // Second violin
+    $('#interpolation-slider-vn2-vn2-sp').on('input', function(event) {
+      setInterpolationImageVN2_VN2_SP(this.value);
+    });  
+    setInterpolationImageVN2_VN2_SP(0);
+    $('#interpolation-slider-vn2-vn2-sp').prop('max', NUM_INTERP_FRAMES_MICROTIMING - 1);    
+
+
+
+
+
+
+
+
 
     preloadInterpolationImages();
     $('#interpolation-slider').on('input', function(event) {

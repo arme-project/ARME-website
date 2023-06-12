@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Effect of Leadership Change on Microtiming Patterns in String Quartet">
+  <meta name="keywords" content="ARME, Microtiming">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Effect of Leadership Change on Microtiming Patterns in String Quartet</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://arme-project.co.uk/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://arme-project.co.uk/">
+            ARME Project
+          </a>
+          <a class="navbar-item" href="https://arme-project.co.uk/publication/synchronisation-in-a-virtual-quartet/">
+            Synchronisation in a virtual quartet
+          </a>
+          <a class="navbar-item" href="https://arme-project.co.uk/publication/synchronisation-in-a-violin-duo/">
+            Synchronisation with a violin duo
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Effect of Leadership Change on Microtiming Patterns in String Quartet</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Tomczak M.</a><sup>a</sup>,</span>
+            <span class="author-block">
+              <a href="https://arme-project.co.uk/people/">Min Li S.</a><sup>b</sup>,</span>
+              <span class="author-block">
+                <a href="https://arme-project.co.uk/people/">Witek M.</a><sup>b</sup>,</span>
+                <span class="author-block">
+                  <a href="https://arme-project.co.uk/people/">Hockman J.</a><sup>a</sup>,</span>                
+            </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>a</sup>Birmingham City University, <a href="https://somagroup.co.uk/">Sound and Music Analysis (SoMA) Group</a>, Birmingham, UK</span>
+              <br>
+            <span class="author-block"><sup>b</sup>University of Birmingham, Birmingham, UK</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Results Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/drive/folders/1YyosUE5W09EcTPoQJ8G1HLaWkVTgiGVB?usp=sharing" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-image"></i>
+                  </span>
+                  <span>Poster</span>
+                </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/arme-project/virtuoso-strings" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            This study investigated the effects of changes in leadership on microtiming patterns of different players within a string quartet. 
+            By quantising note onset positions within eighth-note metrical structure of bar-length rhythmic patterns, it is possible to extract, 
+            visualise and analyse microtiming patterns of each musician over time. The majority of previous studies  have focused on microtiming patterns 
+            of percussion instruments, and relatively few have explored analysis of string instruments. 
+
+          </p>
+            In Tomczak et al. (2022), we showed that onset annotations from multiple annotators typically exhibit some variation. To limit the extent of the measurable annotation variation, we manually verify the outputs of automatic onset and downbeat detection methods (Böck et al., 2012; 2016). 
+          </p>
+
+          <p>
+            Here, we examined the synchronisation of musicians to a designated leader (i.e., first or second violinist) in a string quartet using <a href="https://github.com/mrocamora/carat/">CARAT Python library</a>, a computational approach presented in Rocamora et al. (2019). The stimuli included expert-verified onset and downbeat annotations from 72 performances of Haydn’s Op. 74 No. 1 Finale played in three different performance styles, which totalled 288 individual recordings from the Virtuoso Strings dataset (Tomczak et al., 2022). 
+          </p>
+
+          <p>
+            Our results revealed reduced microtiming accuracy of each player when new leader’s downbeat annotations were used. Specifically, when the musicians were instructed to follow the second and not the first violinist, they played significantly late on every metrical position. Conversely, in a familiar performance context, their synchronisation to the leader’s timing was more precise for each metrical position under the leadership of the first violinist. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="content has-text-justified">
+
+          <h2 class="title is-3">Leadership and Performance Styles</h2>
+          <p>
+            The musicians in the string quartet played in three performance styles under the leadership of the first and the second violinists. The performance styles are: 
+            <ul>
+              — Deadpan (DP) performances with minimal expression in tempo and articulation
+            </ul>
+            <audio controls="controls">
+              <source src="./microtiming/audio/VN1-Q-JH-VN1-DP-1.mp3">
+            </audio>
+            <ul>
+              — Normal (NR) concert style performances
+            </ul>
+            <audio controls="controls">
+              <source src="./microtiming/audio/VN1-Q-JH-VN1-NR-1.mp3">
+            </audio>
+            <ul>
+              — Speed (SP) performances with a spontaneous accelerando and decelerando initiated by the leader once in each performance
+            </ul>
+            <audio controls="controls">
+              <source src="./microtiming/audio/VN1-Q-JH-VN1-SP-1.mp3">
+            </audio>
+          </p>
+
+          <h2 class="title is-3">Dataset</h2>
+          <p>We use note onset and downbeat annotations for the recordings part of the <a href="https://github.com/arme-project/virtuoso-strings/">Virtuoso Strings Dataset</a>.</p>
+          <p>
+            The musicians in the string quartet played in three performance styles under the leadership of the first and the second violinists. The performance styles are: 
+            <ul>
+              — <a href="https://github.com/arme-project/virtuoso-strings/tree/main/docs/scores/Haydn_op74_no1_finale_excerpt">Haydn’s Op. 74 No. 1 Finale</a>
+            </ul>
+            <ul>
+              — 72 performances, total of 288 individual recordings 
+            </ul>
+            <ul>
+              — Virtuoso Strings dataset is <a href="https://github.com/arme-project/virtuoso-strings/">available on GitHub</a>
+            </ul>
+          </p>
+
+        <h2 class="title is-3">Microtiming Patterns of String Quartet Musicians</h2>
+        <p>Microtiming patterns of four musicians in a quartet can 
+          be visualised by quantising note onset positions within 
+          an eighth-note metrical structure of bars in a 
+          performance. In this study we use Haydn’s Op. 74 No. 1 Finale with <a href="https://github.com/arme-project/virtuoso-strings/tree/main/docs/scores/Haydn_op74_no1_finale_excerpt">the score available here</a>.
+          Each musicians’ annotated note onset 
+          positions and downbeat positions are first annotated 
+          and then used to visualise microtiming patterns over 
+          time.</p>
+
+        
+        <img src="microtiming/VC-Q-JH-NR-12.png" class="interpolation-image"
+          alt="Microtiming pattern visualisation example." />
+          
+          <p>
+            Figure 1: Microtiming pattern visualisation 
+            example for the cello playing Haydn’s Op. 74 Finale.
+            <ul>
+              — Note onsets are shown as yellow dots
+            </ul>
+            <ul>
+              — Onsets include pitch and metrical subdivision labels
+            </ul>
+            <ul>
+              — Four eighth-notes in a bar are quantised to the 
+              annotated downbeat locations
+            </ul>
+            <ul>
+              — Metrical grid covers bars 1-48 in 2/4 metre
+            </ul>
+            <ul>
+              — Vertical dashed blue lines represent means and 
+              standard deviation values
+            </ul>
+            <ul>
+              — Histograms of onset locations are shown at the 
+              bottom
+            </ul>
+            <ul>
+              — Means are shown as percentages for each 
+              subdivision in an isochronous metrical grid with values 
+              0%, 25%, 50% and 100%
+            </ul>
+  
+          </p>
+
+
+        <h2 class="title is-3">Microtiming Results</h2>
+        <ul>
+          — The experiment compares two leadership changes in three performance styles (NR, DP and SP).
+        </ul>
+        <ul>
+          — Means of microtiming pattern deviations in % are shown per instrument (in colour) for each performance style with additional per-performance style means and per-instrument 
+          means shown above and below plots, respectively. 
+        </ul>
+        <ul>
+          — The experiment investigates microtiming patterns for onsets quantised to the annotated downbeat positions. 
+        </ul>
+        <ul>
+          — All individual results in the following sections use downbeat annotations from the corresponding leader.
+        </ul>
+
+        <!-- Interpolating Leader VN1 - Deadpan -->
+        <h3 class="title is-4">First violinist as leader - Deadpan</h3>
+        <div class="content has-text-justified">
+          <p>
+            Per instrument microtiming patterns for performances 1 to 12 in deadpan style. Patterns in the following figures are visualised using annotated downbeats of the designated leader. 
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vn1-vn1-dp">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vn1-vn1-dp"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>First violin</p>
+          </div>
+
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vn2-vn1-dp">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vn2-vn1-dp"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>Second violin</p>
+          </div>
+        </div>
+        
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-va-vn1-dp">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-va-vn1-dp"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>Viola</p>
+          </div>
+
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vc-vn1-dp">
+              Loading...
+            </div>
+
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vc-vn1-dp"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>Cello</p>
+          </div>
+
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+
+        <!-- Interpolating Leader VN1 - Normal -->
+        <h3 class="title is-4">First violinist as leader - Normal</h3>
+        <div class="content has-text-justified">
+          <p>
+            Per instrument microtiming patterns for performances 1 to 12 in normal style. 
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vn1-vn1-nr">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vn1-vn1-nr"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>First violin</p>
+          </div>
+
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vn2-vn1-nr">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vn2-vn1-nr"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>Second violin</p>
+          </div>
+        </div>
+        
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-va-vn1-nr">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-va-vn1-nr"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>Viola</p>
+          </div>
+
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vc-vn1-nr">
+              Loading...
+            </div>
+
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vc-vn1-nr"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>Cello</p>
+          </div>
+
+
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+
+
+        <!-- Interpolating Leader VN1 - Speed -->
+        <h3 class="title is-4">First violinist as leader - Speed</h3>
+        <div class="content has-text-justified">
+          <p>
+            Per instrument microtiming patterns for performances 1 to 12 in speed style. 
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vn1-vn1-sp">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vn1-vn1-sp"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>First violin</p>
+          </div>
+
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vn2-vn1-sp">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vn2-vn1-sp"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>Second violin</p>
+          </div>
+        </div>
+        
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-va-vn1-sp">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-va-vn1-sp"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>Viola</p>
+          </div>
+
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vc-vn1-sp">
+              Loading...
+            </div>
+
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vc-vn1-sp"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>Cello</p>
+          </div>
+
+
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+
+
+
+
+
+
+        <!-- Interpolating Leader VN2 - Deadpan -->
+        <h3 class="title is-4">Second violinist as leader - Deadpan</h3>
+        <div class="content has-text-justified">
+          <p>
+            Per instrument microtiming patterns for performances 1 to 12 in deadpan style.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vn1-vn2-dp">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vn1-vn2-dp"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>First violin</p>
+          </div>
+
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vn2-vn2-dp">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vn2-vn2-dp"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>Second violin</p>
+          </div>
+        </div>
+        
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-va-vn2-dp">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-va-vn2-dp"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>Viola</p>
+          </div>
+
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vc-vn2-dp">
+              Loading...
+            </div>
+
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vc-vn2-dp"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>Cello</p>
+          </div>
+
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+
+        <!-- Interpolating Leader VN2 - Normal -->
+        <h3 class="title is-4">Second violinist as leader - Normal</h3>
+        <div class="content has-text-justified">
+          <p>
+            Per instrument microtiming patterns for performances 1 to 12 in normal style.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vn1-vn2-nr">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vn1-vn2-nr"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>First violin</p>
+          </div>
+
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vn2-vn2-nr">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vn2-vn2-nr"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>Second violin</p>
+          </div>
+        </div>
+        
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-va-vn2-nr">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-va-vn2-nr"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>Viola</p>
+          </div>
+
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vc-vn2-nr">
+              Loading...
+            </div>
+
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vc-vn2-nr"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>Cello</p>
+          </div>
+
+
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+
+
+        <!-- Interpolating Leader VN2 - Speed -->
+        <h3 class="title is-4">Second violinist as leader - Speed</h3>
+        <div class="content has-text-justified">
+          <p>
+            Per instrument microtiming patterns for performances 1 to 12 in speed style. 
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vn1-vn2-sp">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vn1-vn2-sp"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>First violin</p>
+          </div>
+
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vn2-vn2-sp">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vn2-vn2-sp"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>Second violin</p>
+          </div>
+        </div>
+        
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-va-vn2-sp">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-va-vn2-sp"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>Viola</p>
+          </div>
+
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-vc-vn2-sp">
+              Loading...
+            </div>
+
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-vc-vn2-sp"
+                   step="1" min="0" max="100" value="0" type="range">
+                   <p>Cello</p>
+          </div>
+
+        </div>
+        <!--/ Interpolating. -->
+
+        <h3>Microtiming patterns for annotated downbeat locations.</h3>
+        <p>
+          Mean results for two leaderships and three performance styles. Means of microtiming pattern deviations in % are shown per instrument for each performance style. 
+          Additional means per instrument and performance style are shown above and below, respectively. 
+        </p>
+        <img src="microtiming/RPPW2023-results-annotated-downbeats.png" class="interpolation-image"
+          alt="Microtiming pattern results RPPW 2023." />
+          
+        <br/>
+        
+
+          <h2 class="title is-3">Conclusions</h2>
+          <p>
+            This study investigated the changes in microtiming patterns of musicians in a string quartet 
+            after changing the ensemble's leader. Our analysis revealed reduced microtiming accuracy of 
+            each player when new leader's downbeat annotations were used. Specifically, when the 
+            musicians were instructed to follow the second and not the first violinist, they played 
+            significantly late on every metrical position. Conversely, in a familiar performance context, 
+            their synchronisation to the leader's timing was more precise for each metrical position under 
+            the leadership of the first violinist. The results highlighted that the presented analysis is a 
+            promising approach for studying microtiming in string quartet recordings in future work.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">References</h2>
+        <div class="content has-text-justified">
+          <p>Tomczak, M., Li, M.S., Bradbury, A., Elliott, M., Stables, R., Witek, M., Goodman, T., Abdlkarim, D., Di Luca, M., Wing, A. and Hockman, J., 2022. Annotation of Soft Onsets in String Ensemble Recordings. arXiv preprint arXiv:2211.08848.
+          </p>
+            
+          <p>Böck, S., Krebs, F. and Schedl, M., 2012. Evaluating the Online Capabilities of Onset Detection Methods. In Proceedings of the International Society for Music Information Retrieval Conference (ISMIR).
+          </p>
+            
+          <p>Böck, S., Krebs, F. and Widmer, G., 2016. Joint Beat and Downbeat Tracking with Recurrent Neural Networks. In Proceedings of the International Society for Music Information Retrieval Conference (ISMIR).
+          </p>
+
+          <p>Rocamora, M., Jure, L., Fuentes, M., Maia, L. and Biscainho, L., 2019. CARAT: Computer-Aided Rhythmic Analysis Toolbox. Late-Breaking Demo (LBD) in the International Society for Music Information Retrieval Conference (ISMIR).
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">BibTeX</h2>
+        <div class="content has-text-justified">
+          <p>Feel free to cite this abstract:</p>
+          <pre><code>@article{tomczak2023effect,
+  title={Effect of Leadership Change on Microtiming Patterns in String Quartet}, 
+  author={Tomczak, Maciej and Li, Min Susan and Witek, Maria and Hockman, Jason},
+  journal={19th Rhythm Perception and Production Workshop},
+  year={2023}
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons 
+              Attribution-ShareAlike 4.0 International License</a> with source code available <a href="https://github.com/nerfies/nerfies.github.io">here</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
