@@ -89,14 +89,14 @@ phone = ""
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
-address = {street = "Edgbaston", city = "Birmingham", region = "WM", postcode = "B15 2TT", country = "United Kingdom", country_code = "UK"}
+address = {street = "52 Pritchatts road, Edgbaston", city = "Birmingham", region = "WM", postcode = "B15 2TT", country = "United Kingdom", country_code = "UK"}
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-coordinates = {latitude = "52.449844", longitude = "-1.932306"}
+coordinates = {latitude = "52.4530043", longitude = "-1.9291126"}
 
 # Directions for visitors to locate you.
-directions = "Enter Hills Building and take the stairs to Level 3"
+directions = "Enter the Gisbert Kapp Building and take the elevator to Level 4"
 
 # Office hours
 # A list of your office hours. To remove, set to an empty list `[]`.
