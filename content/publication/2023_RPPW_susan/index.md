@@ -12,7 +12,7 @@ authors:
   - Saul Danan-Verryt
   - Max Di Luca
   - Alan Wing
-  author_notes: []
+author_notes: []
 doi: ""
 publication: Rhythm Perception and Production Workshop 2023
 publication_short: RPPW2023
