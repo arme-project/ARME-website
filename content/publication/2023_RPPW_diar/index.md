@@ -1,17 +1,11 @@
 ---
-title: Playing in Synch: Exploring the Effects of Expressive Styles on Motion Synchrony in String Quartets 
+title: Playing in Synch, Exploring the Effects of Expressive Styles on Motion Synchrony in String Quartets 
 subtitle: ""
 publication_types:
   - "1"
 authors:
   - Diar Karim
-  - Min Susan Li
-  - Maciek Tomczak
-  - Jason Hockman
-  - Maria Witek
-  - Alan Wing
-  - Mark Elliott
-  - Max Di Luca
+
 
 author_notes: []
 doi: ""
