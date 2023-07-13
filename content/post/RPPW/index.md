@@ -15,7 +15,7 @@ The team's six posters presented a range of projects that captivated the confere
 
 ["Adaptive Metronome, A MIDI Plug-In for Modelling Cooperative Timing in Music Ensembles"]({{< ref "publication/2023_RPPW_sean/index.md" >}}) presented by Sean Enderby.
 
-["Effect of Leadership Change on Microtiming Patterns in String Quartet"]({{< ref "publication/2023_RPPW_macieck/index.md" >}}) presented by Macieck Enderby.
+["Effect of Leadership Change on Microtiming Patterns in String Quartet"]({{< ref "publication/2023_RPPW_macieck/index.md" >}}) presented by Macieck Tomczak.
 
 ["Padded bGLS - an Approach for Near Real-Time Estimation of Synchronisation Parameters for Ensemble Musicians"]({{< ref "publication/2023_RPPW_tom/index.md" >}}) presented by Tom Goodman.
 
@@ -23,7 +23,7 @@ The team's six posters presented a range of projects that captivated the confere
 
 ["Annotation Variance Analysis for Optimal Feedback Correction"]({{< ref "publication/2023_RPPW_busola/index.md" >}}) presented by Iyabosola Busola Oronti.
 
-The <a href="https://www.rppw.org/program--keynotes.html">keynote </a> by Alan Wing. In his captivating keynote talk, Alan  delves into the captivating realm of rhythm perception and production. With his vast research expertise, he presents cutting-edge findings that unravel the intricacies of how humans perceive and generate rhythmic patterns. Intertwining his expertise with the rich history of the RPPW conference, which he established in 1997, Alan highlights the profound impact this gathering has had on advancing our understanding of rhythm in various domains, from music to movement.
+The <a href="https://www.rppw.org/program--keynotes.html">keynote </a> by Alan Wing. In his captivating keynote talk, Alan  delves into the captivating realm of rhythm perception and production. With his vast research expertise, he presents cutting-edge findings that unravel the intricacies of how humans perceive and generate rhythmic patterns. Intertwining his expertise with the rich history of the RPPW conference, which he established in 1985, Alan highlights the profound impact this gathering has had on advancing our understanding of rhythm in various domains, from music to movement.
 
 
 The Augmented Reality Music Ensemble's remarkable success at RPPW exemplifies the fusion of technology, music, and human experience. Their pioneering projects showcased the immense potential of augmented reality in revolutionizing musical performance and engagement. By pushing the boundaries of creativity and innovation, this talented team continues to inspire and shape the future of music. Their contributions serve as a testament to the power of interdisciplinary collaboration and the exciting possibilities that lie ahead in the realm of rhythm perception and production.
