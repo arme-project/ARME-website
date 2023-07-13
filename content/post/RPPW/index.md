@@ -3,7 +3,7 @@
 title: ARME presence at RPPW19
 date: 2023-06-21T23:10:45.249Z
 draft: false
-featured: true
+featured: false
 ---
 
 The recent <a href="https://www.rppw.org/">Rhythm Perception and Production Workshop (RPPW) </a> showcased groundbreaking research and exciting advancements in the scientific study of rhythm perception and production. Among the standout contributors were the talented staff of the Augmented Reality Music Ensemble, who presented a remarkable collection of six posters and one keynote at this esteemed conference. 
