@@ -10,10 +10,11 @@ The recent [Rhythm Perception and Production Workshop (RPPW)]({{ref "https://www
 
 The team's six posters showcased a range of projects that captivated the conference attendees and highlighted the potential of augmented reality in the realm of music.
 
-["Padded bGLS - an Approach for Near Real-Time Estimation of Synchronisation Parameters for Ensemble Musicians"]({{< ref "publication/2023_RPPW_tom/index.md" >}}) 
+
 ["Phase Correction in Simulated-Ensemble Timing"]({{< ref "publication/2023_RPPW_susan/index.md" >}})
 ["Adaptive Metronome, A MIDI Plug-In for Modelling Cooperative Timing in Music Ensembles"]({{< ref "publication/2023_RPPW_sean/index.md" >}})
-["Effect of Leadership Change on Microtiming Patterns in String Quartet"]({{< ref "publication/2023_RPPW_maciek/index.md" >}})
+["Effect of Leadership Change on Microtiming Patterns in String Quartet"]({{< ref "publication/2023_RPPW_macieck/index.md" >}})
+["Padded bGLS - an Approach for Near Real-Time Estimation of Synchronisation Parameters for Ensemble Musicians"]({{< ref "publication/2023_RPPW_tom/index.md" >}}) 
 ["Playing in Synch, Exploring the Effects of Expressive Styles on Motion Synchrony in String Quartets "]({{< ref "publication/2023_RPPW_diar/index.md" >}})
 ["Annotation Variance Analysis for Optimal Feedback Correction"]({{< ref "publication/2023_RPPW_busola/index.md" >}})
 
