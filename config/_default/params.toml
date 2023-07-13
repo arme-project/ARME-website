@@ -96,7 +96,7 @@ address = {street = "52 Pritchatts road, Edgbaston", city = "Birmingham", region
 coordinates = {latitude = "52.4530043", longitude = "-1.9291126"}
 
 # Directions for visitors to locate you.
-directions = "Enter the Gisbert Kapp Building and take the elevator to Level 4"
+directions = "Enter the 52 Pritchatts road building, turn left to reach the Gisbert Kapp Building and take the elevator to Level 4"
 
 # Office hours
 # A list of your office hours. To remove, set to an empty list `[]`.
