@@ -8,7 +8,7 @@ featured: false
 
 The recent <a href="https://www.rppw.org/">Rhythm Perception and Production Workshop (RPPW) </a> showcased groundbreaking research and exciting advancements in the scientific study of rhythm perception and production. Among the standout contributors were the talented staff of the Augmented Reality Music Ensemble, who presented a remarkable collection of six posters and one keynote at this esteemed conference. 
 
-The team's six posters showcased a range of projects that captivated the conference attendees and highlighted the potential of augmented reality in the realm of music.
+The team's six posters presented a range of projects that captivated the conference attendees and highlighted the potential of augmented reality in the realm of music.
 
 
 ["Phase Correction in Simulated-Ensemble Timing"]({{< ref "publication/2023_RPPW_susan/index.md" >}}) presented by Min Li.
