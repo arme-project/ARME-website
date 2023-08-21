@@ -19,7 +19,7 @@ A collection of demos accompanying our [publications](/publication).
 --------------------------------------
 
 ## [:computer: Adaptive Metronome Plugin :computer:](/demos/adaptive-metronome.html)
-Check out the plguin Github page here [:point_right: here.](https://github.com/arme-project/AdaptiveMetronome)
+Check out the plugin Github page here [:point_right: here.](https://github.com/arme-project/AdaptiveMetronome)
 
 ## [:violin: Microtiming Patterns in String Quartet :violin:](/demos/microtiming.html)
 Check out dataset used in experiments here [:point_right: here.](https://github.com/arme-project/virtuoso-strings)
