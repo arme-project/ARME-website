@@ -35,10 +35,10 @@ weight = 20
   weight = 60
 
 
-  [[main]]
-    name = "Twitter"
-    url = "twitter"
-    weight = 70
+#   [[main]]
+#     name = "Twitter"
+#     url = "twitter"
+#     weight = 70
 
 [[main]]
   name = "Contact"
