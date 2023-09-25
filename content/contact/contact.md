@@ -16,4 +16,4 @@ design:
   columns: "1"
 
 ---
-The project is run at the University of Birmingham in the Symonlab, as well as at the University of Warwick and at the Birmingham City University
+The project is run in the [Virtual Reality Lab](https://virtualrealitylab.netlify.app) at the University of Birmingham, as well as at the University of Warwick and at the Birmingham City University.
