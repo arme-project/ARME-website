@@ -17,3 +17,5 @@ The Digital Media Technology (DMT) Lab specialises in the development of methods
 [Maciek Tomczak]({{< ref "/authors/Maciek_Tomczak" >}} "About Us")
 
 [Ryan Stables]({{< ref "/authors/Ryan_Stables" >}} "About Us")
+
+[Islah Ali-MacLachlan]({{< ref "/authors/Islah_Ali-MacLachlan" >}} "About Us")
