@@ -15,3 +15,5 @@ Research focuses on human movement analytics to monitor, measure and model movem
 [Mark Elliot]({{< ref "/authors/Mark_Elliott" >}} "About Us")
 
 [Tom Goodman]({{< ref "/authors/Tom_Goodman" >}} "About Us")
+
+[Abhishek Goswami]({{< ref "/authors/Abhishek_Goswami" >}} "About Us")

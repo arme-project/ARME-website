@@ -18,7 +18,7 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts as a single sentence)
-bio: Abhishek is a Research and Teaching Fellow at WMG, University of Warwick. Abhishek has a PhD in Signal and Image Processing from University Paris-Saclay, France. 
+bio: Abhishek is a Research and Teaching Fellow at WMG, University of Warwick. Abhishek has a PhD in Signal and Image Processing from University Paris-Saclay, France. Email - bhishekgoswami@warwick.ac.uk
 
 interests:
 - Computational Photography
@@ -40,13 +40,6 @@ education:
       year: 2015
       logo: 
 
-# Social/Academic Networking
-# For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
-social:
-  - icon: envelope
-    icon_pack: fas
-    link: 'mailto:abhishekgoswami@warwick.ac.uk'
-email: ""
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
