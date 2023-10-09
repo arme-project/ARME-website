@@ -23,7 +23,7 @@ image:
   filename:
   focal_point: Smart
   preview_only: false
-date: 2023-06-19T16:07:14.779Z
+date: 2023-09-01T16:07:14.779Z
 url_slides: https://audiomostly.com/2023/program/proceedings/
 ---
 
