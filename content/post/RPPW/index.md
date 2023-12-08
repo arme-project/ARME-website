@@ -15,7 +15,7 @@ The team's six posters presented a range of projects that captivated the confere
 
 ["Adaptive Metronome, A MIDI Plug-In for Modelling Cooperative Timing in Music Ensembles"]({{< ref "publication/2023_RPPW_sean/index.md" >}}) presented by Sean Enderby.
 
-["Effect of Leadership Change on Microtiming Patterns in String Quartet"]({{< ref "publication/2023_RPPW_macieck/index.md" >}}) presented by Macieck Tomczak.
+["Effect of Leadership Change on Microtiming Patterns in String Quartet"]({{< ref "publication/2023_RPPW_maciek/index.md" >}}) presented by Macieck Tomczak.
 
 ["Padded bGLS - an Approach for Near Real-Time Estimation of Synchronisation Parameters for Ensemble Musicians"]({{< ref "publication/2023_RPPW_tom/index.md" >}}) presented by Tom Goodman.
 

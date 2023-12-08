@@ -4,7 +4,6 @@ title: Abhishek Goswami
 
 # Username (this should match the folder name)
 authors: Abhishek_Goswami
-- 
 
 # Is this the primary user of the site?
 superuser: false
