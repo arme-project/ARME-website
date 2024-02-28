@@ -41,7 +41,7 @@ social:
   link: https://www.facebook.com/daatmusic/
 
 user_groups:
-- Principal Investigators
+- Collaborators
 ---
 Jason Hockman is Associate Professor of Audio Engineering at Birmingham City University. He is a member of the [Digital Media Technology Laboratory (DMT Lab)](https://www.bcu.ac.uk/computing/research/digital-media-technology), in which he leads the [Sound and Music Analysis (SoMA) Group](https://somagroup.co.uk/) for computational analysis of sound and music and digital audio processing.
 
