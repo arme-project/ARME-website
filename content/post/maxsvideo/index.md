@@ -1,6 +1,6 @@
 ---
 title: Max Di Luca interview
-date: 2020-12-02
+date: 2024-24-02
 draft: false
 
 ---
