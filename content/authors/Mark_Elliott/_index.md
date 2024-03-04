@@ -7,7 +7,7 @@ authors:
 
 # Organizations/Affiliations
 organizations:
-- name: University of Warwick
+- name: University of Birmingham
   url: ""
 superuser: false
 
@@ -41,4 +41,4 @@ email: ""
 user_groups:
 - Principal Investigators
 ---
-Bio
+

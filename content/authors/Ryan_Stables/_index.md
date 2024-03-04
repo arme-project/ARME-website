@@ -36,5 +36,5 @@ social:
   link: https://www.researchgate.net/profile/Ryan-Stables
 
 user_groups:
-- Principal Investigators
+- Collaborators
 ---
