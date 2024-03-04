@@ -1,6 +1,6 @@
 ---
 title: Max Di Luca interview
-date: 2024-24-02T22:00:00+00:00
+date: 2024-02-02T22:00:00+00:00
 draft: false
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: VR Lab website 
-date: 2024-24-01T22:00:00+00:00
+date: 2024-01-01T22:00:00+00:00
 draft: false
 
 ---
