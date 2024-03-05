@@ -34,6 +34,10 @@ weight = 20
   url = "demos"
   weight = 60
 
+[[main]]
+  name = "Internal"
+  url = "https://bham.sharepoint.com/sites/AugmentedRealityMusicEnsemble-Project"
+  weight = 79
 
 #   [[main]]
 #     name = "Twitter"
