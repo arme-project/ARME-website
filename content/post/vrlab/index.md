@@ -6,4 +6,4 @@ draft: false
 ---
 
 
-The VR Lab has a new <a href=" https:http://virtualrealitylab.netlify.app/ ">website</a>
+The VR Lab has a new <a href=" https://virtualrealitylab.netlify.app/ ">website</a>
