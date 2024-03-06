@@ -33,21 +33,30 @@ weight = 20
   name = "Demos"
   url = "demos"
   weight = 60
-  
+
+
+
+
 [[main]]
-  name = "Internal"
-   weight = 75
-
-[[Internal]]
-  name = "Sharepoint"
-  url = "https://bham.sharepoint.com/sites/AugmentedRealityMusicEnsemble-Project"
-  weight = 76
-  
-  [[Internal]]
-  name = "Sharepoint2"
-  url = "https://bham.sharepoint.com/sites/AugmentedRealityMusicEnsemble-Project"
-  weight = 77
-
+    identifier = "internal"
+    name = "Internal"
+    url = "/internal"
+    weight = 61
+  [[main]]
+    identifier = "category1"
+    name = "Category1"
+    url = "https://bham.sharepoint.com/sites/AugmentedRealityMusicEnsemble-Project"
+    parent = "internal"
+    weight = 1
+  [[main]]
+    identifier = "category2"
+    name = "Category2"
+    url = "https://tinyurl.com/CODAVRLab"
+    parent = "internal"
+    weight = 2
+    
+    
+    
 #   [[main]]
 #     name = "Twitter"
 #     url = "twitter"
