@@ -18,7 +18,7 @@ weight = 20
     identifier = "team"
     name = "Team"
     url = "/team"
-    weight = 61
+    weight = 30
     
     
     
@@ -38,18 +38,34 @@ weight = 20
   
   
   
+[[main]]
+    identifier = "output"
+    name = "Outcomes"
+    url = "/output"
+    weight = 30
 
 [[main]]
-  name = "Publications"
+   identifier = "Publications"
+    name = "Publications"
   url = "publication"
-  weight = 50
+  parent = "output"
+   weight = 1
+  
 
 [[main]]
-  name = "Demos"
+   identifier = "Demos"
+    name = "Demos"
   url = "demos"
-  weight = 60
+  parent = "output"
+   weight = 2
 
 
+[[main]]
+   identifier = "Researchfish"
+    name = "Researchfish"
+  url ="https://app.researchfish.com/awards/viewdetails/0?gorderby=organisation&filter=89804838_5f3e28d9cd2e26_AW"
+  parent = "output"
+   weight = 3
 
 
 [[main]]
