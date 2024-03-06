@@ -13,16 +13,31 @@ name = "News"
 url = "post"
 weight = 20
 
-[[main]]
-  name = "Consortium"
-  url = "partners"
-  weight = 30
-
 
 [[main]]
-  name = "Team"
-  url = "people"
-  weight = 40
+    identifier = "team"
+    name = "Team"
+    url = "/team"
+    weight = 61
+    
+    
+    
+    [[main]]
+    identifier = "Consortium"
+    name = "Consortium"
+    url = "partners"
+    parent = "team"
+    weight = 1
+  [[main]]
+    identifier = "Team"
+    name = "Team"
+    url = "people"
+    parent = "team"
+    weight = 2
+    
+  
+  
+  
 
 [[main]]
   name = "Publications"
@@ -43,14 +58,14 @@ weight = 20
     url = "/internal"
     weight = 61
   [[main]]
-    identifier = "category1"
-    name = "Category1"
+    identifier = "Sharepoint"
+    name = "Sharepoint"
     url = "https://bham.sharepoint.com/sites/AugmentedRealityMusicEnsemble-Project"
     parent = "internal"
     weight = 1
   [[main]]
-    identifier = "category2"
-    name = "Category2"
+    identifier = "Coda"
+    name = "Coda"
     url = "https://tinyurl.com/CODAVRLab"
     parent = "internal"
     weight = 2
