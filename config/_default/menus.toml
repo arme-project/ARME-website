@@ -33,11 +33,20 @@ weight = 20
   name = "Demos"
   url = "demos"
   weight = 60
-
+  
 [[main]]
   name = "Internal"
+   weight = 75
+
+[[Internal]]
+  name = "Sharepoint"
   url = "https://bham.sharepoint.com/sites/AugmentedRealityMusicEnsemble-Project"
-  weight = 79
+  weight = 76
+  
+  [[Internal]]
+  name = "Sharepoint2"
+  url = "https://bham.sharepoint.com/sites/AugmentedRealityMusicEnsemble-Project"
+  weight = 77
 
 #   [[main]]
 #     name = "Twitter"
