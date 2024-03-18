@@ -85,6 +85,13 @@ weight = 20
     url = "https://tinyurl.com/CODAVRLab"
     parent = "internal"
     weight = 2
+     [[main]]
+    identifier = "BEAR"
+    name = "BEAR"
+    url = "    https://bearadmin.bham.ac.uk/identity/project/dilucam-arme"
+    parent = "internal"
+    weight = 3
+
     
     
     
