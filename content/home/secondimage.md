@@ -18,7 +18,7 @@ subtitle:
 design:
   columns: "1"
   background:
-    image: uob-tier-one-photography-091123-146.jpg
+    image: uob-tier-one-photography-091123-146_2.jpg
     image_darken: 0
     image_parallax: false
     image_position: center
