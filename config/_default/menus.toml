@@ -86,9 +86,9 @@ weight = 20
     parent = "internal"
     weight = 2
      [[main]]
-    identifier = "BEAR"
-    name = "BEAR"
-    url = "    https://bearadmin.bham.ac.uk/identity/project/dilucam-arme"
+    identifier = "RDS"
+    name = "RDS"
+    url = "https://portal.bear.bham.ac.uk/pun/sys/files/fs/rds/projects/d/dilucam-arme/"
     parent = "internal"
     weight = 3
 
