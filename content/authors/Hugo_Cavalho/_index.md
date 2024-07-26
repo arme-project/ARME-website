@@ -9,7 +9,7 @@ role: Assistant Professor
 bio: 'Hugo is Assistant Professor of Statistics at the Federal University of Rio de Janeiro (Brazil). He is member of the MusMat Research Group and editor of the MusMat - Brazilian Journal of Music and Mathematics. Hugo is also amateur classical guitarrist, composer and homebrewer.'
 organizations:
 - name: Federal University of Rio de Janeiro
-  url: 'http://www.im.ufrj.br/hugocarvalho'
+  url: 'https://hugocarvalho.mat.br/'
 
 interests:
 - Audio Signal Processing
@@ -37,13 +37,10 @@ education:
 social:
 - icon: link
   icon_pack: fas
-  link: http://www.im.ufrj.br/hugocarvalho
+  link: https://hugocarvalho.mat.br/
 - icon: youtube
   icon_pack: fab
   link: https://www.youtube.com/@profhugocarvalhoufrj
-- icon: linkedin
-  icon_pack: fab
-  link: https://www.linkedin.com/in/hugo-carvalho-700b86193/
 - icon: orcid
   icon_pack: fab
   link: https://orcid.org/0000-0003-0776-0400
