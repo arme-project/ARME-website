@@ -5,7 +5,7 @@ draft: false
 
 ---
 
-The ARME project is celebrating a new milestone with additional backing from the iCURE program. This UKRI acceleration award underscores ARME’s innovative approach to transforming musical practice and opens exciting opportunities for further advancements in augmented and virtual reality (AR/VR) technologies.
+The ARME project is celebrating a new milestone with additional backing from the iCURE program (https://www.icureprogramme.com). This UKRI acceleration award underscores ARME’s innovative approach to transforming musical practice and opens exciting opportunities for further advancements in augmented and virtual reality (AR/VR) technologies.
 
 The iCURE program will play a pivotal role in translating ARME’s groundbreaking research into practical, real-world applications. Key initiatives supported by the funding include:
 
