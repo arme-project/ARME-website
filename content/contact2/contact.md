@@ -1,5 +1,5 @@
 ---
-widget: contact2
+widget: contact
 headless: true
 weight: "10"
 title: Commercial contact
