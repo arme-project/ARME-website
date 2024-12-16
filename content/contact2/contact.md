@@ -9,7 +9,7 @@ content:
   form:
     provider: netlify
     formspree:
-      id: 
+      id: 1
     netlify:
       captcha: true
 design:
