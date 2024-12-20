@@ -96,7 +96,7 @@ weight = 20
     identifier = "Site Maintenance"
     name = "Site Maintenance"
     url = "site_maintenance"
-    parent = "Internal"
+    parent = "internal"
     weight = 4
     
 
