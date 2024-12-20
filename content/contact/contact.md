@@ -11,7 +11,7 @@ content:
     formspree:
       id: 
     netlify:
-      captcha: true
+      captcha: false
 design:
   columns: "1"
 
