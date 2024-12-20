@@ -22,4 +22,4 @@ The School of Sport, Exercise and Rehabilitation Sciences focuses on cutting-edg
 
 [Maria Witek]({{< ref "/authors/Maria_Witek" >}} "About Us")
 
-[Mark Elliott]({{< ref "/authors/Mark_Elliott_" >}} "About Us")
+[Mark Elliott]({{< ref "/authors/Mark_Elliott" >}} "About Us")
