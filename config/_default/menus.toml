@@ -61,11 +61,20 @@ weight = 20
 
 
 [[main]]
+   identifier = "UKRI's Gateway to Research (GtR)"
+    name = "GtR"
+  url =" https://gtr.ukri.org/projects?ref=EP%2FV034987%2F1"
+  parent = "output"
+   weight = 3
+   
+   
+   [[main]]
    identifier = "Researchfish"
     name = "Researchfish"
   url ="https://app.researchfish.com/awards/viewdetails/0?gorderby=organisation&filter=89804838_5f3e28d9cd2e26_AW"
   parent = "output"
-   weight = 3
+   weight = 4
+  
 
 
 [[main]]
