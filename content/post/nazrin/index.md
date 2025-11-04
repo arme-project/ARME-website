@@ -1,8 +1,8 @@
 ---
 title: Designing Interfaces to Connect Musicians in Virtual Ensembles
-date: 2022-02-26T23:10:45.249Z
+date: 2025-11-04T23:10:45.249Z
 draft: false
-featured: false
+featured: true
 ---
 
 As part of the ARME project, a Master student project by Nazrin Salimzade focused on designing an interface that supports discovery of musicians, social connection among potential collaborators, and encourages the creation of novel virtual ensembles. The work explored ways to create and strengthen online collaboration, make uploading new repertoires easier, and foster an environment where musicians can grow together.
