@@ -1,6 +1,6 @@
 ---
 title: Designing Interfaces to Connect Musicians in Virtual Ensembles
-date: 2025-11-04T23:10:45.249Z
+date: 2025-11-03T23:10:45.249Z
 draft: false
 featured: true
 ---
