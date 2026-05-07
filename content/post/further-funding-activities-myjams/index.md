@@ -1,6 +1,6 @@
 ---
 title: Further funding for ARME development
-date: 2025-06-30T12:00:00+00:00
+date: 2026-05-07T13:50:00+00:00
 draft: false
 featured: true
 ---

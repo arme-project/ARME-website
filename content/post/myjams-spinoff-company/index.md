@@ -1,6 +1,6 @@
 ---
 title: MyJAMS Ltd spin-off company
-date: 2025-01-07T12:00:00+00:00
+date: 2026-05-07T13:55:00+00:00
 draft: false
 featured: true
 ---
