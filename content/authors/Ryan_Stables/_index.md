@@ -5,7 +5,6 @@ authors:
 - Ryan_Stables
 
 avatar_filename: avatar
-social: []
 superuser: false
 # Organizations/Affiliations
 organizations:

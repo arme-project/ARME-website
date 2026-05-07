@@ -13,6 +13,6 @@ The recordings were performed using two Intel RealSense LiDAR Camera L515 placed
 
 ![Musician performance captured with LIDAR camera](depthmap.jpg)
 
-The data from the two cameras has been cleaned up and combined by aliging the reference systems. Here is an example of the outcome obtained for one of the frames.
+The data from the two cameras has been cleaned up and combined by aligning the reference systems. Here is an example of the outcome obtained for one of the frames.
 
 {{<youtube id="khaJwGyW7co">}}

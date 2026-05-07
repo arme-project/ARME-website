@@ -5,10 +5,9 @@ draft: false
 
 ---
 
-The ARME project and the business development that is spinning off (JAMS) have been featured by the University of Birmingham in two press releases:
+The ARME project and the business development that is spinning off through MyJAMS Ltd and the Joint Active Music Sessions (JAMS) platform have been featured by the University of Birmingham in two press releases:
 
 [https://www.birmingham.ac.uk/news/2024/dr-massimiliano-di-luca-leads-development-of-software-for-virtual-orchestra-rehearsals](https://www.birmingham.ac.uk/news/2024/dr-massimiliano-di-luca-leads-development-of-software-for-virtual-orchestra-rehearsals "https://www.birmingham.ac.uk/news/2024/dr-massimiliano-di-luca-leads-development-of-software-for-virtual-orchestra-rehearsals")
 
 
 [https://www.birmingham.ac.uk/news/2024/bringing-the-magic-of-playing-music-to-the-virtual-world](https://www.birmingham.ac.uk/news/2024/bringing-the-magic-of-playing-music-to-the-virtual-world "https://www.birmingham.ac.uk/news/2024/bringing-the-magic-of-playing-music-to-the-virtual-world")
-
