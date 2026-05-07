@@ -1,6 +1,6 @@
 ---
 title: ARME research data, models, and software resources
-date: 2026-05-07T13:00:00+00:00
+date: 2023-12-31T12:00:00+00:00
 draft: false
 featured: true
 ---
