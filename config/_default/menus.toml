@@ -9,79 +9,22 @@
 #  weight = 10
 
 [[main]]
-name = "News"
-url = "post"
-weight = 20
-
-
-[[main]]
-    identifier = "team"
-    name = "Team"
-    url = "/team"
-    weight = 30
-    
-    
-    
-    [[main]]
-    identifier = "Consortium"
-    name = "Consortium"
-    url = "partners"
-    parent = "team"
-    weight = 1
-  [[main]]
-    identifier = "People"
-    name = "People"
-    url = "people"
-    parent = "team"
-    weight = 2
-    
-  
-  
-  
-[[main]]
-    identifier = "output"
-    name = "Outcomes"
-    url = "/output"
-    weight = 30
+  identifier = "team"
+  name = "Team"
+  url = "team"
+  weight = 30
 
 [[main]]
-   identifier = "Publications"
-    name = "Publications"
-  url = "publication"
-  parent = "output"
-   weight = 1
-  
+  identifier = "outcomes"
+  name = "Outcomes"
+  url = "outcomes"
+  weight = 20
 
 [[main]]
-   identifier = "Demos"
-    name = "Demos"
-  url = "demos"
-  parent = "output"
-   weight = 2
-
-
-[[main]]
-   identifier = "UKRI's Gateway to Research (GtR)"
-    name = "GtR"
-  url =" https://gtr.ukri.org/projects?ref=EP%2FV034987%2F1"
-  parent = "output"
-   weight = 3
-   
-   
-   [[main]]
-   identifier = "Researchfish"
-    name = "Researchfish"
-  url ="https://app.researchfish.com/awards/viewdetails/0?gorderby=organisation&filter=89804838_5f3e28d9cd2e26_AW"
-  parent = "output"
-   weight = 4
-  
-
-
-[[main]]
-    identifier = "internal"
-    name = "Internal"
-    url = "/internal"
-    weight = 61
+  identifier = "internal"
+  name = "Internal"
+  url = "/internal"
+  weight = 90
   [[main]]
     identifier = "Sharepoint"
     name = "Sharepoint"

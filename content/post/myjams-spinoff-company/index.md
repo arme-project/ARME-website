@@ -3,7 +3,16 @@ title: MyJAMS Ltd spin-off company
 date: 2026-05-07T13:55:00+00:00
 draft: false
 featured: true
+summary: Commercial development from the ARME project is being taken forward through the MyJAMS Ltd spin-off company.
+image:
+  preview_only: true
 ---
+
+<p class="myjams-logo-link">
+  <a href="https://myjamsltd.netlify.app" target="_blank" rel="noopener">
+    <img src="featured.png" alt="MyJAMS Ltd logo">
+  </a>
+</p>
 
 Commercial development from the ARME project is being taken forward through the MyJAMS Ltd spin-off company.
 
