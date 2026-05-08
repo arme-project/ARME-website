@@ -16,18 +16,18 @@ The ARME project outcomes bring together open demos and datasets, the public UKR
 
 ## Demos and Datasets
 
-## [💻 Adaptive Metronome Plugin 💻]({{< ref "/demos/adaptive-metronome" >}})
+## [💻 Adaptive Metronome Plugin 💻](/demos/adaptive-metronome.html)
 
 Check out the plugin Github page here 👉 [here.](https://github.com/arme-project/AdaptiveMetronome)
 
-## [🎻 Microtiming Patterns in String Quartet 🎻]({{< ref "/demos/microtiming" >}})
+## [🎻 Microtiming Patterns in String Quartet 🎻](/demos/microtiming.html)
 
 Check out dataset used in experiments here 👉 [here.](https://github.com/arme-project/virtuoso-strings)
 
-## [📝 Annotation of Soft Onsets 📝]({{< ref "/demos/onset-annotation" >}})
+## [📝 Annotation of Soft Onsets 📝](/demos/onset-annotation.html)
 
 Check out our Github page 👉 [here.](https://github.com/arme-project/haydn-annotation-dataset)
 
-## [🎻 Virtuoso Strings Dataset 🎻]({{< ref "/demos/virtuoso-strings" >}})
+## [🎻 Virtuoso Strings Dataset 🎻](/demos/virtuoso-strings.html)
 
 Check out dataset Github page here 👉 [here.](https://github.com/arme-project/virtuoso-strings)
