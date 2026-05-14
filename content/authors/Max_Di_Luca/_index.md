@@ -6,7 +6,7 @@ authors:
 
 highlight_name: true
 badge: Lead PI
-role: Lead PI; Associate professor
+role: Associate professor
 bio: 'Max Di Luca is the lead PI of the project. He is Associate Professor at the University of Birmingham (UK) in the Centre for Computational Neuroscience and Cognitive Robotics.'
 organizations:
 - name: University of Birmingham
