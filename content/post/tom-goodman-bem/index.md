@@ -1,8 +1,12 @@
 ---
-title: Dr Tom Goodman awarded BEM in the 2026 New Year Honours
-date: 2026-02-14T12:00:00+01:00
+title: Dr Tom Goodman awarded British Empire Medal
+date: 2026-03-02T12:00:00+00:00
 draft: false
 featured: true
+image:
+  caption: "Image: University of Birmingham"
+  focal_point: Smart
+  preview_only: false
 ---
 
 The ARME team is delighted to congratulate [Dr Tom Goodman](/author/tom-goodman/) on being awarded the British Empire Medal (BEM) in His Majesty the King's New Year Honours List for 2026.
