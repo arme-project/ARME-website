@@ -54,6 +54,7 @@
 
     <div class="portrait-title">
       <h2>{{with $link}}<a href="{{.}}"{{ $link_attrs | safeHTMLAttr }}>{{end}}{{ .Title }}{{if $link}}</a>{{end}}</h2>
+      {{ with .Params.badge }}<div class="people-role-badge">{{ . | markdownify | emojify }}</div>{{ end }}
       {{ if and $show_organizations .Params.organizations }}{{ range .Params.organizations }}<h3>{{ .name }}</h3>{{ end }}{{ end }}
       {{ if and $show_role .Params.role }}<h3>{{ .Params.role | markdownify | emojify }}</h3>{{ end }}
       {{ if $show_social }}{{ partial "social_links" . }}{{ end }}
