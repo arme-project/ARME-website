@@ -1,0 +1,43 @@
+SOURCE: /Users/m.diluca@bham.ac.uk/Downloads/Review 1 of #1817 "When Registration Error Becomes Ambiguous: ...".pdf
+PAGES: 1
+METADATA: {'/Title': 'Review 1 of #1817 "When Registration Error Becomes Ambiguous: ..."', '/Producer': 'macOS Version 15.7.4 (Build 24G517) Quartz PDFContext', '/Author': 'Massimiliano Di Luca (Psychology)', '/Creator': 'Safari', '/CreationDate': "D:20260517225056Z00'00'", '/ModDate': "D:20260517225056Z00'00'"}
+
+
+
+===== PAGE 1 =====
+   
+Review of 1817 - "When Registration Error Becomes Ambiguous: Behavioural Effects of Static Misalignment inAugmented Reality"
+Reviewer 1 (reviewer)
+Expertise
+Knowledgeable
+Contribution
+The paper considers augmented reality and specifically the behavioural consequences of misalignment between the virtual and real-worldcontent.
+Paper Length
+The paper length matches its contribution
+Significance
+Good
+Originality
+Good
+Research Quality
+Excellent
+Technical Correctness
+Excellent
+Writing Style & Organization
+Excellent
+Overall Rating
+Probably accept: I would argue for accepting this submission.
+Detailed Rationale
+(blank)
+Comments to Reviewers and Program Committee
+(blank)
+Recommendation for TVCG
+I recommend this submission for TVCG
+Comment for TVCG recommendation
+(blank)
+Recommendation for Best Paper
+(blank)
+Comment for Best Paper recommendation
+(blank)
+SubmissionsReviews
+ISMAR 2026 Papers
+Account

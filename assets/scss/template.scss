@@ -37,3 +37,33 @@ body.page-wrapper #publications.home-section {
   line-height: 1.4;
   letter-spacing: 0;
 }
+
+.site-footer .footer-project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.site-footer .footer-internal-nav {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  justify-content: center;
+}
+
+.site-footer .footer-internal-nav a {
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .site-footer .footer-project-links {
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .site-footer .footer-internal-nav {
+    justify-content: flex-end;
+  }
+}

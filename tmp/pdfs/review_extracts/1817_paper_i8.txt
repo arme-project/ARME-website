@@ -1,0 +1,362 @@
+SOURCE: /Users/m.diluca@bham.ac.uk/Downloads/ismar26a-sub1817-i8.pdf
+PAGES: 8
+METADATA: {'/CreationDate': 'D:20260317114009', '/Creator': 'PDFium', '/Producer': 'PDFium'}
+
+
+
+===== PAGE 1 =====
+Online Submission ID: 1817
+A SUPPLEMENTALMATERIALS
+A.1 Questionnaires
+A.1.1 Pre-Study Questionnaire
+Participants completed the following pre-study questionnaire be-
+fore the experiment.
+P1.What’s your age?
+P2.Are you fluent in English writing, reading, and speaking?
+P3.What is your gender?
+P4.How often do you use the following? Please select the most
+appropriate option.
+Items:Virtual Reality (headset), Augmented Reality (hand-
+held), Augmented Reality (headset), PC Video Games.
+Response options for each item:Several times a day, Once
+a day, Several times a week, Once a week, Several times a
+month, Once a month, Never.
+P5.Have you previously suffered an epileptic episode or have pho-
+tosensitive epilepsy?
+Yes/No.
+P6.Do you have normal or corrected-to-normal eyesight?
+Yes/No.
+P7.If you are wearing lenses, what type of lenses are you wearing?
+Frame glasses/Contact lenses/N/A.
+P8.How would you rate your current level of fitness (the ability to
+sustain prolonged physical or mental effort)?
+1 (Very Low) 7 (Very High)
+P9.What’s your dominant eye?
+Left/Right.
+P10.What’s your dominant hand?
+Left/Right.
+A.2 Post-Condition Questionnaire
+Participants completed the following questionnaire after each con-
+dition.
+Section 1
+C1.Overall, this task was difficult.
+1 (Not At All) 4 (Somewhat) 7 (Very Much So)
+C2.I found the system hard to use.
+1 (Not At All) 4 (Somewhat) 7 (Very Much So)
+C3.This activity was fun to do.
+1 (Not At All) 4 (Somewhat) 7 (Very Much So)
+C4.I had no difficultly concentrating.
+1 (Not At All) 4 (Somewhat) 7 (Very Much So)
+Section 2
+C5.How responsive was the control panel to actions that you per-
+formed?
+1 (Not Responsive) 4 (Moderately Responsive)
+7 (Completely Responsive)
+C6.How natural did your interactions with the control panel seem?
+1 (Extremely Artificial) 4 (Borderline) 7 (Completely Natural)
+C7.Were you able to anticipate what would happen next in re-
+sponse to the actions that you performed?
+1 (Not At All) 4 (Somewhat) 7 (Completely)
+C8.How involved were you in the task?
+1 (Not Involved) 4 (Mildly Involved) 7 (Completely Involved)
+C9.How quickly did you adjust to perform the task with the light?
+1 (Not At All) 4 (Slowly) 7 (Quickly)
+C10.How proficient in interacting with the lights did you feel at the
+end of the experience?
+1 (Not Proficient)4 (Reasonably Proficient)7 (Very Proficient)
+C11.How much did the visual display quality interfere or distract
+you from performing assigned tasks or required activities?
+1 (Not At All) 4 (Interfered Somewhat)
+7 (Prevented Task Performance)
+C12.How well could you concentrate on the assigned tasks or re-
+quired activities rather than on the mechanisms used to per-
+form those tasks or activities?
+1 (Not At All) 4 (Somewhat) 7 (Completely)
+Section 3: NASA Task Load Index
+C13.Mental Demand: How mentally demanding was the task?
+1 (Very Low) 7 (Very High)
+C14.Physical Demand: How physically demanding was the task?
+1 (Very Low) 7 (Very High)
+C15.Temporal Demand: How hurried or rushed was the pace of the
+task?
+1 (Very Low) 7 (Very High)
+C16.Performance: How successful were you in accomplishing
+what you were asked to do?
+1 (Perfect) 7 (Failure)
+C17.Effort: How hard did you have to work to accomplish your
+level of performance?
+1 (Very Low) 7 (Very High)
+C18.Frustration: How insecure, discouraged, irritated, stressed,
+and annoyed were you?
+1 (Very Low) 7 (Very High)
+A.2.1 Post-Study Questionnaire
+Participants completed the following questionnaire after finishing
+the study.
+A.2.2 Rating Scale Questions
+S1.Could you perform the task in an ergonomic manner?
+1 (Not At All) 7 (Completely)
+S2.Do you think your performance increased over time?
+1 (Not At All) 7 (Completely)
+S3.Did you experience a learning curve for performing the task?
+1 (Not At All) 7 (Completely)
+Short Answer Questions
+S4.Describe your approach to the task. (Did you know which
+button to tap on before you release your hands from the
+Adaptive Controller or not?)(Appeared at the end of the Post
+Condition Questionnaire for condition 2 as well.)
+S5.If you made adjustments or adapted to the misalignment in the
+task, could you elaborate on what adjustments you made and
+how you adapted?
+S6.Did you find it difficult to adjust to the system? Why or why
+not?
+12
+
+===== PAGE 2 =====
+Online Submission ID: 1817
+A.3 Age Composition
+Table 1: Age distribution of participants
+Age range Count
+20–25 6
+25–30 12
+30–35 3
+35–40 1
+40–45 1
+45–50 1
+Total 24
+B SUPPLEMENTARYMODELDETAILS
+B.1 Additional Subjective Results
+Table 2: Friedman omnibus results for the main subjective outcomes.
+pB denotes Bonferroni-corrected p values within the usability and en-
+gagement families and for the primary TLX Sum outcome, andW
+denotes Kendall’s coefficient of concordance. [r] marks items that
+were reverse-scored for analysis, and * marks outcomes for which
+higher scores indicate worse workload.
+Fam. Outcome chi2(7) p B W
+Usab. Difficulty[r] 110.54<1e-3 0.658
+Usab. Fun 5.96 1.000 0.035
+Usab. Ease of Use[r] 44.83<1e-3 0.267
+Usab. Concentration 6.35 1.000 0.038
+Eng. Responsiveness 16.90 0.145 0.101
+Eng. Naturalness 45.16<1e-3 0.269
+Eng. Anticipation 42.38<1e-3 0.252
+Eng. Involvement 15.97 0.203 0.095
+Eng. Adjustment 66.44<1e-3 0.395
+Eng. Proficiency 74.15<1e-3 0.441
+Eng. Interference[r] 30.29<1e-3 0.180
+Eng. Task Focus 11.97 0.812 0.071
+TLX TLX Sum* 77.20<1e-3 0.460
+Friedman omnibus tests use chi2(7). [r] reverse-scored for analysis.
+Higher analyzed scores indicate better experience for usability and en-
+gagement, but greater workload for TLX Sum. * higher = worse work-
+load.
+Table 4: Appendix-level TLX subscale results. Friedman omnibus
+tests were Bonferroni-corrected across the six NASA-TLX subscales,
+and the strongest surviving paired Wilcoxon contrast is reported
+when available. TLX Sum is reported in the main text. Higher scores
+indicate greater workload; for Performance, higher scores indicate
+worse perceived performance.
+Outcome chi2(7) p B W Contrast pair p B
+Mental 87.75<1e-3 0.522 Ctrl<H<1e-3
+Physical 14.49 0.258 0.086 – –
+Temporal 13.99 0.308 0.083 – –
+Performance 52.46<1e-3 0.312 S<H 0.0095
+Effort 75.10<1e-3 0.447 S<H 0.0012
+Frustration 42.73<1e-3 0.254 S<H 0.014
+Condition codes: Base=Baseline, Ctrl=Control, S=Small, Half=Half,
+Med=Medium, L=Large, VL=VLarge, H=Huge. Contrast reports the
+strongest surviving paired Wilcoxon contrast for that subscale, if any.
+Higher scores indicate greater workload; for Performance, higher scores
+indicate worse perceived performance.
+Table 3: Bonferroni-corrected paired Wilcoxon signed-rank post hoc
+contrasts for outcomes with a significant Friedman omnibus effect.
+Only surviving contrasts are shown. A>B indicates higher analyzed
+scores for condition A than for condition B. * marks outcomes for
+which higher scores indicate worse workload.
+Outcome Contrast W p B
+Adjustment S>H 0.0 0.0012
+Adjustment Ctrl>H 3.0 0.0020
+Adjustment S>L 0.0 0.0025
+Anticipation Ctrl>H 8.0 0.029
+Anticipation Ctrl>L 14.0 0.047
+Naturalness S>L 0.0 0.014
+Naturalness Base>VL 17.5 0.026
+Naturalness S>VL 12.0 0.032
+Proficiency Ctrl>L 0.0 0.0036
+Proficiency Base>L 0.0 0.0040
+Proficiency Base>H 0.0 0.0046
+TLX Sum* S<H 0.0<1e-3
+TLX Sum* S<L 5.0 0.0014
+TLX Sum* Base<H 21.0 0.0015
+Ease of Use[r] Base>VL 5.5 0.025
+Ease of Use[r] Base>H 4.5 0.037
+Difficulty[r] Ctrl>VL 0.0<1e-3
+Difficulty[r] Base>VL 0.0<1e-3
+Difficulty[r] Base>Med 0.0<1e-3
+Condition codes: Base=Baseline, Ctrl=Control, S=Small, Half=Half,
+Med=Medium, L=Large, VL=VLarge, H=Huge. A>B indicates higher
+analyzed scores for A than B. For TLX Sum, higher scores indicate
+greater workload. [r] reverse-scored for analysis. * higher = worse
+workload.
+13
+
+===== PAGE 3 =====
+Online Submission ID: 1817
+B.2 Objective Performance
+B.2.1 Continuous fit of Normalised RT and MT
+Figure 7: Objective-performance summary using Normalised RT
+(blue) and MT(red). The control condition anchors the continuous
+fit at 0 cm. Baseline is excluded so that the zero-offset case is not
+overrepresented. The curves show the fitted quadratic mixed-effects
+trends with 95% confidence bands with registration-error magnitude.
+For display clarity, the y-axis is clipped at 2.2, and the number
+of clipped-out participant means is indicated in the panel. These
+clipped values were retained in all statistical analyses and model fits.
+Across both views, temporal cost increases with misalignment mag-
+nitude while the zero-offset conditions remain close to Control.
+B.2.2 Details on Statistical Analysis
+Appendix Table 5 reports the planned contrasts from the expanded
+categorical mixed-effects models used for Figure 3. Ratios are re-
+ported on the control-normalised scale, so values above 1.0 indi-
+cate slower performance than the corresponding Control reference.
+The categorical analysis shows that Baseline was slightly faster than
+Control aligned for both RT and MT, that RT was elevated at every
+misaligned offset relative to Control offset, and that MT diverged
+reliably from Control offset from the Half condition onward.
+Table 5: Planned contrasts from the expanded categorical condition-
+phase models used for Figure 3. Ratios are exponentiated model
+contrasts on the normalized scale.
+Contrast RT Ratio [95% CI] RTpMT Ratio [95% CI] MTp
+Baseline vs Control aligned 0.933 [0.901, 0.967]< .001 0.954 [0.917, 0.992].019
+Small offset vs Control offset 1.059 [1.029, 1.089]< .001 1.022 [0.991, 1.055].165
+Half offset vs Control offset 1.131 [1.099, 1.164]< .001 1.099 [1.064, 1.134]< .001
+Medium offset vs Control offset 1.254 [1.218, 1.292]< .001 1.147 [1.110, 1.185]< .001
+Large offset vs Control offset 1.471 [1.429, 1.515]< .001 1.320 [1.278, 1.365]< .001
+VLarge offset vs Control offset 1.528 [1.483, 1.573]< .001 1.306 [1.264, 1.349]< .001
+Huge offset vs Control offset 1.535 [1.491, 1.581]< .001 1.373 [1.329, 1.419]< .001
+Appendix Table 6 reports the key coefficients from the contin-
+uous normalised mixed-effects models used for Figure 7. These
+models used the Control condition to anchor the fit at 0 cm and in-
+cluded participant-level random intercepts and random slopes for
+offset magnitude. In both RT and MT, the positive linear term and
+negative quadratic term indicate a graded increase in temporal cost
+with mild tapering at the largest offsets.
+Table 6: Key coefficients from the continuous normalised mixed-
+effects models used for Figure 7.∆AICis reported relative to the
+corresponding linear model.
+Outcome Best model∆AIC vs. linear Linear termβ[95% CI] Quadratic termβ[95% CI]
+RT Quadratic 138.44 0.136 [0.116, 0.156],p< .001 -0.035 [-0.040, -0.029],p< .001
+MT Quadratic 40.04 0.093 [0.078, 0.107],p< .001 -0.022 [-0.029, -0.016],p< .001
+14
+
+===== PAGE 4 =====
+Online Submission ID: 1817
+B.3 Correctness
+Appendix Figure 8 summarizes mean error rate during the offset
+phase across conditions. Baseline and Control remained at or near
+0% error, indicating that participants were highly accurate when
+no spatial misalignment was present. Error remained low in the
+Small condition (1.0%) but increased sharply by Half (8.3%) and
+continued to rise through Medium (15.0%), Large (16.7%), VLarge
+(17.1%), and Huge (18.9%). Paired Wilcoxon signed-rank tests on
+participant-level offset-phase error rates, compared against Control
+and Holm-corrected across the six misaligned conditions, showed
+a small but reliable increase in the Small condition (W=0,p=
+.046) and larger increases from Half onward (all correctedp< .001;
+Appendix Table 7). This pattern is consistent with the RT and MT
+analyses: larger registration errors not only slowed performance but
+also reduced response accuracy, with the clearest accuracy costs
+emerging from the medium-to-large offsets onward.
+Figure 8: Supplementary mean error rate during the offset phase
+by condition. Bars show the participant mean and error bars indicate
+SEM across participants. Baseline and Control remained near 0% er-
+ror, whereas error increased with offset magnitude, from 1.0% in the
+Small condition to 18.9% in the Huge condition. Formal participant-
+level contrasts against Control are reported in Appendix Table 7.
+Appendix Table 7 reports supplementary correctness statistics
+corresponding to Appendix Figure 8. Error rates are summarized
+as participant-level offset-phase percentages, and inferential com-
+parisons use paired Wilcoxon signed-rank tests against the Control
+condition with Holm correction across the six misaligned condi-
+tions. These tests show that error remained at floor for Baseline
+and Control, increased slightly but reliably in the Small condition,
+and rose substantially from Half onward.
+Table 7: Supplementary correctness statistics for Appendix Figure 8.
+Error rates are participant-level offset-phase percentages. Wilcoxon
+contrasts compare each misaligned condition against Control, with
+Holm correction across the six tests.
+Condition Mean error rate±SEM (%) WilcoxonWvs Control Holm-correctedp
+Baseline 0.0±0.0 — —
+Control 0.0±0.0 — —
+Small 1.0±0.5 0.0.046
+Half 8.3±2.0 0.0< .001
+Medium 15.0±3.9 0.0< .001
+Large 16.7±4.3 0.0< .001
+VLarge 17.1±4.3 0.0< .001
+Huge 18.9±3.6 0.0< .001
+15
+
+===== PAGE 5 =====
+Online Submission ID: 1817
+B.4 Learning/Fatigue Analyses
+Figure 9: Supplementary descriptive summary of learning/fatigue
+across the six randomized switch-condition blocks. Transparent
+points show participant means for aligned and offset phases, and
+black markers indicate the group mean±SEM. Baseline and Con-
+trol were excluded because their positions were fixed at the start and
+end of the session. The figure is consistent with the inferential anal-
+ysis: normalized RT remains broadly stable across switch-block or-
+der, normalized MT shows a modest reduction in the offset phase
+over later blocks, and correctness does not exhibit a reliable across-
+session decline.
+Table 8: Supplementary coefficient details for the learning/fatigue
+analyses.
+Outcome Model termβ95% CIpNotes
+Normalised RT Aligned-phase block-order slope 0.0037[−0.0036,0.0110].324 Linear model preferred,∆AIC=3.30
+Normalised RT Offset-specific additional slope 0.0016[−0.0073,0.0106].721
+Normalised MT Aligned-phase block-order slope 0.0003[−0.0080,0.0087].930 Quadratic model preferred,∆AIC=12.83
+Normalised MT Offset-specific additional slope -0.0104[−0.0206,−0.0001].043
+Correctness Aligned-phase block-order slope -0.175[−0.843,0.493].607 Clustered logistic model
+Correctness Offset-specific additional slope 0.144[−0.530,0.818].676 Clustered logistic model
+Normalised RT Trial number -0.0071[−0.0085,−0.0057]< .001 Within-block adaptation
+Normalised MT Trial number -0.0076[−0.0092,−0.0060]< .001 Within-block adaptation
+Correctness Trial number 0.131[0.068,0.193]< .001 Within-block adaptation
+16
+
+===== PAGE 6 =====
+Online Submission ID: 1817
+C REACTIONTIME ANDMOVEMENTTIME
+C.1 Per Trial Plot
+Figure 10: Raw movement time (left) and reaction time (right) pre-
+sented in each condition across offset magnitude conditions. Blue
+points represent aligned trials, red points represent offset trials.
+Figure 11: Normalised movement time (left) and reaction time (right)
+across offset magnitude conditions. Values are normalised per-
+participant and per-button-row using aligned phase baselines. Blue
+points represent aligned trials, red points represent offset trials. The
+dashed green line indicates the baseline ratio of 1.0. Both metrics
+show increased variance and elevated values at larger offset mag-
+nitudes (22.5cm and 40cm), with reaction time exhibiting more pro-
+nounced effects than movement time.
+17
+
+===== PAGE 7 =====
+Online Submission ID: 1817
+Figure 12: Raw reaction time and movement time by condition. Each
+point represents one trial; blue and red points denote aligned and
+offset phases, respectively.
+Figure 13: Normalised reaction time and movement time by condi-
+tion. Each point represents one trial; blue and red points denote
+aligned and offset phases, respectively, and black markers indicate
+the mean±SEM for each phase. Baseline and Control are shown
+as no-offset references. The green dashed line marks the control-
+normalised baseline at 1.0, and the top axis shows offset magnitude.
+For readability, values above 6.0 are clipped (9 MT points exceeded
+this bound).
+18
+
+===== PAGE 8 =====
+Online Submission ID: 1817
+C.2 Average RT and MT
+Figure 14: Raw Average reaction time and motion time
+Figure 15: Normalised Average reaction time and motion time
+19

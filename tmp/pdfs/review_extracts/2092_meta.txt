@@ -1,0 +1,50 @@
+SOURCE: /Users/m.diluca@bham.ac.uk/Downloads/#2092 "AR-COMPQ: A Dual-Path Perceptual Quality ...".pdf
+PAGES: 2
+METADATA: {'/Title': '#2092 "AR-COMPQ: A Dual-Path Perceptual Quality ..."', '/Producer': 'macOS Version 15.7.4 (Build 24G517) Quartz PDFContext', '/Author': 'Massimiliano Di Luca (Psychology)', '/Creator': 'Safari', '/CreationDate': "D:20260517225114Z00'00'", '/ModDate': "D:20260517225114Z00'00'"}
+
+
+
+===== PAGE 1 =====
+   
+Submission 2092 - "AR-COMPQ: A Dual-Path Perceptual Quality Assessment for Augmented Reality ImagesComposition"
+Reviews
+Reviewer Role ScoreReviewActionInvitation
+Yue Liu coordinator
+Massimiliano Di Lucacommittee memberNone edit
+Viviana Pentangelo (Di Luca)reviewer 0*review 1removeaccepted
+Ville Cantory (Liu) reviewer complete
+Assign reviewer  Continue
+Show potential reviewersMail to reviewers of this submissionMail to subcommittee chairs of this submissionSee all reviews on one pageSee log
+Submission
+AR-COMPQ: A Dual-Path Perceptual Quality Assessment for Augmented Reality Images Composition
+Authors
+Mahzar EisapourElectrical and Computer Engineering,Image & Vision Computing (IVC) Laboratory, University of Waterloo, waterloo, Ontario, Canada,eisapour@uwaterloo.caZhou WangElectrical and Computer Engineering,Image & Vision Computing (IVC) Laboratory, University of Waterloo, waterloo, Ontario, Canada,zhou.wang@uwaterloo.ca
+Abstract
+Augmented Reality (AR) applications depend on the seamless composition of virtual objects within real-world environments. In practice,however, imperfections in sensing, rendering, and compositing pipelines introduce distortions that degrade the perceived realism of ARimagery. The perceptual impact of these distortions is highly content-dependent and varies across different distortion types, making reliablequality assessment of AR image composition particularly challenging. Existing image quality assessment (IQA) metrics, primarily designed fornatural images, do not adequately capture the perceptual characteristics of distortions arising in AR compositions.
+In this work, we investigate perceptual quality in AR image composition through a unified framework that combines dataset construction,perceptual analysis, and quality modeling. We first introduce a new AR composition quality dataset containing diverse scene contexts withsystematically controlled distortions affecting both the structural properties of virtual objects (geometry and texture) and appearanceconsistency (brightness, color, and contrast). Using this dataset, we conduct a subjective evaluation to analyze human sensitivity to differentdistortion types and to obtain perceptual quality annotations.
+Based on the insights from this perceptual analysis, we propose an objective AR composition quality assessment model that explicitlyaccounts for both structural distortions impacting object fidelity and appearance distortions affecting photometric harmony between virtualobjects and the surrounding scene. Experimental results show that the proposed approach better predicts human perceptual judgments of ARcomposition quality than existing IQA methods across diverse content and distortion conditions.
+The Original Document
+The file (12.8 MB)
+Item 1
+(no file)
+SubmissionsReviews
+ISMAR 2026 Papers
+Account
+ Provide name or email.
+
+===== PAGE 2 =====
+Item 2
+(no file)
+Item 3
+(no file)
+Item 4
+(no file)
+Related work for ALL reviewers (pdf)
+(no file)
+Related work for ALL reviewers (text)
+(no file)
+Primary Research Topic
+Perception & Cognition
+Secondary Research Topic
+Computer Vision/Machine Learning
+Return to list of reviews

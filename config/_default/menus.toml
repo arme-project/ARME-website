@@ -20,40 +20,6 @@
   url = "outcomes"
   weight = 20
 
-[[main]]
-  identifier = "internal"
-  name = "Internal"
-  url = "/internal"
-  weight = 90
-  [[main]]
-    identifier = "Sharepoint"
-    name = "Sharepoint"
-    url = "https://bham.sharepoint.com/sites/AugmentedRealityMusicEnsemble-Project"
-    parent = "internal"
-    weight = 1
-  [[main]]
-    identifier = "Coda"
-    name = "Coda"
-    url = "https://tinyurl.com/CODAVRLab"
-    parent = "internal"
-    weight = 2
-     [[main]]
-    identifier = "RDS"
-    name = "RDS"
-    url = "https://portal.bear.bham.ac.uk/pun/sys/files/fs/rds/projects/d/dilucam-arme/"
-    parent = "internal"
-    weight = 3
-   
-   [[main]]
-    identifier = "Site Maintenance"
-    name = "Site Maintenance"
-    url = "site_maintenance"
-    parent = "internal"
-    weight = 4
-    
-
-    
-    
 #   [[main]]
 #     name = "Twitter"
 #     url = "twitter"
@@ -63,3 +29,27 @@
   name = "Contact"
   url = "contact"
   weight = 80
+
+[[footer_internal]]
+  identifier = "Sharepoint"
+  name = "Sharepoint"
+  url = "https://bham.sharepoint.com/sites/AugmentedRealityMusicEnsemble-Project"
+  weight = 1
+
+[[footer_internal]]
+  identifier = "Coda"
+  name = "Coda"
+  url = "https://tinyurl.com/CODAVRLab"
+  weight = 2
+
+[[footer_internal]]
+  identifier = "RDS"
+  name = "RDS"
+  url = "https://portal.bear.bham.ac.uk/pun/sys/files/fs/rds/projects/d/dilucam-arme/"
+  weight = 3
+
+[[footer_internal]]
+  identifier = "Site Maintenance"
+  name = "Site Maintenance"
+  url = "site_maintenance"
+  weight = 4

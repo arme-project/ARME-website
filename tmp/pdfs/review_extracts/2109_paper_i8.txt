@@ -1,0 +1,261 @@
+SOURCE: /Users/m.diluca@bham.ac.uk/Downloads/ismar26a-sub2109-i8.pdf
+PAGES: 7
+METADATA: {'/Author': '', '/CreationDate': 'D:20260317101830Z', '/Creator': 'LaTeX with hyperref', '/Keywords': '', '/ModDate': 'D:20260317101830Z', '/PTEX.Fullbanner': 'This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) kpathsea version 6.4.1', '/Producer': 'pdfTeX-1.40.27', '/Subject': '', '/Title': '', '/Trapped': '/False'}
+
+
+
+===== PAGE 1 =====
+1
+Appendix
+Error-Related Eye Response: Error Detection and Confidence Support in
+Upper Limb Virtual Reality Rehabilitation
+I.OBJECTIVE MEASURES
+A.Eye response feature statistics
+Eye response feature statistics quantify objective, window-level changes in eye behaviour that
+characterise Error-Related Eye Responses (ErrE) during the exergame/therapy task.Eye tracking signals
+were analysed continuously using a sliding window of lengthTms updated at 10 Hz. For analysis, windows
+were grouped intoNormalandErrorclasses according to the study protocol (i.e.,Errorwindows correspond
+to perceived error instances, whereasNormalwindows correspond to error-free interaction windows). For
+each class and window length, descriptive statistics were computed for each feature to provide an objective
+description of ErrE patterns and to support interpretation of the detection results.
+The following eye-derived features were extracted from each window:
+•Eye Blinks.The number of blinks detected within the window. A blink was defined as a complete
+closure–reopening cycle in the eye-openness signal: the eye openness value drops to0%(closure) and
+subsequently returns above0%(reopening). Each such closure–reopening event was counted as one
+blink. This feature captures transient visual interruption that may occur when a perceived error elicits a
+reflexive blink response.
+•Gaze Movement.The number of rapid gaze shifts within the window. A saccade was defined as a discrete
+gaze movement whose angular displacement exceeded a predefined threshold (e.g.,≥7 ◦) within a short
+time interval, indicating a rapid redirection of gaze rather than slow drift. This feature captures abrupt
+gaze reorientation that may occur when a user notices an unexpected outcome and visually checks the
+scene or the manipulated object.
+•Pupil size change (%).The percentage change in pupil size from the start to the end of the window,
+computed as
+∆P(%) = Pend −P start
+Pstart +ε ×100,
+whereP start andP end denote pupil diameter at the beginning and end of the window. This feature captures
+rapid pupillary dynamics that may reflect an arousal-like response to unexpected events.
+•Eye openness change (%).The percentage change in eye openness from the start to the end of the
+window, computed as
+∆O(%) = Oend −O start
+Ostart +ε ×100,
+whereO start andO end denote the eye openness value at the beginning and end of the window. This
+feature captures brief eyelid aperture changes that may accompany perceived error responses.
+A separate explanation of the event-aligned schematic eye-response visualisation, including the signed
+normalised gaze-shift trace, is provided in Appendix I-C.
+B.Task performance
+Task performance summarises how efficiently and reliably participants completed the reach–grasp–place
+task using two simple behavioural indices: mean completion time per trial and error frequency per
+trial.Each participant performed the task continuously until the session ended once sufficient error instances
+had been recorded. Because the number of completed trials therefore varied across participants and conditions,
+performance was expressed using per-trial averages that remain comparable despite different session lengths.
+The following measures were computed for each participant and each condition:
+
+===== PAGE 2 =====
+2
+•Mean trial completion time (s/trial).LetN trial denote the total number of completed trials and let
+tactive denote the total active task time (seconds) spent performing the task. The mean time per trial was
+computed as
+Ttrial = tactive
+Ntrial
+.
+Smaller values indicate faster task completion.
+•Error frequency (errors/trial).LetN err denote the total number of errors during the session, where
+Nerr =N wrong +N drop. The error frequency was computed as
+Rerr = Nerr
+Ntrial
+.
+Smaller values indicate fewer errors per trial, irrespective of how long the session lasted.
+These two indices were used as the primary behavioural performance measures for comparing conditions,
+capturing speed (T trial) and reliability (R err) separately.
+C.Construction and interpretation of schematic eye-response traces
+This subsection clarifies the event-aligned eye-response traces used for visual interpretation of Error-Related
+Eye Responses (ErrE). These traces were introduced to provide an intuitive temporal summary of how eye
+behaviour changes before and after a perceived error event. They should be interpreted separately from the
+window-level statistical features described in Appendix I-A, which were the actual features used for analysis
+and detection.
+Relation to the main ErrE features.The features used by ErrE for statistical analysis were computed
+on sliding windows and included blink count, gaze-movement count, pupil-size change, and eye-openness
+change. By contrast, the event-aligned traces presented in the schematic visualisation were constructed as
+time-resolved descriptive signals to illustrate the typical temporal evolution of eye behaviour around an error
+event. Accordingly, these traces were intended for interpretation and visual explanation rather than for direct
+model fitting.
+Event-centred time axis.All schematic traces were aligned to the perceived error onset att= 0ms. Negative
+time values denote behaviour observed before the error became apparent, whereas positive time values denote
+behaviour observed after the error. The full illustrative window spanned from−500ms to1000ms, with
+values sampled at 10 ms intervals.
+Eye openness and pupil size.For visual consistency, eye openness and pupil diameter were expressed as
+percentage-change signals across the event-centred window. Positive values indicate an increase relative to the
+local reference state, whereas negative values indicate a decrease. In the schematic trace, these signals were
+used to visualise the qualitative pattern observed during ErrE, including pre-error blink-related eye closure,
+post-error widening of eye openness, and delayed pupil dilation.
+Blink event.Blink was represented as a binary temporal state rather than as a continuous percentage-valued
+signal. A time segment was labelled asBlinkwhen the eyelid was considered to be within a blink interval, and
+asNootherwise. In the visual plot, blink was represented as a shaded temporal window in the background,
+so that the continuous percentage-valued signals could remain clearly visible.
+Normalised gaze shift (%).To visualise the direction and strength of gaze reorientation around the error
+event, a signed gaze-shift quantity was defined relative to two task-relevant spatial regions: the hand side and
+the object/error side. Letx(t)denote the gaze location at timet, and letc hand andc obj denote the centres of
+the hand region and the object/error region, respectively. The corresponding distances are
+dhand(t) =∥x(t)−c hand∥, d obj(t) =∥x(t)−c obj∥.
+A signed gaze-shift score was then defined as
+g(t) =d hand(t)−d obj(t).
+Under this definition, a positive value ofg(t)indicates that gaze is closer to the object or error location
+than to the hand, whereas a negative value indicates that gaze is closer to the hand side than to the object
+side. A value near zero indicates relatively stable fixation or an approximately balanced position between the
+two regions.
+
+===== PAGE 3 =====
+3
+For visual comparability with the percentage-valued eye-openness and pupil-size traces, the signed gaze-shift
+score was normalised as
+G(t) = g(t)
+maxτ∈T |g(τ)| ×100,
+whereTdenotes the full event-centred interval. Thus,G(t) = +100%corresponds to the strongest gaze shift
+towards the object/error side within the illustrated interval, andG(t) =−100%corresponds to the strongest
+gaze shift towards the hand side.
+Interpretation of the sign.The sign convention was defined explicitly for interpretability:
+•G(t)>0: gaze shifts towards the object or error location;
+•G(t)<0: gaze shifts towards the hand or limb side;
+•G(t)≈0: gaze remains relatively stable or lies between the two task-relevant regions.
+The absolute magnitude|G(t)|reflects the strength of the directional shift. Larger absolute values correspond
+to stronger gaze reorientation, whereas smaller absolute values correspond to weaker directional bias.
+Interpretive purpose.This signed, normalised gaze-shift signal was used to make the temporal structure
+of ErrE easier to interpret visually. In particular, it helps illustrate the rapid hand-object checking behaviour
+before an error, the immediate post-error refocusing towards the dropped object or error location, and the
+later scanning behaviour that follows the error.
+
+===== PAGE 4 =====
+4
+II.SUBJECTIVEMEASURES
+A.Confidence
+Confidence was assessed using a task-adapted Perceived Competence Scale (PCS), a brief self-report
+measure grounded in Self-Determination Theory and commonly used to capture perceived competence
+for a specific activity [1].The PCS was adapted to the present exergame/therapy task by phrasing each
+item with explicit reference to the immediately preceding gameplay block (with ErrE or without ErrE). Each
+item was rated on a 7-point Likert scale (1 = Strongly Disagree, 7 = Strongly Agree). Higher scores indicate
+greater perceived competence (task confidence) while performing the exergame/therapy task.
+Participants responded to the following items after each condition:
+1) I felt confident that I could perform the tasks in this exergame/therapy successfully.
+2) I felt capable of meeting the requirements of this exergame/therapy task.
+3) I felt able to achieve the goals of this exergame/therapy task.
+4) I felt able to cope with the difficulty level of this exergame/therapy task.
+A composite confidence score was computed by averaging the four item responses and converting the result
+to a percentage, yielding a score between 0% and 100%, where higher values indicate higher confidence:
+Confidence Score (%)=
+(Q1 +Q 2 +Q 3 +Q 4)−4
+24
+
+×100
+B.Usability
+The System Usability Scale (SUS) is a widely used instrument for evaluating perceived usability [2].
+It consists of 10 items alternating between positive and negative phrasing, each rated on a 5-point Likert scale
+(1 = Strongly Disagree, 5 = Strongly Agree). The SUS is designed to provide a quick yet reliable measure
+of how easy and pleasant a system is to use, covering aspects such as complexity, consistency, confidence,
+and learnability.
+Participants responded to the following items:
+1) I think that I would like to use this system frequently.
+2) I found the system unnecessarily complex.
+3) I thought the system was easy to use.
+4) I think that I would need the support of a technical person to be able to use this system.
+5) I found the various functions in this system were well integrated.
+6) I thought there was too much inconsistency in this system.
+7) I would imagine that most people would learn to use this system very quickly.
+8) I found the system very cumbersome to use.
+9) I felt very confident using the system.
+10) I needed to learn a lot of things before I could get going with this system.
+The SUS score is calculated using the standard formula. A higher SUS score indicates better perceived
+usability, with scores above 68 generally considered above average.
+•For odd-numbered items: subtract 1 from the user response (i.e.,Q i −1)
+•For even-numbered items: subtract the user response from 5 (i.e.,5−Q i)
+•Sum all adjusted scores, multiply by 2.5 to convert to a 0–100 scale.
+SUS Score (%)=
+
+X
+oddi
+(Qi −1) +
+X
+evenj
+(5−Q j)
+
+ ×2.5
+
+===== PAGE 5 =====
+5
+C.Engagement
+The Hopkins Rehabilitation Engagement Rating Scale (HRERS) is a validated clinical tool used
+to assess patient engagement in rehabilitation settings [3].It evaluates key behaviours such as attitude,
+participation, and perceived value of therapy.
+This research adapted the original clinician-rated version into a participant-facing, self-report format suitable
+for therapy/exergame contexts. The item on attendance was replaced with a measure of willingness, as
+participants attended only one session. Each item was rated on a 6-point Likert scale (1 = Strongly Disagree,
+6 = Strongly Agree), with one item (Q2) reverse-scored to account for prompt dependency. The modified
+questions are:
+1) I would be willing to participate in this exergame/therapy again.
+2) I required verbal or physical prompts to actively participate in my exergame/therapy activity.
+3) I feel positive about my exergame/therapy activities.
+4) I recognise the need for and benefits of engaging in exergame/therapy activities.
+5) I actively engage and put effort into my exergame/therapy activities.
+The final engagement score is calculated using the following formula. This yields a percentage between
+0% and 100%, with higher values indicating stronger engagement in the rehabilitation task.
+Engagement Score (%)=
+(Q1 + (7−Q 2) +Q 3 +Q 4 +Q 5)−5
+25
+
+×100
+D.User Experience
+User Experience was assessed using a brief 3-item questionnaire targeting three core dimensions
+relevant to exergame and therapeutic engagement: motivation, confidence, and satisfaction. Each question
+was adapted from a validated instrument and reworded for use in the VR rehabilitation context. The questionnaire’s
+question picks the core idea question from each classic questionnaire.
+Participants rated their agreement with each item on a 5-point Likert scale (1 = Strongly Disagree, 5 =
+Strongly Agree):
+1)Motivation[4]: I feel that doing the tasks in this exergame/therapy is fun.
+2)Confidence[5]: I feel confident to do the tasks well in this exercise/therapy.
+3)Satisfaction[2]: I am satisfied with this exergame/therapy.
+The final user experience score is calculated by averaging the responses and converting it into a percentage.
+where 15 is the maximum possible total score. A higher percentage indicates a more positive user experience.
+User Experience Score (%)=
+(Q1 +Q 2 +Q 3)−3
+12
+
+×100
+E.Clinician Observation
+Clinician Observation is a clinician-completed questionnaire designed to assess a patient’s engagement
+and progress during game-based rehabilitation compared to traditional therapy.It captures expert
+impressions across five key domains:
+1)Movement Strength:I feel that the patient exhibits stronger movements when engaging with the game
+compared to traditional rehabilitation exercises.
+2)Flexibility:I have noticed an improvement in the patient’s flexibility or range of motion with game-based
+rehabilitation.
+3)Joyfulness:The patient appears more joyful and shows a more positive attitude during the game-based
+sessions.
+4)Engagement:The game has increased the patient’s interest and active involvement in the rehabilitation
+process.
+
+===== PAGE 6 =====
+6
+5)Motivation:The patient demonstrates higher motivation and improved outcomes when using the game.
+Each item is rated from 1 (Strongly Disagree) to 5 (Strongly Agree). A higher score indicates more positive
+professional impressions of the game-based rehabilitation compared to traditional therapy. The final score is
+computed as:
+Clinician Observation Score (%)=
+ Q1 +Q 2 +Q 3 +Q 4 +Q 5 −5
+20
+
+×100
+
+===== PAGE 7 =====
+7
+REFERENCES
+[1] G. C. Williams and E. L. Deci. Internalization of biopsychosocial values by medical students: A test of self-determination theory.
+Journal of Personality and Social Psychology, 70(4):767–779, 1997.
+[2] P. W. Jordan, B. Thomas, I. L. McClelland, and B. Weerdmeester.Usability Evaluation in Industry. CRC press, 1996.
+[3] K. B. Kortte, L. D. Falk, R. C. Castillo, D. Johnson-Greene, and S. T. Wegener. The hopkins rehabilitation engagement rating scale:
+Development and psychometric properties.Archives of Physical Medicine and Rehabilitation, 88(7):877–884, July 2007. doi: 10.
+1016/j.apmr.2007.03.030
+[4] E. McAuley, T. Duncan, and V . V . Tammen. Psychometric properties of the intrinsic motivation inventory in a competitive sport
+setting: A confirmatory factor analysis.Research Quarterly for Exercise and Sport, 60(1):48–58, Mar. 1989. doi: 10.1080/02701367
+.1989.10607413
+[5] J. M. Simpson, C. Worsfold, K. D. Fisher, and J. D. Valentine. The confbal scale: A measure of balance confidence—a key outcome
+of rehabilitation.Physiotherapy, 95(2):103–109, June 2009. doi: 10.1016/j.physio.2008.12.004

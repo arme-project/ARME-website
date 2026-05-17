@@ -1,0 +1,829 @@
+SOURCE: /Users/m.diluca@bham.ac.uk/Downloads/ismar26a-sub2092-i7.pdf
+PAGES: 9
+METADATA: {'/Author': '', '/CreationDate': 'D:20260316184657Z', '/Creator': 'LaTeX with hyperref', '/Keywords': '', '/ModDate': 'D:20260316184657Z', '/PTEX.Fullbanner': 'This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) kpathsea version 6.4.1', '/Producer': 'pdfTeX-1.40.27', '/Subject': 'VGTC Conference Paper', '/Title': '', '/Trapped': '/False'}
+
+
+
+===== PAGE 1 =====
+AR-COMPQ: A Dual-Path Perceptual Quality Assessment for Augmented
+Reality Images Composition
+Figure 1: Snapshot of the AR composition data construction and quality assessment model operation.
+ABSTRACT
+Augmented Reality (AR) applications depend on the seamless com-
+position of virtual objects within real-world environments. In prac-
+tice, however, imperfections in sensing, rendering, and composit-
+ing pipelines introduce distortions that degrade the perceived re-
+alism of AR imagery. The perceptual impact of these distortions
+is highly content-dependent and varies across different distortion
+types, making reliable quality assessment of AR image composi-
+tion particularly challenging. Existing image quality assessment
+(IQA) metrics, primarily designed for natural images, do not ade-
+quately capture the perceptual characteristics of distortions arising
+in AR compositions.
+In this work, we investigate perceptual quality in AR image com-
+position through a unified framework that combines dataset con-
+struction, perceptual analysis, and quality modeling. We first in-
+troduce a new AR composition quality dataset containing diverse
+scene contexts with systematically controlled distortions affecting
+both the structural properties of virtual objects (geometry and tex-
+ture) and appearance consistency (brightness, color, and contrast).
+Using this dataset, we conduct a subjective evaluation to analyze
+human sensitivity to different distortion types and to obtain percep-
+tual quality annotations.
+Based on the insights from this perceptual analysis, we propose
+an objective AR composition quality assessment model that explic-
+itly accounts for both structural distortions impacting object fidelity
+and appearance distortions affecting photometric harmony between
+virtual objects and the surrounding scene. Experimental results
+show that the proposed approach better predicts human perceptual
+judgments of AR composition quality than existing IQA methods
+across diverse content and distortion conditions.
+Index Terms:Augmented Reality, Image Composition, Image
+Quality, Quality of Experience, Visual Perception.
+1 INTRODUCTION
+Augmented Reality (AR) systems aim to seamlessly integrate vir-
+tual objects into the physical world by compositing rendered con-
+tent into camera-captured scenes. Achieving perceptually convinc-
+ing image compositions is fundamental for many AR applications,
+including interactive retail visualization, remote assistance, immer-
+sive education, navigation, and product visualization. As AR tech-
+nologies rapidly transition from research prototypes to widely de-
+ployed consumer platforms on smartphones, wearable devices, and
+lightweight head-mounted displays, AR has become an increas-
+ingly important medium for delivering interactive visual experi-
+ences [22]. In such scenarios, users continuously evaluate the re-
+alism of the augmented content, and even minor visual inconsis-
+tencies can disrupt the illusion of integration and negatively affect
+the overall Quality-of-Experience (QoE). In consumer-facing ap-
+plications such as online shopping or interior design visualization,
+the perceived realism of virtual objects can directly influence user
+trust, engagement, and decision-making [3]. Consequently, ensur-
+ing high perceptual quality in AR image composition has become
+an important challenge for modern AR systems.
+Despite substantial progress in real-time rendering, tracking, and
+scene understanding, AR image composition often introduces ar-
+tifacts that degrade perceptual realism. These artifacts may arise
+from limitations in sensing accuracy, rendering pipelines, and de-
+vice resources, as well as mismatches between virtual objects and
+the surrounding environment. Practical constraints such as limited
+computational resources, bandwidth restrictions, and aggressive
+compression—particularly on mobile and wearable platforms—can
+
+===== PAGE 2 =====
+(a) vase brown
+ (b) bookshelf
+ (c) sofa brown
+ (d) office chair
+(e) sofa pich
+ (f) 3baskets
+ (g) pillow
+Figure 2: Representative samples from the content and composi-
+tions in ARC-IQA dataset.
+further exacerbate these degradations [13]. In practice, distortions
+in AR image compositions can be broadly categorized into two
+groups. The first group consists of structural distortions, which
+affect the structural fidelity of the virtual object itself. Examples
+include geometric distortions such as shape deformation or spa-
+tial misalignment, and texture degradations, such as blurred or cor-
+rupted surface details. The second group includes appearance dis-
+tortions, which influence the photometric consistency between the
+virtual object and the real scene, including brightness inconsisten-
+cies, color shifts, contrast mismatches, and blending artifacts. Ad-
+ditional compositional artifacts may also arise from inaccurate oc-
+clusion handling, boundary inconsistencies, or shadow mismatches
+introduced during AR rendering pipelines [2]. The perceptual im-
+pact of these distortions is often highly dependent on scene context,
+background complexity, and object characteristics, making their in-
+fluence on perceived AR quality difficult to quantify.
+Reliable quality assessment methods are therefore essential for
+analyzing AR composition pipelines and guiding perceptually op-
+timized system design. Image Quality Assessment (IQA) has been
+extensively studied for natural images and videos, with widely used
+metrics such as PSNR, SSIM [24], FSIM [30], and VIF [19]. More
+recent deep perceptual metrics, including LPIPS [31], DISTS [5],
+and DreamSim [8], have demonstrated improved correlation with
+human judgments on natural-image datasets. However, these ap-
+proaches are primarily designed for conventional image distortions
+and rely on pixel-level fidelity or learned natural-image statistics.
+Consequently, they are not well suited to capture the perceptual
+characteristics of AR image composition, where perceived realism
+depends not only on object quality but also on the contextual rela-
+tionship between virtual objects and real-world environments. In
+particular, AR imagery often involves distortions related to spatial
+alignment, appearance harmony, and object–background consis-
+tency that are not adequately represented in traditional IQA frame-
+works [23, 29].
+Only a limited number of studies have investigated perceptual
+phenomena specific to AR imagery. For instance, Duanet al.ex-
+plored perceptual ambiguity in AR compositions and introduced
+datasets and metrics for analyzing visual confusion in augmented
+scenes [6, 7]. Other work has examined the perceptual impact of il-
+lumination inconsistencies between virtual objects and real scenes,
+demonstrating that lighting mismatches can significantly degrade
+perceived realism [12]. More recently, several AR-oriented quality
+assessment models have been proposed to address the limitations
+of traditional IQA methods, including blind AR image quality as-
+sessment frameworks and lightweight transformer-based predictors
+designed for AR imagery [15, 17, 18]. While these efforts provide
+valuable insights into AR perception, existing studies typically fo-
+cus on limited distortion types, restricted compositing scenarios, or
+relatively small datasets. A systematic understanding of how differ-
+ent distortions influence perceived AR composition quality across
+diverse scene content remains largely unexplored, and current ob-
+jective metrics still struggle to reliably predict human perceptual
+judgments under such conditions.
+In this paper, we address these challenges through a comprehen-
+sive investigation of perceptual quality in AR image composition.
+We first introduce a new AR image composition quality dataset that
+contains diverse scene contexts with systematically controlled dis-
+tortions affecting both structural properties of virtual objects (ge-
+ometry and texture) and appearance consistency (brightness, color,
+and contrast). Using this dataset, we conduct a large-scale subjec-
+tive evaluation to obtain Mean Opinion Scores (MOS) and analyze
+human sensitivity to different distortion types across varying scene
+conditions. Building upon insights from this perceptual analysis,
+we further develop an objective AR composition quality assessment
+model designed to capture both structural distortions that affect ob-
+ject fidelity and appearance distortions that influence photometric
+harmony between virtual objects and real environments. Exper-
+imental results demonstrate that the proposed approach provides
+improved prediction of perceptual quality compared with existing
+IQA metrics.
+The main contributions of this work are summarized as follows:
+• AR Composition Quality Dataset: We introduce a new dataset
+for AR image composition quality assessment containing di-
+verse scenes with controlled structural (geometry and texture)
+and appearance (brightness, color, and contrast) distortions.
+• Perceptual Study and Analysis: We conduct a comprehensive
+subjective study to analyze human sensitivity to different dis-
+tortion types and content variations, providing perceptual in-
+sights into AR composition quality.
+• Objective AR Quality Assessment Model: We propose a
+distortion-aware quality assessment model that jointly con-
+siders structural fidelity and appearance consistency, achiev-
+ing improved prediction performance compared with existing
+IQA metrics.
+2 SUBJECTIVEANALYSIS OFAR QUALITY
+Despite the rapid deployment of AR, efforts toward systematic data
+generation and benchmarking for AR image quality assessment re-
+main limited. Existing studies either focus on simplified compo-
+sition models or consider only a narrow range of perceptual fac-
+tors [6, 7, 12]. For instance Duan et al. [6, 7] investigated alpha
+blending composition in AR content with just limited effort to add
+compression factor. Realistic object rendering and structural align-
+ment, which are important in applications such as AR shopping, are
+not considered in these studies. Guti´errezet al.[12] examined illu-
+mination variations but their dataset was restricted to four contents
+and did not capture the broader diversity of AR rendering artifacts.
+
+===== PAGE 3 =====
+Tex
+ Tex dist
+ Geo
+ Geo dist
+ Bright−
+ Bright
+ Bright+
+ Color −
+ Color
+ Color +
+ Cntrst −
+ Cntrst
+ Cntrst +
+Figure 3: Representative samples from the ARC-IQA dataset. The first row shows full-view AR compositions under different distortion types
+and severity levels, while the second row presents corresponding cropped regions highlighting local artifacts.
+To address these limitations, we introduce a comprehensive
+benchmark for AR composition image quality assessment, named
+ARC-IQA, and conduct a controlled subjective study to obtain re-
+liable perceptual ground truth. The dataset is designed to reflect re-
+alistic AR usage conditions by incorporating diverse object types,
+backgrounds, and distortion sources relevant to mobile AR applica-
+tions.
+2.1 ARC-IQA Dataset
+2.1.1 AR Content Selection
+Virtual objects used in ARC-IQA are selected from the Ama-
+zon–Berkeley 3D Object Dataset [9], which provides high-
+resolution, high-quality 3D models of everyday objects. These
+models exhibit diverse material properties, textures, and geometric
+complexity, making them well suited for perceptual quality anal-
+ysis. From this dataset, seven representative objects are selected
+to span a wide range of color distributions, textural richness, and
+shape complexity.
+For each object, a corresponding real background scene is care-
+fully chosen and captured using a mobile device to ensure clear
+visibility, appropriate scale, and realistic placement of the virtual
+object. This setup enables controlled evaluation of object realism
+while maintaining natural scene context.
+2.1.2 Distortion Design
+In the generation of the dataset, the pristine selected contents are
+used to apply some major distortions observed in practical AR sys-
+tems particularly on 3D object features such as mesh and texture
+and then distorted object is blended with corresponding background
+in an AR device platform (Fig. 1). A snapshot image of each com-
+position is used for AR quality assessment. We discuss the main
+distortion types applied in ARC-IQA dataset. Fig. 3 shows sample
+snapshots of content with different distortions applied in AR com-
+position.
+Object-level distortionsare introduced directly on the 3D
+model of virtual object prior to any composition. We applied two
+object-level distortions, geometric distortion and texture distortion.
+Geometric distortions are generated by applying random vertex dis-
+placements to the object mesh simulating inaccuracies and defor-
+mation artifacts. Considering the original mesh defined by a set of
+verticesV={v i ∈R 3}N
+i=1. Geometric distortion is simulated by
+perturbing vertex positions:
+˜vi =v i +αε i,(1)
+whereε i ∼N(0,I)denotes random spatial displacement noise
+andαcontrols distortion magnitude.
+Texture distortions are applied by performing lossy compression
+on the object’s texture maps, introducing blur and blocking artifacts
+that commonly arise in real-time rendering pipelines.
+Appearance-level distortionssimulate photometric inconsis-
+tencies between the rendered object and the real scene. We ma-
+nipulate three attributes: color balance, contrast, and brightness.
+For each attribute, distorted versions are generated by progressively
+increasing or decreasing the parameter across three severity levels
+relative to the reference setting.
+Composition-level distortionsmodel errors arising during AR
+scene integration. These include incorrect object positioning, oc-
+clusion mismatches between virtual and real elements, and blend-
+ing artifacts at object boundaries. Four representative composition
+noise patterns are applied to sample content to capture these effects.
+2.1.3 Mobile AR Capture Pipeline
+We develop a custom ARCore-based mobile application to place
+and render virtual 3D objects within real scenes while controlling
+distortion parameters and rendering settings. For each distortion
+configuration, a 2D snapshot of the composed AR scene is captured,
+producing paired reference and distorted images for image-based
+quality assessment.
+The resulting dataset, as summarize in Tab. 1, termed ARC-IQA,
+comprises diverse AR compositions spanning multiple contents,
+distortion types, and severity levels. The selected parameters for
+distortions are chosen to bring some noticeable change and at same
+time tried to cover wide range of distortion levels. Representative
+dataset examples are shown in Fig. 3.
+2.2 Subjective Study
+We conducted a subjective study with 15 participants (ages 21–45
+years) screened for normal vision; stimuli were shown in random-
+ized order under controlled lighting at native resolution with a 2-ft
+viewing distance; sessions lasted approximately 30 minutes to pre-
+vent fatigue and included a standardized training phase with inde-
+pendent anchor content.
+Using the generated ARC-IQA dataset, we conduct a subjective
+quality assessment study to obtain perceptual ground-truth annota-
+tions. In total, 193 AR image snapshots are selected, covering all
+contents and distortion categories.
+All experiments have been conducted in accordance with
+the ITU-T P.910 recommendation [1] for subjective multime-
+dia quality assessment. A Double Stimulus Continuous Quality
+Scale (DSCQS) methodology is adopted, in which participants are
+shown the reference and distorted AR images side by side and asked
+to rate the perceived quality of the distorted image on a continuous
+scale ranging from 0 to 100. We had 15 participants in total with
+age 21 to 45 years old. The stimuli were presented in random or-
+der to each participant using different random seeds. Participants
+were seated at a fixed viewing distance of approximately two feet
+in a light-controlled laboratory environment. Each session started
+with a training session with different contents than original dataset
+and total session lasted∼30 mins. To ensure consistency across
+
+===== PAGE 4 =====
+`
+Harmonization
+Quality score
+Chanel attention
+ module
+1x1xC1x1xC 1x1xC
+FCFC
+1. Max pool SIG
+WxHxC
+Concatenation
+Subtraction
+FC:       Fully connected
+Conv:   Convolution
+f'D
+f'R
+Conv
+ReLU
+ReLU
+MaxPool
+Flatten
+FC
+ReLU
+Dropout
+FC
+Sogmoid
+f'H
+Channel 
+Attention
+Channel 
+Attention
+Image
+Encoding
+Image 
+Encoding
+fD
+fR
+Conv
+ID
+IR
+IH
+Distorted ARReference AR
+ReLU
+Conv
+ReLU
+Conv
+fharm
+ffid
+Harmonized AR
+Fidelity path
+Harmony path
+Feature integration and
+regression
+WxHxC
+Channel 
+Attention
+fH
+Image
+Encoding
+Figure 4: Overview of the proposed AR-COMPQ architecture. The network consists of an object-fidelity path and an appearance-harmony
+path, whose representations are integrated for quality regression.
+Table 1: Summary of the ARC-IQA dataset.
+Factor # Details
+Scene contexts 7 pillow, vase, chair, shelves, baskets,sofa(b,w)
+Texture distortion 3 JPEG quality:{100, 20, 10}
+Geometric distortion 3 Vertex displacement:{0, 0.001, 0.002}
+Brightness variation 6 Scaling within±90%
+Color balance variation 6 Scaling within±90%
+Contrast variation 6 Scaling within±90%
+Composition artifacts 4 occlusion, boundary, shadow, depth
+Total images 193–
+subjects, raw scores are normalized using the z-score method. The
+final MOS for each distorted sample was computed as the average
+of all corresponding scores. Outlier detection for individual scores
+was performed based on z-score by considering three standard de-
+viation (σ) as the cut-off threshold. Subject-level outlier detection
+was also performed based on z-score analysis of scoring consis-
+tency with two standard deviation from MOS, however no subjects
+were removed after outlier analysis. The ARC-IQA and its subjec-
+tive annotations provide a comprehensive benchmark for AR image
+quality assessment.
+3 PROPOSEDMETHOD
+3.1 Overview
+The proposed framework decomposes AR perceptual realism as-
+sessment into two complementary dimensions:object-level fidelity
+andappearance-level harmony. The former evaluates structural
+consistency between distorted and pristine compositions, while the
+latter measures cross-domain appearance discrepancy relative to a
+perceptually harmonized prior.
+As illustrated in Fig. 4, the model consists of: (1) a shared back-
+bone encoder, (2) a fidelity assessment branch, (3) a harmony as-
+sessment branch, and (4) a lightweight regression head for quality
+prediction.
+3.2 Shared Feature Encoding
+First, a harmonization module is applied to the distorted imageI D
+to generate harmonized imageI H. Given distorted compositionI D,
+pristine referenceI R, and its harmonized reconstructionI H, all in-
+puts are processed by a shared backbone encoderφ(·):
+fR =φ(I R),f D =φ(I D),f H =φ(I H ),(2)
+whereφ:R H×W×3 →R C×h×w maps images to deep feature rep-
+resentations. Weight sharing ensures that all representations lie in a
+common embedding manifold, facilitating meaningful cross-image
+comparisons.
+3.3 Fidelity Assessment Branch
+To emphasize perceptually salient distortions, we used a channel at-
+tention mechanism applied to both reference and distorted features:
+wR =σ(W 2δ(W1GAP(f R))),
+wD =σ(W 2δ(W1GAP(f D))), (3)
+where GAP denotes global average pooling,δis ReLU activa-
+tion,σis the sigmoid function, andW 1,W 2 are learnable projection
+matrices.
+The attended features are obtained via channel-wise modulation:
+f ′
+R =w R ⊙f R,f ′
+D =w D ⊙f D,(4)
+where⊙denotes element-wise multiplication. The fidelity is
+computed as a channel-wise concatenation of features further re-
+fined by a convolutional projectionψ fid(·)(as two convolution lay-
+ers) as:
+ffid =ψ fid([f ′
+D ||f ′
+R]).(5)
+
+===== PAGE 5 =====
+3.4 Harmony Assessment Branch
+Unlike fidelity evaluation, harmony assessment focuses on appear-
+ance consistency between distorted composition and a harmonized
+counterpart. Channel attention is similarly applied:
+f ′
+H =w H ⊙f H ,(6)
+withw H computed analogously. We compute a normalized ap-
+pearance deviation as:
+∆harm = f ′
+D −f ′
+H
+∥f ′
+H ∥2 +ε ,(7)
+whereεensures numerical stability. The harmony representation
+is obtained through:
+fharm =ψ harm(∆harm),(8)
+whereψ harm(·)denotes a lightweight convolutional mapping.
+3.5 Feature Integration and Quality Regression
+The fidelity and harmony descriptors are concatenated and further
+processed by a convolution and two additional fully connected lay-
+ers to perform the final regression as:
+ˆq=G([f fid ||f harm]),(9)
+where[·||·]denotes channel concatenation andG(·)is the convo-
+lution and fully connected layers and ˆqis predicted quality score.
+3.6 Training Objective
+AR-COMPQ is trained using MOS values obtained from the sub-
+jective study conducted on the ARC-IQA dataset. The network is
+optimized using the Smooth L1 loss, which balances robustness to
+outliers with stable convergence in regression-based quality predic-
+tion:
+LSmooth L1 =
+(
+1
+2 (q−ˆq)2,if|q−ˆq|<1,
+|q−ˆq| −1
+2 ,otherwise,
+whereqand ˆqdenote the ground-truth MOS and the predicted
+quality score, respectively.
+4 EXPERIMENTS
+4.1 Experimental Setup
+The proposed AR-COMPQ, is trained and evaluated on the ARC-
+IQA dataset. Cross-validation on other dataset (e.g. CFIQA [7]
+and ARIQA [6]) was not appropriate as there is a significant shift
+of target on them with focusing on blending and confusion of in-
+formation. To ensure content-independent evaluation and provide
+stronger generalization evaluation, a leave-one-content-out cross-
+validation strategy is adopted. Specifically, in each split, all samples
+corresponding to one AR content are reserved for testing, while the
+remaining contents are used for training. This procedure is repeated
+exhaustively so that each content appears once as the test set, and
+the reported results are obtained by averaging across all splits.
+For the base feature extractor in the proposed method, we se-
+lected SqueezeNet pre-trained on the ImageNet dataset. To pre-
+serve generic visual representations and reduce overfitting given the
+dataset size, the weights of the base network are kept frozen, and
+only the task-specific layers of AR-COMPQ are trained.
+The distorted image and corresponding pristine version on ARC-
+IQA are used as main inputs to network along with a harmonized
+version synthesized using the AICT harmonization model [16]
+which is optimized for providing efficient high resolution image
+harmonization. The MOS values from the subjective study are used
+as ground-truth quality labels.
+Table 2: Performance of different IQA metrics in AR quality as-
+sessment on ARC-IQA dataset. Top two results per column are
+highlighted in bold.
+Metric PLCC SRCC KRCC RMSE MAE
+Pixel-based
+MSE -0.555 -0.661 -0.477 0.712 0.668
+PSNR 0.585 0.661 0.477 33.39 31.81
+IW-MSE [26] -0.507 -0.518 -0.355 0.709 0.662
+IW-PSNR [26] 0.458 0.518 0.355 39.37 34.74
+Structural
+SSIM [25] 0.668 0.667 0.495 0.378 0.305
+SC-SSIM [10] 0.685 0.675 0.502 0.376 0.304
+Information-theoretic
+IFC [21] 0.474 0.578 0.409 12.17 10.57
+VIF [20] 0.099 0.134 0.092 0.675 0.630
+Perceptual / Feature-based
+NQM [4] 0.476 0.578 0.409 37.90 33.13
+FSIM [30] 0.787 0.722 0.545 0.378 0.306
+GSI [14] 0.639 0.656 0.4780.342 0.277
+GMSM [28] 0.744 0.677 0.501 0.387 0.313
+PAMSE [27] 0.577 0.506 0.363 0.402 0.322
+LTG [11] 0.103 0.146 0.106 0.634 0.587
+Deep learning
+LPIPS [31]-0.776 -0.827 -0.6420.780 0.691
+Dreamsim [8] -0.723 -0.713 -0.611 0.703 0.654
+AR focus
+CFIQ(NoSal) [7] 0.609 0.487 0.557 0.276 0.369
+CFIQ(wSal) [7] 0.696 0.563 0.614 0.190 0.257
+Proposed method0.918 0.782 0.632 0.106 0.084
+The network is trained using Adam optimizer and Smooth L1
+loss is used as the training objective, which provides robustness to
+outliers while maintaining stable convergence for regression-based
+quality prediction. All experiments are conducted using a learning
+rate of 10 −4, a batch size of 8, and a total of 50 training epochs.
+These hyperparameters are empirically chosen to balance conver-
+gence stability and generalization performance. This training pro-
+tocol ensures a fair and reproducible evaluation.
+4.2 Quantitative Results
+Tab. 2 reports correlation-based (PLCC, SRCC, KRCC) and error-
+based (RMSE, MAE) performance of representative IQA metrics
+on the ARC-IQA dataset. We applied monotonic nonlinear fitting
+of scores for traditional method by following similar approach in
+using logistic function in [7]. Overall, the proposed AR-COMPQ
+consistently outperforms all other methods, with the highest cor-
+relations and the lowest prediction errors. In contrast, conventional
+pixel-based, structural, and perceptual metrics exhibit limited align-
+ment with subjective AR quality, while deep feature-based metrics
+show strong inverse correlations. These results demonstrate that
+AR-COMPQ more accurately captures perceptual factors specific
+to AR content, leading to superior agreement with human judg-
+ments.
+
+===== PAGE 6 =====
+(a) 3baskets
+ (b) bookshelf
+ (c) office chair
+ (d) pillow
+(e) sofa brown
+ (f) sofa pitch
+ (g) vase brown
+Figure 5: Performance of proposed method over different content compositions in ARC-IQA dataset.
+4.3 Perceptual Sensitivity Analysis Across Content and
+Distortions
+To further understand the behavior and robustness of the proposed
+AR-COMPQ model, we analyze its prediction performance across
+different scene contents, distortion categories, and distortion sever-
+ity levels. This analysis provides insight into how well the model
+captures perceptual variations that arise from content-dependent
+distortions in AR image composition.
+4.3.1 Performance Across Scene Contents
+Fig. 5 illustrates the prediction performance of AR-COMPQ across
+seven different AR scene contents in the ARC-IQA dataset. Each
+content corresponds to a unique background environment and vir-
+tual object configuration, resulting in varying visual complexity and
+compositional difficulty.
+The results show that the proposed model maintains consis-
+tently high prediction accuracy across most contents. However,
+moderate variations can be observed for scenes with highly tex-
+tured backgrounds or extreme lighting conditions. For example
+the office chair scene contains low lighting condition with uniform
+texture which is difficult for user to distinguish distortions while
+our method usually under estimate quality score. The complex-
+ity of background in 3baskets and sofa pich is also resulting in
+lower performance on them. Such example scenes typically intro-
+duce stronger contextual interactions between the virtual object and
+the surrounding environment, making perceptual quality prediction
+more challenging. Nevertheless, AR-COMPQ demonstrates stable
+performance across contents, indicating that the model generalizes
+well to diverse AR scenarios.
+4.3.2 Performance Across Distortion T ypes
+We further analyze the prediction behavior across different distor-
+tion categories, including appearance distortions (brightness, color,
+and contrast) and structural distortions (texture and geometry).
+Fig. 6 presents the prediction results grouped by distortion type.
+The results reveal that AR-COMPQ maintains strong agreement
+with subjective scores across all distortion categories. Bright-
+ness and Contrast distortions generally produce smoother predic-
+tion trends due to their global photometric effects, whereas struc-
+tural distortions introduce more localized visual artifacts that can
+lead to larger perceptual variations. Also, color harmony predic-
+tions show larger variation as the perception of color could be com-
+plex and more background dependent. Despite these differences,
+the proposed model effectively captures both structural and appear-
+ance degradations, demonstrating the benefit of explicitly modeling
+these two complementary distortion dimensions in the proposed ar-
+chitecture as two complementary paths.
+4.3.3 Joint Analysis of Performance on Distortion and Con-
+tent
+Figure 7 presents the prediction error of AR-COMPQ across differ-
+ent AR contents and distortion types, measured using Mean Abso-
+lute Error (MAE) between predicted quality scores and the ground-
+truth ratings. Overall, the model shows consistently low errors
+across most contents, indicating stable performance across diverse
+AR scenes. Some variations can be observed depending on scene
+characteristics; for example, contents such as bookshelf exhibit uni-
+formly low errors, while scenes with more complex structures, such
+as 3baskets and office chair, show slightly higher errors for certain
+distortions.
+Across distortion categories, prediction errors remain rela-
+tively balanced, suggesting that the proposed model generalizes
+well across different distortion conditions. While certain con-
+tent–distortion combinations produce higher deviations, the over-
+all error distribution remains bounded, demonstrating that AR-
+COMPQ maintains reliable quality prediction across varying scene
+contents and distortion scenarios.
+4.3.4 Performance Across Distortion Severity Levels
+To further investigate the sensitivity of AR-COMPQ to distortion
+intensity, we analyze the prediction trends across multiple sever-
+ity levels for appearance-based distortions (brightness, color, and
+contrast). Figure 8 shows the relationship between predicted qual-
+ity scores and distortion levels in both decreasing and increasing
+directions around unit value representing no change. This figure
+also includes the trend for human perception from subjective study
+
+===== PAGE 7 =====
+(a) Brightness
+ (b) Color
+(c) Contrast
+ (d) Texture-Geometry
+Figure 6: Performance of proposed method over different distortion
+applied on compositions in ARC-IQA dataset.
+Table 3: Ablation results for two-path input configurations. Best
+results are highlighted in bold.
+Config. PLCC SRCC RMSE S-L1 MAE
+Dist 0.733 0.615 0.209 0.113 0.166
+Ref 0.717 0.587 0.251 0.128 0.172
+Ref + Dist 0.800 0.644 0.182 0.109 0.154
+Dist + Harm 0.871 0.747 0.119 0.097 0.116
+Ref + Harm 0.821 0.722 0.153 0.086 0.130
+Dist,Ref,Harm0.918 0.782 0.106 0.046 0.084
+measured by MOS against different level of distortions. Analysis
+of trend for either subjective study shows how human is sensitive to
+severity of each distortion while comparing trend with the objective
+model’s response; shows how close the modeling could behave as
+human perception.
+As it can be seen in Fig. 8, as distortion severity increases
+in both directions, the predicted quality scores consistently de-
+crease, closely following the corresponding subjective quality
+trends. However, this change is more significant for brightness dis-
+tortion. This monotonic behavior indicates that the proposed model
+successfully captures the perceptual degradation associated with
+increasing photometric inconsistencies. Moreover, the smoother
+trend of quality in positive tail of contrast curve reveal the expecta-
+tion of participants for sharper images in better quality pictures in-
+troduce additional complexity in compositin distortion perception
+to be considered by any modeling, however our model could care-
+fully mimic this trend and get high correlation with human opinion.
+Overall, these analyses confirm that AR-COMPQ not only
+achieves strong overall correlation with human judgments but also
+maintains reliable performance across varying scene contents, dis-
+tortion types, and distortion intensities. This robustness is essential
+for practical AR quality assessment, where perceptual degradations
+can vary widely depending on scene context and rendering condi-
+tions.
+Figure 7: Prediction error for different content and distortion types.
+(a) Brightness
+ (b) Color
+(c) Contrast
+Figure 8: Performance of proposed method over different distortion
+levels applied on compositions in ARC-IQA dataset.
+5 ABLATIONSTUDY
+To systematically investigate the contribution of individual archi-
+tectural components and design choices within the proposed AR-
+COMPQ framework, we conducted an extensive ablation study.
+The analysis focuses on three key aspects: (i) the configuration of
+input paths, (ii) the influence of backbone architecture and model
+capacity, All ablation experiments are performed on the ARC-IQA
+dataset under identical training settings to ensure fair comparisons.
+5.1 Effect of Input Path Selection
+To further analyze the relative contribution of individual input
+streams, we conduct a focused ablation study using two-path vari-
+ants of the proposed framework. Specifically, we evaluate three
+configurations: reference–distorted, reference–harmonized, and
+distorted–harmonized. All models are trained and evaluated under
+identical settings to isolate the effect of input selection.
+The quantitative results are summarized in Table 3. Among the
+evaluated configurations, the ”reference,distorted,harmonized vari-
+ant” consistently achieves the best performance across all evalua-
+tion metrics.
+
+===== PAGE 8 =====
+Table 4: Ablation results for backbone network and model com-
+plexity on ARC-IQA. Best results inbold.
+Backbone PLCC↑SRCC↑RMSE↓L1↓MAE↓
+VGG16 0.841 0.756 0.152 0.085 0.129
+AlexNet 0.814 0.712 0.149 0.083 0.126
+SqueezeNet (Orig.)0.918 0.782 0.106 0.046 0.084
+SqueezeNet (Light) 0.782 0.750 0.183 0.063 0.114
+These results suggest that explicitly modeling distortion charac-
+teristics in conjunction with appearance harmonization cues is more
+critical than relying on reference information alone or its combina-
+tion with each of the other two.
+5.2 Backbone Network and Model Complexity
+To evaluate the influence of backbone architecture and model ca-
+pacity, we replace the base feature extractor with VGG16, AlexNet,
+and SqueezeNet, and additionally consider a lightweight version of
+version of the model with SqueezeNet where the parameters and
+number of layers in processing and integration layers are changed
+to reduce the trainable parameters to below 50
+The quantitative results in Table 4 show that the SqueezeNet-
+based configuration consistently achieves the best performance
+across correlation- and error-based metrics. Although VGG16
+and AlexNet provide higher representational capacity, their per-
+formance is inferior, suggesting that compact, task-aligned feature
+representations are more suitable for AR perceptual quality assess-
+ment. In contrast, the lightweight network exhibits a clear degrada-
+tion in performance, indicating that aggressive parameter reduction
+limits the model’s ability to capture fine-grained perceptual distor-
+tions.
+6 CONCLUSION
+In this paper, we presented a comprehensive investigation of per-
+ceptual quality in augmented reality (AR) image composition. We
+introduced theARC-IQAdataset, which systematically incorpo-
+rates object-level, appearance-level, and composition-level distor-
+tions generated through a realistic AR rendering pipeline. A con-
+trolled subjective study was conducted to analyze human sensitivity
+to these distortions across diverse scene contents.
+Guided by this perceptual analysis, we proposedAR-COMPQ,
+a dual-path objective quality assessment model that jointly captures
+object-level structural fidelity and appearance-level harmony be-
+tween virtual objects and real scenes. Experimental results demon-
+strate that AR-COMPQ achieves stronger agreement with human
+perceptual judgments compared to conventional IQA metrics and
+recent deep perceptual models.
+Overall, this work provides a new benchmark and a perceptually
+grounded framework for evaluating AR composition quality, sup-
+porting future research in perceptually optimized AR systems.
+Future work will explore view-dependent and dynamic AR sce-
+narios enabled by head-mounted displays and extend the dataset to
+include more complex compositions, potentially leveraging gener-
+ative AI for scalable data synthesis.
+REFERENCES
+[1] I.-T. S. V . Q. Assessment. Methods for multimedia applications.
+Telecommuniation Standardization Sector of ITU Recommendation P,
+911, 1998. 3
+[2] A. M. Boutsi. Photogrammetric techniques and algorithms optimiza-
+tion for the development of interactive augmented reality systems.
+2025. 2
+[3] M. Daassi and S. Debbabi. Intention to reuse ar-based apps: The com-
+bined role of the sense of immersion, product presence and perceived
+realism.Information & Management, 58(4):103453, 2021. 1
+[4] N. Damera-Venkata, T. D. Kite, W. S. Geisler, B. L. Evans, and A. C.
+Bovik. Image quality assessment based on a degradation model.IEEE
+transactions on image processing, 9(4):636–650, 2000. 5
+[5] K. Ding, K. Ma, S. Wang, and E. P. Simoncelli. Image quality
+assessment: Deformable image transformer similarity (DISTS). In
+Proc. IEEE Conf. Comput. Vis. Pattern Recognit. (CVPR), pp. 11813–
+11821, 2020. 2
+[6] H. Duan, L. Guo, W. Sun, X. Min, L. Chen, and G. Zhai. Augmented
+reality image quality assessment based on visual confusion theory. In
+2022 IEEE International Symposium on Broadband Multimedia Sys-
+tems and Broadcasting (BMSB), pp. 1–6. IEEE, 2022. 2, 5
+[7] H. Duan, X. Min, Y . Zhu, G. Zhai, X. Yang, and P. Le Callet. Con-
+fusing image quality assessment: Toward better augmented reality ex-
+perience.IEEE Transactions on Image Processing, 31:7206–7221,
+2022. 2, 5
+[8] S.-Y . Fu and et al. Dreamsim: Learning new dimensions of human
+visual similarity using synthetic data, 2023. arXiv:2311.18803. 2, 5
+[9] D. Gantenbein. Collaboration between amazon and uc berkeley ad-
+vances ai and machine learning.Amazon Science, July, 7, 2020. 3
+[10] K. Gu, G. Zhai, X. Yang, and W. Zhang. An improved full-reference
+image quality metric based on structure compensation. InProceedings
+of The 2012 Asia Pacific Signal and Information Processing Associa-
+tion Annual Summit and Conference, pp. 1–6. IEEE, 2012. 5
+[11] K. Gu, G. Zhai, X. Yang, and W. Zhang. An efficient color image
+quality metric with local-tuned-global model. In2014 IEEE Interna-
+tional Conference on Image Processing (ICIP), pp. 506–510. IEEE,
+2014. 5
+[12] L. E. Guti ´errez, M. M. Betts, P. Wightman, A. Salazar, D. Jabba, and
+W. Nieto. Characterization of quality attributes to evaluate the user
+experience in augmented reality.IEEE Access, 10:112639–112656,
+2022. 2
+[13] E.-L. Hsiang, Z. Yang, Q. Yang, P.-C. Lai, C.-L. Lin, and S.-T. Wu.
+Ar/vr light engines: perspectives and challenges.Advances in Optics
+and Photonics, 14(4):783–861, 2022. 2
+[14] A. Liu, W. Lin, and M. Narwaria. Image quality assessment based
+on gradient similarity.IEEE Transactions on Image Processing,
+21(4):1500–1512, 2011. 5
+[15] G. Ma and et al. ARABIQA: A novel blind image quality assess-
+ment model for augmented reality. InProc. IEEE Int. Conf. Acoustics,
+Speech, Signal Process. (ICASSP), 2023. 2
+[16] Q. Meng, L. Qinglin, Z. Li, X. Lan, S. Zhang, and L. Nie. High-
+resolution image harmonization with adaptive-interval color trans-
+formation.Advances in Neural Information Processing Systems,
+37:13769–13793, 2024. 5
+[17] A. Sekhri, S. A. Amirshahi, and M.-C. Larabi. Towards light-weight
+transformer-based quality assessment metric for augmented reality. In
+2024 IEEE 26th International Workshop on Multimedia Signal Pro-
+cessing (MMSP), pp. 1–6. IEEE, 2024. 2
+[18] A. Sekhri, M.-C. Larabi, and S. A. Amirshahi. Transformar: A light-
+weight transformer-based metric for augmented reality quality assess-
+ment.Signal Processing: Image Communication, 140:117437, 2025.
+2
+[19] H. R. Sheikh and A. C. Bovik. Image information and visual quality.
+IEEE Trans. Image Process., 15(2):430–444, 2006. 2
+[20] H. R. Sheikh and A. C. Bovik. Image information and visual quality.
+IEEE Transactions on image processing, 15(2):430–444, 2006. 5
+[21] H. R. Sheikh, A. C. Bovik, and G. De Veciana. An information fidelity
+criterion for image quality assessment using natural scene statistics.
+IEEE Transactions on image processing, 14(12):2117–2128, 2005. 5
+[22] J. Simon, L. Gogol ´ak, and Z. ˇCovi´c. The future of augmented reality
+application development trends and opportunities.Analecta Technica
+Szegedinensia, 19(1):28–37, 2025. 1
+[23] P. Wang, H. Duan, Z. Xie, X. Min, and G. Zhai. Subjective and ob-
+jective quality assessment for augmented reality images.IEEE Open
+Journal on Immersive Displays, 2024. 2
+[24] Z. Wang, A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli. Image
+quality assessment: From error visibility to structural similarity.IEEE
+Trans. Image Process., 13(4):600–612, Apr. 2004. 2
+[25] Z. Wang, A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli. Image
+quality assessment: from error visibility to structural similarity.IEEE
+
+===== PAGE 9 =====
+transactions on image processing, 13(4):600–612, 2004. 5
+[26] Z. Wang and Q. Li. Information content weighting for perceptual
+image quality assessment.IEEE Transactions on image processing,
+20(5):1185–1198, 2010. 5
+[27] W. Xue, X. Mou, L. Zhang, and X. Feng. Perceptual fidelity aware
+mean squared error. InProceedings of the IEEE international confer-
+ence on computer vision, pp. 705–712, 2013. 5
+[28] W. Xue, L. Zhang, X. Mou, and A. C. Bovik. Gradient magnitude
+similarity deviation: A highly efficient perceptual image quality index.
+IEEE transactions on image processing, 23(2):684–695, 2013. 5
+[29] L. Zhai and D. Chen. Image real-time augmented reality technology
+based on spatial color and depth consistency.Journal of Real-Time
+Image Processing, 18(2):369–377, 2021. 2
+[30] L. Zhang, L. Zhang, X. Mou, and D. Zhang. Fsim: A feature similar-
+ity index for image quality assessment.IEEE transactions on Image
+Processing, 20(8):2378–2386, 2011. 2, 5
+[31] R. Zhang, P. Isola, A. A. Efros, E. Shechtman, and O. Wang. The
+unreasonable effectiveness of deep features as a perceptual metric. In
+Proc. IEEE Conf. Comput. Vis. Pattern Recognit. (CVPR), pp. 586–
+595, 2018. 2, 5

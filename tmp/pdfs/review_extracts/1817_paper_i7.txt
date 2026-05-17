@@ -1,0 +1,1170 @@
+SOURCE: /Users/m.diluca@bham.ac.uk/Downloads/ismar26a-sub1817-i7.pdf
+PAGES: 11
+METADATA: {'/CreationDate': 'D:20260317114548', '/Creator': 'PDFium', '/Producer': 'PDFium'}
+
+
+
+===== PAGE 1 =====
+Online Submission ID: 1817
+When Registration Error Becomes Ambiguous: Behavioural Effects of
+Static Misalignment in Augmented Reality
+Category: Research
+ABSTRACT
+Static registration error can impair user performance in augmented
+reality, but its behavioural and subjective effects remain insuffi-
+ciently characterised. While existing works often evaluate accept-
+able registration quality as a purely quantitative geometric prob-
+lem, this perspective overlooks how spatial misalignment creates
+perceptual ambiguity for the user. In this paper, we demonstrate
+that AR registration requirements might not be defined by abso-
+lute offset magnitude alone, but also by the physical layout and the
+boundaries of cue-target ambiguity. We report a controlled video
+see-through augmented reality study with 24 participants using a re-
+producible 3 × 3 button-acquisition task, in which a visual cue was
+displaced relative to physical targets across six offset magnitudes.
+User performance remained close to the zero-offset reference at the
+smallest offsets, but degraded significantly under larger misalign-
+ments. Participants also showed short-term adaptation after the
+switch to misalignment, although larger offsets retained substan-
+tial residual costs. Subjective ratings showed parallel increases in
+rating with performance. These findings provide a basis for setting
+task-specific registration requirements by identifying offset ranges
+that remain behaviourally tolerable, rather than those that produce
+ambiguity-driven breakdown under explicit performance criteria.
+Index Terms:AR, Registration Error, Reaction Time.
+1 INTRODUCTION
+Augmented Reality (AR) overlays virtual content onto the real
+world in order to support perception and action. A core require-
+ment for such overlays is spatial registration, that is, the alignment
+and synchronisation of virtual cues with their corresponding physi-
+cal referents or real-world events [2, 22, 26]. Its usefulness depends
+not only on the presence of an augmentation, but also on whether
+the displayed cue preserves a meaningful spatial relationship to the
+physical referent [22, 26]. When registration error is low relative to
+the spatial tolerance of the task, virtual cues can be interpreted di-
+rectly in relation to the workspace. As registration error increases,
+the cue may remain visible but become a less reliable actionable
+indicator of the intended physical referent.
+In practice, perfect alignment is difficult to obtain. Tracking
+limitations, such as calibration error, modelling inaccuracies, and
+system latency, can all introduce spatial deviation between virtual
+content and the physical scene. This deviation is commonly de-
+scribed as registration error and remains a central challenge in AR
+systems [20]. Although registration error is often discussed as a
+system-accuracy problem, its consequences for interaction depend
+on how misalignment affects the user’s interpretation of the cue dur-
+ing task performance [3, 26].
+In discrete spatial tasks, increasing static registration error need
+not act only as a monotonic increase in difficulty. Instead, it may
+alter the functional relationship between the virtual cue and the in-
+tended physical target. At small offsets, the cue may still preserve a
+clear association with a single target. At intermediate offsets, espe-
+cially near the midpoint between neighbouring targets, the cue may
+become ambiguous[10, 27]. At larger offsets, it may no longer ap-
+pear locally attached to the target and may instead be interpreted as
+an external spatial reference that requires deliberate remapping[34].
+Under this view, static misalignment is not only a matter of reduced
+spatial accuracy, but also a matter of weakened cue–target associa-
+tion and changing perceptual interpretation [15, 23, 34].
+This distinction is likely to matter for behaviour. If the displaced
+cue still specifies one target clearly, users may remain relatively
+efficient despite some error. Once ambiguity emerges, however,
+users may require additional time to interpret the cue before initi-
+ating movement, and may also show more incorrect selections or
+prolonged movement execution. Separating these effects is im-
+portant because delays before movement onset and delays during
+movement execution may reflect different underlying processes, in-
+cluding cue interpretation, response selection, and online correc-
+tion [19, 36, 44, 46]. For this reason, acceptable registration quality
+for a given task should not be defined by absolute offset alone, but
+by how offset interacts with target spacing, action demands, and
+explicit behavioural criteria such as time cost and error rate.
+Motivated by this issue, we investigate how increasing static reg-
+istration error affects performance and subjective experience in a
+rapid AR target-acquisition task. We use a controlled video see-
+through setup and a reproducible 3×3 button-acquisition task in
+which a visual cue is horizontally displaced relative to physical tar-
+gets across multiple offset magnitudes chosen with respect to target
+spacing. This enables millisecond-level measurement of reaction
+time, movement time, and correctness, together with post-condition
+ratings of workload, perceived difficulty, and interaction quality.
+The paper addresses the following question: how does increasing
+static registration error affect objective performance and subjective
+response in a discrete AR target-acquisition task, and what does this
+imply for task-specific registration requirements? We make three
+contributions. First, we introduce a controlled and reproducible
+task paradigm for studying static registration error in AR. Sec-
+ond, we characterise how increasing offset affects response initi-
+ation, movement execution, correctness, and short-term adaptation
+across offsets spanning clear-association, ambiguity, and detached-
+cue regimes. Third, we complement these behavioural measures
+with questionnaire-based ratings of workload, perceived difficulty,
+and interaction quality, providing an integrated evaluation frame-
+work for studying registration error under this class of task.
+2 BACKGROUND
+2.1 Target Acquisition and Task Design
+Target acquisition tasks provide a controlled way to study how
+spatial properties of an interface affect action time and accuracy.
+Fitts’ law remains the classic framework for relating performance
+to movement amplitude and target width in aimed movement [12].
+In the present work, we draw on this tradition not to claim a canon-
+ical ISO Fitts task, but to motivate a controlled target-acquisition
+paradigm for a discrete physical layout.
+In button-based interfaces, increasing target size generally re-
+duces misses, errors, and completion time, whereas the effects of
+inter-target spacing are less consistent and appear to depend on the
+overall layout [8, 17]. These considerations are especially impor-
+tant in Extended Reality (XR), where Fitts-style studies vary sub-
+stantially in task design and reporting [1]. Roig-Maim ´o et al. fur-
+ther showed that non-ISO target-selection tasks can produce less
+interpretable throughput estimates when target arrangement and
+movement amplitude vary excessively within a sequence [35]. Ac-
+cordingly, we use large buttons and generous spacing to minimise
+1
+
+===== PAGE 2 =====
+Online Submission ID: 1817
+baseline selection difficulty and neighbouring-target confusion, so
+that performance changes can be interpreted primarily in relation to
+cue misalignment rather than to an intrinsically crowded layout.
+2.2 Static Misalignment as a Perceptual and Be-
+havioural Problem
+Registration error in AR is often introduced as a problem of track-
+ing, calibration, and spatial alignment. However, earlier discussions
+of perceptual issues in AR make clear that the effectiveness of an
+augmentation depends not only on nominal geometric placement,
+but also on how virtual content is perceived and interpreted relative
+to the physical scene [26]. In goal-directed action, visual, propri-
+oceptive, and haptic information are combined according to their
+relative reliability [11, 48, 43]. Static registration error therefore
+does not simply reduce overlay accuracy. It can also weaken the
+cue–target relationship by making the displaced visual cue a less
+reliable indicator of the intended physical referent.
+In a discrete control layout, increasing offset may alter not only
+spatial accuracy but also how the cue is interpreted. We use three
+perceptual regimes as a conceptual framework for this progres-
+sion: aclear-associationregime, in which the cue still unambigu-
+ously indicates the intended target; anambiguityregime, in which it
+could plausibly refer to multiple nearby targets; and adetached-cue
+regime, in which it no longer appears locally attached to the lay-
+out and must instead be interpreted as an external spatial reference.
+This framing suggests that the effect of misalignment may become
+non-linear once the displaced cue no longer specifies a unique tar-
+get reliably, even though the formal hypotheses concern monotonic
+degradation with increasing offset magnitude.
+2.3 Response Timing and Adaptation
+Performance in aimed action is commonly understood as the out-
+come of multiple processing stages rather than a single undiffer-
+entiated response latency. Classic reaction-time accounts treat the
+interval between stimulus onset and overt action as reflecting pre-
+movement processes such as cue encoding, response selection, and
+movement preparation [44, 19]. Related work further suggests that
+movement control can continue during execution through online ad-
+justment [36, 46]. In visually guided reaching, target information
+can be used online during movement, and reach trajectories can be
+corrected rapidly in response to target displacement [31, 30, 14].
+Static registration error may therefore impair performance in at
+least two ways. It may delay interpretation of the displaced cue
+and preparation of the intended response before movement begins,
+and it may increase the need for corrective control once the reach
+has been initiated. Analysing reaction time and movement time
+separately is therefore more informative than relying on a single
+aggregate completion-time measure. Because the offset within a
+condition is stable rather than random, participants may also par-
+tially adapt over repeated trials by recalibrating their mapping from
+cue to target or by adopting compensatory strategies [25, 32, 24].
+2.4 Prior Studies of Registration Error
+Prior AR and XR studies suggest that spatial distortion affects not
+only task performance, but also how users interpret and rely on aug-
+mented cues during action. Robertson et al. examined static regis-
+tration error in a tabletop AR Lego block-placement task by com-
+paring no error, fixed translation error, and random translation error,
+both with and without added graphical context. Using time, place-
+ment errors, and questionnaire responses, they showed that partici-
+pants gradually adapted to fixed error over repeated trials, whereas
+random error without context reduced the task to near-guessing.
+Added context reduced placement errors under misalignment, al-
+though it could also increase completion time because participants
+had to interpret additional spatial information [34]. Gottsacker et
+al. examined simulated tracking errors in an optical see-through AR
+search-and-selection task. Their study separated fixed accuracy off-
+sets from dynamic precision jitter, showing that even small angular
+errors affected both task performance and subjective trust, particu-
+larly when participants relied primarily on AR cues [15].
+A related perspective is provided by Killough et al., who stud-
+ied imposed spatial offset in a HoloLens 2 task involving writing
+and walking. Although framed as drift tolerance, their conditions
+were implemented as fixed offsets and evaluated using behavioural
+performance, Likert ratings, and qualitative reports. In the static
+writing task, performance and perceived difficulty worsened as off-
+set increased, with clearer degradation at larger offsets, and partic-
+ipants differed in whether they followed the displayed drifted loca-
+tion directly or attempted to compensate for it [23].
+Taken together, these studies show that spatial distortion in AR
+and XR affects performance, trust, and user strategy, but they do
+not yet characterise how increasing fixed translational offset affects
+rapid discrete acquisition of real controls when the cost of target in-
+terpretation can be separated from the cost of movement execution.
+2.5 Reaction Time and Measures in MR
+There has been a noted relationship between presence and reaction
+time in MR where reaction time could predict presence [6, 7, 5]. In
+virtual reality (VR), presence is often defined as the “sense of being
+there” [39]. In MR, however, there is some debate as to whether
+presence exists in the same manner as it does in VR, with competing
+definitions and metrics. This is because presence in VR requires a
+virtual environment (VE) [42] and, as MR takes place in the real
+world, MR does not have a VE. This raises a problem when trying
+to measure presence in MR.
+When using reaction time as a proxy for presence, Chandio et
+al. used unaltered VR presence questionnaires to try and measure
+the experience of presence in MR [6]. This creates a problem as
+unaltered VR presence questionnaires have not been validated for
+MR [47]. There is concern that, because presence lacks a VE, these
+questionnaires are not applicable as many of them ask users to com-
+pare their experience of the virtual world to their experience of the
+physical world. As such, the authors cannot definitively say that
+they used reaction time as a proxy for presence. Further complicat-
+ing matters, there is a lack of proof suggesting objective measures,
+such as reaction time, are adequate or reliable measures of presence,
+especially as presence is considered to be personal that depends on
+the user and their interpretation of the experience [47, 16].
+Despite the doubts surrounding presence, this study and its find-
+ings regarding reaction time should not be ignored. Clearly, re-
+action time was measurable and correlated to something, even if
+that was not specifically presence. Perhaps what Chandio et al.
+were measuring was not presence, but engagement or a similar phe-
+nomenon. While not yet studied in MR, a relationship between en-
+gagement and reaction time has been noted in the field of game and
+education [21, 28]. Reaction time as an objective measure for user
+experience should be more deeply considered.
+3 RESEARCHAIM ANDHYPOTHESES
+We investigate how increasing static registration error affects objec-
+tive performance and subjective response in a discrete AR target-
+acquisition task, and what this implies for task-specific registration
+requirements. Rather than treating acceptable error as a purely ge-
+ometric quantity, we examine it with respect to explicit behavioural
+criteria. We also examine whether increasing registration error is
+reflected in subjective ratings collected after each condition.
+3.1 Hypotheses
+H1:Increasing registration error magnitude will impair objective
+task performance.
+H1.1:Reaction time and movement time will increase with
+increasing registration error magnitude.
+2
+
+===== PAGE 3 =====
+Online Submission ID: 1817
+H1.2:Task accuracy will decrease with increasing registra-
+tion error magnitude.
+H2:Increasing registration error magnitude will worsen subjective
+workload and perceived task difficulty.
+H2.1:Subjective workload will increase with increasing reg-
+istration error magnitude.
+H2.2:Perceived task difficulty will increase with increasing
+registration error magnitude.
+As a secondary exploratory analysis, we also examine whether in-
+creasing registration error is associated with poorer ratings of inter-
+action quality and engagement-related experience.
+4 METHOD
+4.1 Participants
+Twenty-four volunteers (10 female, 14 male; estimatedM age =
+28.8,SD=6.3) were recruited from the university community.
+Age was collected in 10-year intervals due to ethics requirements,
+and the reported mean and standard deviation were estimated using
+the midpoint of each age range. All participants reported normal
+or corrected-to-normal vision and no history of epileptic episodes.
+The study was approved by the institutional ethics committee, and
+written informed consent was obtained from every participant.
+4.2 Apparatus
+The experimental system comprised a Meta Quest 3 video see-
+through mixed-reality headset and a custom control panel mounted
+on a height-adjustable table (Figure 1 (b)) with a USB-serial inter-
+face, and a host PC. The wooden control panel is 60×60 cm with
+nine circular tactile buttons (diameter 100 mm) arranged in a 3×3
+grid with 5 cm edge-to-edge spacing (15 cm centre-to-centre spac-
+ing). A Unity 2022.3 application using Meta SDK v85 rendered
+the virtual overlays in the headset, while the host PC managed the
+experiment logic and controlled the virtual LED cues. Communica-
+tion between the PC and headset was implemented over Wi-Fi using
+a TCP-based messaging framework. Details on parts and construc-
+tion can be provided upon request.
+Participants interacted with a wooden control panel. The dome-
+shaped button top provides a clear tactile cue about the centre of the
+button. Each button contained an individually addressable white
+LED beneath a flat diffuser as a real light stimulus, allowing the
+same physical layout to be used for both real and virtual cue pre-
+sentation. The virtual LED texture was derived from a photograph
+of an illuminated physical button in order to approximate the halo
+produced by the diffuser. Brightness was adjusted to reduce visual
+mismatch, although the rendered cue remained visually distinguish-
+able from the physical LED from differences in display contrast and
+pass-through capture.
+We used a video see-through (VST) headset rather than an opti-
+cal see-through display in order to reduce accommodation-related
+confounds when switching attention between virtual cues and the
+physical workspace [13]. For VST headsets, the pass-through im-
+age and virtual augmentation are rendered on the same display
+plane, which makes the attentional and perceptual effects of spa-
+tial misalignment easier to interpret. Their wider field of view also
+ensured that the largest imposed offsets remained visible rather than
+being clipped by the display boundary.
+For spatial registration, the virtual LED panel was aligned with
+the physical control panel using four QR codes, one at each corner
+of the board. The Meta MRUK QR Code Trackable is spawned for
+each QR code (example scene in Figure 1 (b)), and a Spatial An-
+chor is spawned from each trackable to stabilise the virtual panel
+over the session. Alignment was visually checked (under around 1
+cm) before each session and recalibrated when necessary. This ap-
+proach provided more consistent placement than manual alignment,
+particularly after table-height adjustment.
+4.3 Task
+We employed a discrete target-acquisition task with controllable
+static registration error to test how misalignment magnitude af-
+fected rapid responding to physical controls.
+On each trial, participants responded to a single illuminated tar-
+get on a 3×3 button board (control panel). Depending on the
+condition, the cue was presented either as a physical LED on the
+corresponding button (Baseline) or as a virtual LED rendered in the
+headset (Control and Offset). Participants were instructed to tap the
+corresponding physical button as accurately and as quickly as possi-
+ble. Each trial began when the participant placed both hands on the
+A and B buttons of a Microsoft Adaptive Controller, which served
+as the home position and triggered trial onset. After a randomised
+holding interval, one target cue was presented. Participants con-
+tinued holding the home-position buttons until they initiated their
+response by moving one hand to tap the cued button. This variable
+foreperiod reduced anticipatory responses to predictable cue onset,
+as illustrated in Figure 1 (c).
+In the Offset conditions, the visual cue was laterally displaced
+relative to the physical button layout. Participants therefore had to
+interpret the misaligned cue and reach to the intended physical tar-
+get despite the altered cue-target relationship. After each tap, the
+LED corresponding to the pressed button was illuminated as re-
+sponse feedback. If the participant pressed an incorrect button, the
+original cue was turned off immediately and the pressed button was
+illuminated instead, which could serve as an immediate correction
+cue. A rising sound was played for a correct response and a falling
+sound was played for an incorrect response.
+4.4 Experimental Design
+Conditions and Trial StructureThe study used a within-
+subjects design with the static Registration Error (RE) magnitude
+as the independent variable. As shown in Fig. 1, the study com-
+prised eight conditions: Baseline (physical LEDs only), Control
+(AR overlay with 0cm offset), and six Offset conditions with lat-
+eral misalignment magnitudes of 5, 7.5, 11.25, 22.5, 35, and 40cm.
+The button layout had a centre-to-centre spacing of 15cm. The
+error magnitudes were chosen to probe theoretically meaningful po-
+sitions relative to this spacing, from small displacements that pre-
+serve a clear cue-target association, through ambiguous intermedi-
+ate offsets, to a large displacement that places the cue outside the
+board while remaining visible in the headset field of view. The
+5 cm condition represents a small displacement that remains be-
+low the midpoint between adjacent buttons. The 7.5 cm condition
+places the virtual LED midway between two adjacent buttons, cor-
+responding to 0.5×the spacing and marking the onset of percep-
+tual ambiguity. The 11.25 cm condition corresponds to 0.75×the
+spacing and was included to further probe this ambiguity before a
+full one-column shift. The 22.5 cm condition corresponds to 1.5×
+the spacing, placing the virtual LED at an equal-distance confusion
+point after a one-column shift. The 35 cm condition applies a two-
+column shift plus less than 0.5×the spacing, keeping the cue within
+the board extent while preserving a similar ambiguity pattern. Fi-
+nally, the 40 cm condition shifts the virtual LED beyond the board
+while keeping it within the headset field of view, approximating a
+detached-cue configuration.
+The manipulation was restricted to horizontal translation be-
+cause displacement towards the user would project the cue onto the
+ground or the participant’s body, whereas displacement away from
+the user could not be balanced symmetrically. Offsets outside the
+field of view were excluded because they would have introduced
+additional visual search and head movement costs beyond the in-
+tended registration-error manipulation. The Baseline condition pro-
+vided a physical reference without headset-mediated presentation.
+Baseline and Control were always presented first, in fixed order,
+followed by the six Offset conditions.
+3
+
+===== PAGE 4 =====
+Online Submission ID: 1817
+Figure 1: Top(a): Visualisation of Offset Conditions, the Registration Error (RE) increases from left to right. The Half condition labels the start of
+confusion of the cue to buttons, and the Huge condition has a light cue off the board. Raw screen captures from Meta Quest 3 for the LED cue
+are shown for each condition, including hand tapping on the corresponding button in offset conditions. Button Left(a): System Hardware Setup.
+The system consists of our self-made control panel and a Microsoft Adaptive Controller on a height-adjustable table. The white virtual frame and
+QR code axis and red bounding boxes are for illustration purposes for alignment accuracy verification and are disabled during the experiment.
+Bottom Right(c): Individual trial timeline highlighting key events during a trial.
+Each condition consisted of 30 trials. Baseline and Control re-
+mained aligned throughout. Each Offset condition comprised an
+aligned phase (trials 1–6), a transition window (trials 7–12), and a
+sustained misaligned phase (trials 13–30), with the predefined off-
+set introduced at a randomly selected switch point within the tran-
+sition window and maintained thereafter.
+Counterbalancing and RandomisationWe counterbalance
+and randomise at the participant, condition, and trial levels to re-
+duce anticipatory bias, learning, and order effects. At the partic-
+ipant level, the order of the six Offset conditions was counterbal-
+anced across participants using a 6×6 balanced Latin square. Par-
+ticipants were assigned to six groups (n=4 per group), with each
+group following one row of the Latin square. Offset direction (left-
+ward or rightward) was randomised and balanced (left of Figure 2).
+At the condition level, we randomised the onset of misalignment
+within each Offset condition to capture adaptation to the sudden in-
+troduction of spatial error. Specifically, the transition window (trials
+7–12) contained a single randomly selected switch point, with trials
+before the switch point remaining aligned and trials from the switch
+point onward misaligned. The sequence of illuminated target but-
+tons for each trial was also randomised within each condition to
+reduce ordering effects. At the trial level, each trial used a jittered
+foreperiod before stimulus onset while participants held down the
+two home-position buttons on the Adaptive Controller to prevent
+anticipation of LED illumination.
+Pilot Study and Design RefinementA pilot study with six
+volunteers was conducted to refine the final protocol. Based on the
+pilot, the number of trials per condition was increased from 20 to
+30 to provide a longer sustained-misalignment phase for stabilised
+RT and MT estimates. Manual alignment was replaced with QR-
+based registration for greater consistency across participants. The
+response timeout was increased from 2s to 5s to allow sufficient
+time for response selection under misalignment. Finally, offset di-
+rection was balanced leftward and rightward in the final study to
+avoid anticipatory bias.
+4.5 Measures
+We collected both objective behavioural measures and subjective
+self-report measures. Behavioural measures comprised Reaction
+Time (RT), Movement Time (MT), task correctness, and timeout
+events recorded on each trial. All task events, including cue on-
+sets and offsets, button presses, and home-position hold and release
+timestamps, were logged with millisecond precision.
+RT was defined as the interval from cue onset to movement
+initiation as the hand off the adaptive controller. MT was de-
+fined as the interval from movement initiation to the target-button
+press. This separation was motivated by prior accounts of motor
+behaviour suggesting that pre-movement processes, including cue
+interpretation, response selection, and movement specification, can
+be dissociated from execution-stage processes such as online cor-
+rection [44, 19, 36, 46]. We analysed RT and MT separately in
+order to distinguish delays arising primarily before movement on-
+set from delays arising during target acquisition. In the present
+task, RT primarily indexes cue interpretation, response selection,
+and movement initiation, whereas MT primarily indexes execution
+after initiation.
+Subjective measures comprised a pre-study questionnaire, a
+post-condition questionnaire administered after each experimental
+condition, and a post-study questionnaire administered at the end of
+the session. All scale-based questions used a 7-point Likert scale,
+and the full questionnaires are provided in Appendix Section A.1.
+The pre-study questionnaire collected demographic information
+on age, English fluency, gender, prior use of VR/AR, dominant eye
+and hand, current fitness, and vision/safety information.
+The post-condition questionnaire has three sections. The first
+section is a series of questions adapted from one-question HCI post-
+experiment surveys. These questions assess perceived task diffi-
+culty [45, 41], ease of use [4], motivation [37, 38], and concentra-
+tion [33]. For these custom items, several scales included verbal
+midpoint anchors at response option 4 following the source of the
+questions. The second section is an adapted version of the Witmer
+& Singer Presence Questionnaire tailored to the control panel, light
+cues, and task [49]. As discussed in Section 2.5, a consensus on
+how to measure presence in AR has not yet been reached so we do
+not claim to be measuring it here. Instead, we are using the ques-
+tions within the Witmer & Singer Presence Questionnaire to eval-
+uate responsiveness, naturalness of interaction, anticipation of sys-
+tem behaviour, involvement, speed of adjustment to the light cues,
+perceived proficiency, visual distraction, and the ability to concen-
+trate on the task rather than on the interaction mechanism. The third
+section is the NASA-TLX adapted to a 7-point Likert-scale [18].
+The post-study questionnaire assessed ergonomics, perceived
+4
+
+===== PAGE 5 =====
+Online Submission ID: 1817
+Figure 2: Hierarchical study design and trial structure. Left: session-level sequence comprising Baseline, Control, and six lateral-offset conditions
+(counterbalanced across groups). Right: 30-trial structure per condition. Offset conditions include an aligned phase (trials 1–6), a transition
+window with a randomly selected switch point (trials 7–12), and a sustained misaligned phase (trials 13–30). Colour encodes offset magnitude,
+and mid-condition trials are visually compressed for readability.
+improvement over time, and learning, followed by open-ended
+questions about task strategy, adaptation to misalignment, and per-
+ceived difficulty of adjustment.
+4.6 Procedure
+Participants first completed the pre-study questionnaire. They then
+received instructions for the task, including the visual and auditory
+response feedback, and adjusted the table height so that all buttons
+could be reached comfortably while standing.
+Participants next completed three practice blocks. First, they
+performed 12 practice trials without the headset using the physical
+LEDs only. They then wore the headset and completed 12 aligned
+AR practice trials, followed by 12 practice trials with a small lateral
+offset. During practice, participants were also asked to deliberately
+tap an incorrect button once to experience error feedback.
+After practice, the experimental session began. Each participant
+completed eight conditions: Baseline, Control, and the six Offset
+conditions. Baseline was completed without the headset, followed
+by the aligned Control condition, and then the six Offset conditions
+in the pre-assigned counterbalanced order. After each condition,
+participants completed the post-condition questionnaire. After all
+eight conditions, they completed the post-study questionnaire.
+4.7 Data Processing and Statistical Analysis
+MT was normalised to reduce differences in movement amplitude
+across target rows and baseline motor differences between partici-
+pants. Targets further fromthe participant required a longer reach
+irrespective of the experimental manipulation.
+Therefore, we applied a participant-specific, row-specific nor-
+malisation to absorb these geometric row effects during preprocess-
+ing rather than estimate additional factors in the statistical models.
+The normalisation process is as follows. For each participantpand
+target rowr∈ {0,1,2}, we computed the row-specific aligned-AR
+baseline ¯MT AR-align
+p,r using valid aligned AR trials targetingr. These
+included the Control condition and the aligned phase of the Offset
+conditions, but not the physical Baseline condition. Theith Trial-
+level MT was then normalised usingMT norm
+pri =MT pri
+ ¯MT AR-align
+pr .
+Reaction time was not normalised by target row since the target
+depth was not expected to affect the interval between cue onset and
+release from the home position. Instead, RT was normalised us-
+ing a participant-specific aligned-AR baseline, pooled across rows,
+again excluding the Baseline condition for visualisation and model
+reporting. Trials with zero timing values, indicating no valid tap
+within the timeout window, were assigned an MT of 5s. Correctness
+was analysed separately as the proportion of incorrect selections by
+condition and phase.
+Objective performance was analysed using trial-level mixed-
+effects models. For categorical analyses of normalised RT and
+MT, we used condition-phase as a fixed factor, included trial num-
+ber as a covariate, and included participant as a random intercept.
+Continuous analyses replaced the categorical condition coding with
+registration-error magnitude. Model selection between linear and
+quadratic trends was based on AIC.
+Correctness was analysed separately from RT and MT. Switch
+recovery was analysed by aligning trials to the misalignment switch
+point within each Offset condition and examining the post-switch
+trajectory over subsequent trials. To assess possible across-session
+learning or fatigue, we analysed the six counterbalanced Offset
+blocks separately from Baseline and Control, which were fixed at
+the start of the session.
+Questionnaire data were analysed at the participant level. Non-
+TLX items were tested across conditions using Friedman tests.
+Bonferroni correction was applied separately within the usabil-
+ity and engagement item families, and significant omnibus effects
+were followed by Bonferroni-corrected Wilcoxon signed-rank tests.
+NASA-TLX ratings were summarised and compared across condi-
+tions in parallel with the non-TLX subjective measures.
+5 RESULT
+5.1 H1: Objective Performance
+Increasing registration error impaired objective task performance,
+supporting H1. Temporal costs increased with offset magnitude,
+and correctness deteriorated once the displaced cue entered more
+ambiguous spatial relationships to neighbouring targets.
+As shown in Figure 3, Baseline, Control, and the aligned phases
+of the six switch conditions remained close to the zero-offset refer-
+ence, whereas offset-phase values increased with registration-error
+magnitude. This separation was small at the smallest offset, became
+clearer by the intermediate conditions, and was largest in the Large,
+VLarge, and Huge conditions. At the largest offsets, offset-phase
+participant means were centred at approximately 1.6×baseline for
+RT and 1.4×baseline for MT.
+Trial-level mixed-effects models supported this pattern. Rela-
+tive to the Control offset phase, every misaligned offset increased
+RT, from Small (ratio = 1.059,p< .001) to Huge (ratio = 1.605,
+p< .001). MT showed the same overall pattern, although the Small
+offset did not differ reliably from Control offset (ratio = 1.022,
+p=.213); from Half onward, offset-phase MT increased signifi-
+cantly, ranging from 1.1 times Control at Half to 1.44 times Control
+at Huge. Baseline was slightly faster than Control aligned for RT
+(ratio = 0.947,p=.007), whereas the corresponding MT difference
+was not reliable (ratio = 0.969,p=.162).
+Continuous analyses showed the same graded pattern when per-
+formance was indexed by registration-error magnitude directly. For
+normalized RT, a quadratic model fit better than a linear model
+(∆AIC=92.21); for normalized MT, a linear model fit better than a
+quadratic alternative (∆AIC=8.22, in favour of the linear model).
+5
+
+===== PAGE 6 =====
+Online Submission ID: 1817
+Figure 3: Objective-performance summary using Normalised RT (blue) and MT(red). Baseline and Control provide the zero-offset references,
+aligned phases are shown with open markers and dashed model lines, and offset phases are shown with filled markers and solid model lines;
+black circles indicate the observed mean±SEM and diamonds indicate estimates from the expanded categorical mixed-effects models. For
+clarity of display, the y-axis is clipped at 2.2, and the number of clipped participant means is shown in the panel. Across both views, temporal
+cost increases with misalignment magnitude while the zero-offset conditions remain close to Control.
+Both measures increased significantly with error magnitude (RT:
+β=0.146,p< .001; MT:β=0.093,p< .001), and RT addi-
+tionally showed a negative quadratic term indicating mild tapering
+at the largest offsets (RT:β=−0.033,p< .001). The categorical
+and continuous analyses therefore show a graded increase in tempo-
+ral cost with increasing misalignment. Detailed model coefficients,
+and the continuous-model plot, are reported in Appendix Table 5, 6,
+and Figure 7.
+Correctness results were also consistent with H1.2 (Appendix
+Figure 8). Error rates remained 0% in the Baseline and Control
+conditions and 1.0% in the Small condition, but increased sharply
+at Half (8.3%) and remained elevated at Medium (15.0%), Large
+(16.7%), VLarge (17.1%), and Huge (18.9%). Paired Wilcoxon
+signed-rank tests on participant-level offset-phase error rates, com-
+pared against Control and Holm-corrected across the six misaligned
+conditions, showed a small but reliable increase in the Small condi-
+tion (W=0,p=.046) and larger increases from Half onward (all
+correctedp< .001). This pattern suggests that reliable target se-
+lection began to break down once the displaced cue entered a range
+that was ambiguous relative to the 15 cm inter-target spacing.
+5.2 Adaptation After the Switch to Misalignment
+Figure 6 shows switch-aligned recovery of normalised RT and MT
+after the onset of misalignment. In all switch conditions, both mea-
+sures increased immediately after the switch and then declined over
+subsequent trials, consistent with short-term adaptation. However,
+the magnitude and persistence of this disruption depended on offset
+size. In the Small condition, RT and MT returned close to their orig-
+inal aligned levels, whereas Medium and larger offsets remained
+visibly elevated at the late stable level, with the largest residual
+costs in the Large, VLarge, and Huge conditions. A further pattern
+is that the gap between late-stable RT and late-stable MT was larger
+in the Medium and Large conditions than in the other offset condi-
+tions. This divergence is summarised in the lower panel of Fig-
+ure 6b. Baseline and Control remained comparatively stable across
+the same aligned window. Overall, these results indicate short-term
+adaptation after the switch, but incomplete recovery within a single
+block for the larger offsets.
+5.3 Learning and Fatigue
+Across the six randomised switch-condition blocks, we found lit-
+tle evidence for a broad session-wide fatigue effect. Block-order
+effects were not reliable for normalised RT or correctness, and the
+only reliable block-order effect for MT was a small offset-specific
+decrease across later switch blocks (β=−0.0104,p=.043). By
+contrast, within-block trial progression was reliable for RT, MT, and
+correctness (allp< .001), indicating local adaptation within blocks
+rather than general fatigue across the session.
+5.4 H2: Subjective Workload and Usability
+Increasing registration error also worsened subjective experience,
+supporting H2. Average questionnaire scores are shown in Fig-
+ures 4 and 5. Among the non-TLX usability items, condition had
+significant effects on Task Difficulty (χ 2(7) =110.54,p B < .001,
+Kendall’sW=0.658) and System Hard to Use (χ 2(7) =44.83,
+pB < .001, Kendall’sW=0.267), whereas Fun and No Difficulty
+Concentrating were not significant after correction. Bonferroni-
+corrected Wilcoxon signed-rank tests indicated that these effects
+were driven primarily by contrasts involving the larger offsets, par-
+ticularly VLarge and Huge, relative to Baseline and/or Control.
+Workload ratings showed the same overall pattern. TLX Sum
+also showed a significant effect (χ 2(7) =77.20,p B <1e-3,W=
+0.460), with subscale-level TLX detail reported in the appendix.
+The scores remained similar for Baseline, Control, and Small, but
+increased from 7.5 cm onward, with the clearest increases in Mental
+Demand, Effort, Frustration, and perceived Performance cost.
+5.5 Exploratory Interaction-Quality Ratings
+As a secondary exploratory analysis, we examined questionnaire
+items related to interaction quality and engagement. Significant
+condition effects were observed for Naturalness (χ 2(7) =45.16,
+pB < .001, Kendall’sW=0.269), Anticipation (χ 2(7) =42.38,
+pB < .001, Kendall’sW=0.252), Adjustment Speed (χ 2(7) =
+66.44,p B < .001, Kendall’sW=0.395), Proficiency (χ 2(7) =
+74.15,p B < .001, Kendall’sW=0.441), and Visual Interference
+(χ 2(7) =30.29,p B < .001, Kendall’sW=0.180). By contrast,
+Responsiveness, Involvement, and Task Focus were not significant
+after correction. Bonferroni-corrected Wilcoxon signed-rank tests
+indicated that these effects were driven primarily by contrasts in-
+volving the larger offsets, especially VLarge and Huge, relative to
+Baseline and/or Control. Overall, larger offsets did not mainly re-
+duce enjoyment or general engagement. Instead, they were associ-
+ated more specifically with poorer perceived interaction quality, in-
+cluding lower naturalness, anticipation, adjustment speed, and per-
+ceived proficiency, as well as greater visual interference.
+Post-study ratings were generally positive, with mean scores of
+5.42 for ergonomics, 5.12 for perceived improvement, and 5.04 for
+learning, indicating that participants found the task reasonably er-
+gonomic and felt they improved over the session.
+5.6 User strategy
+We coded participants’ reported strategies from the post-training
+and post-study free-text responses. The post-training coding was
+binary and indicated that 21/24 participants reported knowing the
+target location before releasing their hands. The post-study re-
+sponses showed the same overall pattern, with 16/24 participants
+6
+
+===== PAGE 7 =====
+Online Submission ID: 1817
+Figure 4: Usability (left) and NASA-TLX workload ratings across the eight conditions (right). The left y-axis shows the1–7subscale rating, while
+the right y-axis shows the corresponding TLX sum range for the aggregated workload score.
+Figure 5: Engagement ratings across the eight conditions. Asterisks mark items with a Bonferroni-significant Friedman omnibus effect.Visual
+Interferenceis negatively worded. Reverse scoring was applied only in the statistical analysis.
+still reflecting a before-release strategy and 3/24 showing a mixed
+strategy, in which target selection was usually anticipated before
+release but sometimes required additional reasoning after release,
+particularly at larger offsets.
+Overall, these responses suggest that most participants were able
+to anticipate the target and form a workable adaptation strategy.
+In contrast, 2/24 participants reported relying on the closest button
+rather than inferring the mapping, consistent with the substantially
+elevated error rates observed in those cases, which approached 2/3
+in some conditions. One of the participants explained post study
+that “the conditions with very low error and very high error are
+easier than the middle ones because they are less confusing with
+the repeated button references.”
+6 LIMITATIONS
+The task provides a simple and reproducible way to characterise
+the behavioural effects of static registration error. Because the
+cue-response mapping was discrete and tightly controlled, the task
+could capture gradual increases in both temporal cost and target
+confusion as misalignment grew. However, the findings should be
+interpreted within the scope of the current design. The task in-
+volved rapid discrete target acquisition on a fixed physical layout,
+using static offsets in a single viewing configuration. Only horizon-
+tal translational offsets are tested; vertical, depth, rotational errors,
+or dynamic jitter are not examined, limiting generality. Different
+patterns may emerge for continuous interaction, 3D placement, ro-
+tational error, dynamic jitter, denser layouts, or longer adaptation
+periods. Practice before the main session may also have contributed
+to performance stability in the easier conditions.
+A second limitation concerns the display and rendering setup.
+The study used a video see-through display rather than an opti-
+cal see-through one. This helped to reduce accommodation-related
+confounds and kept large offsets visible. However, it also means
+that the results should not be treated as directly equivalent to opti-
+cal see-through viewing. Furthermore, the virtual cue did not in-
+corporate hand occlusion. We chose not to use the available SDK
+hand-occlusion pipeline because its instability introduced a stronger
+distraction than the absence of occlusion, but this remains a limita-
+tion of the present implementation. Additionally, the head position
+are not fixed so deviation of perspective might affect performance.
+A third limitation concerns the subjective measures. We delib-
+erately retained questionnaire-based assessment as part of the con-
+tribution, but the adapted Witmer and Singer items should not be
+interpreted as a validated measure of AR presence. They were
+used as task-relevant ratings of interaction quality, including nat-
+uralness, anticipation and adjustment speed. This framing supports
+the present study; it does not establish a general psychometric in-
+strument for mixed-reality presence.
+Finally, the present movement analysis was designed for con-
+servative interpretation within this task rather than for a full Fitts-
+style account. The row-based formulation outperformed the Fitts-
+style alternative on the current dataset, and the latter would in any
+case require more precise information about movement start posi-
+tion (we could not reliably capture which hand is used ). We there-
+fore interpret the present MT analysis as a task-specific account of
+movement execution under misalignment rather than as a general
+statement against Fitts-style modelling.
+7 DISCUSSION
+7.1 Behavioural Effects of Registration Error
+The zero-offset conditions (Baseline and Control) showed only a
+modest difference. This suggests that, although Baseline and Con-
+trol were not identical, the main degradations observed in the Offset
+conditions are not just a result of the headset-based presentation.
+Overall, the objective results support H1: increasing registration
+error impaired performance. As the error magnitude increased, both
+RT and MT rose, indicating rising costs in both response prepara-
+tion and movement execution. However, the continuous models
+show that this cost was not proportional to error magnitude across
+the full range. Instead, the quadratic fit showed mild tapering at the
+largest offsets, consistent with a ceiling-like effect in which addi-
+tional displacement continued to impair performance but with di-
+minishing incremental cost.
+7.2 Ambiguity Rather Than Absolute Offset Alone
+The correctness pattern suggests that the most sensitive region was
+the ambiguity range around the Half and Medium conditions. These
+offsets produced the clearest rise in wrong-button selection, which
+is consistent with the cue remaining close enough to the board to
+7
+
+===== PAGE 8 =====
+Online Submission ID: 1817
+Figure 6: Recovery after the switch to misalignment. Top: switch-
+aligned normalised RT and MT trajectories by condition. Blue and
+red curves show the population means for RT and MT, shaded bands
+show mean±SEM, dotted lines mark the original aligned levels,
+dashed lines mark the late stable levels, and the right axis shows
+the number of contributing participants. The vertical dash-dotted line
+and green shading indicate the high-support window (≥95% partic-
+ipant coverage). Baseline and Control are included as references.
+The display is clipped to the 1st–99th percentile range for readability.
+Bottom: Per-participant Late stable values summarised by condition
+as mean±SEM from result in the top panel. RT and MT stabilised
+level diverges in the middle and large conditions.
+compete with neighbouring buttons while no longer preserving a
+unique cue–target association.
+In the larger conditions (Large and VLarge), the intended tar-
+get is no longer the most locally implied neighbour, so the prob-
+lem becomes less about immediate adjacent-button ambiguity and
+more about remapping under a larger displacement. Huge intro-
+duced a further change. Once the cue has become detached from
+the board, local ambiguity is reduced, but the overall magnitude of
+the offset and the need to interpret the cue as an external reference
+may impose their own cost. Taken together, this suggests that am-
+biguity and displacement magnitude are partly separable factors,
+even though they covaried in the present design. It also suggests
+a possible interaction between them: Half and Medium may pro-
+duce stronger ambiguity at lower displacement, whereas the larger
+conditions produce stronger displacement with lower local ambi-
+guity. The ceiling-like temporal pattern may therefore reflect the
+summed effect of increasing magnitude and decreasing ambiguity
+across the offset range. This possible interplay between ambiguity
+and displacement magnitude is the subject of future work.
+7.3 Adaptation After the Switch to Misalignment
+The switch analysis suggests that participants adapted to a sta-
+ble misalignment within a condition, but that this adaptation was
+only partial once the offset became sufficiently large. In all switch
+conditions, RT and MT increased immediately after the onset of
+misalignment and then declined over subsequent trials, indicating
+short-term learning of the altered cue–target relationship.
+However, this recovery was offset-dependent. In the Small con-
+dition, both measures returned close to their original aligned levels,
+suggesting that the smallest imposed error could be accommodated
+relatively quickly. By contrast, Medium and larger offsets retained
+visible late-stable costs, indicating that brief exposure within a sin-
+gle block was not sufficient to remove the performance penalty en-
+tirely. A more specific pattern emerges when the late-stable RT
+and MT values are compared directly. The gap between late-stable
+RT and late-stable MT was especially pronounced in the Medium
+and Large conditions. This gives a more specific interpretation of
+recovery: not just incomplete adaptation, but a condition-specific
+residual cost after adaptation that may lie more strongly in response
+selection or cue interpretation than in movement execution. In addi-
+tion, RT and MT were inconsistent in the late stable region and un-
+der high workload, which could be attributed to a behavioural shift
+with Large-Huge offsets, as vision dominates over proprioception.
+One plausible interpretation is that this reflects the same inter-
+play between ambiguity and displacement magnitude seen else-
+where in the results. In the Medium and Large conditions, the cue
+may remain difficult to interpret even after brief adaptation because
+it is still close enough to the board to compete with nearby buttons
+while no longer preserving a uniquely specified target. By contrast,
+the Small condition remains sufficiently clear, while in the most ex-
+treme condition, the cue may be treated more consistently as a dis-
+placed external reference. Under this view, the persistent late-stable
+RT cost may reflect continued ambiguity in cue interpretation rather
+than movement difficulty alone.
+These findings suggest that adaptation to registration error was
+not uniform across the offset range. Some misalignments could be
+absorbed with relatively little lasting cost, whereas others continued
+to impair performance even after repeated exposure and adaptation.
+This again points to the importance of the cue–target relationship,
+rather than absolute offset magnitude alone, in determining how
+disruptive a given registration error becomes during interaction.
+7.4 Subjective Response and Questionnaire
+The subjective measures complement the behavioural findings.
+Consistent with H2, increasing registration error worsened per-
+ceived task difficulty and workload, with the clearest increases
+emerging at the larger offsets. NASA-TLX ratings showed a simi-
+lar pattern, particularly for mental demand, effort, frustration, and
+perceived performance cost. This indicates that the behavioural
+8
+
+===== PAGE 9 =====
+Online Submission ID: 1817
+penalties associated with misalignment were also experienced by
+participants as a more effortful and less manageable interaction.
+The broader questionnaires add a second layer of interpretation.
+Larger offsets did not mainly reduce fun or general involvement.
+Instead, the exploratory item pattern is more consistent with a loss
+of interaction fluency, predictability, and perceived controllability.
+Participants reported poorer naturalness, anticipation, adjustment
+speed, and perceived proficiency, together with greater visual in-
+terference, while responsiveness, involvement, and task focus were
+less consistently affected after correction. This shows that the ex-
+periential cost of registration error in this task was not primarily a
+loss of engagement. Rather, it was a degradation in how directly
+and confidently the virtual cue could be used to guide action.
+7.5 Implications for Task-Specific Registration Require-
+ments
+The main design implication is that acceptable registration error is
+not just determined by the geometric offset. In our task, the be-
+havioural effect of misalignment depended not only on displace-
+ment magnitude, but also on whether the displaced cue entered an
+ambiguity-inducing relationship with nearby targets. Small offsets
+produced only limited practical cost under the current study design,
+whereas the clearest breakdown emerged when the cue no longer
+preserved an unambiguous association with a single button. This
+suggests that registration requirements should be specified relative
+to both offset magnitude and local ambiguity, using explicit be-
+havioural criteria such as RT, MT, error rate, and subjective burden.
+At the same time, the switch analysis shows that users can adapt
+to stable registration errors, at least to some extent. For this rea-
+son, it would be inaccurate to claim that all AR systems must re-
+tain one fixed level of tracking accuracy irrespective of task. The
+present findings are better interpreted within the scope of a direct
+and simple rapid target-acquisition task, in which participants re-
+ceived training and responded to discrete controls on a regular lay-
+out. Under other tasks or contexts, the same absolute offset might
+have a different consequence. For example, an offset may remain
+tolerable when the cue still uniquely specifies one target, yet be-
+come much more disruptive when the same cue falls between adja-
+cent controls and creates local ambiguity. Designers should there-
+fore aim not only to reduce registration error in general, but also
+to avoid ambiguous cue–target situations in which misalignment
+weakens unique target association.
+A further implication is methodological. In the presence of reg-
+istration error, correctness may be an insufficient indicator of user
+impact because participants may still complete the task correctly
+after adapting. More sensitive measures may be low-level perfor-
+mance deviations from baseline, such as RT or residual late-stable
+cost after adaptation. These measures may provide a more reliable
+indication that registration error is affecting the user, even when
+overt task success remains high.
+8 FUTUREWORK
+The study can be extended in several different ways First, future
+work should capture richer behavioural measures in more detail.
+Eye-tracking data, such as gaze and pupil diameter, could help re-
+veal attentional allocation and hesitation during cue interpretation.
+Additional physiological sensing, such as thermal imaging, may
+also provide complementary estimates of cognitive load [9, 29].
+Hand tracking could support more precise analysis of reach trajec-
+tories and online correction, similar to prior visually guided reach-
+ing studies [30, 31]. Measures such as contact duration, applied
+pressure, or weighted estimates of commitment may further help
+interpret user intention during the task, for example, by revealing
+hesitation while holding or before movement initiation.
+A second priority is to dissociate ambiguity from error magni-
+tude more directly. In the present design, these factors covaried
+across conditions, so their individual contributions could not be es-
+timated independently. Future studies should vary target spacing
+and offset magnitude independently to determine whether perfor-
+mance costs are driven primarily by local cue–target ambiguity, dis-
+placement magnitude itself, or an interaction between the two.
+Such a design would also support a clearer test of Fitts-style
+movement effects under registration error. In the current setup, only
+0 cm and 5 cm fell clearly within the unambiguous range, which is
+insufficient to examine how movement cost scales with registration
+error alone. A denser set of small, unambiguous offsets would make
+this analysis more feasible. At the same time, the current task used
+fixed button locations, so repeated exposure may enhance the con-
+tribution of proprioception to the setup [40]. Future studies could
+therefore use smaller controls, randomised target placement, or al-
+ternative layouts to reduce layout-specific motor learning and better
+isolate the contribution of visual guidance.
+The present results also suggest that correctness alone may be
+an insufficient indicator of impact on the user. Participants may
+adapt sufficiently to complete the task correctly while still showing
+residual deviations from baseline performance. Future work should
+therefore examine whether lower-level measures, such as RT, MT,
+or residual late-stable cost after adaptation, provide more sensitive
+task-based indicators of user burden under misalignment.
+Finally, a practical direction is ambiguity checking during the
+design process. Information already available in location-based au-
+thoring tools or VR-based simulation workflows could be used to
+test whether expected registration errors would place a cue in an
+ambiguous relationship with nearby targets before deployment. In
+this way, registration quality could be evaluated not only in terms
+of geometric offset, but also in terms of ambiguity risk. Reasoning-
+based systems, including large language models, may also assist
+by helping identify likely confusion cases from scene and layout
+descriptions, although this would require separate validation.
+9 CONCLUSION
+This paper investigated how increasing static registration error
+affects performance and subjective response in an AR target-
+acquisition task. Using a controlled video see-through setup and
+a reproducible 3×3 button-acquisition configuration, we anal-
+ysed RT, MT, correctness, and post-condition questionnaire ratings
+across multiple offset magnitudes defined relative to target spacing.
+Overall, the results show that static registration error reduced
+both the efficiency and the quality of AR interaction in this task.
+Small offsets were relatively tolerable, whereas larger offsets led
+to a clearer breakdown in speed, correctness, and perceived flu-
+ency. The effect increased gradually, but it also showed a more
+distinct shift once the displacement became large enough to create
+target ambiguity. Participants showed short-term adaptation after
+the onset of misalignment, but larger offsets retained residual per-
+formance costs, particularly in late-stable RT.
+Taken together, these findings suggest that registration require-
+ments should be defined with respect to both error magnitude and
+ambiguity risk under a specific task geometry, rather than by ab-
+solute offset alone. More broadly, the study contributes a con-
+trolled evaluation framework that combines behavioural measures
+with questionnaire-based assessment to characterise how static reg-
+istration error affects direct AR interaction.
+REFERENCES
+[1] M. Amini, W. Stuerzlinger, R. J. Teather, and A. U. Batmaz. A Sys-
+tematic Review of Fitts’ Law in 3D Extended Reality. InProceedings
+of the 2025 CHI Conference on Human Factors in Computing Systems,
+pp. 1–25. ACM, Yokohama Japan, Apr. 2025. doi: 10.1145/3706598.
+3713623 1
+[2] R. T. Azuma. A Survey of Augmented Reality.Presence: Teleop-
+erators and Virtual Environments, 6(4):355–385, Aug. 1997. doi: 10.
+1162/pres.1997.6.4.355 1
+9
+
+===== PAGE 10 =====
+Online Submission ID: 1817
+[3] M. Billinghurst, A. Clark, and G. Lee. A Survey of Augmented Real-
+ity.Foundations and Trends® in Human–Computer Interaction, 8(2-
+3):73–272, 2015. doi: 10.1561/1100000049 1
+[4] J. Brooke. SUS – a quick and dirty usability scale. InUsability Eval-
+uation In Industry, pp. 189–194. Jan. 1996. 4
+[5] Y . Chandio, N. Bashir, V . Interrante, and F. M. Anwar. Investigating
+the Correlation Between Presence and Reaction Time in Mixed Real-
+ity.IEEE Transactions on Visualization and Computer Graphics, pp.
+1–13, 2024. doi: 10.1109/TVCG.2023.3319563 2
+[6] Y . Chandio, V . Interrante, and F. M. Anwar. Reaction Time as a Proxy
+for Presence in Mixed Reality with Distraction.IEEE Transactions on
+Visualization and Computer Graphics, 31(5):3140–3150, 2025. doi:
+10.1109/TVCG.2025.3549575 2
+[7] Y . Chandio, V . Interrante, and F. M. Anwar. Tap into Reality: Under-
+standing the Impact of Interactions on Presence and Reaction Time
+in Mixed Reality.IEEE Transactions on Visualization and Com-
+puter Graphics, 31(5):2557–2567, 2025. doi: 10.1109/TVCG.2025.
+3549580 2
+[8] K. B. Chen, A. B. Savage, A. O. Chourasia, D. A. Wiegmann, and
+M. E. Sesto. Touch Screen Performance by Individuals With and
+Without Motor Control Disabilities.Applied ergonomics, 44(2):297–
+302, Mar. 2013. doi: 10.1016/j.apergo.2012.08.004 1
+[9] Y . Cho, S. J. Julier, and N. Bianchi-Berthouze. Instant Stress: Detec-
+tion of Perceived Mental Stress Through Smartphone Photoplethys-
+mography and Thermal Imaging.JMIR Mental Health, 6(4):e10140,
+Apr. 2019. doi: 10.2196/10140 9
+[10] E. M. Coelho, B. MacIntyre, and S. J. Julier. Supporting interaction
+in augmented reality in the presence of uncertain spatial knowledge.
+InProceedings of the 18th annual ACM symposium on User interface
+software and technology, pp. 111–114. ACM, Seattle W A USA, Oct.
+2005. doi: 10.1145/1095034.1095052 1
+[11] M. O. Ernst and M. S. Banks. Humans integrate visual and haptic
+information in a statistically optimal fashion.Nature, 415(6870):429–
+433, Jan. 2002. doi: 10.1038/415429a 2
+[12] P. M. Fitts. The information capacity of the human motor system
+in controlling the amplitude of movement.Journal of Experimental
+Psychology, 47(6):381–391, 1954. doi: 10.1037/h0055392 1
+[13] J. L. Gabbard, D. G. Mehra, and J. E. Swan. Effects of AR Display
+Context Switching and Focal Distance Switching on Human Perfor-
+mance.IEEE Transactions on Visualization and Computer Graphics,
+25(6):2228–2241, June 2019. doi: 10.1109/TVCG.2018.2832633 3
+[14] M. A. Goodale, D. Pelisson, and C. Prablanc. Large adjustments in vi-
+sually guided reaching do not depend on vision of the hand or percep-
+tion of target displacement.Nature, 320(6064):748–750, Apr. 1986.
+doi: 10.1038/320748a0 2
+[15] M. Gottsacker, H. Furuya, Z. D. Choudhary, A. Erickson, R. Schubert,
+G. Bruder, M. P. Browne, and G. F. Welch. Investigating the relation-
+ships between user behaviors and tracking factors on task performance
+and trust in augmented reality.Computers & Graphics, 123:104035,
+Oct. 2024. doi: 10.1016/j.cag.2024.104035 1, 2
+[16] S. Grassini and K. Laumann. Questionnaire measures and physiologi-
+cal correlates of presence: A systematic review.Frontiers in Psychol-
+ogy, V olume 11 - 2020, 2020. doi: 10.3389/fpsyg.2020.00349 2
+[17] J. Guo, R. Cheng, W. Zhang, and T. Xia. Influence of
+size and location of buttons on the usability of interface on
+large touch screens.Ergonomics, 66(12):2025–2038, Dec. 2023.
+eprint: https://doi.org/10.1080/00140139.2023.2179670. doi: 10.
+1080/00140139.2023.2179670 1
+[18] S. G. Hart. NASA Task Load Index (TLX), Jan. 1986. NTRS Au-
+thor Affiliations: NASA Ames Research Center NTRS Document ID:
+20000021488 NTRS Research Center: Ames Research Center (ARC).
+4
+[19] F. M. Henry and D. E. Rogers. Increased Response Latency for Com-
+plicated Movements and A “Memory Drum” Theory of Neuromo-
+tor Reaction.Research Quarterly. American Association for Health,
+Physical Education and Recreation, 31(3):448–458, Oct. 1960. doi:
+10.1080/10671188.1960.10762052 1, 2, 4
+[20] R. L. Holloway. Registration Error Analysis for Augmented Real-
+ity.Presence: Teleoperators and Virtual Environments, 6(4):413–432,
+Aug. 1997. doi: 10.1162/pres.1997.6.4.413 1
+[21] C. Jennett, A. L. Cox, P. Cairns, S. Dhoparee, A. Epps, T. Tijs,
+and A. Walton. Measuring and defining the experience of immer-
+sion in games.International Journal of Human-Computer Studies,
+66(9):641–661, Sept. 2008. doi: 10.1016/j.ijhcs.2008.04.004 2
+[22] D. Kalkofen, E. Mendez, and D. Schmalstieg. Comprehensible Vi-
+sualization for Augmented Reality.IEEE Transactions on Visualiza-
+tion and Computer Graphics, 15(2):193–204, Mar. 2009. Conference
+Name: IEEE Transactions on Visualization and Computer Graphics.
+doi: 10.1109/TVCG.2008.96 1
+[23] D. Killough, R. Chen, Y . Zhao, and B. Mutlu. Understanding Mixed
+Reality Drift Tolerance. InProceedings of the Extended Abstracts of
+the CHI Conference on Human Factors in Computing Systems, CHI
+EA ’25, pp. 1–8. Association for Computing Machinery, New York,
+NY , USA, Apr. 2025. doi: 10.1145/3706599.3720161 1, 2
+[24] H. E. Kim, D. E. Parvin, and R. B. Ivry. The influence of task outcome
+on implicit motor learning.eLife, 8:e39882, Apr. 2019. doi: 10.7554/
+eLife.39882 2
+[25] J. W. Krakauer and P. Mazzoni. Human sensorimotor learning:
+adaptation, skill, and beyond.Current Opinion in Neurobiology,
+21(4):636–644, Aug. 2011. doi: 10.1016/j.conb.2011.06.012 2
+[26] E. Kruijff, J. E. Swan, and S. Feiner. Perceptual issues in augmented
+reality revisited. In9th IEEE International Symposium on Mixed and
+Augmented Reality 2010: Science and Technology, ISMAR 2010 -
+Proceedings, pp. 3–12. IEEE, Oct. 2010. doi: 10.1109/ISMAR.2010.
+5643530 1, 2
+[27] B. Macintyre, E. M. Coelho, and S. J. Julier. Estimating and Adapting
+to Registration Errors in Augmented Reality Systems. InIEEE VR
+2002, pp. 73–80. IEEE Press, 2002. 1
+[28] V . Naik and V . Kamat. Analyzing relation between response time, en-
+gagement and performance. In2018 IEEE Tenth International Con-
+ference on Technology for Education (T4E), pp. 110–113, 2018. doi:
+10.1109/T4E.2018.00030 2
+[29] M. Pluisch, J. Gugenheimer, Y . Cho, S. Julier, and E. Kruijff. A Multi-
+Sensor Approach for Cognitive Load Assessment in Mobile Aug-
+mented Reality. In2025 IEEE International Symposium on Mixed and
+Augmented Reality (ISMAR), pp. 208–218, Oct. 2025. ISSN: 2473-
+0726. doi: 10.1109/ISMAR67309.2025.00033 9
+[30] C. Prablanc, D. P ´elisson, and M. A. Goodale. Visual control of reach-
+ing movements without vision of the limb. I. Role of retinal feedback
+of target position in guiding the hand.Experimental Brain Research,
+62(2):293–302, 1986. doi: 10.1007/BF00238848 2, 9
+[31] D. P ´elisson, C. Prablanc, M. A. Goodale, and M. Jeannerod. Visual
+control of reaching movements without vision of the limb. II. Evidence
+of fast unconscious processes correcting the trajectory of the hand to
+the final position of a double-step stimulus.Experimental Brain Re-
+search, 62(2):303–311, 1986. doi: 10.1007/BF00238849 2, 9
+[32] M. Reichenthal, G. Avraham, A. Karniel, and L. Shmuelof. Target
+size matters: target errors contribute to the generalization of implicit
+visuomotor learning.Journal of Neurophysiology, 116(2):411–424,
+Aug. 2016. doi: 10.1152/jn.00830.2015 2
+[33] F. Rheinberg, R. V ollmeyer, S. Engster, and D. Sreeramoju. FSS -
+Flow Short Scale ( English Version), Sept. 2023. 4
+[34] C. M. Robertson, B. MacIntyre, and B. N. Walker. An Evaluation of
+Graphical Context as a Means for Ameliorating the Effects of Reg-
+istration Error.IEEE Transactions on Visualization and Computer
+Graphics, 15(2):179–192, Mar. 2009. Conference Name: IEEE Trans-
+actions on Visualization and Computer Graphics. doi: 10.1109/TVCG
+.2008.100 1, 2
+[35] M. F. Roig-Maim ´o, I. S. MacKenzie, C. Manresa-Yee, and J. Varona.
+Evaluating fitts’ law performance with a non-ISO task. InProceed-
+ings of the XVIII International Conference on Human Computer In-
+teraction, pp. 1–8. ACM, Cancun Mexico, Sept. 2017. doi: 10.1145/
+3123818.3123827 1
+[36] D. Rosenbaum. Human movement initiation.Journal of Experimental
+Psychology: General, 109(4):444–474, Dec. 1980. 1, 2, 4
+[37] d. M. Ryan, V . Mimis, and R. Koestner. Intrinsic Motivation Inventory
+(IMI). 4
+[38] R. M. Ryan. Control and Information in the Intrapersonal Sphere: An
+Extension of Cognitive Evaluation Theory.Journal of Personality and
+Social Psychology, 43:450–461, 1982. 4
+10
+
+===== PAGE 11 =====
+Online Submission ID: 1817
+[39] M. V . Sanchez-Vives and M. Slater. From presence to consciousness
+through virtual reality.Nature reviews neuroscience, 6(4):332–339,
+2005. 2
+[40] F. R. Sarlegna and R. L. Sainburg. The Roles of Vision and Proprio-
+ception in the Planning of Reaching Movements.Advances in exper-
+imental medicine and biology, 629:317–335, 2009. doi: 10.1007/978
+-0-387-77064-2 16 9
+[41] J. Sauro and J. S. Dumas. Comparison of three one-question, post-task
+usability questionnaires. InProceedings of the SIGCHI Conference on
+Human Factors in Computing Systems, CHI ’09, pp. 1599–1608. As-
+sociation for Computing Machinery, New York, NY , USA, Apr. 2009.
+doi: 10.1145/1518701.1518946 4
+[42] M. Slater. Place Illusion and Plausibility Can Lead to Realistic Be-
+haviour in Immersive Virtual Environments.Philosophical Trans-
+actions of the Royal Society B: Biological Sciences, 364(1535):pp.
+3549–3557, 2009. doi: 10.1098/rstb.2009.0138 2
+[43] S. J. Sober and P. N. Sabes. Multisensory Integration during Motor
+Planning.Journal of Neuroscience, 23(18):6982–6992, Aug. 2003.
+doi: 10.1523/JNEUROSCI.23-18-06982.2003 2
+[44] S. Sternberg. The discovery of processing stages: Extensions of Don-
+ders’ method.Acta Psychologica, Amsterdam, 30:276–315, 1969. doi:
+10.1016/0001-6918(69)90055-9 1, 2, 4
+[45] D. Tedesco and T. Tullis. A Comparison of Methods for Eliciting
+Post-Task Subjective Ratings in Usability Testing. Jan. 2006. 4
+[46] E. Todorov and M. I. Jordan. Optimal feedback control as a theory
+of motor coordination.Nature Neuroscience, 5(11):1226–1235, Nov.
+2002. doi: 10.1038/nn963 1, 2, 4
+[47] T. Q. Tran, T. Langlotz, and H. Regenbrecht. A survey on measuring
+presence in mixed reality. InProceedings of the 2024 CHI Confer-
+ence on Human Factors in Computing Systems, CHI ’24. Association
+for Computing Machinery, New York, NY , USA, 2024. doi: 10.1145/
+3613904.3642383 2
+[48] R. J. van Beers, A. C. Sittig, and J. J. Gon. Integration of proprio-
+ceptive and visual position-information: An experimentally supported
+model.Journal of Neurophysiology, 81(3):1355–1364, Mar. 1999.
+doi: 10.1152/jn.1999.81.3.1355 2
+[49] B. G. Witmer and M. J. Singer. Measuring Presence in Virtual En-
+vironments: A Presence Questionnaire.Presence: Teleoperators
+and Virtual Environments, 7(3):225–240, June 1998. doi: 10.1162/
+105474698565686 4
+11

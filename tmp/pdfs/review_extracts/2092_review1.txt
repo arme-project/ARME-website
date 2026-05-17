@@ -1,0 +1,53 @@
+SOURCE: /Users/m.diluca@bham.ac.uk/Downloads/Review 1 of #2092 "AR-COMPQ: A Dual-Path Perceptual Quality ...".pdf
+PAGES: 2
+METADATA: {'/Title': 'Review 1 of #2092 "AR-COMPQ: A Dual-Path Perceptual Quality ..."', '/Producer': 'macOS Version 15.7.4 (Build 24G517) Quartz PDFContext', '/Author': 'Massimiliano Di Luca (Psychology)', '/Creator': 'Safari', '/CreationDate': "D:20260517225125Z00'00'", '/ModDate': "D:20260517225125Z00'00'"}
+
+
+
+===== PAGE 1 =====
+   
+Review of 2092 - "AR-COMPQ: A Dual-Path Perceptual Quality Assessment for Augmented Reality Images Composition"
+Reviewer 1 (reviewer)
+Expertise
+Knowledgeable
+Contribution
+This paper introduces a framework for assessing the perceptual quality of Augmented Reality image compositions, noting that existing metricsoverlook AR-specific distortions related to object fidelity and environmental harmony. The authors developed the ARC-IQA dataset, containing193 images across seven scene contexts with controlled structural and appearance distortions. A subjective study involving 15 participantsprovided mean opinion scores to quantify human sensitivity to these artifacts. Based on this analysis, the authors proposed AR-COMPQ, adual-path objective model that evaluates the quality of image composition in AR environments based on structural fidelity and photometricharmony. They compared their model against a number of other well-established metrics, and the results showed that AR-COMPQoutperformed all existing methods in terms of conformity to mean human opinion scores. An ablation study confirmed that the integration of allthree input streams (reference, distorted, and harmonized) is the best combination for achieving optimal performance.
+Paper Length
+The paper length matches its contribution
+Significance
+Acceptable
+Originality
+Acceptable
+Research Quality
+Poor
+Technical Correctness
+Poor
+Writing Style & Organization
+Acceptable
+Overall Rating
+Probably reject: I would argue for rejecting this submission.
+Detailed Rationale
+Starting from the relevance of the context, I believe that the paper addresses a highly relevant one, as the realism and credibility ofaugmented reality experiences are a key component for user adoption. We can easily agree how any visual inconsistency or poor quality canimmediately disrupt the user's illusion and disconnect their sense of presence with the AR application.
+The paper proceeds on explaining the two main types of distortion that could affect such a user experience, claiming that “In practice,distortions in AR image compositions can be broadly categorized into two groups,” which are structural and appearance. This taxonomy issomehow presented as an established fact in the introduction, but it is missing either (1) support from existing literature or (2) a clarificationthat such a classification a novel proposal for this specific study.
+The paper takes into account multiple established metrics for their analysis, assessing that such metrics for not being designed for AR imagecomposition. It would be helpful if it could further clarify the innovation of their approach and motivate the research gap identified. In otherwords, any of the distortions they investigate such as brightness and contrast are quite common in traditional image quality assessment and itwould be beneficial to highlight how their methodology provides a significant advancement from these established methods.
+Regarding the related work which is currently merged with the introduction, the paper could be improved by providing a more comprehensive
+SubmissionsReviews
+ISMAR 2026 Papers
+Account
+
+===== PAGE 2 =====
+panoramic view of the literature. The current discussion is quite critical of previous works but does not fully explain the research gap or howthe authors' selection of distortion types is substantially more systematic than those they describe as limited. Moreover, research questionsare missing. It would also be clearer if the specific research questions or core objectives were explicitly stated before moving into thecontributions. As presented the three contributions involving the dataset the analysis and the assessment model feel more like sequentialsteps of a single framework rather than three distinct and strong individual contributions. The transition from the literature analysis directly tothe dataset construction could be smoother if the background and related works were more thoroughly integrated.
+The paper presents a structured approach to evaluate AR image composition. I appreciated the precise articulation into dataset creation,model definition and training, and quantitative evaluation. This structure is clearly introduced from the beginning of the paper. Nonetheless, Iwould like to discuss the aspects of the methodology that could be significantly strengthened.
+First, the creation of a custom ARCore-based mobile application is valuable, yet I am afraid that the scope of the resulting ARC-IQA datasetappears somewhat limited. Since the built dataset is essentially made of 3D objects on real background pictures, I was expecting a lot morecombinations of them. The selected objects are 7, which are defined as “representative”, but I think there should be a rationale behind howand what such objects are representing. Indeed, the resulting images are also limited in number (193) and snapshots may not sufficientlycapture the vast diversity of AR scenarios. I felt this as a missed opportunity, since the size of the resulting dataset could have been easilyway more consistent by choosing to integrate more 3D objects, which are readily available from many publicly available sources. It would be alot more beneficial if the dataset was significantly larger to better support the claim that the framework is robust across diverse contexts. Itwould also be clearer if it provided a more rigorous justification for the chosen distortions. The classification into object-level, appearance-level, and composition-level categories appears somewhat arbitrary, and the lack of references to established literature for this specifictaxonomy makes it difficult to assess its validity.
+Furthermore, I am afraid that the most critical point of the soundness of the work is in the user study. The sample size of 15 participants isnotably small for a study that uses human perception as the ground truth of both the training of the model and the subsequent evaluation. Asignificantly larger participant pool would have provided more stable Mean Opinion Scores and reduced concerns regarding the reliability ofthe labels used for regression. It would be more convincing if the paper addressed the potential bias in their evaluation, as comparing a modelspecifically trained on AR distortions against traditional metrics that ignore such factors may naturally favor the proposed approach. Finally,the rationale behind the dual-path architecture would be more persuasive if it were grounded in existing perceptual theories rather thanappearing as a purely empirical choice.
+Overall, I am convinced that the work addresses a compelling and timely problem with a structured technical execution. However, I believethere are fundamental methodological improvements to be done, to significantly strengthen the validity and generalizability of the results. First,the paper should first ground the work in a more precise analysis of the existing literature, from which a central objective or specific researchquestions should be explicitly derived. Furthermore, the distortion categories themselves (which are at the very core of the datasetconstruction) require a more systematic motivation, either by defining through a framework or justified by a more thorough review of AR-specific artifacts. Finally, the empirical foundation of the study needs significant strengthening. A much larger dataset and, crucially, asubstantially more representative pool of participants are necessary to ensure that the human ground truth used for both training andevaluation is statistically robust. Alternatively, the authors could supplement their subjective data with a wider array of established metrics tovalidate their findings more rigorously. As it stands, these considerations would require some effort to be addressed, and for this reason I amafraid I have to suggest a rejection.
+Comments to Reviewers and Program Committee
+(blank)
+Recommendation for TVCG
+(blank)
+Comment for TVCG recommendation
+(blank)
+Recommendation for Best Paper
+(blank)
+Comment for Best Paper recommendation
+(blank)

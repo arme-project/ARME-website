@@ -1,0 +1,1254 @@
+SOURCE: /Users/m.diluca@bham.ac.uk/Downloads/ismar26a-sub1779-i7.pdf
+PAGES: 11
+METADATA: {'/Author': '', '/CreationDate': 'D:20260317072750Z', '/Creator': 'LaTeX with hyperref', '/Keywords': '', '/ModDate': 'D:20260317072750Z', '/PTEX.Fullbanner': 'This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) kpathsea version 6.4.1', '/Producer': 'pdfTeX-1.40.27', '/Subject': 'VGTC Conference Paper', '/Title': '', '/Trapped': '/False'}
+
+
+
+===== PAGE 1 =====
+Online Submission ID: 1779
+Multimodal Guidance under IK-Mediated Embodiment: Topological Limits
+and Gender-Moderated Effects
+Category: Research
+Figure 1: IK-mediated multimodal guidance in sparse-tracking VR: visual puppet linkages with optional pitch auditory and haptic
+cues. We evaluate two self-reported gender groups and analyze errors by IK-topology categories—solver-driven elbows (gray),
+sensor-driven wrists (green), and hierarchy-driven fingertips (orange).
+ABSTRACT
+Combining, otherwise known as ‘stacking’, auditory and haptic
+cues with visual guidance is a common strategy for improving on-
+line error correction in VR training. However, under sparse 6-
+DoF tracking with inverse kinematics (IK), multimodal benefits
+may be limited by solver-induced kinematic ambiguity and may
+not generalize across users. We investigated this question in a VR
+motor-imitation study (N=104) with four feedback conditions:
+visual only (V), visual+audio (V A), visual+haptic (VH), and vi-
+sual+audio+haptic (V AH). Results show that multimodal efficacy
+is constrained by IK topology and learning-stage trade-offs. Along
+the kinematic chain, feedback effects were absent at solver-driven
+joints (elbows), exhibited trend-level divergence at sensor-driven
+joints (wrists), and were strongest at hierarchy-driven distal seg-
+ments (fingers). Visuo-haptic guidance (VH) accelerated online
+adaptation relative to the visual baseline, but this benefit did not
+carry over to the full stack (V AH). Instead, V AH was associated
+with lower offline cued recall, indicating a trade-off between exe-
+cution support and short-term retention. We also observed a distal
+Condition×Gender interaction—haptic inclusion improved perfor-
+mance in the male group but degraded performance in the female
+group under the same mapping, consistent with a confirmation-
+versus-interference pattern. Based on these findings, we derive
+three design guidelines for IK-mediated VR training—Topology-
+Aware Masking, Interference Detection, and Scaffold-and-Wean
+Scheduling.
+Index Terms:Virtual reality, multimodal feedback, inverse kine-
+matics, motor learning, gender differences.
+1 INTRODUCTION
+A central challenge in consumer VR training is providing action-
+able error information under sparse 6-DoF tracking, typically lim-
+ited to the head and hands. Although visual guidance (e.g. trajec-
+tory overlays) has shown promise [9], its fidelity is fundamentally
+constrained by inverse kinematics (IK) reconstruction. IK intro-
+duces a solver-dependent “black box”—including non-unique joint
+solutions and temporal smoothing—that can obscure fine-grained
+motor deviations [14]. In this case, the “solver” refers to the al-
+gorithm that reconstructs untracked joint poses from sparse tracked
+inputs. As a result, users may struggle to accurately perceive and
+correct motion errors online (i.e. as the training is occuring). A
+common mitigation strategy ismodality stacking, in which visual
+guidance is augmented with auditory sonification and/or vibrotac-
+tile cues. Under classical multisensory integration, combining inde-
+pendent sensory estimates should reduce perceptual variance [12].
+However, empirical findings in VR remain mixed. For example,
+some studies showed that auxiliary cues can also compete for at-
+tention or introduce sensory conflict [19, 41].
+These inconsistencies suggest that multimodal benefits may de-
+pend jointly on system-level estimation fidelity and user hetero-
+geneity. Classical integration theories assume that modalities
+provide partially independent observations of a common latent
+state, enabling reliability-weighted variance reduction [39]. In IK-
+mediated VR, however, multiple feedback channels are often de-
+rived from the same solver-mediated error signal, which may con-
+tain both temporal fluctuations (dynamic noise) and systematic off-
+sets (spatial bias). In this setting, adding channels does not neces-
+sarily add independent information.
+At the same time, prior psychophysical work reports group-
+level variability in sensorimotor strategies, including differences
+in reference-frame preference and sensory weighting [30, 32]. If
+generic IK priors and parameterizations fit users unevenly, an addi-
+tional channel coupled to IK error may act as a confirmation signal
+for some users, but may reinforce an incorrect mapping for others.
+Another source of heterogeneity lies in the topology of the IK chain
+itself. Topology refers to the functional role of each joint within
+the reconstruction pipeline—whether it is directly constrained by
+tracked sensors, inferred by the IK solver, or propagated through
+the avatar hierarchy. Taken together, clarifying multimodal efficacy
+requires moving beyond one-size-fits-all assumptions and asking
+for whomandunder what conditionsspecific modality combina-
+tions improve performance.
+To address this question, we conducted a controlled experi-
+ment (N=104) on bimanual upper-limb motor imitation in a
+consumer VR setup. We compared four feedback conditions—
+Visual-only (V), Visual+Audio (V A), Visual+Haptic (VH), and Vi-
+sual+Audio+Haptic (V AH). Participants imitated pre-recorded ges-
+tures under these conditions. We collected behavioral measures
+(point-wise imitation accuracy) and offline recall performance to
+evaluate learning outcomes, and subjective ratings (workload, mo-
+tivation, presence, and embodiment) for exploratory analyses.
+Our primary contributions are:
+1.Empirical evidence for IK-chain topological limits, temporal
+trade-offs, and user-moderated effects in IK-mediated mul-
+timodal guidance:We find that multimodal efficacy is bounded
+1
+
+===== PAGE 2 =====
+Online Submission ID: 1779
+by IK-chain topology, with effects concentrated at sensor-driven
+joints and hierarchy-amplified distal segments, but limited ef-
+fects at solver-dominated joints. We further identify a temporal
+trade-off. VH feedback accelerates online adaptation, whereas
+V AH attenuates this advantage and is associated with reduced
+offline cued recall. Finally, our results reveal a reliableCondi-
+tion×Gender×Joint Groupinteraction, and planned DID con-
+trasts localize gender divergence under haptic-involving com-
+parisons primarily to distal joints (significant at fingers; trend-
+level at wrists), suggesting that haptic guidance may function as
+confirmation for some users but may interfere for others.
+2.Mechanistically grounded design guidelines for IK-mediated
+VR training:We derive three actionable rules. (1)Topology-
+Aware Masking(restricting feedback to joints with reliable
+control authority); (2)Interference Detection(adapting feed-
+back based on individual sensorimotor response profiles rather
+than assuming uniform benefits); and (3)Scaffold-and-Wean
+Scheduling(using haptics to accelerate adaptation while limit-
+ing over-reliance).
+2 RELATEDWORK
+Theories of motor skill learning increasingly emphasize embod-
+ied cognition, where knowledge is grounded in sensorimotor in-
+teraction and reenactment [23, 24, 4]. VR supports this learning-
+by-doing paradigm through synthetic embodiment, aligning users
+with avatar demonstrations to facilitate motor learning and trans-
+fer [1, 21, 7]. However, this benefit is constrained by a fidelity
+paradox. Adding sensory richness without sufficient physical accu-
+racy can increase extraneous cognitive load [26, 15]. The issue is
+particularly acute in sparse-tracking VR with IK, where reconstruc-
+tion errors can introduce visuo-proprioceptive mismatches relative
+to the user’s body schema [14].
+2.1 Inverse Kinematics and Embodiment Constraints
+Consumer VR systems typically track only a small number of 6-
+DoF points (e.g. head and hands), making full-body reconstruction
+mathematically underconstrained because of human kinematic re-
+dundancy [22, 20]. In practice, heuristic IK solvers trade biome-
+chanical fidelity for visual plausibility. However, priors used to
+suppress implausible postures and reduce jitter can also introduce
+metric distortions, decoupling avatar posture from the user’s pro-
+prioceptive state [27].
+During interaction, systems may further employ kinematic de-
+coupling or pseudo-haptic techniques to evoke sensations such as
+resistance [37]. Although effective for interaction design, such ma-
+nipulations can induce a “follower effect,” in which users gradually
+drift their physical limbs toward an erroneous avatar pose [17]. If
+learners internalize motor patterns calibrated to a smoothed or spa-
+tially biased IK representation, transfer to real-world execution may
+degrade. To mitigate this risk, non-visual channels (e.g. audio and
+haptics) have been explored as alternative carriers of error informa-
+tion under imperfect visual embodiment [36, 10].
+2.2 Multimodal Feedback and Sensory Integration
+Multimodal augmentation in VR is commonly motivated by prob-
+abilistic accounts of sensory integration, including maximum like-
+lihood estimation (MLE) models [44]. When IK reduces visual fi-
+delity, additional cues could in principle reduce perceptual uncer-
+tainty by contributing independent, reliability-weighted estimates
+of a shared latent state [5].
+Different modalities offer distinct functional affordances. Hap-
+tic feedback can stabilize body-centered perception; pseudo-haptic
+cues, for example, can reduce overshoot by providing a reference
+for mechanical impedance [16]. Movement sonification offers high
+temporal resolution and can support rhythmic regulation while of-
+floading part of the monitoring demand from vision [11], consistent
+with resource-sharing accounts of attention [42].
+However, multimodal gains are not guaranteed. Multiple Re-
+source Theory predicts that cross-modal presentation can reduce
+modality-specific bottlenecks, but coordination, integration, and re-
+sponse selection still impose central processing costs [42]. More-
+over, spatial misalignment or semantic inconsistency across cues
+can introduce conflict-resolution costs that offset, or even outweigh,
+the informational benefits of additional channels [41]. This tension
+is especially relevant in IK-mediated VR, where multiple feedback
+channels may be derived from the same solver-mediated error sig-
+nal rather than from independent sensory estimates.
+2.3 Gender Differences in Motor Control and Sensory
+Processing
+Prior work reports population-level variability in sensorimotor con-
+trol, including group-level differences associated with sex/gender in
+some task settings [30]. For example, the “crossed-hands deficit”
+has been used to suggest that males may rely more on internal (ego-
+centric) reference frames, whereas females may rely more on ex-
+ternal (allocentric) visual frames in some spatial tasks [8]. Tactile
+processing efficiency in males has also been linked to mental ro-
+tation performance, suggesting a coupling between body-centered
+cues and spatial processing [2]. In motor adaptation, some studies
+further report that males may rely more on rapid, error-based strate-
+gic calibration, whereas females may rely more on slower implicit
+spatial alignment processes [25].
+These differences may interact with VR hardware and embodi-
+ment constraints. For instance, females have been reported to show
+greater susceptibility to visually induced postural perturbations in
+some settings [3]. Standard HMD configurations may also inad-
+equately accommodate narrower interpupillary distances common
+in female populations [35], and generic anthropometric priors in
+kinematic models (e.g. shoulder-width assumptions) can introduce
+systematic estimation error for some users [28, 40]. In addition,
+modality-specific learning effects have been reported. In force-
+control tasks, auditory feedback outperformed visual feedback for
+females in some studies, whereas this advantage was not observed
+for males [38]. Collectively, these findings motivate treating multi-
+modal VR guidance not only as a signal-combination problem, but
+also as a user-dependent adaptation problem.
+3 METHODOLOGY
+We conducted a between-subjects VR experiment to evaluate mul-
+timodal guidance under IK-mediated embodiment. Specifically, we
+tested the individual and combined effects of auditory and haptic
+error cues added to a visual baseline [9], and examined moderation
+by self-reported gender. The remainder of this section describes the
+feedback design, tasks, experimental design, measurements, partic-
+ipants, apparatus, and procedure. The Ethics Committee approved
+this study with the protocol number (removed for review).
+3.1 Feedback Design
+To support precise imitation under IK-mediated embodiment, we
+implemented a multimodal feedback framework extending the
+“puppet-metaphor” visualization [9]. The visual baseline links
+the learner’s and expert’s avatar joints to externalize moment-to-
+moment spatial error. We augmented this baseline with auditory
+and haptic channels that encode site-specific posture deviation with-
+out increasing visual clutter.
+During runtime, we compute the Euclidean spatial deviation in
+world coordinates for each jointjat timetas:
+d j(t) =
+xuser
+j (t)−x expert
+j (t)
+
+2
+,
+2
+
+===== PAGE 3 =====
+Online Submission ID: 1779
+wherex user
+j andx expert
+j denote the 3D positions of the user’s IK-
+driven avatar and the expert reference avatar, respectively.
+Figure 2: Upper-limb 14-point mapping for imitation distance calcu-
+lation (elbow, wrist, and five fingertips per side).
+We tracked 14 upper-limb landmarks (Figure 2), defining later-
+alized setsJ L andJ R for the left and right arms (elbow, wrist,
+and five fingertips per side). To reduce cognitive load and provide
+a compact representation of side-level posture deviation, we com-
+puted a lateralized mean error for feedback generation:
+¯Ds(t) = 1
+|Js| ∑
+j∈Js
+d j(t),s∈ {L,R}.
+In our implementation, the visual channel remains joint-wise
+(14 visual linkages), whereas the auditory and haptic channels are
+driven by the side-level aggregate ¯Ds(t).
+3.1.1 Visual Feedback
+We adopted the “puppet-based” visual linkage technique estab-
+lished in prior work [9]. The visualization renders static, continu-
+ous line segments tethering each user joint to its expert counterpart,
+thereby externalizing instantaneous spatial discrepancy. In the cur-
+rent implementation, these visual linkages were applied to the same
+14 upper-limb landmarks defined above (bilateral elbows, wrists,
+and fingertips). For rendering details (e.g. fixed thickness and un-
+modulated color), we refer readers to the original protocol [9].
+3.1.2 Auditory Feedback
+The auditory channel uses stereo error sonification based on a sonar
+“ping” sound1 with pitch modulation. Feedback is strictly lateral-
+ized: the mean positional error of the left or right upper-limb chain
+independently drives the pitch of the corresponding audio channel.
+Let ¯Ds(t)denote the mean positional error for sides∈ {L,R}
+at timet. The pitch multiplierp s(t)is defined by a clamped linear
+mapping:
+ps(t) =p min + (pmax −p min)·clip
+ ¯Ds(t)
+Dmax
+,0,1
+
+.
+We setD max =0.30 m to cover the typical range of task devi-
+ations without premature saturation, and bounded the pitch multi-
+plier betweenp min =0.5 andp max =3.0. This lateralized mapping
+causes larger deviations to produce higher-pitched, more urgent
+tones in the corresponding ear, supporting rapid side-specific cor-
+rection. The auditory mapping was updated every rendering frame
+during training.
+1https://pixabay.com/zh/sound-effects/
+sonar-ping-95840/
+3.1.3 Haptic Feedback
+To provide proprioceptive reinforcement, we used the linear res-
+onant actuators in standard HTC Vive controllers. Mirroring the
+auditory channel, haptic feedback is driven by the same lateralized
+mean error ¯Ds(t), with the left and right controllers independently
+encoding deviation in their corresponding upper-limb chains.
+The vibration amplitudeA s(t)is defined by an analogous
+clamped linear mapping:
+As(t) =A min + (Amax −A min)·clip
+ ¯Ds(t)
+Dmax
+,0,1
+
+.
+Using the same thresholdD max =0.30 m, vibration amplitude
+was bounded between a baseline intensityA min =0.1 and a max-
+imum intensityA max =1.0. This mapping provides subtle tactile
+confirmation at small deviations and stronger alerts at larger devia-
+tions. As with auditory feedback, the haptic mapping was updated
+every rendering frame.
+To ensure cross-modal perceptual congruence, two researchers
+iteratively tuned the audio and haptic parameters in VR. This
+heuristic calibration established monotonic, discriminable map-
+pings while avoiding saturation and distraction. All parameters
+were fixed before the main study.
+3.2 Tasks
+To elicit diverse upper-limb kinematics, we curated 12 station-
+ary, gross-motor bimanual gestures from football referee signals 2.
+These gestures span varying spatial extents, symmetry patterns, and
+inter-limb coordination demands.
+Crucially, during gesture selection we imposed a strict visibil-
+ity constraint:both hands had to remain continuously within the
+user’s field of view. This ensured uninterrupted access to the expert
+demonstration and visual baseline, reducing uncontrolled variance
+from occlusion and head turns.
+3.3 Experiment
+We examined how auxiliary auditory and haptic cues affect mo-
+tor precision, short-term learning, and subjective experience during
+IK-mediated embodiment. Specifically, we tested whether these
+modalities act additively or interact with user factors across differ-
+ent points in the kinematic chain.
+The study used a 4 (Feedback)×2 (Gender) between-subjects
+design (N=104; 26 per condition, gender-balanced via strati-
+fied randomization). To capture adaptation dynamics across a di-
+verse workspace, participants performed 12 actions×6 repetitions,
+yielding kinematic deviation data across 14 upper-limb landmarks.
+3.3.1 Conditions
+Participants were assigned to one of four feedback configurations:
+•Visual Only (V):Baseline condition with only the puppet-
+string visual linkage (Section 3.1.1).
+•Visual + Audio (V A):V plus stereo auditory sonification,
+with pitch driven by the lateralized mean spatial error (Sec-
+tion 3.1.2).
+•Visual + Haptic (VH):V plus vibrotactile controller feed-
+back, with vibration amplitude driven by the same lateralized
+mean spatial error (Section 3.1.3).
+•Visual + Audio + Haptic (V AH):Full multimodal combina-
+tion (V + A + H), presented simultaneously to test modality-
+stacking effects.
+2https://cfldb.ca/rulebook/referees-signals;
+https://www.dummies.com/article/home-auto-hobbies/
+sports-recreation/fantasy-sports/fantasy-football/
+american-football-referee-signals-for-offense-205793
+3
+
+===== PAGE 4 =====
+Online Submission ID: 1779
+3.3.2 Measurements
+We collected kinematic and questionnaire data to evaluate online
+imitation fidelity, short-term learning, recall performance, and sub-
+jective experience.
+Kinematic Performance & Learning.Kinematics were logged
+at 4 Hz (∆t=0.25 s). Because our focus is IK-mediated embod-
+iment, we analyzed the 14 IK-estimated avatar landmarks rather
+than anatomical joints directly, with controller poses serving as end-
+effector constraints. To enable fair cross-joint comparisons, abso-
+lute spatial deviatione j(t)(equivalent tod j(t)in Section 3.1) was
+normalized by the expert’s total trajectory length:
+L j =
+T
+∑
+t=2
+∥xexpert
+j (t)−x expert
+j (t−1)∥ 2,
+and a relative spatial error was calculated by:r j(t) =e j(t)/L j.We
+averagedr j(t)over time to obtain one scalar error value per joint
+for each repetition. Short-term learning was assessed from trial-
+wise reductions in this error metric (operationalized in Section 4.2
+using both trial-progression and slope-based analyses).
+Recall Performance (Immediate).Recall performance was eval-
+uated at the gesture level by a blinded rater using binary scoring
+(success/failure = 1/0). Participants first attemptedfree recall(no
+visual aids). For gestures missed during free recall, participants
+were given the semantic label and asked to perform the gesture
+again (cued recall). Participant-level outcomes were analyzed as
+count scores (number of correctly retrieved gestures) in free and
+cued recall, respectively.
+The scoring criterion was gesture identifiability: a trial was
+scored as correct if the rater could unambiguously recognize which
+target gesture the participant intended to perform (i.e., correct ac-
+tion category identification), even if minor kinematic deviations
+were present. A trial was scored as incorrect if the performed move-
+ment could not be reliably identified as the target gesture or was
+confused with another gesture in the stimulus set. Recall scoring
+was conducted by a single blinded rater.
+Subjective Questionnaires.After the experimental block, par-
+ticipants completed standardized 7-point Likert-type question-
+naires for workload (NASA-TLX [18]), motivation [29], presence
+(IPQ [34]), and embodiment [31], using the same questionnaire
+protocol and scoring scheme as in [9].
+3.3.3 Hypotheses
+Our hypotheses draw on multisensory integration accounts, which
+predict that auxiliary cues can improve online correction when vi-
+sual estimation is uncertain, but also allow for coordination costs
+under concurrent audio–haptic streams [6, 13, 43]. Because senso-
+rimotor processing varies across users [30], we treat self-reported
+gender as a grouping moderator and test whether modality utility
+differs across groups.
+Training Performance (Real-time Imitation)
+•H1 (Multimodal benefit):Multimodal guidance reduces imita-
+tion error relative to Visual-only (ErrorVA ,Error V H,Error VAH <
+ErrorV ).
+•H2 (Male-favored haptics):Within multimodal conditions,
+males perform best with haptic-inclusive guidance, especially
+VH (ErrorMale
+V H <Error Male
+VA andError Male
+V H ≤Error Male
+VAH ).
+•H3 (Female-favored audio):Within multimodal conditions,
+females perform best with auditory guidance, especially V A
+(ErrorFemale
+VA <Error Female
+V H andError Female
+VA ≤Error Female
+VAH ).
+•H4 (Triple-modality interference):V AH underperforms
+the group-preferred dual-modality condition (Error Male
+VAH >
+ErrorMale
+V H ;Error Female
+VAH >Error Female
+VA ).
+Short-term Learning (Within-session Improvement)
+•H5 (Greater multimodal learning):Multimodal guidance
+yields greater within-session improvement than Visual-only
+(larger∆Error/ steeper error-decrease slopes).
+•H6 (Gender-conditional learning):The largest within-session
+improvement occurs in the group-preferred dual-modality condi-
+tion (VH for males; V A for females).
+Learning Retention (Immediate Recall)
+•H7a (Free recall benefit):Multimodal training improves free re-
+call relative to Visual-only, with peak performance in the group-
+preferred dual-modality condition.
+•H7b (Cued recall benefit):Multimodal training improves cued
+recall (for gestures missed in free recall) relative to Visual-only,
+again peaking in the group-preferred dual-modality condition.
+3.3.4 Participants
+A total of 104 participants completed the experiment. Participants
+were recruited from the university community (students and staff).
+They were 18–32 years old (M=21.1,SD=2.5), including 52 self-
+reported males and 52 self-reported females. Participants reported
+occasional VR experience but no professional training.
+Unlike prior work that required fixed participant anthropome-
+try [9], we accommodated diverse body sizes via per-participant
+avatar scaling, which was iteratively calibrated in VR to match each
+participant’s perceived eye height and body proportions. All partic-
+ipants reported normal or corrected-to-normal vision and no mus-
+culoskeletal or cognitive impairments. All participants provided in-
+formed consent prior to the experiment and received 20 CNY com-
+pensation for their time.
+3.3.5 Experiment Apparatus
+The apparatus comprised a PC (Intel Core i7, RTX 4090, 128 GB
+RAM) and an HTC Vive Pro HMD (2880×1600, 90 Hz) with stan-
+dard controllers for tracking and vibrotactile output. The applica-
+tion was developed in Unity 2021.3 using SteamVR and Final IK 3
+to reconstruct upper-limb poses from sparse 3-point tracking (HMD
++ two controllers).
+To reduce embodiment confounds, self-avatars and expert mod-
+els (Customizable Survivors Pack 4) were matched to partici-
+pants’ self-reported gender. Expert gestures were pre-recorded
+by one male researcher and one female researcher. We inten-
+tionally preserved naturalistic, demonstrator-specific kinematics
+rather than forcing identical path geometries across demonstrators.
+Within each participant gender group, the demonstrated motion set
+was held constant across all feedback conditions. Accordingly,
+between-gender differences should be interpreted as gender-group
+effects under gender-matched demonstrations, rather than as purely
+participant-intrinsic effects.
+3.3.6 Procedure
+Each session lasted approximately 60 minutes and consisted of
+three phases:
+A. Preparation:After consent and hardware fitting, participants
+calibrated avatar scale to match their perceived body size and com-
+pleted a three-gesture tutorial to familiarize themselves with the VR
+environment and their assigned feedback cues.
+B. Acquisition (Training):Participants practiced the 12 target
+gestures under their assigned condition (6 randomized repetitions
+per gesture; 72 trials total). Each trial began with a 5-second au-
+ditory countdown and a 3-second on-screen text prompt indicating
+the gesture name. Participants then continuously imitated the expert
+avatar while kinematics were recorded.
+3https://assetstore.unity.com/packages/tools/
+animation/final-ik-14290
+4https://assetstore.unity.com/packages/3d/characters/
+humanoids/humans/customizable-survivors-pack-202059
+4
+
+===== PAGE 5 =====
+Online Submission ID: 1779
+C. Retention (Recall):Immediately after training, participants
+removed the HMD and completed a strictly controlled 20-minute
+retention interval, during which they filled out questionnaires and
+rested without physical rehearsal. The recall test was then admin-
+istered in the physical environment. A blinded rater scored gesture
+identifiability in free recall, followed by cued recall (verbal gesture
+labels) for gestures not reproduced in the free-recall phase.
+4 RESULTS
+We report objective kinematics, recall performance, and subjective
+experience (FDR-corrected). Analyses of all subjective question-
+naires (NASA-TLX, Motivation, IPQ, and Embodiment) revealed
+no significant main effects or interactions (two-way ANOV As with
+ConditionandGenderas factors; allp> .05). Thus, auxiliary
+feedback did not produce statistically reliable differences in self-
+reported workload, motivation, presence, or embodiment relative to
+the visual baseline. The remainder of this section therefore focuses
+on objective outcomes.Relative errors were log-transformed, and
+model assumptions, including normality, were verified to be satis-
+fied.
+To improve generalizability across sparse-tracking embodi-
+ment pipelines, we grouped the upper-limb chain into three IK-
+topology categories rather than using a purely anatomical parti-
+tion: (1)Sensor-Driven (Wrists), hardware-tracked 6-DoF con-
+straints; (2)Solver-Driven (Elbows), IK-computed nodes that
+satisfy chain constraints; and (3)Hierarchy-Driven (Fingers),
+forward-kinematics–propagated nodes that amplify geometric de-
+viations without participating in the IK solve. For analysis, we pro-
+duced three group-level errors per participant×condition×action
+×trial by aggregating joints within each category—per-joint rela-
+tive errors were log-transformed and then averaged equally within
+the group, yielding one scalar per group per trial.
+4.1 Training Performance
+We used a two-stage analysis. First, we fit a global omnibus Linear
+Mixed-Effects Model (LMM) to test high-order interactions among
+feedback condition, gender, and joint-group category. We then de-
+composed the significant interaction using targeted Difference-in-
+Differences (DID) contrasts corresponding toH2–H4.
+A. Main Effects and Interactions
+Table 1: LMM results for training performance.
+Effectχ 2 Dfp-value
+Condition 0.56 3 0.906
+Gender 44.45 1<.001*
+Joint Group 39084.02 2<.001*
+Condition×Gender 5.74 3 0.125
+Condition×Joint Group 12.74 60.047*
+Gender×Joint Group 120.83 2<.001*
+Condition×Gender×Joint Group 183.65 6<.001*
+We fit an LMM to log-transformed relative spatial error with
+fixed effects forCondition,Gender, andJoint Group, including all
+interactions. Random intercepts were included forParticipant,Ac-
+tion, and their interaction.
+The model showed significant main effects ofGender(χ 2(1) =
+44.45,p< .001) andJoint Group(χ 2(2) =39084.02,p< .001).
+The main effect ofConditionwas not significant (χ 2(3) =0.56,p=
+.906),not supporting H1. Critically, a significantCondi-
+tion×Gender×Joint Groupinteraction was observed (χ 2(6) =
+183.65,p< .001), motivating the targeted DID analyses forH2–
+H4.
+Estimated Marginal Means (EMMs) are shown in Figure 3. At
+theElbows, error profiles were statistically indistinguishable across
+conditions (pairwisep> .05). At theWristsandFingers, visual
+inspection suggested a numerical crossover pattern: the male group
+tended to show lower error under VH than V , whereas the female
+group showed the opposite pattern under VH and tended to show
+lower error under V A. However, within-gender pairwise contrasts
+(multiple-comparison corrected) were not significant (p> .05).
+Therefore,H2/H3 were not supported in simple pairwise con-
+trasts, and we proceeded to the planned DID tests.
+B. Difference-in-Differences (DID) Analysis
+We decomposed the three-way interaction by computing, within
+each joint group, three planned difference-in-differences (DID)
+contrasts—(V H−VA),(VAH−VA), and(VAH−V H)—each de-
+fined as the gender difference in the corresponding condition con-
+trast,
+DIDA−B =
+ 
+µMale,A −µ Male,B
+
+−
+ 
+µFemale,A −µ Female,B
+
+.
+Estimates are shown in Figure 4.
+Elbow.No significant DID effects were observed at the el-
+bows. The trade-off contrast (VH - VA: Est=−0.060,SE=0.103,
+p=0.561) and the two triple-modality contrasts (VAH - VA: Est=
+−0.186,SE=0.103,p=0.213;VAH - VH: Est=−0.126,SE=
+0.103,p=0.331) were all non-significant. Accordingly,H2–H4
+were not supported at the elbow level.
+Wrist.At the wrist, DID results showed numerical but non-
+significant gender divergence for contrasts involving haptics. For
+VH - VA, the DID estimate was−0.222 (SE=0.103,p=0.084).
+ForVAH - VA, the estimate was−0.197 (SE=0.103,p=0.084). In
+both cases, the negative coefficient indicates a larger relative error
+reduction for the male group than for the female group, but neither
+contrast reached significance after correction. Thus,H2/H3 were
+not statistically supported at the wrist level(with a numerical
+trend only). ForVAH - VH, the DID estimate was 0.026 (SE=
+0.103,p=0.802), soH4 was not supported at the wrist level.
+Fingers.At the fingers, gender divergence was significant for
+contrasts involving haptics. The trade-off contrast (VH - VA)
+yielded Est=−0.232 (SE=0.103,p=0.043), and adding haptics
+to audio (VAH - VA) yielded Est=−0.225 (SE=0.103,p=0.043).
+These resultspartially support H2 and H3. By contrast,VAH -
+VHwas non-significant (Est=0.007,SE=0.103,p=0.942), so
+H4 was not supported at the finger level.
+4.2 Short-term Learning
+Table 2: LMM Results for short-term learning rates (Log-Linear
+Model).
+Effectχ 2 Dfp-value
+Main Effects
+Condition 0.22 3 0.974
+Gender 47.76 1<.001*
+Joint Group 6039.71 2<.001*
+log(Trial)(Learning Rate) 2846.18 1<.001*
+Two-Way Interactions
+Condition×Gender 5.19 3 0.159
+Condition×Joint Group 0.68 6 0.995
+Gender×Joint Group 21.44 2<.001*
+Condition×log(Trial)15.95 30.001*
+Gender×log(Trial)5.47 10.019*
+Joint Group×log(Trial)118.90 2<.001*
+Three-Way Interactions
+Cond×Gend×Joint Group 29.66 6<.001*
+Note:Other higher-order interactions involving log(Trial)were not sig-
+nificant (p> .05).
+To characterize skill-acquisition dynamics, we fit two comple-
+mentary LMMs to log-transformed imitation error. First, to assess
+5
+
+===== PAGE 6 =====
+Online Submission ID: 1779
+Elbow Wrist Fingers
+V VA VH VAH V VA VH VAH V VA VH VAH
+−4.00
+−3.75
+−3.50
+−3.25
+−3.8
+−3.6
+−3.4
+−3.2
+−3.0
+−3.4
+−3.2
+−3.0
+−2.8
+−2.6
+Feedback Condition
+Log Relative Error (Lower is Better)
+gender
+Male
+Female
+Figure 3: Interaction plot of Estimated Marginal Means (EMMs). At the elbow (left), error profiles are generally flat. At the wrist (middle) and
+fingers (right), a gender-specific crossover emerges: males tend to benefit from haptics (VH reduces error), whereas females show the opposite
+pattern (VH increases error) but tend to benefit from audio (VA).
+convergence (plateau), we treatedTrialas a discrete factor. Sec-
+ond, to quantify and compare learning rates, we fit a log–log model
+with log(Trial)as a continuous predictor, assuming power-law er-
+ror reduction. Both models included fixed effects forCondition,
+Gender, andJoint Group, along with their full interactions with the
+trial term. Random intercepts were included forParticipant ID,
+Action ID, and theParticipant×Action IDinteraction. Results are
+summarized in Table 2 and visualized in Figure 5.
+General learning dynamics and plateau.A significant
+main effect ofTrialwas observed across participants (χ 2(1) =
+2846.2,p< .001). The discrete-trial analysis showed a monotonic
+reduction in error from Trial 1 to Trial 5, with significant pairwise
+reductions between consecutive trials up to Trial 5 (p< .05 for all
+Tnvs. Tn−1 contrasts). The Trial 5 vs. Trial 6 contrast was not
+significant (p> .05), indicating a global plateau within the six-trial
+session (Figure 5A1). This analysis does not directly testH5/H6.
+Condition-dependent learning rates.The learning-rate model
+revealed a significantCondition×log(Trial)interaction (χ 2(3) =
+15.95,p=.001), indicating differential effects of feedback condi-
+tion on adaptation speed. Post-hoc slope contrasts showed that VH
+had a significantly steeper negative slope than V (VH vs. V: esti-
+mate=−0.018,p=.008) and than V AH (VH vs. V AH: estimate
+=−0.023,p< .001). No significant slope differences were found
+for V vs. V A (p=.604) or V vs. V AH (p=.530). These results
+partially support H5.
+Gender-specific learning rates.A significantGen-
+der×log(Trial)interaction was observed (χ 2(1) =5.47,p=.019).
+Slope estimates indicated faster error reduction in the fe-
+male group than in the male group (Male vs. Female slope
+estimate=0.010,p=.019). However, because theCondi-
+tion×Gender×Trialinteraction was not significant,H6 was not
+supported.
+Topology-group dissociation of learning.Learning dynamics
+also differed by joint group (Joint Group×log(Trial):χ 2(2) =
+118.9,p< .001). Pairwise slope comparisons showed a clear hi-
+erarchy: Fingers exhibited the steepest learning rate, followed by
+Wrists, with Elbows showing the slowest improvement. All pair-
+wise differences were significant (p< .001 for Fingers vs. Wrist,
+Fingers vs. Elbow, and Wrist vs. Elbow; Figure 5C).
+4.3 Recall
+Because recall outcomes were non-negative counts in a between-
+subjects design, we analyzed them using Generalized Linear Mod-
+els (GLMs). We first fit Poisson models and used Negative Bino-
+mial models when overdispersion was present. Models included
+fixed effects forCondition,Gender, and their interaction. Results
+are reported in Table 3 and Figure 6.
+Free Recall.For free recall, there were no significant main ef-
+fects ofCondition(χ 2(3) =0.98,p=.806) orGender(χ 2(1) =
+1.17,p=.279), and no significantCondition×Genderinteraction
+Table 3: GLM results for offline recall performance.
+Effectχ 2 Dfp-value
+Free Recall
+Condition 0.98 3 0.806
+Gender 1.17 1 0.279
+Condition×Gender 2.26 3 0.520
+Cued Recall
+Condition 12.38 30.006*
+Gender 6.92 10.009*
+Condition×Gender 7.38 3 0.061
+(χ 2(3) =2.26,p=.520). Post-hoc pairwise comparisons showed
+no between-condition differences (allp> .05). Thus,H7a was not
+supported.
+Cued Recall.For cued recall, there was a significant main effect
+ofCondition(χ 2(3) =12.38,p=.006) and a significant main ef-
+fect ofGender(χ 2(1) =6.92,p=.009). TheCondition×Gender
+interaction approached significance (χ 2(3) =7.38,p=.061) but
+did not reach the threshold.
+Aggregating across condition groups, pairwise comparisons
+(Figure 6, top-right) showed that the visual baseline (V) outper-
+formed V AH (p=.014). The V vs. VH comparison was not signif-
+icant (p=.086), and V vs. V A was also non-significant (p=.195).
+No significant differences were observed among the multimodal
+conditions (V A vs. VH, V A vs. V AH, VH vs. V AH; allp> .05).
+Therefore,H7b was not supported.
+For the effect of gender, estimated marginal means indicated
+higher cued-recall accuracy in the male group (M=1.029,SE=
+0.144) than in the female group (M=0.549,SE=0.113),p=.012,
+as shown in Figure 6 (bottom-right). As noted above, gender is
+treated here as a grouping factor; this effect should be interpreted
+as a group-level difference under the present task and demonstra-
+tion configuration rather than a causal biological claim.
+5 DISCUSSION
+This study examined whether augmenting visual guidance with au-
+ditory sonification and vibrotactile feedback improves motor im-
+itation under IK-mediated embodiment in consumer VR. The re-
+sults do not support a simple modality-stacking account—adding
+channels did not provide a uniform performance gain (H1 not sup-
+ported), and haptic effects depended on both IK-topological joint
+category and self-reported gender grouping (H2/H3 partially sup-
+ported). In addition, visuo-haptic guidance (VH) accelerated on-
+line adaptation (H5 partially supported), whereas the full stack
+(V AH) did not preserve this advantage and was associated with
+lower cued recall than the visual baseline (H7b not supported).
+6
+
+===== PAGE 7 =====
+Online Submission ID: 1779
+−0.2
+0.0
+0.2
+Male Female
+VH − VA
+p(FDR)=0.561
+−0.2
+0.0
+0.2
+Male Female
+VAH − VA
+p(FDR)=0.213
+−0.2
+0.0
+0.2
+Male Female
+VAH − VH
+p(FDR)=0.331
+A. Elbow
+−0.2
+0.0
+0.2
+Male Female
+VH − VA
+p(FDR)=0.084
+−0.2
+0.0
+0.2
+Male Female
+VAH − VA
+p(FDR)=0.084
+−0.2
+0.0
+0.2
+Male Female
+VAH − VH
+p(FDR)=0.802
+B. Wrist
+−0.2
+0.0
+0.2
+Male Female
+VH − VA
+p(FDR)=0.043
+−0.2
+0.0
+0.2
+Male Female
+VAH − VA
+p(FDR)=0.043
+−0.2
+0.0
+0.2
+Male Female
+VAH − VH
+p(FDR)=0.942
+C. Fingers
+Figure 4: Difference-in-Differences (DID) analysis of the VH vs. VA trade-off across joint groups. Negative values indicate a relative performance
+gain when switching to haptic guidance; positive values indicate a decrement. The crossover pattern is masked by IK noise at the elbow
+(p=.561), shows a trend at the wrists (p=.084), and becomes significant at the fingers (p=.043).
+Taken together, these findings indicate that multimodal guidance in
+IK-mediated training is bounded by (1) where error can be mean-
+ingfully acted upon in the kinematic chain and (2) the cognitive cost
+of maintaining multiple concurrent feedback streams.
+5.1 Kinematic Propagation and the “Amplifier Effect”
+A central result is the joint-group dissociation in training
+performance—feedback effects were absent at elbows, weak at
+wrists, and strongest at fingers. This pattern is consistent with the
+algorithmic structure of the IK chain and the physical locus of the
+haptic stimulus.
+In our setup, the wrist is asensor-drivenjoint directly con-
+strained by the controller’s tracked 6-DoF pose. The elbow is a
+solver-drivenjoint whose configuration is inferred by the IK solver
+(e.g. geometric constraints and bend heuristics) rather than directly
+measured. Because vibrotactile feedback was delivered through the
+controllers, it provided localized information at the hand-held end
+effector but no direct information about the elbow’s latent IK so-
+lution. Under this configuration, elbow behavior is dominated by
+solver priors and chain constraints, which plausibly explains why
+elbow-level DID contrasts remained non-significant.
+By contrast, the fingers arehierarchy-drivennodes whose fin-
+gertip positions are ultimately determined by upstream hand/wrist
+pose through the avatar’s forward-kinematic chain. As a result, dis-
+tal endpoints can exhibitamplifiedpositional changes. That means,
+relatively small wrist/hand adjustments may result in larger dis-
+placements at the fingertips due to lever-arm effects along the distal
+chain. Importantly, the pronounced gender divergence we observed
+at the fingers under haptic-involving contrasts does not by itself
+establish digit-specific control strategies. Instead, it iscompatible
+withan account in which wrist-localized corrections (or hand-level
+pose changes) propagate downstream and become most visible at
+the distal end effector.
+5.2 Gender-Specific Processing of Localized Haptics
+The distal DID results further suggest that the same controller-
+localized haptic signal was not functionally equivalent across users.
+At the finger level, contrasts involving haptics (VH–V A; V AH–V A)
+were significant, indicating that haptic inclusion benefited the male
+group more than the female group (H2/H3 partially supported).
+At the wrist level, the same pattern appeared only as a numerical
+trend. In contrast, adding audio on top of haptics (V AH–VH) did
+not produce a reliable DID effect in any joint group (H4 not sup-
+ported).
+A possible interpretation is that controller vibration acted as a
+state-confirmation cuefor some users but asinterferencefor others.
+Because vibration is co-located with the tracked end effector, it may
+help users verify wrist state (position/timing) when the cue aligns
+with their preferred integration strategy. Conversely, if a user re-
+lies more strongly on visual flow or auditory rhythm, an additional
+hand-localized tactile cue may compete for attention or be treated
+as noise, especially when the cue is abstract (error-coded) rather
+7
+
+===== PAGE 8 =====
+Online Submission ID: 1779
+n.s.
+−3.6
+−3.2
+−2.8
+−2.4
+1 2 3 4 5 6
+Trial
+Log Error
+Main Effect of Trial
+A1. Global Trend
+Fastest Learning Rate: VH
+ vs V: p=.008
+ vs VAH: p<.001
+ vs VA: p=.026
+1 2 3 4 5 6
+Trial
+Condition V VA VH VAH
+Interaction: Cond x Trial
+A2. By Condition
+Females learn faster
+(Steeper Slope, p=.019*)
+−3.50
+−3.25
+−3.00
+1 2 3 4 5 6
+Log Error
+Gender Male Female
+B. Gender−Specific Trajectories
+Learning Rate Hierarchy:
+Fingers > Wrist > Elbow
+(all p < .001)
+−3.6
+−3.3
+−3.0
+−2.7
+1 2 3 4 5 6
+Trial Number
+Log Error
+Joint Group Elbow Wrist Fingers
+C. Anatomical Hierarchy
+Figure 5: Short-term learning dynamics.A1)Global learning trajectory across all conditions. Error decreased significantly from Trials 1–5, with
+no significant difference between Trials 5 and 6.A2)Learning rates by condition. The VH condition shows a significantly steeper slope (faster
+learning) than both V and VAH.B)Gender-specific learning trajectories. Female participants show a significantly steeper learning slope than
+male participants.C)Joint-group hierarchy of learning rates. All pairwise differences were statistically significant.
+0
+2
+4
+V VA VH VAH
+Mean Count
+Free Recall: Condition Effect
+* (p = .014)
+0.0
+0.5
+1.0
+1.5
+2.0
+V VA VH VAH
+Mean Count
+Cued Recall: Condition Effect
+0
+2
+4
+Male Female
+Mean Count
+Free Recall: Gender Effect
+* (p = .012)
+0.0
+0.5
+1.0
+1.5
+Male Female
+Mean Count
+Cued Recall: Gender Effect
+Figure 6: Offline memory retrieval performance.
+than task-semantic. Under a hierarchy-driven chain, instability in-
+troduced at the wrist would then be magnified at the fingertips.
+We emphasize that these aregroup-levelinterpretations based
+on self-reported gender and should not be read as causal biolog-
+ical claims. Moreover, participants trained with gender-matched
+demonstrators in our design, so the observed effects reflect user-
+group differences under that training configuration. The key impli-
+cation is not a fixed demographic rule, but the presence ofheteroge-
+neous sensorimotor response profilesto the same haptic mapping.
+5.3 Visuo-Haptic Feedback as a Learning Catalyst
+The learning-rate analysis clarifies the functional role of haptics.
+VH did not simply lower error uniformly. Instead, it increased
+the rate of error reduction across trials relative to the visual base-
+line (H5 partially supported). This pattern supports interpreting
+visuo-haptic guidance as alearning catalyst. To explain, VH can
+accelerate short-term calibration even when no global main effect
+of condition is present.
+One interpretation is that low-latency coupling between vi-
+sual discrepancy and wrist-localized tactile feedback increases the
+salience of actionable error during practice, enabling faster trial-
+to-trial updating. However, this catalytic effect did not extend to
+the full multimodal stack. V AH showed a shallower learning slope
+than VH and no reliable advantage over V , indicating that a third
+channel did not produce additive gains. This is compatible with
+split-attention or coordination costs in multimodal monitoring [42]:
+even when signals are distributed across modalities, users must still
+allocate attention, reconcile cue meaning, and select corrective ac-
+tions in real time.
+We also did not observe a significantCondition×Gender×Trial
+interaction (H6 not supported). Thus, although gender-group dif-
+8
+
+===== PAGE 9 =====
+Online Submission ID: 1779
+ferences emerged in distal training accuracy, they did not translate
+into statistically distinct condition-dependent learning-rate modula-
+tion.
+5.4 Retention Trade-offs under Stacked Multimodal
+Guidance
+The recall resultssuggestan execution–retention trade-off under
+stacked guidance. Feedback condition did not affect free recall
+(H7a not supported), but cued recall showed a significant main
+effect of condition, with the visual baseline outperforming V AH
+(contrary to H7b). In other words, the condition with the rich-
+est concurrent guidance did not yield the strongest semantic–motor
+retrieval.
+This pattern is consistent with theGuidance Hypothesis[33]:
+dense augmented feedback can support practice performance while
+weakening performance once those cues are removed. In the
+present task, V AH may have encouraged reliance on external cor-
+rection signals during execution without equally strengthening the
+internal semantic–motor mapping required for cued retrieval. No-
+tably, subjective questionnaires did not reveal reliable differences
+(e.g. workload or embodiment). Two possible explanations are: (1)
+the retention cost may not directly translate into subjective experi-
+ence during practice; and (2) the retention cost may not be readily
+captured by self-report, instead requiring behavioral memory mea-
+sures to detect. Future work could probe this dissociation with de-
+layed recall/transfer tests or more sensitive metacognitive measures.
+5.5 Design Guidelines for Multimodal IK Training
+For consumer VR training systems that rely on IK to reconstruct
+upper-limb motion, our results indicate that adding more feedback
+channels does not necessarily improve learning. Instead, multi-
+modal effectiveness is bounded by the avatar’s algorithmic topol-
+ogy, the temporal phase of skill acquisition, and user-specific sen-
+sorimotor response profiles. Based on these findings, we propose
+three engineering-oriented guidelines for balancing online kine-
+matic support and short-term retention.
+Guideline 1: Respect Solver Topology (Masked Haptics)—
+motivated by Section 5.1.Map feedback only to joints for which
+users have direct or behaviorally meaningful control authority. In
+our data, controller-coupled haptics did not reliably improve elbow-
+level performance, whereas effects emerged at the wrist/finger end
+of the chain.
+•Topology mismatch.In common VR IK pipelines, elbow pose
+is a solver-determined latent variable inferred from distal con-
+straints (e.g. tracked hand pose) and bend heuristics. Trigger-
+ing controller vibration for elbow-related deviation creates a
+control mismatch: the signal is delivered at the hand, but the
+user cannot directly manipulate the solver’s proximal latent
+variables to resolve elbow error.
+•Implementation rule.Apply a topology-aware error mask be-
+fore issuing haptic feedback. If the deviation is primarily at-
+tributable to solver-dominated proximal variables (e.g. elbow
+bend/swivel ambiguity), suppress controller vibration and rely
+on visual disambiguation (e.g. linkages or ghost overlays).
+Restrict haptic signaling to sensor-driven joints (wrists in this
+study) and hierarchy-driven distal segments (fingers), where
+the cue remains actionable and behaviorally observable.
+Guideline 2: Detect Sensory Interference Early (Adap-
+tive Profiling)—motivated by Section 5.2.The distalCondi-
+tion×Genderinteraction indicates that the same haptic mapping
+can help some users and hinder others. Accordingly, modality as-
+signment should be behavior-driven rather than fixed.
+•Rationale.Do not use demographic labels as proxies for sen-
+sory preference. Instead, estimate each user’s response profile
+directly from early behavioral performance.
+•Calibration protocol.Add a brief onboarding probe (e.g. 20–
+30 s per block) comparing V A and VH under matched task
+difficulty.
+•Decision logic.Monitor distal endpoint error (e.g.
+wrist/finger relative error). If adding haptics reduces error rel-
+ative to V A, retain VH. If haptics increase error, classify the
+response as likely sensory interference and switch to V A or V .
+Re-evaluate periodically, as the optimal profile may change
+over learning.
+Guideline 3: Use Scaffold-and-Wean Scheduling—motivated
+by Section 5.3.The combination of faster online adaptation in VH
+and poorer cued recall in V AH suggests a guidance trade-off: dense
+feedback can accelerate early calibration, but sustained stacking
+may increase dependence and weaken retention.
+•Phase 1: Acquisition (scaffold).During early practice, prior-
+itize visuo-haptic (VH) feedback. In our study, VH produced
+the steepest learning slope, indicating faster trial-to-trial cali-
+bration.
+•Phase 2: Consolidation (wean).Avoid persistent V AH as the
+default. Once performance begins to plateau, progressively
+fade haptic and/or auditory channels. This shifts users from
+externally guided correction toward internally generated exe-
+cution, which is more compatible with semantic–motor reten-
+tion.
+6 LIMITATIONS
+This study has several limitations. First, demonstrator identity was
+nested within gender to preserve naturalistic motion, which im-
+proves ecological validity but means absolute gender main effects
+may partly reflect demonstrator-specific motion statistics; there-
+fore, within-gender condition contrasts provide the strongest evi-
+dence for modality effects. Second, the findings are specific to IK-
+mediated embodiment under sparse 6-DoF tracking and may not
+generalize to other embodiment pipelines (e.g. full-body motion
+capture or alternative IK solvers). Third, the study used standing,
+stationary, bimanual gross-motor gestures in a single session with
+immediate recall, so the results do not establish longer-term reten-
+tion or transfer to other task classes (e.g. fine manipulation or loco-
+motion). Fourth, recall scoring was performed by a single blinded
+rater based on gesture identifiability, and inter-rater reliability was
+not assessed. Finally, the auditory and haptic channels used a sin-
+gle heuristic cue parameterization, and different mappings or gain
+schedules may alter the observed balance between facilitation and
+interference.
+7 CONCLUSION
+We investigated multimodal guidance in IK-mediated VR motor
+imitation and found that its effectiveness is bounded by both IK
+topology and a trade-off between online execution and short-term
+retention. Multimodal effects were localized to sensor-driven and
+hierarchy-driven segments (wrists/fingers), while solver-driven el-
+bows showed little sensitivity to auxiliary cues. Visuo-Haptic (VH)
+guidance accelerated early adaptation, but this benefit did not per-
+sist under the full Visuo-Audio-Haptic (V AH) stack, which was also
+associated with poorer cued recall than the visual baseline.
+We also observed user-group moderation in distal performance:
+the same haptic mapping improved accuracy for one group but de-
+graded it for another, indicating that modality utility is not uniform
+across users. Together, these results challenge a “more feedback is
+better” assumption for consumer VR training under sparse-tracking
+embodiment. Instead, our findings support topology-aware, adap-
+tive multimodal design. We distill this into three practical principles
+for IK-mediated training:Topology-Aware Masking,Interference
+Detection, andScaffold-and-Weanscheduling.
+9
+
+===== PAGE 10 =====
+Online Submission ID: 1779
+REFERENCES
+[1] K. E. Adolph and J. E. Hoch. Motor development: Embodied, em-
+bedded, enculturated, and enabling.Annual review of psychology,
+70(1):141–164, 2019. 2
+[2] D. E. Aguilar Ramirez and C. L. Gonzalez. Sex and hand differences
+in haptic processing: implications for mental rotation ability.Biology
+of Sex Differences, 16(1):6, 2025. 2
+[3] M. Barnett-Cowan, R. Dyde, C. Thompson, and L. Harris. Multisen-
+sory determinants of orientation perception: task-specific sex differ-
+ences.European Journal of Neuroscience, 31(10):1899–1907, 2010.
+2
+[4] L. W. Barsalou. Perceptual symbol systems.Behavioral and brain
+sciences, 22(4):577–660, 1999. 2
+[5] P. Bremen, R. Massoudi, M. M. Van Wanrooij, and A. Van Opstal.
+Audio-visual integration in a redundant target paradigm: a comparison
+between rhesus macaque and man.Frontiers in Systems Neuroscience,
+11:89, 2017. 2
+[6] D. Burr and D. Alais. Combining visual and auditory information.
+Progress in brain research, 155:243–258, 2006. 4
+[7] F. Buttussi and L. Chittaro. Effects of different types of virtual reality
+display on presence and learning in a safety training scenario.IEEE
+transactions on visualization and computer graphics, 24(2):1063–
+1076, 2017. 2
+[8] M. L. Cadieux, M. Barnett-Cowan, and D. I. Shore. Crossing the
+hands is more confusing for females than males.Experimental brain
+research, 204(3):431–446, 2010. 2
+[9] R. Cao, Z. Liang, C. Zhang, A. Cunningham, J. A. Walsh, and R. Cao.
+The role of visual augmentation on embodied skill acquisition across
+perspectives and body representations.IEEE Transactions on Visual-
+ization and Computer Graphics, 2025. 1, 2, 3, 4
+[10] P. Chandak. Leveraging haptic feedback in mixed reality: Enhanc-
+ing training, skill acquisition and robotic simulation.Journal of En-
+gineering and Applied Sciences Technology. SRC/JEAST-E170. DOI:
+doi. org/10.47363/JEAST/2023 (5) E170, 5(4):2–6, 2023. 2
+[11] J. F. Dyer, P. Stapleton, and M. W. Rodger. Sonification as concur-
+rent augmented feedback for motor skill learning and the importance
+of mapping design.Open Psychology Journal, 8(Suppl 3):192–202,
+2015. 2
+[12] M. O. Ernst and H. H. B ¨ulthoff. Merging the senses into a robust
+percept.Trends in cognitive sciences, 8(4):162–169, 2004. 1
+[13] C. R. Fetsch, A. Pouget, G. C. DeAngelis, and D. E. Angelaki. Neu-
+ral correlates of reliability-based cue weighting during multisensory
+integration.Nature neuroscience, 15(1):146–154, 2012. 4
+[14] C. Fossataro, A. R. Sebastiano, G. Tieri, K. Poles, M. Galigani,
+M. Pyasik, V . Bruno, T. Bertoni, and F. Garbarini. Immersive vir-
+tual reality reveals that visuo-proprioceptive discrepancy enlarges the
+hand-centred peripersonal space.Neuropsychologia, 146:107540,
+2020. 1, 2
+[15] J. G. Frederiksen, S. M. D. Sørensen, L. Konge, M. B. S. Svendsen,
+M. Nobel-Jørgensen, F. Bjerrum, and S. A. W. Andersen. Cognitive
+load and performance in immersive virtual reality versus conventional
+virtual reality simulation training of laparoscopic surgery: a random-
+ized trial.Surgical endoscopy, 34(3):1244–1252, 2020. 2
+[16] A. Gani, O. Pickering, C. Ellis, O. Sabri, and P. Pucher. Impact of hap-
+tic feedback on surgical training outcomes: a randomised controlled
+trial of haptic versus non-haptic immersive virtual reality training.An-
+nals of Medicine and Surgery, 83:104734, 2022. 2
+[17] M. Gonzalez-Franco, B. Cohn, E. Ofek, D. Burin, and A. Maselli. The
+self-avatar follower effect in virtual reality. In2020 IEEE Conference
+on Virtual Reality and 3D User Interfaces (VR), pp. 18–25. Ieee, 2020.
+2
+[18] S. G. Hart and L. E. Staveland. Development of nasa-tlx (task load
+index): Results of empirical and theoretical research. InAdvances in
+psychology, vol. 52, pp. 139–183. Elsevier, 1988. 4
+[19] A. Jeyathasan and S. Banerjee. Multisensory integration and sensory
+substitution across vision, audition, and haptics: Answering the what,
+which, and when in study protocols.arXiv preprint arXiv:2507.18401,
+2025. 1
+[20] M. Khoramshahi, A. Roby-Brami, R. Parry, and N. Jarrass ´e. Identifi-
+cation of inverse kinematic parameters in redundant systems: Towards
+quantification of inter-joint coordination in the human upper extrem-
+ity.Plos one, 17(12):e0278228, 2022. 2
+[21] K. Kilteni, R. Groten, and M. Slater. The sense of embodiment in
+virtual reality.Presence: Teleoperators and Virtual Environments,
+21(4):373–387, 2012. 2
+[22] Y .-L. Lai. A fast task planning system for 6r articulated robots based
+on inverse kinematics.The International Journal of Advanced Manu-
+facturing Technology, 125(11):4989–5013, 2023. 2
+[23] M. Macedonia. Embodied learning: Why at school the mind needs
+the body.Frontiers in psychology, 10:2098, 2019. 2
+[24] S. L. Macrine and J. M. Fugate. Embodied cognition. InOxford
+Research Encyclopedia of Education. 2020. 2
+[25] P. Moreno-Brise ˜no, R. D ´ıaz, A. Campos-Romo, and J. Fernandez-
+Ruiz. Sex-related differences in motor learning and performance.Be-
+havioral and brain functions, 6(1):74, 2010. 2
+[26] S. M ¨uller, E. Dekker, K. Morris-Binelli, B. Piggott, G. Hoyne,
+W. Christensen, P. Fadde, L. Zaichkowsky, J. Brenton, and D. Z. Ham-
+brick. Attributes of expert anticipation should inform the design of
+virtual reality simulators to accelerate learning and transfer of skill.
+Sports Medicine, 53(2):301–309, 2023. 2
+[27] M. Parger, J. H. Mueller, D. Schmalstieg, and M. Steinberger. Hu-
+man upper-body inverse kinematics for increased embodiment in
+consumer-grade virtual reality. InProceedings of the 24th ACM sym-
+posium on virtual reality software and technology, pp. 1–10, 2018.
+2
+[28] A. Rajagopal, C. L. Dembia, M. S. DeMers, D. D. Delp, J. L. Hicks,
+and S. L. Delp. Full-body musculoskeletal model for muscle-driven
+simulation of human gait.IEEE transactions on biomedical engineer-
+ing, 63(10):2068–2079, 2016. 2
+[29] L. Reynolds. Measuring intrinsic motivations.Handbook of research
+on electronic surveys and measurements, pp. 170–173, 2007. 4
+[30] A. Rogojin, D. J. Gorbet, and L. E. Sergio. Sex differences in the
+neural underpinnings of unimanual and bimanual control in adults.
+Experimental Brain Research, 241(3):793–806, 2023. 1, 2, 4
+[31] D. Roth and M. E. Latoschik. Construction of the virtual embodiment
+questionnaire (veq).IEEE Transactions on Visualization and Com-
+puter Graphics, 26(12):3546–3556, 2020. 4
+[32] J. Rudisch, K. M ¨uller, D. F. Kutz, L. Brich, R. Sleimen-Malkoun, and
+C. V oelcker-Rehage. How age, cognitive function and gender affect
+bimanual force control.Frontiers in Physiology, 11:245, 2020. 1
+[33] R. A. Schmidt. Frequent augmented feedback can degrade learning:
+Evidence and interpretations. InTutorials in motor neuroscience, pp.
+59–75. Springer, 1991. 9
+[34] T. W. Schubert. The sense of presence in virtual environments: A
+three-component scale measuring spatial presence, involvement, and
+realness.Z. f ¨ur Medienpsychologie, 15(2):69–71, 2003. 4
+[35] K. Stanney, C. Fidopiastis, and L. Foster. Virtual reality is sexist: but
+it does not have to be.Frontiers in Robotics and AI, 7:4, 2020. 2
+[36] T. R. Stanton and C. Spence. The influence of auditory cues on bodily
+and movement perception.Frontiers in psychology, 10:3001, 2020. 2
+[37] K. Sugimori, H. Mitake, H. Sato, K. Oguri, and S. Hasegawa. Avatar
+tracking control with generations of physically natural responses on
+contact to reduce performers’ loads. InProceedings of the 27th
+ACM Symposium on Virtual Reality Software and Technology, pp. 1–5,
+2021. 2
+[38] J. Tarnas, R. Stemplewski, and P. Krutki. Sex differences in main-
+taining the requested handgrip force enhanced by auditory or visual
+feedback.International Journal of Environmental Research and Pub-
+lic Health, 17(14):5158, 2020. 2
+[39] R. J. van Beers, A. C. Sittig, and J. J. van der Gon Denier. How humans
+combine simultaneous proprioceptive and visual position information.
+Experimental brain research, 111(2):253–261, 1996. 1
+[40] E. van der Kruk. Biasmechanics: Does an unconscious bias still per-
+sist in biomechanics, positioning males as the default in human re-
+search? a meta-analysis on the journal of biomechanics 2024 publica-
+tions.Journal of Biomechanics, 181:112560, 2025. 2
+[41] C. Wickens, J. Prinet, S. Hutchins, N. Sarter, and A. Sebok.
+Auditory-visual redundancy in vehicle control interruptions: Two
+meta-analyses. InProceedings of the Human Factors and Ergonomics
+10
+
+===== PAGE 11 =====
+Online Submission ID: 1779
+Society Annual Meeting, vol. 55, pp. 1155–1159. SAGE Publications
+Sage CA: Los Angeles, CA, 2011. 1, 2
+[42] C. D. Wickens. Multiple resources and performance prediction.The-
+oretical issues in ergonomics science, 3(2):159–177, 2002. 2, 8
+[43] C. D. Wickens, R. S. Gutzwiller, and A. Santamaria. Discrete task
+switching in overload: A meta-analyses and a model.International
+Journal of Human-Computer Studies, 79:79–84, 2015. 4
+[44] V . R. Zschorlich, F. Behrendt, and M. H. de Lussanet. Multimodal
+sensorimotor integration of visual and kinaesthetic afferents modu-
+lates motor circuits in humans.Brain Sciences, 11(2):187, 2021. 2
+11

@@ -1,0 +1,1274 @@
+SOURCE: /Users/m.diluca@bham.ac.uk/Downloads/ismar26a-sub2109-i7.pdf
+PAGES: 11
+METADATA: {'/Author': '', '/CreationDate': 'D:20260317101735Z', '/Creator': 'LaTeX with hyperref', '/Keywords': '', '/ModDate': 'D:20260317101735Z', '/PTEX.Fullbanner': 'This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) kpathsea version 6.4.1', '/Producer': 'pdfTeX-1.40.27', '/Subject': 'VGTC Conference Paper', '/Title': '', '/Trapped': '/False'}
+
+
+
+===== PAGE 1 =====
+Error-Related Eye Response: Error Detection and Confidence Support in
+Upper Limb Virtual Reality Rehabilitation
+Figure 1: (A) Upper limb rehabilitation action sequence illustrating rest, grasp initiation, and object placement. (B) Upper
+limb virtual reality rehabilitation game. (C) Clinical experiment of upper limb VR rehabilitation game with ErrE strategy. (D)
+User experiment overview. User Study 1 calibrates the ErrE statistical models and selects an analysis window using 40 healthy
+participants, with 30 for calibration and 10 for window comparison. User Studies 2 and 3 evaluate real-time ErrE detection and
+corrective feedback in healthy participants and in patients, respectively.
+ABSTRACT
+Interaction errors in upper-limb virtual reality (VR) rehabilitation,
+such as unintended object selection or accidental drops, can dis-
+rupt task flow, reduce perceived control, and undermine user con-
+fidence. Existing systems usually detect such failures only after
+they become behaviourally visible and often respond with coarse
+correction that interrupts ongoing action. This research addresses
+that gap by proposing ErrE, an Error-Related Eye Response frame-
+work that combines real-time perceived-error detection with pre-
+ventive, state-preserving corrective feedback. ErrE continuously
+analyses blinks, gaze shifts, pupil-size change, and eye openness
+within a sliding window using lightweight statistical models to in-
+fer whether the user has perceived an interaction error. Three user
+studies involving 70 healthy participants and 24 patients evaluated
+the framework. Event-aligned analysis revealed a structured ocu-
+lar signature around perceived errors, including pre-onset gaze in-
+stability, blink activity, increased eye openness, and delayed pupil
+dilation. In online use, ErrE achieved 96.11%–97.78% detection
+accuracy in healthy participants and 97.22% in patients, with low
+trigger latency. Enabling ErrE increased confidence from 75.28%
+to 95.56% in healthy participants and from 61.81% to 83.85% in
+patients, shortened trial completion time, and reduced error bur-
+den in healthy participants. ErrE offers one of the first real-time,
+eye-based error-awareness strategies for VR rehabilitation and pro-
+vides an interpretable, clinically feasible path towards confidence-
+oriented adaptive support.
+Index Terms:Virtual reality, Physical therapy, Gaze pattern, Error
+detection, User confidence
+1 INTRODUCTION
+Virtual Reality (VR) has become an increasingly powerful medium
+for motor rehabilitation, offering interactive and repeatable environ-
+ments that support goal-directed upper-limb training [1–4]. Within
+such environments, patients can practise functional movements in
+ecologically meaningful contexts while receiving rich sensory feed-
+back, which can promote motivation and adherence to therapy [5,6].
+Effective rehabilitation, however, also depends on measurable per-
+formance and patients’ confidence during training [7–9]. In VR,
+confidence may be undermined when the system responds in ways
+that conflict with the patient’s intention, for example, through un-
+intended object selection or object drops caused by tracking or ex-
+ecution variability [10, 11]. When such errors are not recognised
+and handled appropriately, patients may attribute failures either to
+themselves or to an untrustworthy system, reducing engagement
+and willingness to continue challenging tasks [12, 13]. At the same
+time, corrective feedback must be carefully calibrated. Repeated
+trial restarts or automatic success assignment despite incomplete
+action may reduce perceived agency and weaken self-confidence by
+making the system appear overly intrusive or unreliable [7, 9, 14].
+Early error-awareness detection and minimally disruptive, state-
+preserving correction are therefore important for preserving con-
+fidence and supporting sustained practice in upper-limb VR reha-
+
+===== PAGE 2 =====
+2
+bilitation [15].
+Current VR rehabilitation systems typically detect errors indi-
+rectly through behavioural outcomes such as task scores and com-
+pletion time, through hand-motion thresholds, or through collision
+and state rules defined by the application logic [16–18]. These
+triggers often arise only after the failure has become a salient
+event, for example, once an unintended selection has been com-
+mitted or a drop has visibly begun, leaving limited opportunity for
+state-preserving intervention. Although such approaches can cap-
+ture some objective failures, they usually provide little insight into
+whether the user actually perceived the event as an error [16, 19],
+treat errors in a uniform manner without considering perceived er-
+ror [20], and rely on coarse correction strategies such as restart-
+ing a trial or reducing difficulty, which may interrupt training flow
+[17, 21]. More advanced work in adaptive interfaces and brain-
+computer interfaces suggests that error awareness can be inferred
+from neurophysiological markers such as Error-Related Potentials
+[22, 23]. However, electroencephalography equipment and signal-
+processing pipelines remain burdensome for routine rehabilitation
+deployment [22,24]. This leaves a clear research gap: a lightweight
+method for detecting perceived errors early enough to support pre-
+ventive real-time correction, with the specific aim of maintaining
+user confidence. Eye tracking, now increasingly available in mod-
+ern VR headsets [25], provides a practical opportunity to address
+this gap because ocular and pupillometric responses, including gaze
+shifts, blinks, eye openness, and pupil dynamics, can reflect rapid
+reactions to unexpected outcomes [22, 23, 26, 27].
+Motivated by the need to preserve confidence during upper-limb
+VR rehabilitation, this research investigates whether perceived in-
+teraction errors can be identified early enough from ocular and
+pupillometric responses to support preventive correction [7, 9, 10].
+Existing systems can identify some objective failures from task
+logic and performance measures, yet they offer limited information
+about whether the user has actually noticed the mismatch between
+intention and outcome, that is, error awareness, and they often re-
+spond with interventions that disrupt task flow [16, 18]. To address
+this gap, this work proposes an Error-Related Eye Response (ErrE)
+framework that uses ocular and pupillometric signals to infer per-
+ceived errors in real time and to drive targeted, state-preserving cor-
+rective feedback. The central premise is that these eye-response
+patterns can provide an interpretable basis for early error detec-
+tion, and that acting on this signal at the moment of emergence can
+support confidence while preserving perceived control and avoid-
+ing unnecessary interruption to training. This research evaluates
+ErrE through a sequence of studies involving healthy participants
+and patients undergoing upper-limb rehabilitation.
+To address this aim, ErrE enables real-time perceived-error de-
+tection and confidence-oriented corrective feedback in upper-limb
+VR rehabilitation. Eye-tracking and interaction signals are cap-
+tured continuously during gameplay, and a sliding window of ocular
+and pupillometric features is analysed using interpretable statistical
+models to infer whether the user has perceived an interaction error.
+When error awareness is detected, the resulting ErrE decision drives
+a closed-loop feedback mechanism that applies immediate, context-
+appropriate correction while leaving successful actions untouched,
+thereby aiming to support confidence while preserving perceived
+control and maintaining task flow. ErrE is systematically evaluated
+through three staged user studies: (i) model training and character-
+isation of error responses in healthy participants, (ii) validation of
+real-time error detection and corrective-feedback effects in a con-
+trolled laboratory setting, and (iii) clinical testing with patients un-
+dergoing upper-limb rehabilitation.
+The key contributions of this research to VR rehabilitation and
+human-computer interaction are as follows:
+• This research is the first to introduce and systematically char-
+acterise ErrE in immersive VR rehabilitation, showing that
+perceived interaction errors can be detected from eye-tracking
+signals without electroencephalography.
+• This work demonstrates a closed-loop preventive correction
+strategy driven by detected error awareness, providing evi-
+dence that early, targeted intervention can support user con-
+fidence while preserving perceived control during VR reha-
+bilitation tasks.
+• This research provides design and evaluation insights for in-
+tegrating real-time, eye-based error detection and confidence-
+oriented feedback into practical VR rehabilitation applica-
+tions in clinical settings.
+2 RELATEDWORK
+2.1 Gaze Behaviour and Error Awareness in Rehabilita-
+tion
+Gaze behaviour provides an important window into the cognitive
+and perceptual processes underlying interaction in virtual environ-
+ments [12, 28, 29]. In rehabilitation, eye tracking is increasingly
+used to examine where patients look, how they allocate attention
+across task-relevant elements, and how visual exploration changes
+during functional training [12, 30]. During upper-limb virtual real-
+ity rehabilitation, gaze patterns over objects, targets, and feedback
+displays can indicate whether patients are following instructions,
+understanding task structure, and engaging with the training con-
+tent [30–32]. Compared with performance metrics such as success
+rates or completion times alone [17,19], gaze-based measures offer
+a richer account of how patients experience the task and respond to
+its demands [30, 33].
+Beyond attention and engagement, gaze behaviour is also closely
+linked to error processing during interaction [32, 34]. Across cog-
+nitive psychology and human-computer interaction, unexpected
+events and mismatches between intention and outcome have been
+associated with characteristic ocular responses, including pupil di-
+lation, transient eye widening, blink suppression, and corrective
+saccades towards the source of the error [22,23,26,27]. Importantly,
+these responses may emerge before the failure has fully unfolded,
+suggesting a possible route towards preventive support rather than
+delayed repair [22, 23, 26, 27]. In rehabilitation tasks, similar re-
+sponses may occur when a patient selects the wrong object, drops
+a target unexpectedly, or encounters feedback that conflicts with
+the effort they believe they have made. Such eye-based signals
+therefore offer a direct indication that the user has recognised that
+something has gone wrong, even before confusion or frustration is
+reported explicitly [23].
+Despite this potential, the use of gaze behaviour to capture error
+awareness in rehabilitation remains limited [1, 16]. Current virtual
+reality rehabilitation systems mainly use eye tracking to study spa-
+tial attention or to analyse visual behaviour retrospectively [30,32],
+and rarely attempt to detect in real time when users have noticed an
+interaction error [29, 31]. Errors are typically recorded as perfor-
+mance failures, with little consideration of the accompanying per-
+ceptual or emotional response [35, 36]. As a result, systems miss
+the opportunity to respond at the moment when the user becomes
+aware of an unexpected outcome. There is therefore a clear need for
+methods that interpret gaze changes as markers of error awareness
+and incorporate them into adaptive control, so that rehabilitation
+systems can recognise user-perceived errors as they occur and re-
+spond in ways that protect confidence and maintain continuity of
+practice.
+2.2 Adaptive Feedback and Confidence Restoration in
+VR Rehabilitation
+Adaptive feedback has become central to the design of virtual re-
+ality rehabilitation systems, reflecting a broader move from fixed
+
+===== PAGE 3 =====
+3
+exercise protocols towards responsive and personalised training en-
+vironments [14, 37, 38]. In conventional therapy, clinicians con-
+tinuously adjust instructions, task difficulty, and encouragement
+in response to patient performance and emotional state in order
+to maintain an appropriate level of challenge and support confi-
+dence [7, 9, 10]. Virtual reality systems seek to emulate this pro-
+cess by monitoring user behaviour and adapting feedback or task
+parameters accordingly [8, 39]. In upper-limb rehabilitation, such
+adaptation commonly includes changes to target position, move-
+ment amplitude, or timing demands, together with visual, auditory,
+or other sensory cues that signal success, highlight errors, or guide
+correction [14, 33]. When designed well, adaptive feedback can
+make rehabilitation feel more supportive, personalised, and clini-
+cally meaningful [12, 14].
+Recent work has shown that adaptive feedback can benefit both
+performance and user experience [2, 3, 40]. Performance-driven
+difficulty adjustment can help keep tasks within an effective chal-
+lenge range, reducing boredom when tasks are too easy and discour-
+agement when they are too demanding [41, 42]. State-contingent
+feedback, for example, based on attention or fatigue, can sustain
+engagement across longer sessions and promote more consistent
+movement quality [8, 43]. Multimodal feedback, including visual,
+auditory, haptic, and thermal cues, can further strengthen embodi-
+ment and make corrective information feel more natural and intu-
+itive [30, 44]. Within this broader context, feedback also plays an
+important role in shaping users’ sense of competence, control, and
+trust in the system [45,46]. Feedback that resolves confusing situa-
+tions quickly and clearly may therefore be especially important for
+preserving confidence when errors occur [7, 8].
+However, current adaptive feedback strategies in virtual reality
+rehabilitation rarely address directly how confidence should be sup-
+ported when patients encounter an error or other unexpected out-
+come [7,9]. In many systems, errors are treated primarily as perfor-
+mance deficits to be penalised, ignored, or used to adjust later diffi-
+culty, rather than as events that may disrupt trust in the system when
+handled poorly [16,17,19]. Feedback after an error is often delayed,
+generic, or restricted to negative signals such as score reduction or
+trial failure, which may increase frustration and reduce willingness
+to continue [5,47]. There remains a need for feedback mechanisms
+that are sensitive to user-perceived errors and that respond in ways
+that frame these events as manageable and understandable, thereby
+protecting confidence during training [3, 48]. Integrating real-time
+indicators of error awareness, such as gaze changes, into the feed-
+back loop offers a promising direction. This would allow virtual
+reality rehabilitation systems to detect when users recognise an er-
+ror and to deliver immediate, supportive, preventive correction that
+preserves continuity of action and reinforces the sense that the sys-
+tem is reliable and supportive.
+3 METHODOLOGY
+3.1 ErrE Strategy
+3.1.1 Closed Loop Overview
+TheErrEstrategy implements a closed-loop mechanism that links
+eye behaviour to targeted correction ofperceivedinteraction errors
+during upper-limb VR rehabilitation. As shown in Figure 2, eye
+tracking signals are processed continuously, converted into sliding-
+window features, evaluated by three lightweight statistical models,
+fused into a binary Error/Normal decision, and returned to the reha-
+bilitation game to determine whether correction should be applied.
+In this way, ErrE aims to detect perceived error awareness early
+enough to support immediate, state-preserving correction with min-
+imal disruption to the ongoing task. Detailed model definitions and
+the online inference procedure are provided in Section 3.1.2 and
+Algorithm 1.
+Figure 2: System flowchart of the ErrE strategy
+Eye tracking data:The rehabilitation game records eye track-
+ing signals continuously during interaction. ErrE uses four signal
+types: eye blinks, gaze movement, pupil size, and eye openness.
+Task state is also available to the game engine for logging and for
+selecting the appropriate correction after an ErrE Error decision has
+been produced. Importantly, task state does not trigger ErrE in-
+ference; detection operates continuously and independently of task
+logic.
+Sliding window feature extraction:ErrE maintains a sliding
+window of lengthTms and updates at 10 Hz. At each update, the
+most recent window is converted into a feature vector that sum-
+marises the current eye response, including blink activity, gaze
+movement, pupil change, and eye openness change. This provides
+a compact, time-local representation suitable for low-latency online
+inference.
+Statistical models:The window-level feature vector is passed
+to three lightweight statistical criteria. Each compares the cur-
+rent window with class-specific reference patterns estimated from
+labelled calibration data and outputs an error confidence score in
+[0,1], denotedp Z,p MZ, andp IQR in Section 3.1.2. These models
+are designed to remain interpretable and computationally efficient
+for real-time use.
+ErrE fusion and decision:The three confidence scores are
+fused into a single confidence valuep ErrE, which is then thresh-
+olded to produce a binary decision (Error or Normal) at 10 Hz. An
+optional temporal consistency rule may be applied across consecu-
+tive updates to suppress isolated false alarms. Fusion and threshold-
+ing follow the procedures defined in Section 3.1.2 and implemented
+in Algorithm 1.
+System feedback:The binary ErrE decision is returned to the re-
+habilitation game. When an Error decision is produced, the system
+applies an immediate correction selected from the current interac-
+tion state. In this task, correction includes restoring an object after a
+drop or replacing an incorrectly grasped object with the instructed
+target. When a Normal decision is produced, the task continues
+unchanged. This design aims to preserve task flow, perceived con-
+trol, and confidence by intervening only when an error-related eye
+response indicates that the user has noticed an unexpected outcome.
+3.1.2 Statistical Modelling
+ErrE detects perceived interaction errors using three lightweight
+statistical models applied to the same sliding-window eye feature
+vectorf= [f 1, . . . ,fK]∈R K, updated at 10 Hz. Each model com-
+pares the current window with class-specific reference statistics es-
+timated from labelled calibration windows and outputs an error con-
+fidence in[0,1], denotedp Z,p MZ, andp IQR. These three confi-
+dences are then fused into a single scorepErrE, which is thresholded
+to produce the binary ErrE decision used by the closed-loop system
+(Algorithm 1 and Eq. (8)). TheErrorclass corresponds to windows
+aligned to participant-perceived error instances, whereasNormal
+corresponds to error-free interaction windows. A small constantε
+is used to avoid division by zero.
+
+===== PAGE 4 =====
+4
+Algorithm 1ErrE online error-related eye response detection and
+correction (continuous inference)
+1:Input:continuous eye tracking stream; current interaction state from the rehabil-
+itation game
+2:Output:ErrE decision at 10 Hz; context-appropriate corrective action when Er-
+ror is detected
+3:Initialisation
+4:Load class statistics for Normal and Error windows for each model
+5:Load model weightsw Z,w MZ,w IQR and decision thresholdτ
+6:Set window lengthTms and update ratef=10 Hz
+7:Online loop (runs continuously)
+8:whiletask is activedo
+9:extract most recent eye data window of lengthTms
+10:compute featuresffrom blink, gaze, pupil, and eye openness
+11:compute error confidencep Z using Z score
+12:compute error confidencep MZ using Modified Z score
+13:compute error confidencep IQR using IQR
+14:fuse confidences:
+15:p ErrE =w Z pZ +w MZ pMZ +w IQR pIQR
+16:ifp ErrE >τthen
+17:output ErrE decision = Error
+18:identify the current error type using the interaction state
+19:apply the corresponding corrective action in the rehabilitation game
+20:else
+21:output ErrE decision = Normal
+22:continue the task without modification
+23:end if
+24:wait∆t=1/fseconds
+25:end while
+Z-score model (mean-based)The Z-score model measures
+how far each feature deviates from the Normal and Error class
+means relative to the corresponding standard deviations. Mean de-
+viation to each class is first computed and then converted into an
+error confidence, where a larger value indicates stronger similarity
+to the Error class (Equations (1) and (2)):
+DC
+Z = 1
+K
+K
+∑
+k=1
+
+fk −µ C
+k
+σC
+k +ε
+ ,C∈ {N,E},(1)
+pZ = DN
+Z
+DN
+Z +D E
+Z +ε .(2)
+Modified Z-score model (median-based)The Modified Z-
+score model uses median and median absolute deviation (MAD)
+to provide a more robust estimate under outliers or non-Gaussian
+feature distributions. As above, the average deviation to each class
+is converted into an error confidence (Equations (3) and (4)):
+DC
+MZ = 1
+K
+K
+∑
+k=1
+
+0.6745(f k − ˜f C
+k )
+MADC
+k +ε
+ ,C∈ {N,E},(3)
+pMZ = DN
+MZ
+DN
+MZ +D E
+MZ +ε .(4)
+IQR-based model (range-based evidence)The IQR-based
+model provides complementary range-based evidence using Tukey
+bounds derived from the class quartiles. For each feature, the
+current value is checked against the Normal and Error bounds.
+Features that fall within the Error bounds but outside the Normal
+bounds contribute to the Error countN E, whereas features that
+fall within the Normal bounds but outside the Error bounds con-
+tribute to the Normal countN N. The final confidence is then com-
+puted from the relative amount of Error-supporting evidence (Equa-
+tions (5) and (6)):
+IC
+k =Q C
+3,k −Q C
+1,k,C∈ {N,E},
+LC
+k =Q C
+1,k −1.5I C
+k ,U C
+k =Q C
+3,k +1.5I C
+k .
+(5)
+pIQR = NE
+NE +N N +ε .(6)
+Fusion and decisionThe three confidences are combined us-
+ing a weighted average. During calibration, each model is assigned
+a reliability weight according to its balanced accuracy on a held-out
+split of labelled windows. The fused confidence is then thresholded
+atτto produce the final ErrE decision (Equations (7) and (8)):
+wm = Sm
+SZ +S MZ +S IQR
+,m∈ {Z,MZ,IQR},(7)
+pErrE =w Z pZ +w MZ pMZ +w IQR pIQR.(8)
+3.1.3 Corrective Feedback Policy
+ErrE uses a corrective feedback policy designed arounderror pre-
+ventionas a real-time, state-preserving intervention. In upper-limb
+VR rehabilitation, perceived interaction errors may reduce per-
+ceived control and confidence [49]. The goal is therefore to in-
+tervene when perceived error awareness emerges, before the failure
+becomes a completed and salient event. ErrE uses the rapid ocular
+“shock” response as an early signal that the mismatch between in-
+tention and outcome has been recognised, even when the hand can
+no longer correct the movement in time. By acting at this point, the
+system aims to preserve action continuity and maintain confidence.
+This emphasis ontimingdistinguishes ErrE from conventional
+post hoc correction and coarse assistance. Post hoc correction acts
+only after the failure has fully unfolded, while coarse strategies
+such as trial restart or global undo may interrupt task flow and ap-
+pear overly intrusive [7,9]. ErrE instead applies only minimal local
+state adjustments, and only when an ErrEErrordecision is pro-
+duced (Algorithm 1); otherwise, the task proceeds unchanged. In
+this sense, the policy is preventive rather than reparative.
+The rehabilitation game maintains an interaction state, includ-
+ing the instructed target, grasp status, and release status, which
+is queried only after anErrordecision is received. This keeps
+the eye-based error-awareness trigger independent of task-specific
+logic while allowing the system to select a context-appropriate cor-
+rection.
+Two representative error types were implemented.Wrong se-
+lectionis treated as an action-selection error: if the user begins to
+grasp the wrong object, the system substitutes the grasped item with
+the instructed target so that the movement can continue without an
+explicit re-attempt.Dropis treated as an execution slip: if the cor-
+rect object is unintentionally released during transport, the system
+restores it to the grasp state so that transport and placement can
+continue. In both cases, the correction is applied at the earliest fea-
+sible moment after perceived error awareness is detected, while the
+action is still unfolding.
+More broadly, the policy can be viewed as a small library of
+correction primitives indexed by interaction state. This structure
+can transfer to other VR rehabilitation tasks by redefining the task-
+specific state variables and selecting local correction primitives that
+preserve continuity of action. The intervention trigger remains the
+same: an eye-derived indication of perceived error awareness that
+can arise before the behavioural outcome is fully visible.
+3.2 Rehabilitation Game Implementation
+ErrE was evaluated in a seated upper-limb VR rehabilitation game
+built around a repetitive reach–grasp–transport–place sequence
+(Figure 1A). This movement pattern is commonly used in occu-
+pational therapy because it trains shoulder and elbow control, fore-
+arm rotation, and coordinated grasp and release within a functional
+tabletop context [50,51]. A kitchen scene was used to preserve eco-
+logical relevance while allowing precise control of task parameters
+and interaction logging.
+As shown in Figure 1B, the user sits at a virtual dining table with
+a bowl within reach and a hotpot as the placement target. Each trial
+begins with an instruction specifying the required meatball type.
+The participant visually identifies the target item, reaches to the
+bowl, grasps the meatball using a three-finger pinch supported by
+
+===== PAGE 5 =====
+5
+the haptic glove, transports it across the table, and releases it into
+the hotpot. This yields clear start and end states for each trial and
+supports repeated practice with a stable movement structure.
+The bowl contains three visually distinct meatball types (brown,
+white, and green) placed in close proximity. This supports con-
+trolled selection demands and creates natural opportunities for the
+two error types targeted by ErrE: wrong selection and accidental
+drop. ErrE operates continuously during gameplay by recording
+eye behaviour, extracting sliding-window features, and issuing an
+ErrororNormaldecision, while the game maintains the interaction
+state required to apply the corresponding correction. In the healthy-
+participant calibration study, task difficulty was further adjusted to
+ensure that sufficient error instances were observed; this procedure
+is described in Section 3.3.
+3.3 User Experiments
+Three sequential user studies evaluatedErrEin a staged manner,
+progressing from model calibration to online validation and clinical
+feasibility.User Study 1calibrated the statistical modelling core
+of ErrE by characterising Error-Related Eye Responses, estimating
+class-specific feature statistics and fusion weights, and selecting an
+analysis window lengthTthat balances detection accuracy and la-
+tency.User Study 2validated online error-awareness detection in
+a new healthy cohort and then evaluated whether ErrE-driven cor-
+rective feedback improves confidence and task continuity during
+ongoing practice.User Study 3deployed ErrE in a rehabilitation
+hospital to assess the feasibility and user experience with patients
+under routine clinical constraints. In the healthy-participant stud-
+ies, the task was performed with the non-dominant hand to elicit
+sufficient natural errors, whereas patients performed the task with
+the affected limb targeted for rehabilitation.
+Shared setup.All studies used the same VR rehabilitation
+game described in Section 3.2. Participants wore an HTC Vive Pro
+Eye headset with built-in eye tracking and a Vive Tracker mounted
+on the wrist, attached to a TouchDIVER G1 haptic glove. The game
+was implemented in Unity 3D and ran on a workstation with an Intel
+i9 central processing unit, 32GB RAM, and an RTX 3080 graph-
+ics processing unit at a stable 90 Hz refresh rate. Eye tracking,
+hand tracking, task events, model outputs, and system feedback
+events were logged synchronously. Healthy participants used the
+non-dominant hand to avoid ceiling performance and elicit suffi-
+cient natural errors, whereas patients performed the task with the
+rehabilitation target limb.
+3.3.1 User Study 1: Calibration of Error-Related Eye Re-
+sponse
+User Study 1 (as presented in Figure 1D) established the calibration
+foundation for ErrE. Its aims were to (i) characterise window-level
+eye responses associated with perceived interaction errors in the
+rehabilitation task, (ii) estimate class-specific feature statistics and
+reliability weights for the three statistical criteria, and (iii) select
+an analysis window lengthTthat balances discrimination perfor-
+mance and detection latency. The study comprised a calibration
+phase (Group A) for parameter estimation and a window-selection
+phase (Group B) for comparing candidate values ofT.
+Participants.A total of forty healthy adults (20 male, 20
+female) participated in this study. Thirty participants (Group A)
+(n=30;M age =37.20,SD=11.50) formed the calibration group
+used to estimate Normal and Error statistics and model reliabil-
+ity weights. The remaining ten participants (Group B) (n=10;
+Mage =37.90,SD=11.09) formed the window-selection group,
+who experienced different analysis window lengths and evaluated
+perceived responsiveness and correctness. All participants reported
+normal or corrected-to-normal vision and no history of neurologi-
+cal or motor impairment. Familiarity with VR was recorded, with
+82.50% reporting no prior experience, 15.00% reporting occasional
+use, and 2.50% reporting regular use. Ethical approval was ob-
+tained from the institutional review board, and written informed
+consent was collected from all participants.
+Procedure.Participants completed a briefing, eye and hand
+calibration, and a short practice block. InGroup A, participants
+then performed repeated instructed trials while task difficulty was
+adaptively increased by reducing the size of the bowl and all three
+meatballs by 10% after each successful trial. This increased selec-
+tion and grasping demands so thatwrong selectionanddroperrors
+arose naturally. Each session continued until at least three wrong
+selection errors and three drop errors had been recorded, or un-
+til fifteen minutes had elapsed. After each trial, the system logged
+the interaction outcome, and participants reported whether they had
+perceived an error. For offline calibration, sliding-window eye fea-
+tures were aligned to logged grab and drop events, and samples
+from[−500,1000]ms around event onset were labelled asError
+only when the participant reported perceiving the error; all other
+samples were treated asNormal. After calibration of class statis-
+tics and fusion weights,Group Bcompleted the same task under
+online ErrE configurations withT∈ {200,400,600,800,1000}ms
+in Latin-square order. For eachT, trials continued until at least
+one wrong selection error and one drop error had occurred. Grab
+and drop timestamps were used to compute detection accuracy and
+latency, after which participants rated perceived accuracy and re-
+sponsiveness and ranked the candidate window lengths.
+Measures.
+•ErrE detection accuracy.For each candidate window length
+T, accuracy was computed as the proportion of logged
+grab and drop events for which ErrE agreed with the
+participant-confirmed ground truth label, evaluated within
+[−500,1000]ms relative to event onset. An event was con-
+sidered detected ifp ErrE crossedτat least once within this in-
+terval. Accuracy is reported overall and separately for wrong
+selection and drop errors.
+•ErrE detection latency.For each window lengthT, latency
+was defined as the time from event onset (t 0) to the first
+threshold crossing ofp ErrE within[−500,1000]ms. Thresh-
+old crossings beforet 0 were treated as early detections and
+reported as 0 ms latency.
+•Eye response feature statistics.For each class and window
+length, summary statistics were computed for eye blinks,
+gaze movement, pupil-size change, and eye-openness change,
+providing an objective description of Error-Related Eye Re-
+sponses in this task. Full feature definitions and extraction
+procedures are given in Appendix I.A.
+•Preferred window length.Participants ranked the candidate
+values ofTfrom most to least preferred, indicating which
+configuration offered the best trade-off between perceived la-
+tency and perceived accuracy.
+3.3.2 User Study 2: Online Evaluation of Error Detection
+and Corrective Feedback
+User Study 2 (as presented in Figure 1D) provided an end-to-end
+evaluation of ErrE under online operation in healthy participants.
+The study had two aims: first, to quantify whether ErrE can de-
+tect perceived error events reliably in real time during goal-directed
+upper-limb practice; second, to test whether ErrE-driven correc-
+tive feedback improves confidence and task continuity when nat-
+ural interaction errors occur. A two-session within-subject design
+was used. Session 1 assessed online detection with an alert-based
+self-report ground truth, and Session 2 evaluated the same task with
+closed-loop corrective feedback enabled, using the analysis window
+lengths selected from User Study 1.
+
+===== PAGE 6 =====
+6
+Participants.A total of 30 healthy adults participated in this
+study (15 male, 15 female;n=30;M age =36.70,SD=11.65).
+All reported normal or corrected-to-normal vision and no history
+of neurological, motor, or vestibular impairment that could af-
+fect upper-limb function or tolerance to VR. VR familiarity was
+recorded: 76.67% had no prior experience, and 23.33% had oc-
+casional experience. Ethical approval was obtained, and written
+informed consent was collected from all participants.
+Procedure.Participants completed a briefing, calibration,
+and short practice session. The study comprised two sessions within
+the same visit, separated by a rest break. Three candidate analy-
+sis window lengths, selected from User Study 1, were evaluated in
+counterbalanced order using a Latin square. InSession 1 (detection
+only), participants performed the task while ErrE operated online.
+When ErrE indicated anError, an on-screen alert prompted the par-
+ticipant to report whether they had perceived an error at that mo-
+ment; this response served as the primary ground truth for detection
+accuracy. To ensure sufficient error instances, the same progres-
+sive size-reduction schedule as in User Study 1 was applied. Each
+Tcondition continued until at least three wrong selection errors
+and three drop errors had been observed, or until twenty minutes
+had elapsed. InSession 2 (closed-loop correction), participants
+repeated the same task under the sameTconditions and adaptive
+difficulty schedule, but the alert prompt was replaced by the in-
+tended corrective feedback. When an ErrEErrorwas detected, the
+system applied the corresponding corrective action defined in Sec-
+tion 3.1.3. EachTcondition was again continued until at least three
+wrong selection errors and three drop errors had been observed, or
+until twenty minutes had elapsed. After each condition, participants
+completed brief ratings, and after all conditions, they completed the
+full set of questionnaires.
+Measures.
+•ErrE detection accuracy.For each value ofTin Session 1,
+accuracy was computed as agreement between ErrE and the
+participant’s immediate self-report of perceived error, using
+the same event-centred interval and event-level detection rule
+as in User Study 1.
+•ErrE detection latency.For each value ofTin both sessions,
+latency was defined in the same way as in User Study 1,
+namely from event onset to the first threshold crossing of
+pErrE, with early detections reported as 0 ms.
+•Task performance.Behavioural performance was quantified
+using two per-trial indices: mean trial completion timeT trial
+(seconds per trial) and error frequencyR err (errors per trial),
+where errors include both wrong selections and drops. Full
+definitions are given in Appendix I.B.
+•Subjective outcomes.Confidence (Appendix II.A), usability
+(Appendix II.B), engagement (Appendix II.C), and overall
+user experience (Appendix II.D) were assessed after each ses-
+sion to compare the alert-only setting (Session 1) against the
+corrective-feedback setting (Session 2).
+3.3.3 User Study 3: Clinical Feasibility and Impact of ErrE
+User Study 3 (as presented in Figure 1D) examined the feasibility
+and practical impact of ErrE when embedded within routine upper-
+limb rehabilitation in a clinical setting (Figure 1C 1). Patients per-
+formed the task with the affected limb targeted for rehabilitation,
+and two short sessions compared baseline gameplay without auto-
+matic correction against ErrE-enabled gameplay with closed-loop
+corrective feedback. A single analysis window lengthT, selected
+from User Study 2, was used for all patients.
+Participants.A total ofn=24 patients undergoing upper-
+limb rehabilitation were recruited through a local rehabilitation hos-
+pital (Mage =48.88,SD=9.07; 15 male, 9 female). Inclusion cri-
+teria were the ability to understand task instructions and to perform
+seated reaching and grasping movements with the affected upper
+limb targeted for rehabilitation. Exclusion criteria included medi-
+cal contraindications to VR exposure, severe uncorrected visual im-
+pairment, or conditions that could prevent safe participation. None
+of the participants had prior VR experience. Diagnoses included
+upper-limb trauma (n=22; examples shown in Figure 1C 2) and
+stroke (n=2; an example shown in Figure 1C 3). All participants
+provided informed consent, and the relevant clinical ethics com-
+mittee approved the study. A therapist supervised each session to
+ensure safety and comfort.
+Procedure.The study was conducted in a quiet treatment
+room in the rehabilitation hospital. Patients completed a brief-
+ing, calibration, and short familiarisation period. Two short ses-
+sions compared baseline gameplay without ErrE correction against
+ErrE-enabled gameplay with closed-loop corrective feedback. In
+theBaselinesession, no automatic correction was applied when an
+error occurred. The ErrE pipeline ran in the background to log de-
+tections and timing, but it did not alter task outcomes. In theErrE
+Correctionsession, wrong selection events were corrected by re-
+placing the grasped item with the instructed item, and drop events
+were corrected by restoring the dropped item to the participant’s
+grasp when ErrE was detected. Each session lasted three minutes
+in line with therapist guidance regarding fatigue and safe training
+duration, and session order was counterbalanced where feasible.
+Short rest breaks were provided between sessions, and a therapist
+remained present throughout.
+Measures.The same objective and subjective measures as in
+User Study 2 were collected, including ErrE detection correctness
+and latency, behavioural task performance, and questionnaire-based
+assessments of confidence, usability, engagement, and overall user
+experience. In addition, the following clinician-rated measure was
+collected:
+•Clinician observation.A clinician completed a structured
+observation form comparing patient performance and be-
+havioural engagement in the rehabilitation game against typi-
+cal conventional therapy across five clinical criteria. Full de-
+tails are provided in Appendix II.E.
+4 RESULTS
+4.1 Eye Data: Event-aligned ocular signature around
+perceived errors
+Figure 3:Mean event-aligned ocular response around perceived
+error onset.Time is aligned such that 0 ms denotes perceived er-
+ror onset (vertical line). Shaded regions indicate blink intervals.
+Eye openness and pupil diameter are shown as baseline-corrected
+percentage change, and signed gaze shift is shown as a normalised
+directional measure. Further details of the construction, normalisa-
+tion, and interpretation of these traces are provided in Appendix I.C.
+
+===== PAGE 7 =====
+7
+Figure 3 shows a structured ocular response around perceived error
+onset. Before onset, the trace shows unstable gaze shifts together
+with a blink interval and a marked change in eye openness. Af-
+ter onset, pupil diameter increases more gradually and remains el-
+evated, while a second blink interval appears in the mid post-error
+phase. This temporal organisation suggests that perceived errors
+are associated with a multi-stage eye response rather than a single
+isolated change.
+Importantly, identifiable changes in gaze dynamics and eye
+openness were already present before the overt failure had fully
+unfolded. This supports the use of pre-onset eye data for preventive
+triggering in ErrE. Further details of the signal construction and in-
+terpretation are provided in Appendix I.C.
+4.2 User Study 1: Window Selection
+User Study 1 examined the effect of analysis window length on de-
+tection accuracy, latency, and participant preference. Detection ac-
+curacy differed significantly across windows,F(4,36) =43.76,p<
+0.001. The 200 ms window performed poorly (25.00%), whereas
+400 ms and 600 ms reached 95.00%, and 800 ms and 1000 ms
+reached 100.00% (Figure 4).
+Latency also differed significantly across windows,F(4,36) =
+106.01,p<0.001, increasing from 32.14 ms at 200 ms to 98.99 ms
+at 1000 ms. Participant preference reflected the same trade-off:
+400 ms was most preferred (mean rank=1.2), followed by 600 ms
+(=1.8), whereas 1000 ms was least preferred (=4.8). Taken to-
+gether, these results excluded 200 ms because of inadequate detec-
+tion and 1000 ms because of excessive latency. The 400 ms, 600 ms,
+and 800 ms windows were therefore retained for User Study 2, with
+400 ms emerging as the most favourable balance between accuracy
+and responsiveness.
+4.3 User Study 2: Online Validation and Effectiveness
+User Study 2 evaluated ErrE under online operation in healthy par-
+ticipants. In Session 1, all three retained windows achieved near-
+ceiling online detection accuracy, with no significant difference
+across 400, 600, and 800 ms (F(2,58) =0.63,p=0.537). Mean
+accuracies were 96.11%, 96.67%, and 97.78%, respectively. By
+contrast, latency increased significantly with window length, from
+40.15 ms at 400 ms to 71.59 ms at 800 ms (F(2,58) =145.64,p<
+0.001), and participant preference again favoured 400 ms. These
+findings confirmed 400 ms as the strongest setting for real-time use.
+When ErrE correction was enabled in Session 2, task perfor-
+mance improved. Averaged across windows, mean trial completion
+time decreased from 3.90 s to 3.39 s,t(29) =4.28,p<0.001, and
+mean error rate decreased from 17.13% to 14.46%,t(29) =9.44,
+p<0.001 (Figure 4). More importantly, confidence increased
+markedly from 75.28% to 95.56%,t(29) =6.49,p<0.001. En-
+gagement and overall user experience also increased significantly,
+whereas usability increased numerically but did not reach signifi-
+cance (p=0.092). Overall, User Study 2 showed that ErrE could
+detect perceived errors online with high accuracy and low latency,
+while also providing a clear confidence benefit.
+4.4 User Study 3: Clinical Feasibility
+User Study 3 examined whether the 400 ms model remained ef-
+fective in a clinical rehabilitation setting. Detection performance
+remained strong. In the ErrE-enabled condition, mean detection
+accuracy was 97.22% (SD=9.41%), and mean correction-trigger
+Figure 4:Summary of ErrE outcomes across three user studies.Top row shows detection latency, trial completion time, and error rate.
+Bottom row shows confidence, usability, engagement, and overall user experience. US1 denotes User Study 1, US2 denotes User Study 2,
+and US3 denotes User Study 3. Numbers indicate the analysis window lengthT(ms).Ctrldenotes the baseline condition without ErrE, and
+ErrEdenotes the ErrE-enabled condition. Boxplots show the participant distribution (centre line: median; box: interquartile range; whiskers:
+range; ‘+’ indicates the mean).
+
+===== PAGE 8 =====
+8
+latency was 41.62 ms (SD=6.01 ms), closely matching the healthy-
+participant result at 400 ms (Figure 4).
+The main behavioural effect in the patient group was improved
+task efficiency. Mean trial completion time decreased from 11.57 s
+to 9.22 s,t(23) =4.11,p<0.001. Error rate also decreased,
+from 19.42% to 17.71%, though this change was not significant
+(p=0.160). The clearest subjective effect was again confidence
+support: confidence increased from 61.81% to 83.85%,p<0.001.
+Usability, engagement, and overall user experience also improved,
+and clinician observation scores were high (mean 96.88%). These
+results indicate that ErrE retained high real-time detection perfor-
+mance in the clinical setting and translated its main intended bene-
+fit, namely, confidence-supportive corrective feedback, into patient-
+facing rehabilitation.
+5 DISCUSSION
+5.1 Theoretical Implications of ErrE
+5.1.1 Eye-Based Error Awareness in VR Rehabilitation
+ErrE shifts rehabilitation error detection from completed task
+failure towards perceived mismatch during interaction.Much
+of the existing rehabilitation literature detects errors through task
+outcomes, rule violations, collision events, or broad movement
+thresholds, so system response usually begins only after failure has
+become behaviourally visible [1, 15]. This frames error mainly as
+an objective event in the task logic. ErrE instead focuses on the
+moment when the user becomes aware that intention and outcome
+have diverged. This is theoretically important because it places the
+user’s perceptual and cognitive experience at the centre of rehabili-
+tation interaction design. In this view, an error matters because the
+user has recognised a mismatch and may then experience loss of
+control, disruption, or reduced confidence [7, 8]. The present find-
+ings therefore support a broader reframing in which rehabilitation
+systems respond to awareness of failure rather than waiting for full
+behavioural breakdown.
+The event-aligned ocular patterns observed in this work sup-
+port the use of eye behaviour as a lightweight marker of error
+awareness in immersive rehabilitation.The reconstructed event
+window revealed a structured response spanning pre-error and post-
+error phases, including gaze instability before onset, a blink interval
+shortly before onset, increased eye openness around onset, and de-
+layed pupil dilation afterwards. This suggests that perceived errors
+are reflected in temporally organised ocular dynamics rather than
+in a single isolated feature. Importantly, part of the signal emerged
+before the overt error had fully unfolded, supporting the use of pre-
+onset eye data for preventive triggering. This interpretation is re-
+inforced by the online results, where detection accuracy remained
+near ceiling in User Study 2 and the 400 ms model maintained very
+high accuracy with low latency in User Study 3. Together, these
+findings indicate that eye tracking can provide a practical, real-time
+window into perceived error awareness during VR rehabilitation.
+5.1.2 Confidence as a Core Adaptive State in Rehabilitation
+Design
+ErrE suggests that confidence should be treated as a central
+adaptive state in rehabilitation design rather than as a purely
+post hoc subjective outcome.Many adaptive rehabilitation sys-
+tems focus mainly on performance measures such as speed, move-
+ment range, success rate, or difficulty level [14]. These variables
+are important, though they do not fully capture how unexpected
+interaction failures shape the user’s moment-to-moment interpreta-
+tion of the task. In rehabilitation, especially for users with impaired
+motor control, an interaction error may be interpreted as evidence
+of inability, instability, or system unreliability. From this perspec-
+tive, confidence is part of the interaction loop itself. It influences
+whether users remain willing to continue, persist through difficulty,
+and accept corrective assistance, while also being shaped by the
+system’s behaviour [12]. ErrE therefore supports a broader view in
+which confidence is a design-relevant state that can be monitored
+and stabilised during ongoing therapeutic activity.
+The present results support the view that early detection and
+correction of perceived errors can help preserve confidence dur-
+ing VR rehabilitation.In User Study 2, enabling ErrE was asso-
+ciated with a substantial increase in confidence, from 75.28% to
+95.56%, alongside improvements in engagement and overall user
+experience. In User Study 3, the same pattern was observed in the
+patient group, where confidence increased from 61.81% to 83.85%,
+and clinician feedback described the corrective process as smooth
+and reassuring. These findings suggest that confidence is closely
+tied to how the system handles moments of mismatch, rather than
+being determined only by overall task success. More broadly, ErrE
+supports the argument that effective rehabilitation systems should
+model how secure, in-control, and supported users feel while inter-
+acting, because these moment-to-moment experiences shape will-
+ingness to continue practice and trust the training process.
+5.1.3 Preventive, State-Preserving Correction as a New
+Feedback Logic
+ErrE introduces a preventive and state-preserving correction
+logic that differs from conventional post hoc assistance.Many
+rehabilitation feedback mechanisms intervene only after the system
+has registered a completed error, for example, through trial restart,
+explicit warning, difficulty adjustment, or therapist-led interrup-
+tion [2, 3]. These approaches can be useful, although they often
+create a visible break in task continuity. ErrE advances a differ-
+ent principle: corrective support is triggered when error awareness
+emerges and while the task state is still recoverable. In this formula-
+tion, assistance is designed to preserve continuity of action and re-
+duce the salience of failure. The theoretical significance lies in the
+timing of support. Correction becomes an interaction-timing prob-
+lem in which effectiveness depends on entering the action stream
+early enough to stabilise the intended trajectory.
+The empirical results are consistent with the view that mini-
+mal preventive correction can preserve agency more effectively
+than more disruptive intervention styles.In healthy participants,
+ErrE was associated with shorter trial completion time, lower er-
+ror rate, and markedly higher confidence. In the patient study, the
+clearest objective gain was reduced completion time, accompanied
+by strong gains in confidence and user experience. At the same
+time, real-time detection remained highly accurate and fast, espe-
+cially with the 400 ms window. These patterns suggest that users
+benefited from correction that was early, localised, and aligned with
+their own emerging awareness of error. The conceptual contribu-
+tion, therefore, extends beyond detection alone. ErrE proposes a
+feedback logic in which effective support depends on timing, con-
+tinuity, and fit with the user’s internal state, helping the system sta-
+bilise action while preserving the user’s sense of authorship.
+5.2 Practical Implications of ErrE
+5.2.1 Supporting Confidence and Task Continuity During
+Rehabilitation
+ErrE offers a practical way to help users continue rehabilitation
+tasks with fewer disruptive breakdowns.In upper-limb VR reha-
+bilitation, wrong selections and accidental drops interrupt the action
+sequence, fragment task rhythm, and often require additional recov-
+ery effort. A system that can recognise the user’s awareness of such
+failures and intervene immediately can reduce the need for repeated
+attempts or externally imposed interruption. This is especially rele-
+vant in repetitive task-oriented rehabilitation, where continuity and
+pacing are important for sustaining motivation and reducing frus-
+tration [5, 6]. In practical terms, ErrE helps keep the task centred
+on practice and progression rather than on repeated recovery from
+recoverable interaction problems.
+
+===== PAGE 9 =====
+9
+The observed performance and subjective outcomes suggest
+that confidence-supportive correction can make rehabilitation
+feel smoother and more manageable.In User Study 2, ErrE
+was associated with shorter trial completion time, lower error rate,
+higher confidence, and stronger engagement and user experience.
+In User Study 3, trial completion time again decreased, and thera-
+pist feedback indicated that the corrective responses were fast and
+smooth in practice. These results suggest that practical benefit may
+arise through reducing disruption rather than through large changes
+to task structure. In repeated upper-limb training, even small pre-
+ventive corrections may accumulate into a more fluent and less
+discouraging session. This is likely to matter in clinical routines
+where many repetitions are needed and where maintaining confi-
+dence across the session is as important as completing any single
+trial successfully.
+5.2.2 Lightweight Real-Time Error Detection for Clinical VR
+Systems
+ErrE is practically deployable because it relies on sensing and
+computation that are already realistic for clinical VR systems.
+The method uses eye tracking available in modern VR headsets and
+lightweight statistical criteria rather than specialised physiological
+hardware or computationally intensive pipelines [38]. This matters
+in rehabilitation settings, where system complexity, setup burden,
+and interpretability influence adoption outside the laboratory. A
+practical clinical system should be easy to explain, straightforward
+to operate, and transparent enough that therapists can understand
+why it intervenes. ErrE aligns well with these constraints because
+its feature basis and decision logic remain comparatively simple
+and interpretable.
+Its high accuracy and low latency indicate that this
+lightweight design remains viable under real-time rehabilita-
+tion demands.In User Study 2, detection accuracy remained
+above 96% across the retained windows, while the 400 ms win-
+dow achieved the most favourable balance between accuracy, la-
+tency, and participant preference. In User Study 3, the same
+400 ms setting maintained very high clinical accuracy together with
+a mean correction-trigger latency of approximately 42 ms. These
+results are practically important because they show that responsive
+perceived-error detection can be achieved without EEG-style sens-
+ing or opaque black-box inference. ErrE therefore provides a real-
+istic route towards deployable eye-tracking-based adaptive support
+in rehabilitation VR, particularly in settings where speed, clarity,
+and ease of integration are important.
+5.2.3 Assisting Therapists Through Early, Objective Error
+Monitoring
+ErrE provides therapists with a non-invasive and objective way
+to notice when patients have perceived an interaction problem,
+even when they do not explicitly verbalise it.In supervised reha-
+bilitation, clinicians often infer difficulty, confusion, or hesitation
+from movement quality, facial expression, or trial outcome. These
+cues can be informative, although they may appear late or remain
+ambiguous in immersive VR tasks. ErrE adds a complementary
+signal by translating eye-based responses into an interpretable indi-
+cator of likely error awareness. In practice, this may help therapists
+recognise moments when the patient has noticed a problem even
+before the action has fully broken down [2, 48]. Such support may
+be especially useful when patients have limited confidence, incon-
+sistent verbal feedback, or fluctuating motor performance.
+The clinician observation results and therapist feedback sug-
+gest that ErrE can support therapist judgement rather than re-
+place it.Clinician observation scores were high, and therapist com-
+ments emphasised the apparent accuracy, speed, and smoothness of
+the corrective strategy. This suggests that ErrE may help therapists
+intervene more efficiently, while reducing the need to infer inter-
+action problems entirely from external observation. Importantly,
+the system fits naturally into therapist-supervised rehabilitation be-
+cause it does not remove the clinician from the loop. Instead, it con-
+tributes an additional real-time cue that can support monitoring, in-
+tervention timing, and patient reassurance. In this sense, ErrE func-
+tions as an assistive layer for therapists rather than an autonomous
+substitute for clinical judgement.
+5.3 Limitations and Future Work
+The main limitations of the present work relate primarily to the cur-
+rent hardware implementation rather than to the underlying ErrE
+logic. First, real-time performance depends on the quality of the
+headset’s eye-tracking signal. In a small number of cases, some in-
+dividuals could not be included because the eye tracker did not reli-
+ably capture eye state, particularly when relatively small visible eye
+apertures were misread as persistent eye closure. Second, although
+the TouchDIVER G1 haptic glove and Vive Tracker enabled the
+intended interaction design, the combined hardware remained rela-
+tively heavy for some patients, especially those with stroke-related
+weakness. These issues indicate that the main practical constraints
+arose from sensing quality and wearable-device burden in the cur-
+rent setup.
+Future work should therefore strengthen the hardware founda-
+tion of ErrE while broadening its rehabilitation validation. A direct
+next step is to integrate more accurate eye-tracking hardware and
+lighter wearable interaction equipment in order to improve signal
+robustness and reduce motor burden. Longer-term patient stud-
+ies will also be important for examining whether the confidence-
+supportive and error-detection benefits of ErrE remain stable across
+repeated use and whether they contribute to rehabilitation progress
+over time. Finally, it will be valuable to evaluate ErrE in broader pa-
+tient groups, wider clinical conditions, and other VR rehabilitation
+tasks in order to test how broadly the same error-awareness-driven
+correction logic transfers across rehabilitation contexts.
+6 CONCLUSION
+This research addressed a key challenge in upper-limb VR rehabil-
+itation: interaction errors can disrupt task flow, reduce perceived
+control, and undermine confidence, while existing systems usually
+respond only after failure has become behaviourally visible. To ad-
+dress this gap, this research proposed ErrE, an Error-Related Eye
+Response framework that detects perceived interaction errors from
+real-time eye behaviour and uses that signal to drive immediate,
+state-preserving corrective support. Across three staged user stud-
+ies, ErrE showed that perceived errors are associated with a struc-
+tured ocular signature, that this signal can be detected online with
+high accuracy and low latency, and that the resulting feedback can
+be integrated into rehabilitation without disrupting successful ac-
+tions. In healthy participants, ErrE achieved 96.11%–97.78% de-
+tection accuracy and increased confidence from 75.28% to 95.56%.
+In patients, the selected 400 ms model achieved 97.22% detection
+accuracy with a mean trigger latency of 41.62 ms and increased
+confidence from 61.81% to 83.85%, while also shortening task
+completion time. Taken together, these findings establish ErrE as
+an interpretable and clinically promising framework for combining
+real-time error detection with confidence-oriented adaptive support
+in upper-limb VR rehabilitation.
+ACKNOWLEDGMENTS
+The ethical approvals for this research were obtained from the au-
+thors’ University Research Ethic Review Panel for healthy partici-
+pants and from the Ethics Committee of Hospital for patients.
+
+===== PAGE 10 =====
+10
+REFERENCES
+[1] J. Zhang, M. Liu, J. Yue, J. Yang, Y . Xiao, J. Yang, and E. Cai. Effects
+of virtual reality with different modalities on upper limb recovery: A
+systematic review and network meta-analysis on optimizing stroke re-
+habilitation.Frontiers in Neurology, 16:1544135, Apr. 2025. doi: 10.
+3389/fneur.2025.1544135 1, 2, 8
+[2] P. Tang, Y . Cao, D. T. A. V . Vithran, W. Xiao, T. Wen, S. Liu, and Y . Li.
+The efficacy of virtual reality on the rehabilitation of musculoskeletal
+diseases: Umbrella review.Journal of Medical Internet Research,
+27:e64576, Apr. 2025. doi: 10.2196/64576 1, 3, 8, 9
+[3] C. D. Kenea, T. G. Abessa, D. Lamba, and B. Bonnech `ere. Immersive
+virtual reality in stroke rehabilitation: A systematic review and meta-
+analysis of its efficacy in upper limb recovery.Journal of Clinical
+Medicine, 14(6):1783, Mar. 2025. doi: 10.3390/jcm14061783 1, 3, 8
+[4] L. Wang, M. Huang, R. Yang, H.-N. Liang, J. Han, and Y . Sun. Survey
+of movement reproduction in immersive virtual rehabilitation.IEEE
+Transactions on Visualization and Computer Graphics, 29(4):2184–
+2202, Apr. 2023. doi: 10.1109/TVCG.2022.3142198 1
+[5] C. Zhang, S. Yu, and J. Ji. CFI: A VR motor rehabilitation serious
+game design framework integrating rehabilitation function and game
+design principles with an upper limb case.Journal of NeuroEngineer-
+ing and Rehabilitation, 21(1):113, July 2024. doi: 10.1186/s12984
+-024-01373-2 1, 3, 8
+[6] C. Zhang and S. Yu. Technology to enhance patient motivation in
+virtual reality rehabilitation: A review.Games for Health Journal,
+13(4):215–233, Aug. 2024. doi: 10.1089/g4h.2023.0069 1, 8
+[7] W. Zhu, Q. Yang, B. Zhang, C. Wang, and C. Fan. Associations
+between self-efficacy and health-related quality of life in haemor-
+rhagic stroke survivors: A longitudinal study.BMC Public Health,
+25(1):1716, May 2025. doi: 10.1186/s12889-025-22655-x 1, 2, 3, 4,
+8
+[8] X. Jiang, Q. Sun, R. Tang, S. Liu, X. Chen, and Y . Lv. Self-efficacy
+and implementation intentions in home rehabilitation of stroke pa-
+tients: The parallel mediating role of recurrence risk perception and
+outcome expectations.Frontiers in Psychology, 16:1656514, Sept.
+2025. doi: 10.3389/fpsyg.2025.1656514 1, 3, 8
+[9] B. Darcy, L. Rashford, D. Huizenga, K. B. Reed, and S. J. M. Bam-
+berg. Balance improvement and fall risk reduction in stroke survivors
+after treatment with a wearable home-use gait device: Single-arm lon-
+gitudinal study with 1-year follow-up.JMIR Formative Research,
+9:e67297–e67297, Aug. 2025. doi: 10.2196/67297 1, 2, 3, 4
+[10] S. S. AlFraih, E. Patchwood, and P. Conroy. A scoping review
+of therapies targeting confidence in stroke survivors.Aphasiology,
+39(2):214–237, Feb. 2025. doi: 10.1080/02687038.2024.2340804 1,
+2, 3
+[11] Q. Wang, S. Hunter, R. L.-T. Lee, X. Wang, and S. W.-C. Chan. Mo-
+bile rehabilitation support versus usual care in patients after total hip
+or knee arthroplasty: Study protocol for a randomised controlled trial.
+Trials, 23(1):553, Dec. 2022. doi: 10.1186/s13063-022-06269-x 1
+[12] K.-L. Liao, M. Huang, J. Shi, M. Chen, and R. Yang. ZonAware:
+Identifying zoning out and increasing engagement in upper limb vir-
+tual reality rehabilitation.IEEE Transactions on Visualization and
+Computer Graphics, 31(11):10120–10130, Nov. 2025. doi: 10.1109/
+TVCG.2025.3616818 1, 2, 3, 8
+[13] L. Wang, M. Huang, Y . Zheng, J. Wei, and R. Yang. Weight percep-
+tion and controlling experience in loaded virtual rehabilitation: Effect
+of biased weight feedback and modulated movement. In2023 IEEE
+11th International Conference on Serious Games and Applications for
+Health (SeGAH), pp. 1–7. IEEE, Athens, Greece, Aug. 2023. doi: 10.
+1109/SeGAH57547.2023.10253794 1
+[14] D. J. Palidis, Z. Gardiner, A. Stephenson, K. Zhang, J. Boruff, and
+L. K. Fellows. The use of extrinsic performance feedback and reward
+to enhance upper limb motor behavior and recovery post-stroke: A
+scoping review.Neurorehabilitation and Neural Repair, 39(2):157–
+173, Feb. 2025. doi: 10.1177/15459683241298262 1, 3, 8
+[15] R. Villarroel, B. R. Garc ´ıa-Ramos, J. L. Gonz ´alez-Mora, and
+C. Modro ˜no. Virtual reality therapy for upper limb motor impair-
+ments in patients with stroke: A systematic review and meta-analysis.
+Physiotherapy Research International, 30(2):e70040, Apr. 2025. doi:
+10.1002/pri.70040 2, 8
+[16] G. Nicora, S. Pe, G. Santangelo, L. Billeci, I. G. Aprile, M. German-
+otta, R. Bellazzi, E. Parimbelli, and S. Quaglini. Systematic review
+of AI/ML applications in multi-domain robotic rehabilitation: Trends,
+gaps, and future directions.Journal of NeuroEngineering and Reha-
+bilitation, 22(1):79, Apr. 2025. doi: 10.1186/s12984-025-01605-z 2,
+3
+[17] X. Wang, J. Zhang, S. Q. Xie, C. Shi, J. Li, and Z.-Q. Zhang. Quan-
+titative upper limb impairment assessment for stroke rehabilitation: A
+review.IEEE Sensors Journal, 24(6):7432–7447, Mar. 2024. doi: 10.
+1109/JSEN.2024.3359811 2, 3
+[18] T. Peng. Quantitative assessment of human motion for health and
+rehabilitation: A novel fuzzy comprehensive evaluation approach.
+SLAS Technology, 29(5):100181, Oct. 2024. doi: 10.1016/j.slast.2024
+.100181 2
+[19] D. Ekambaram and V . Ponnusamy. Real-time AI-assisted visual exer-
+cise pose correctness during rehabilitation training for musculoskele-
+tal disorder.Journal of Real-Time Image Processing, 21(1):2, Feb.
+2024. doi: 10.1007/s11554-023-01385-6 2, 3
+[20] R. Maskeli ¯unas, R. Dama ˇseviˇcius, T. Bla ˇzauskas, C. Canbulut,
+A. Adomaviˇcien˙e, and J. Gri ˇskeviˇcius. BiomacVR: A virtual reality-
+based system for precise human posture and motion analysis in reha-
+bilitation exercises using depth sensors.Electronics, 12(2):339, Jan.
+2023. doi: 10.3390/electronics12020339 2
+[21] K. Marek, J. Redlicka, E. Miller, and I. Zubrycki. Objectivizing
+measures of post-stroke hand rehabilitation through multi-disciplinary
+scales.Journal of Clinical Medicine, 12(23):7497, Dec. 2023. doi: 10
+.3390/jcm12237497 2
+[22] S. LoTemplio, J. Silcox, D. L. Strayer, and B. R. Payne. Single-trial
+relationships between the error-related negativity, pe, error-related
+pupillary dilation response, and post-error behavior.Psychophysiol-
+ogy, 63(1):e70216, Jan. 2026. doi: 10.1111/psyp.70216 2
+[23] H. Lee, N. Jiang, and S. Samuel. Detection of error in static
+and dynamic visual stimulation via electroencephalogram and eye-
+tracking systems.Engineering Applications of Artificial Intelligence,
+159:111688, Nov. 2025. doi: 10.1016/j.engappai.2025.111688 2
+[24] L. Wang, M. Huang, R. Yang, C. Qin, J. Han, and H.-N. Liang. Ef-
+fect of reaching movement modulation on experience of control in
+virtual reality.International Journal of Human–Computer Interac-
+tion, 40(21):6740–6757, Nov. 2024. doi: 10.1080/10447318.2023.
+2290382 2
+[25] R. N. Todd, J. Gong, A. C. Banic, and Q. Zhu. Validating the per-
+formance of VR headset eye-tracking using gold standard eye-tracker
+and MoCap system.Information, 17(2):143, Feb. 2026. doi: 10.3390/
+info17020143 2
+[26] L. Pfalz, C. M ¨uller, and K. Kopiske. Can pupillometry reveal pertur-
+bation detection in sensorimotor adaptation during grasping?Journal
+of Neurophysiology, 134(5):1804–1817, Nov. 2025. doi: 10.1152/jn.
+00259.2025 2
+[27] R. Jordan. The locus coeruleus as a global model failure system.
+Trends in Neurosciences, 47(2):92–105, Feb. 2024. doi: 10.1016/j.
+tins.2023.11.006 2
+[28] M. Sugianto, Y . Zhou, and J. Qiu. Eye tracking-based dual task in
+rehabilitation of motor and cognitive function in post-stroke patients:
+A literature review.Bulletin of Faculty of Physical Therapy, 30(1):33,
+May 2025. doi: 10.1186/s43161-025-00295-x 2
+[29] M. Maldonado-D ´ıaz, G. Jara-Vargas, and F. Gonz´alez-Seguel. Visual
+attention during non-immersive virtual reality balance training in older
+adults with mild to moderate cognitive impairment: An eye-tracking
+study.Frontiers in Aging Neuroscience, 17:1671477, Oct. 2025. doi:
+10.3389/fnagi.2025.1671477 2
+[30] J. Zhang, M. Huang, Y . Chen, K.-L. Liao, J. Shi, H.-N. Liang, and
+R. Yang.TouchMark: Partial tactile feedback design for upper
+limb rehabilitation in virtual reality.IEEE Transactions on Visual-
+ization and Computer Graphics, 30(11):7430–7440, Nov. 2024. doi:
+10.1109/TVCG.2024.3456173 2, 3
+[31] P. Diotaiuti, G. Marotta, F. Di Siena, S. Vitiello, F. Di Prinzio, A. Ro-
+dio, T. Di Libero, L. Falese, and S. Mancone. Eye tracking in
+parkinson’s disease: A review of oculomotor markers and clinical
+applications.Brain Sciences, 15(4):362, Mar. 2025. doi: 10.3390/
+
+===== PAGE 11 =====
+11
+brainsci15040362 2
+[32] M. Tahri Sqalli, B. Aslonov, M. Gafurov, N. Mukhammadiev, and
+Y . Sqalli Houssaini. Eye tracking technology in medical practice: A
+perspective on its diverse applications.Frontiers in Medical Technol-
+ogy, 5:1253001, Nov. 2023. doi: 10.3389/fmedt.2023.1253001 2
+[33] K.-L. Liao, M. Huang, J. Shi, M. Chen, and R. Yang. Focus-driven
+augmented feedback: Enhancing focus and maintaining engagement
+in upper limb virtual reality rehabilitation.IEEE Transactions on Visu-
+alization and Computer Graphics, 31(5):2653–2663, May 2025. doi:
+10.1109/TVCG.2025.3549543 2, 3
+[34] A. Ionescu, E. S , tef˘anescu, S, . Strilciuc, A. Rafila, and D. Mures ,anu.
+Correlating eye-tracking fixation metrics and neuropsychological as-
+sessment after ischemic stroke.Medicina, 59(8):1361, July 2023. doi:
+10.3390/medicina59081361 2
+[35] P. W. Jordan, B. Thomas, I. L. McClelland, and B. Weerdmeester.
+Usability Evaluation in Industry. CRC press, 1996. 2
+[36] S. H. Lee, H.-Y . Jung, S. J. Yun, B.-M. Oh, and H. G. Seo. Upper
+extremity rehabilitation using fully immersive virtual reality games
+with a head mount display: A feasibility study.PM&R, 12(3):257–
+262, Mar. 2020. doi: 10.1002/pmrj.12206 2
+[37] I. Miltiadis, A. Skarlis, and P. Burko. The role of virtual reality in
+personalized medicine: Advancing prediction, prevention, and partic-
+ipation.Journal of Medical Systems, 49(1):56, Apr. 2025. doi: 10.
+1007/s10916-025-02191-2 3
+[38] I. Figueiredo, B. Marques, S. Oliveira, B. Guerreiro, S. Silva,
+P. Amorim, T. Ara´ujo, L. V . Costa, C. Ferreira, P. Dias, and B. S. San-
+tos. Personalized eXtended reality experiences to enhance the rehabil-
+itation process of stroke survivors: A scoping review.Computers &
+Graphics, 133:104411, Dec. 2025. doi: 10.1016/j.cag.2025.104411
+3, 9
+[39] A. Lu, M. Huang, K.-L. Liao, Z. Chen, and R. Yang. Crafting Us-
+ability in Neuro-Narrative Games: The Joint Influence of Imagery
+Perspectives and Task Sequences in BCI–VR System.IEEE Trans-
+actions on Games, 17(4):1112–1124, Dec. 2025. doi: 10.1109/TG.
+2025.3615465 3
+[40] K. Brock, S. J. Vine, J. M. Ross, M. Trevarthen, and D. J. Harris.
+Movement kinematic and postural control differences when perform-
+ing a visuomotor skill in real and virtual environments.Experimental
+Brain Research, 241(7):1797–1810, July 2023. doi: 10.1007/s00221
+-023-06639-0 3
+[41] S. Guo, L. Li, H. Liu, S. Wu, Y . Zheng, and J. Niu. Bimanual
+asymmetric coordination in a three-dimensional zooming task based
+on leap motion: Implications for upper limb rehabilitation.Inter-
+national Journal of Human–Computer Interaction, 40(8):1931–1942,
+Apr. 2024. doi: 10.1080/10447318.2023.2242728 3
+[42] O. S. Ajani and R. Mallipeddi. Pareto-based dynamic difficulty adjust-
+ment of a competitive exergame for arm rehabilitation.International
+Journal of Human-Computer Studies, 178:103100, Oct. 2023. doi: 10
+.1016/j.ijhcs.2023.103100 3
+[43] J. Zhao, G. Zhang, and D. Xu. The effect of reward on motor learning:
+Different stage, different effect.Frontiers in Human Neuroscience,
+18:1381935, Mar. 2024. doi: 10.3389/fnhum.2024.1381935 3
+[44] S. P. Maddumage Dona, P. B. Chand, C. Haden, N. Kalyani, A. Lehn,
+K. Sullivan, and G. K. Kerr. Effectiveness of haptic cues on gait
+in people with parkinson’s disease – a systematic review and meta-
+analysis.Gait & Posture, 122:358–374, Oct. 2025. doi: 10.1016/j.
+gaitpost.2025.08.069 3
+[45] P. Amorim. Virtual reality in chronic pain rehabilitation: A systematic
+review.Journal of Physical Medicine and Rehabilitation, 7(1):14–78,
+2025. 3
+[46] W. Quan, S. Liu, M. Cao, and J. Zhao. A comprehensive review of
+virtual reality technology for cognitive rehabilitation in patients with
+neurological conditions.Applied Sciences, 14(14):6285, July 2024.
+doi: 10.3390/app14146285 3
+[47] S. Krishnan, M. A. Mandala, S. L. Wolf, A. Howard, and T. M. Kesar.
+Perceptions of stroke survivors regarding factors affecting adoption of
+technology and exergames for rehabilitation.PM&R, 15(11):1403–
+1410, Nov. 2023. doi: 10.1002/pmrj.12963 3
+[48] K. E. Laver, B. Lange, S. George, J. E. Deutsch, G. Saposnik,
+M. Chapman, and M. Crotty. Virtual reality for stroke rehabilitation.
+Cochrane Database of Systematic Reviews, 2025(6), June 2025. doi:
+10.1002/14651858.CD008349.pub5 3, 9
+[49] M. Gustavsson, E. K. Kj ¨ork, M. Erhardsson, and M. Alt Murphy. Vir-
+tual reality gaming in rehabilitation after stroke – user experiences and
+perceptions.Disability and Rehabilitation, 44(22):6759–6765, Oct.
+2022. doi: 10.1080/09638288.2021.1972351 4
+[50] A. Turton, P. Cunningham, F. Van Wijck, H. Smartt, C. Rogers,
+C. Sackley, S. Jowett, S. Wolf, K. Wheatley, and P. Van Vliet. Home-
+based reach-to-grasp training for people after stroke is feasible: A
+pilot randomised controlled trial.Clinical Rehabilitation, 31(7):891–
+903, July 2017. doi: 10.1177/0269215516661751 4
+[51] F. Grimm, G. Naros, and A. Gharabaghi. Closed-loop task difficulty
+adaptation during virtual reality reach-to-grasp training assisted with
+an exoskeleton for stroke rehabilitation.Frontiers in Neuroscience,
+10, Nov. 2016. doi: 10.3389/fnins.2016.00518 4
