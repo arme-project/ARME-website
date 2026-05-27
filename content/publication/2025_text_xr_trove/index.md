@@ -1,8 +1,8 @@
 ---
-title: "TEXT: Text Entry for XR Trove"
+title: "Text Entry for XR Trove (TEXT): Collecting and Analyzing Techniques for Text Input in XR"
 subtitle: ""
 publication_types:
-  - "0"
+  - "1"
 authors:
   - Arpit Bhatia
   - Moaaz Hudhud Mughrabi
@@ -12,10 +12,10 @@ authors:
   - Karan Ahuja
   - Hasti Seifi
 author_notes: []
-doi: ""
-publication: Web publication/site
-publication_short: Web publication
-abstract: "TEXT, the Text Entry for XR Trove, is a web publication collecting and organising knowledge about text input methods for extended reality. It complements ARME-related XR work by documenting interaction techniques needed for practical use of immersive systems."
+doi: "10.1145/3706598.3713382"
+publication: "CHI '25: Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems"
+publication_short: CHI 2025
+abstract: "This CHI 2025 paper introduces TEXT, the Text Entry for XR Trove: a database of 176 extended-reality text entry techniques. The paper analyses trends in technique design, evaluation metrics, and interaction attributes, and presents an interactive online tool for exploring the database."
 draft: false
 featured: false
 tags: []
@@ -27,8 +27,9 @@ image:
   filename: featured.jpg
   focal_point: Smart
   preview_only: false
-date: 2025-01-01T12:00:00Z
-url_slides: https://research.birmingham.ac.uk/en/publications/text-text-entry-for-xr-trove
+date: 2025-04-25T12:00:00Z
+url_pdf: https://doi.org/10.1145/3706598.3713382
+url_slides: https://research.birmingham.ac.uk/en/publications/text-text-entry-for-xr-trove-collecting-and-analyzing-techniques-
 ---
 
-The University of Birmingham research portal lists this as a 2025 web publication connected to XR text-entry research.
+The paper was published in the proceedings of CHI 2025 and is connected to XR text-entry research.
