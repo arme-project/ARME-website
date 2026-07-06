@@ -5,7 +5,7 @@ type: maintenance
 
 slug:
 private: false
-_build:
+build:
   list: true
 
 ---

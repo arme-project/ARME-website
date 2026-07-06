@@ -13,6 +13,5 @@ design:
 hero_media: depthmap.jpg
 ---
 
-The A.R.M.E. project has been funded by the EPSRC. It has the goal of understanding how musicians synchronise to each other and build a computational model that can reproduce the musician's behaviour. This understanding will allow the creation of a music training tool where believable virtual musicians will play together with the user.
-
+The EPSRC-funded A.R.M.E. project investigates how musicians synchronise with one another and develops computational models of ensemble behaviour. This work supports music-training tools in which believable virtual musicians can play together with a user.
 
