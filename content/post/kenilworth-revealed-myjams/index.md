@@ -4,6 +4,10 @@ date: 2026-05-26T12:00:00+01:00
 draft: false
 featured: true
 summary: MyJAMS Ltd contributed ARME-derived immersive media technology to Kenilworth Revealed, a public augmented-reality heritage app for Abbey Fields.
+image:
+  caption: "Kenilworth Revealed augmented-reality experience. Image: MyJAMS Ltd."
+  focal_point: Center
+  preview_only: false
 ---
 
 ARME research is reaching public audiences through a new route: local heritage, tourism, and community storytelling.
