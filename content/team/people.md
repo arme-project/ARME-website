@@ -15,6 +15,7 @@ content:
   - Industry
   - Musicians
   - Research Assistants
+  - Interns
   - Visitors
   - Students
   - Alumni
